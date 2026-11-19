@@ -41,6 +41,53 @@
     "coverPhone": "tamarack-budget-tracker/cover-phone.webp"
   },
   {
+    "id": "brightwater-resume-makeover",
+    "title": "Noa Brightwater: a resume and LinkedIn makeover",
+    "short": "Resume makeover",
+    "category": "Writing",
+    "label": "Concept demo",
+    "year": 2026,
+    "folder": "brightwater-resume-makeover",
+    "summary": "A cluttered resume rebuilt as a clean, ATS-friendly one-pager, plus a rewritten LinkedIn headline and About section.",
+    "cover": "brightwater-resume-makeover/cover.webp",
+    "coverAlt": "Before and after: a cluttered two-column resume with numbered problem pins next to the rebuilt one-column version",
+    "demo": "brightwater-resume-makeover/demo/index.html",
+    "demoLabel": "Open the before and after",
+    "downloads": [
+      {
+        "file": "brightwater-resume-makeover/samples/Noa-Brightwater-resume-DEMO.pdf",
+        "label": "Download the resume PDF"
+      },
+      {
+        "file": "brightwater-resume-makeover/samples/Noa-Brightwater-resume-DEMO.docx",
+        "label": "Download the Word file"
+      }
+    ],
+    "gallery": [
+      {
+        "src": "brightwater-resume-makeover/screenshots/detail-compare.webp",
+        "alt": "The old resume and the new one side by side, with eight numbered fixes"
+      },
+      {
+        "src": "brightwater-resume-makeover/screenshots/detail-bullets.webp",
+        "alt": "Bullet rewrites, from duties to results"
+      },
+      {
+        "src": "brightwater-resume-makeover/screenshots/detail-keywords.webp",
+        "alt": "Keyword check against a sample posting, before and after"
+      },
+      {
+        "src": "brightwater-resume-makeover/screenshots/detail-linkedin.webp",
+        "alt": "LinkedIn headline and About section, before and after"
+      },
+      {
+        "src": "brightwater-resume-makeover/screenshots/mobile.webp",
+        "alt": "The page on a phone"
+      }
+    ],
+    "labelNote": "The job seeker, employers and school are made up. Every number is example data, and no results are claimed."
+  },
+  {
     "id": "bramblewick-holiday-ads",
     "title": "Bramblewick Gift Co.: holiday Facebook ads",
     "short": "Facebook ad set",
