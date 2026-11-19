@@ -1,0 +1,3 @@
+Archivo.woff2 — Archivo by Omnibus-Type (Héctor Gatti and the Omnibus-Type team). SIL Open Font License 1.1. Subset to Latin.
+PlexMono-400.woff2, PlexMono-500.woff2 — IBM Plex Mono, Copyright IBM Corp. SIL Open Font License 1.1. Subset to Latin.
+License text: https://openfontlicense.org/open-font-license-official-text/

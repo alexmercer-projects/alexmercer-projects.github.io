@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Juniper &amp; Rye Bakehouse · concept demo site</title>
+  <meta name="description" content="Concept demo website for a fictional neighborhood bakery, designed and built by Alex Mercer. Not a real business.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#f1e9da">
+  <link rel="preload" href="fonts/Fraunces.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23f1e9da'/%3E%3Ctext x='16' y='24' font-family='Georgia,serif' font-size='22' text-anchor='middle' fill='%231e2a20'%3EJ%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <div class="demo-bar" role="note">
+    <p><b>Concept demo.</b> Juniper &amp; Rye is a fictional bakery; names, prices and contact details are placeholders. Designed and built by Alex Mercer.</p>
+    <a href="../index.html">Back to the portfolio</a>
+  </div>
+
+  <header class="top">
+    <div class="wrap top__inner">
+      <a class="logo" href="#">Juniper <i>&amp;</i> Rye</a>
+      <nav aria-label="Main">
+        <a href="#today">Today</a>
+        <a href="#menu">Menu</a>
+        <a href="#story">How we bake</a>
+        <a href="#visit">Visit</a>
+        <a class="top__order" href="#preorder">Preorder</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-h">
+      <div class="wrap">
+        <p class="hero__line"><span>Bakehouse &amp; coffee</span><span>Alder Street</span><span>Wed – Sun from 7am</span></p>
+        <h1 id="hero-h" class="hero__title">Slow bread<br>for <em>fast</em> mornings.</h1>
+        <div class="hero__foot">
+          <p class="hero__lede">Naturally leavened loaves, laminated pastry and a short coffee menu. Mixed on Monday, baked before sunrise, usually gone by early afternoon.</p>
+          <div class="hero__cta">
+            <a class="btn" href="#preorder">Preorder for pickup</a>
+            <a class="textlink" href="#menu">Read the menu</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="today" id="today" aria-labelledby="today-h">
+      <div class="wrap today__grid">
+        <header class="today__head">
+          <h2 id="today-h">On the rack today</h2>
+          <p>Written up at 6:30 every morning. When a tray is empty, it’s done for the day.</p>
+        </header>
+        <ol class="board">
+          <li>
+            <span class="board__n">01</span>
+            <div><h3>Country sourdough</h3><p>The everyday loaf. Blistered crust, open crumb, a little tang.</p></div>
+            <span class="board__left">12 left</span><b class="board__p">$9</b>
+          </li>
+          <li>
+            <span class="board__n">02</span>
+            <div><h3>Cardamom knot <small>new this week</small></h3><p>Swedish-style, laminated, rolled in cardamom sugar.</p></div>
+            <span class="board__left">20 left</span><b class="board__p">$5.50</b>
+          </li>
+          <li>
+            <span class="board__n">03</span>
+            <div><h3>Seeded rye <small>weekends</small></h3><p>70% rye with sunflower, flax and toasted sesame. Dense, keeps for days.</p></div>
+            <span class="board__left">Sat &amp; Sun</span><b class="board__p">$11</b>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="menu" id="menu" aria-labelledby="menu-h">
+      <div class="wrap">
+        <div class="menu__head">
+          <h2 id="menu-h">The menu</h2>
+          <p>Short on purpose. Everything is made here from flour, butter, water, salt and time.</p>
+        </div>
+        <div class="menu__cols">
+          <div>
+            <h3>Bread</h3>
+            <ul class="items">
+              <li><span>Country sourdough</span><b>9</b></li>
+              <li><span>Seeded rye</span><b>11</b></li>
+              <li><span>Olive fougasse</span><b>8</b></li>
+              <li><span>Honey oat sandwich loaf</span><b>8</b></li>
+              <li><span>Baguette</span><b>4.50</b></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Pastry</h3>
+            <ul class="items">
+              <li><span>Butter croissant</span><b>4.25</b></li>
+              <li><span>Almond croissant</span><b>5.50</b></li>
+              <li><span>Cardamom knot</span><b>5.50</b></li>
+              <li><span>Morning bun</span><b>5</b></li>
+              <li><span>Seasonal galette</span><b>6</b></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Coffee</h3>
+            <ul class="items">
+              <li><span>Drip</span><b>3</b></li>
+              <li><span>Cortado</span><b>4</b></li>
+              <li><span>Oat latte</span><b>5.25</b></li>
+              <li><span>Chai, made in-house</span><b>5</b></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="story" id="story" aria-labelledby="story-h">
+      <div class="wrap story__grid">
+        <h2 id="story-h" class="story__q">“The kind of bakery where you know the bread by name, and the person who made it waves at you.”</h2>
+        <ol class="timeline">
+          <li><b>Mon, 4pm</b><span>Mix, fold, rest.</span></li>
+          <li><b>Overnight</b><span>Cold proof for 36 hours.</span></li>
+          <li><b>Wed, 4am</b><span>Into the stone oven.</span></li>
+          <li><b>7am</b><span>Doors open.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="visit" id="visit" aria-labelledby="visit-h">
+      <div class="wrap visit__grid">
+        <div class="preorder" id="preorder">
+          <h2 id="visit-h">Preorder for pickup</h2>
+          <p>Order by 6pm, pick up after 7am the next day. Whole loaves and boxes of six pastries.</p>
+          <form class="form" onsubmit="event.preventDefault(); this.querySelector('.form__ok').hidden=false;">
+            <label>Name<input type="text" name="name" autocomplete="off" placeholder="Your name"></label>
+            <label>Pickup day
+              <select name="day"><option>Tomorrow</option><option>Saturday</option><option>Sunday</option></select>
+            </label>
+            <label class="full">What would you like?<textarea name="order" rows="3" placeholder="2 country sourdough, 1 box of morning buns"></textarea></label>
+            <button class="btn full" type="submit">Send preorder</button>
+            <p class="form__ok full" hidden role="status">Demo only: nothing was sent. On a live site this would email the bakery.</p>
+          </form>
+        </div>
+        <div class="info">
+          <h3>Hours</h3>
+          <dl>
+            <div><dt>Wed – Fri</dt><dd>7am – 2pm</dd></div>
+            <div><dt>Sat – Sun</dt><dd>7am – 3pm</dd></div>
+            <div><dt>Mon – Tue</dt><dd>Closed, baking</dd></div>
+          </dl>
+          <h3>Find us</h3>
+          <p>Alder Street, a fictional town<br>(555) 010-0142<br>hello@example.com</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__inner">
+      <span class="foot__mark">Juniper <i>&amp;</i> Rye</span>
+      <span>A concept demo for a fictional business. Design and build: <a href="../index.html">Alex Mercer</a></span>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<!-- The share image (src/assets/og.png). Render it with: node tools/make-og.mjs -->
+<html><head><meta charset="utf-8"><style>
+@font-face{font-family:SG;src:url('../src/assets/fonts/SchibstedGrotesk-latin.woff2') format('woff2');font-weight:400 900}
+@font-face{font-family:JB;src:url('../src/assets/fonts/JetBrainsMono-latin.woff2') format('woff2');font-weight:400 800}
+*{box-sizing:border-box;margin:0}
+body{width:1200px;height:630px;overflow:hidden;position:relative;font-family:SG;color:#0f0f0f;background:#e7e7e2;
+  background-image:linear-gradient(#d4d4ce 1px,transparent 1px),linear-gradient(90deg,#d4d4ce 1px,transparent 1px);background-size:64px 64px;background-position:-1px -1px}
+.brand{position:absolute;left:64px;top:58px;display:flex;align-items:center;gap:14px;font-weight:800;font-size:28px;letter-spacing:-.02em}
+.brand i{width:16px;height:16px;background:#ff4a1c;border:1.5px solid #0f0f0f}
+h1{position:absolute;left:64px;top:128px;width:660px;font-weight:800;font-size:72px;line-height:.95;letter-spacing:-.045em}
+.facts{position:absolute;left:64px;top:463px;display:flex}
+.facts span{font-family:JB;font-size:17px;letter-spacing:.06em;text-transform:uppercase;border:2px solid #0f0f0f;background:#f3f3ef;padding:12px 16px;margin-right:-2px}
+.shot{position:absolute;border:2px solid #0f0f0f;background:#fff;overflow:hidden}
+.shot img{display:block;width:100%;height:100%;object-fit:cover;object-position:top left}
+.a{left:806px;top:56px;width:330px;height:247px}
+.b{left:750px;top:330px;width:200px;height:180px}
+.c{left:970px;top:330px;width:166px;height:180px}
+.band{position:absolute;left:0;right:0;bottom:0;height:72px;background:#ff4a1c;border-top:2px solid #0f0f0f;display:flex;align-items:center;padding-left:64px;font-weight:800;font-size:32px;letter-spacing:-.03em}
+</style></head><body>
+<div class="brand"><i></i>Alex Mercer</div>
+<h1>Made with care, for small businesses that deserve better.</h1>
+<div class="facts"><span>Starts immediately</span><span>Free sample first</span><span>Most jobs in 24h</span></div>
+<div class="shot a"><img src="../pieces/tamarack-budget-tracker/cover-wide.webp" alt=""></div>
+<div class="shot b"><img src="../pieces/hollis-pike-home-repair/cover.webp" alt=""></div>
+<div class="shot c"><img src="../pieces/bramblewick-holiday-ads/demo/creatives/bramblewick-ad-01.jpg" alt=""></div>
+<div class="band">alexmercer.projects@gmail.com</div>
+</body></html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weekend Stall Setup Without Overbuying | Cedar &amp; Clerk</title>
+  <meta name="description" content="A practical Saturday stall plan: what to bring, how much to pack, how to price everything at home, and how to pack the table out in under an hour.">
+  <link rel="canonical" href="https://cedarandclerk.example/weekend-farmers-market-stall">
+  <style>
+    @font-face { font-family: "Newsreader"; src: url("fonts/Newsreader.woff2") format("woff2"); font-weight: 200 800; font-style: normal; font-display: swap; }
+    @font-face { font-family: "Newsreader"; src: url("fonts/Newsreader-Italic.woff2") format("woff2"); font-weight: 200 800; font-style: italic; font-display: swap; }
+    @font-face { font-family: "Source Sans 3"; src: url("fonts/SourceSans3.woff2") format("woff2"); font-weight: 200 900; font-style: normal; font-display: swap; }
+    @font-face { font-family: "Fraunces"; src: url("fonts/Fraunces.woff2") format("woff2"); font-weight: 200 900; font-style: normal; font-display: swap; }
+    @font-face { font-family: "Geist"; src: url("fonts/Geist.woff2") format("woff2"); font-weight: 200 900; font-style: normal; font-display: swap; }
+
+    :root {
+      --paper: #f4efe6;
+      --paper-2: #fbf8f2;
+      --ink: #1c1915;
+      --muted: #5d584f;
+      --rule: #d8d0c4;
+      --accent: #3e5644;
+      --accent-2: #8a3e2c;
+      --card: #fffdf8;
+      --shadow: 0 10px 30px rgba(28,25,21,.08);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: var(--paper); color: var(--ink); }
+    body { font-family: "Source Sans 3", "Source Sans Pro", sans-serif; line-height: 1.5; }
+    a { color: var(--accent); }
+    a:hover { color: var(--accent-2); }
+
+    .demo-banner {
+      background: #2b2a26;
+      color: #f4efe6;
+      font-family: Geist, "Source Sans 3", sans-serif;
+      font-size: 12px;
+      letter-spacing: .04em;
+      text-align: center;
+      padding: 10px 16px;
+    }
+    .demo-banner strong { font-weight: 600; color: #fff; }
+
+    header.site {
+      border-bottom: 1px solid var(--rule);
+      background: var(--paper-2);
+    }
+    .site-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 22px 28px 18px;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .wordmark {
+      font-family: Fraunces, Newsreader, serif;
+      font-weight: 560;
+      font-size: 28px;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .wordmark span { color: var(--accent); }
+    nav.site-nav { display: flex; gap: 22px; font-size: 14px; }
+    nav.site-nav a { color: var(--muted); text-decoration: none; }
+    nav.site-nav a:hover { color: var(--ink); }
+
+    .wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 32px 28px 64px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 320px;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .crumb {
+      font-size: 13px;
+      color: var(--muted);
+      margin: 0 0 14px;
+      letter-spacing: .02em;
+    }
+    .crumb a { color: var(--accent); text-decoration: none; font-weight: 600; }
+
+    h1 {
+      font-family: Newsreader, "Source Serif Pro", serif;
+      font-weight: 560;
+      font-size: 42px;
+      line-height: 1.18;
+      letter-spacing: -0.025em;
+      margin: 0 0 14px;
+    }
+    .byline {
+      display: flex; flex-wrap: wrap; gap: 8px 18px;
+      font-size: 14px; color: var(--muted); margin: 0 0 26px;
+      padding-bottom: 18px; border-bottom: 1px solid var(--rule);
+    }
+    .byline strong { color: var(--ink); font-weight: 600; }
+
+    figure.hero { margin: 0 0 28px; }
+    figure.hero img {
+      width: 100%; height: auto; display: block;
+      border-radius: 2px;
+    }
+    figure.hero figcaption {
+      font-size: 13px; color: var(--muted);
+      margin-top: 8px; line-height: 1.45;
+    }
+    figure.hero .alt-note {
+      display: block; margin-top: 2px;
+      font-family: Geist, "Source Sans 3", sans-serif;
+      font-size: 11.5px; letter-spacing: .02em; text-transform: uppercase;
+      color: #6e685e;
+    }
+
+    .article p { font-family: Newsreader, serif; font-size: 19.5px; line-height: 1.55; margin: 0 0 1.05em; }
+    .article p.dek { font-size: 21px; color: #3a372f; font-style: italic; margin-bottom: 1.2em; }
+    .article h2 {
+      font-family: Newsreader, serif;
+      font-weight: 600; font-size: 28px; letter-spacing: -0.02em;
+      margin: 1.5em 0 .55em; line-height: 1.25;
+    }
+    .article h3 {
+      font-family: Source Sans 3, sans-serif;
+      font-weight: 650; font-size: 18px;
+      margin: 1.25em 0 .4em; color: var(--accent);
+    }
+    .article a { text-underline-offset: 3px; }
+    .callout {
+      background: var(--paper-2);
+      border-left: 3px solid var(--accent);
+      padding: 14px 18px;
+      margin: 0 0 1.4em;
+      font-family: Newsreader, serif;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .tags { margin: 28px 0 0; padding-top: 18px; border-top: 1px solid var(--rule); }
+    .tags span, .tags a {
+      display: inline-block; margin: 0 8px 8px 0; padding: 4px 10px;
+      border: 1px solid var(--rule); border-radius: 999px;
+      font-size: 12.5px; color: var(--muted); text-decoration: none;
+      background: var(--paper-2);
+    }
+    .tags a:hover { border-color: var(--accent); color: var(--accent); }
+
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      box-shadow: var(--shadow);
+      padding: 18px 18px 16px;
+      position: sticky; top: 16px;
+    }
+    .panel h2 {
+      font-family: Geist, "Source Sans 3", sans-serif;
+      font-size: 11px; letter-spacing: .14em; text-transform: uppercase;
+      font-weight: 600; margin: 0 0 12px; color: var(--muted);
+    }
+    .status {
+      display: flex; align-items: center; gap: 8px;
+      background: #e7efe8; color: var(--accent);
+      font-size: 13px; font-weight: 650;
+      padding: 8px 10px; margin-bottom: 14px;
+    }
+    .status i {
+      width: 8px; height: 8px; border-radius: 50%; background: #2f7a45; display: inline-block;
+    }
+    .field { margin: 0 0 12px; padding: 0 0 12px; border-bottom: 1px solid var(--rule); }
+    .field:last-child { margin: 0; padding: 0; border: 0; }
+    .field .k {
+      font-size: 11px; letter-spacing: .08em; text-transform: uppercase;
+      color: var(--muted); font-weight: 650; margin: 0 0 4px;
+    }
+    .field .v { font-size: 13.5px; line-height: 1.4; color: var(--ink); word-break: break-word; }
+    .field .v code {
+      font-family: Geist, ui-monospace, monospace; font-size: 12px;
+      background: var(--paper); padding: 1px 4px; word-break: break-all;
+    }
+    .count { float: right; font-size: 11px; color: var(--accent); font-weight: 650; letter-spacing: .02em; text-transform: none; }
+    .count.warn { color: var(--accent-2); }
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+    .chips b, .chips span {
+      font-weight: 600; font-size: 12px; padding: 3px 8px;
+      background: var(--paper); border: 1px solid var(--rule);
+    }
+    .chips b { background: var(--accent); color: #f6f1e8; border-color: var(--accent); }
+    .panel .note { font-size: 11.5px; color: var(--muted); margin-top: 12px; line-height: 1.4; }
+
+    footer.site {
+      border-top: 1px solid var(--rule);
+      background: #2b2a26; color: #d8d0c4;
+      padding: 22px 28px; text-align: center;
+      font-size: 12.5px; line-height: 1.5;
+    }
+    footer.site strong { color: #f4efe6; }
+
+    @media (max-width: 900px) {
+      .wrap { grid-template-columns: 1fr; gap: 28px; padding: 22px 18px 48px; }
+      h1 { font-size: 32px; }
+      .article p { font-size: 18px; }
+      .panel { position: static; }
+      nav.site-nav { display: none; }
+      .site-inner { padding: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-banner">
+    <strong>Concept demo</strong> by Alex Mercer. Made-up publication and placeholder details. Not a live site.
+    <a href="../index.html" style="color:inherit;margin-left:8px">Back to the portfolio</a>
+  </div>
+  <header class="site">
+    <div class="site-inner">
+      <a class="wordmark" href="#home">Cedar <span>&amp;</span> Clerk</a>
+      <nav class="site-nav" aria-label="Demo navigation">
+        <a href="#guides">Guides</a>
+        <a href="#retail">Retail</a>
+        <a href="#kitchen">Kitchen</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <article class="article">
+      <p class="crumb"><a href="#guides">Guides</a> / <a href="#retail">Retail</a></p>
+      <h1>How to set up a weekend farmers market stall without overbuying</h1>
+      <div class="byline">
+        <span>By <strong>Maya Ellison</strong> (placeholder byline)</span>
+        <span>November 12, 2026</span>
+        <span>6 minute read</span>
+      </div>
+
+      <figure class="hero">
+        <img src="featured.jpg" width="1400" height="788" alt="Wooden crates of citrus and leafy greens, brown paper bags, and a basket of eggs arranged on a linen-covered folding table in morning light">
+        <figcaption>
+          A stall does not have to be crowded to look ready from the sidewalk.
+          <span class="alt-note">Alt text: Wooden crates of citrus and leafy greens, brown paper bags, and a basket of eggs arranged on a linen-covered folding table in morning light</span>
+        </figcaption>
+      </figure>
+
+      <p class="dek">You do not need a van full of product to look ready on Saturday morning. You need a tight list, a table people can read from the sidewalk, and enough stock to last the rush without hauling half of it back home.</p>
+
+      <p>Most overbuying happens on Thursday night, when it still feels safer to pack &ldquo;just a little extra.&rdquo; By Sunday afternoon that extra is a second trip to the car, wilted greens, and a stall that looked busy but did not sell through. The fix is a short plan you finish at home, before anything goes in a crate.</p>
+
+      <h2>Start with a short Saturday list</h2>
+      <p>Write the list on Thursday, not in the parking lot. Three columns are enough: what you will sell, how many units you can reasonably move, and what has to come home if it does not sell. If you already keep notes from last weekend, start there. A <a href="#packing-list">one-page packing list for market mornings</a> is enough. You do not need a new system.</p>
+
+      <h3>Count last week&rsquo;s leftovers first</h3>
+      <p>If eight jars of jam came home last Sunday, do not pack twelve more just in case. Bring the leftovers to the front of the table and add two new flavors, not six. The same rule works for baked goods and produce: sell what is already packed before you bake or harvest a full new batch.</p>
+
+      <h3>Price before you pack</h3>
+      <p>Put the price on a small card while you are still at home. People walking by should be able to read it without asking, and you should not be doing math with a line forming. If you are unsure about a dozen muffins or a bag of citrus, use the same method from <a href="#pricing-muffins">how we price a dozen muffins for a Saturday stall</a> and write the number down once.</p>
+
+      <h2>Build a table people can read from the sidewalk</h2>
+      <p>The first three feet of the stall do most of the work. A clean header sign, one featured item at eye level, and prices that do not hide under the produce will stop more people than a table packed edge to edge.</p>
+
+      <div class="callout">If a walker has to come all the way up to the cloth to learn what you sell or what it costs, the stall is working too hard. Fix the sign and the front row first.</div>
+
+      <h3>Keep the height simple</h3>
+      <p>A folding table, a crate or two for dimension, and a cloth that reaches the grass is usually enough. Tall racks look impressive in photos and get in the way when the wind picks up. Leave a clear path for your own hands so you can restock without rearranging the whole display.</p>
+
+      <h3>Feature one thing, not everything</h3>
+      <p>Pick a single item for the front crate and give it air. The rest of the goods can sit in tighter rows behind it. If you want a photo for the week&rsquo;s post, shoot that front crate at home the night before, using the same setup as <a href="#kitchen-table-photos">photographing products on a kitchen table</a>.</p>
+
+      <h2>Pack out in under an hour</h2>
+      <p>Leave a clear bin for unsold goods and a second one for cash, cards, and the tablecloth. Collapse the display in the reverse order you built it. If teardown regularly takes longer than setup, the stall has too many pieces. Cut one prop or one extra crate before next Saturday, not after you are already tired.</p>
+
+      <p>The goal is a stall that looks considered, sells through most of what you brought, and lets you leave on time. Once the list, the prices, and the front of the table are decided at home, Saturday morning is just assembly.</p>
+
+      <div class="tags" aria-label="Tags">
+        <a href="#tag-farmers-market">farmers market</a>
+        <a href="#tag-stall-setup">stall setup</a>
+        <a href="#tag-inventory">inventory planning</a>
+        <a href="#tag-weekend-retail">weekend retail</a>
+        <a href="#tag-pricing">pricing</a>
+      </div>
+    </article>
+
+    <aside class="panel" aria-label="WordPress post settings">
+      <h2>WordPress post settings</h2>
+      <div class="status"><i></i> Ready to publish &middot; currently a demo draft</div>
+
+      <div class="field">
+        <div class="k">Permalink / slug</div>
+        <div class="v"><code>cedarandclerk.example/weekend-farmers-market-stall</code></div>
+      </div>
+      <div class="field">
+        <div class="k">SEO title <span class="count">54 / 60</span></div>
+        <div class="v">Weekend Stall Setup Without Overbuying | Cedar &amp; Clerk</div>
+      </div>
+      <div class="field">
+        <div class="k">Meta description <span class="count">146 / 155</span></div>
+        <div class="v">A practical Saturday stall plan: what to bring, how much to pack, how to price everything at home, and how to pack the table out in under an hour.</div>
+      </div>
+      <div class="field">
+        <div class="k">Categories</div>
+        <div class="v chips"><b>Guides</b> <span>Retail</span></div>
+      </div>
+      <div class="field">
+        <div class="k">Tags</div>
+        <div class="v">farmers market, stall setup, inventory planning, weekend retail, pricing</div>
+      </div>
+      <div class="field">
+        <div class="k">Featured image</div>
+        <div class="v">1400 &times; 788, JPEG, 187 KB, compressed for the page. Alt text describes the scene, no keyword stuffing.</div>
+      </div>
+      <div class="field">
+        <div class="k">Internal links</div>
+        <div class="v">3 related demo posts, using descriptive anchor text in the body (packing list, muffin pricing, product photos).</div>
+      </div>
+      <p class="note">This sidebar is a stand-in for the WordPress document and SEO panels. On a live site these fields are set in the editor before the post goes from unpublished to live.</p>
+    </aside>
+  </div>
+
+  <footer class="site">
+    <strong>Cedar &amp; Clerk</strong> is a made-up publication for this formatting sample.<br>
+    Built by Alex Mercer &middot; alexmercer.projects@gmail.com &middot; Not a live website
+  </footer>
+</body>
+</html>

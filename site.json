@@ -1,0 +1,31 @@
+{
+  "name": "Alex Mercer",
+  "business": "Alex Mercer Projects",
+  "email": "alexmercer.projects@gmail.com",
+  "mailSubject": "A project for Alex",
+  "url": "https://alexmercer-projects.github.io",
+  "noindex": false,
+  "initialGridCount": 9,
+  "filterGroups": {
+    "Website": "Websites",
+    "WordPress": "Websites",
+    "SEO": "Websites",
+    "Spreadsheet": "Spreadsheets",
+    "Ads": "Ads",
+    "Writing": "Writing",
+    "Technical writing": "Writing",
+    "Automation": "Automation",
+    "VA": "Automation"
+  },
+  "filterOrder": [
+    "Websites",
+    "Spreadsheets",
+    "Ads",
+    "Writing",
+    "Automation"
+  ],
+  "labelNotes": {
+    "Concept demo": "The business is made up. Names, prices and contact details are placeholders, and no results are claimed.",
+    "Spec sample": "An unpublished writing sample. Not client work, and not a published clip."
+  }
+}

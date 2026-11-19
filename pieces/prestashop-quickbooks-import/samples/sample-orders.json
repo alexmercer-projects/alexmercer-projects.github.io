@@ -1,0 +1,8 @@
+{"orders":[
+ {"id":"1041","reference":"XKBKNABJK","id_customer":"7","date_add":"2026-11-12 09:14:02","total_paid_tax_excl":"1245.00","total_shipping_tax_excl":"45.00","total_discounts_tax_excl":"0.00",
+  "associations":{"order_rows":[{"product_reference":"TEE-BLK-L","product_name":"Heavyweight Tee - Black, L","product_quantity":"60","unit_price_tax_excl":"8.50"},
+                                {"product_reference":"HOOD-GRY-M","product_name":"Fleece Hoodie - Grey, M","product_quantity":"40","unit_price_tax_excl":"17.25"}]}},
+ {"id":"1042","reference":"QOPLWZTRE","id_customer":"12","date_add":"2026-11-13 15:40:51","total_paid_tax_excl":"612.00","total_shipping_tax_excl":"0.00","total_discounts_tax_excl":"36.00",
+  "associations":{"order_rows":[{"product_reference":"CAP-NVY","product_name":"Twill Cap, Navy","product_quantity":"120","unit_price_tax_excl":"5.40"}]}}
+],
+"customers":{"7":{"company":"Example Boutique LLC","firstname":"Pat","lastname":"Example"},"12":{"company":"","firstname":"Sam","lastname":"Sample"}}}

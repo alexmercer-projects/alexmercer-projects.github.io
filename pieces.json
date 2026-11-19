@@ -1,0 +1,599 @@
+[
+  {
+    "id": "tamarack-budget-tracker",
+    "title": "Tamarack Build Co.: a project budget and payment tracker",
+    "short": "Budget tracker",
+    "category": "Spreadsheet",
+    "label": "Concept demo",
+    "year": 2026,
+    "folder": "tamarack-budget-tracker",
+    "summary": "A budget and payment tracker for a home builder, as a live dashboard and a real Excel file. Budget vs paid by category, a filterable payments log, change orders and missing-receipt flags, all done with formulas.",
+    "cover": "tamarack-budget-tracker/cover.webp",
+    "featured": true,
+    "coverWide": "tamarack-budget-tracker/cover-wide.webp",
+    "coverAlt": "Tamarack Build Co. tracker dashboard: remaining balance, revised budget, paid to date and missing receipts",
+    "demo": "tamarack-budget-tracker/demo/index.html",
+    "demoLabel": "Open the live dashboard",
+    "downloads": [
+      "tamarack-budget-tracker/samples/Tamarack-budget-tracker-DEMO.xlsx",
+      "tamarack-budget-tracker/samples/Tamarack-budget-tracker-DEMO.pdf"
+    ],
+    "gallery": [
+      {
+        "src": "tamarack-budget-tracker/screenshots/detail-budget.webp",
+        "alt": "Budget against paid, by trade, with a progress bar per category"
+      },
+      {
+        "src": "tamarack-budget-tracker/screenshots/detail-payments.webp",
+        "alt": "Payments log with filters and missing-receipt flags"
+      },
+      {
+        "src": "tamarack-budget-tracker/screenshots/detail-workbook.webp",
+        "alt": "The Excel workbook's Budget vs Paid tab"
+      },
+      {
+        "src": "tamarack-budget-tracker/screenshots/mobile.webp",
+        "alt": "The dashboard on a phone"
+      }
+    ],
+    "featuredTitle": "Tamarack Build Co. budget and payment tracker",
+    "featuredLine": "A live dashboard and a real Excel file for a home builder.",
+    "coverPhone": "tamarack-budget-tracker/cover-phone.webp"
+  },
+  {
+    "id": "bramblewick-holiday-ads",
+    "title": "Bramblewick Gift Co.: holiday Facebook ads",
+    "short": "Facebook ad set",
+    "category": "Ads",
+    "label": "Concept demo",
+    "year": 2026,
+    "folder": "bramblewick-holiday-ads",
+    "summary": "Six Facebook feed ads for a gift shop, with the images, three copy options per line, a Christmas run calendar and a test plan.",
+    "cover": "bramblewick-holiday-ads/cover.webp",
+    "coverAlt": "Bramblewick Gift Co. ad-set page, headline: Six ads for the five weeks before Christmas",
+    "demo": "bramblewick-holiday-ads/demo/index.html",
+    "demoLabel": "Open the ad set",
+    "downloads": [
+      "bramblewick-holiday-ads/samples/Bramblewick-holiday-Facebook-ads-DEMO.pdf"
+    ],
+    "gallery": [
+      {
+        "src": "bramblewick-holiday-ads/demo/creatives/bramblewick-ad-01.jpg",
+        "alt": "Bramblewick holiday feed ad 1 of 6"
+      },
+      {
+        "src": "bramblewick-holiday-ads/demo/creatives/bramblewick-ad-02.jpg",
+        "alt": "Bramblewick holiday feed ad 2 of 6"
+      },
+      {
+        "src": "bramblewick-holiday-ads/demo/creatives/bramblewick-ad-03.jpg",
+        "alt": "Bramblewick holiday feed ad 3 of 6"
+      },
+      {
+        "src": "bramblewick-holiday-ads/demo/creatives/bramblewick-ad-04.jpg",
+        "alt": "Bramblewick holiday feed ad 4 of 6"
+      },
+      {
+        "src": "bramblewick-holiday-ads/demo/creatives/bramblewick-ad-05.jpg",
+        "alt": "Bramblewick holiday feed ad 5 of 6"
+      },
+      {
+        "src": "bramblewick-holiday-ads/demo/creatives/bramblewick-ad-06.jpg",
+        "alt": "Bramblewick holiday feed ad 6 of 6"
+      },
+      {
+        "src": "bramblewick-holiday-ads/screenshots/bramblewick-flight.webp",
+        "alt": "Run calendar from late November to Christmas Eve"
+      }
+    ],
+    "galleryStyle": "ads",
+    "features": [
+      "Six finished 4:5 feed ad images (1440 x 1800)",
+      "Copy bank: 18 primary-text and 18 headline variants",
+      "Flight calendar from late November to December 24, with Black Friday, Cyber Monday and a ship-by date marked",
+      "A setup and testing plan (two ad sets, one change at a time, twice-weekly checks)",
+      "One-page PDF of the set"
+    ]
+  },
+  {
+    "id": "hollis-pike-repair",
+    "title": "Hollis & Pike Home Repair: a one-page trades site",
+    "short": "Trades website",
+    "category": "Website",
+    "label": "Concept demo",
+    "year": 2026,
+    "folder": "hollis-pike-home-repair",
+    "summary": "A one-page site for a handyman and appliance repair business: tap-to-call, starting prices, a service-area map, a photo quote form and an FAQ.",
+    "cover": "hollis-pike-home-repair/cover.webp",
+    "coverAlt": "Hollis and Pike Home Repair one-page site, headline: The little things, fixed properly",
+    "demo": "hollis-pike-home-repair/demo/index.html",
+    "demoLabel": "Open the live site",
+    "downloads": [
+      "hollis-pike-home-repair/samples/Hollis-Pike-home-repair-website-DEMO.pdf"
+    ],
+    "gallery": [
+      {
+        "src": "hollis-pike-home-repair/screenshots/detail-services.webp",
+        "alt": "Starting prices by job type"
+      },
+      {
+        "src": "hollis-pike-home-repair/screenshots/detail-quote.webp",
+        "alt": "Photo quote form"
+      },
+      {
+        "src": "hollis-pike-home-repair/screenshots/mobile.webp",
+        "alt": "The site on a phone, with the call button up top"
+      }
+    ]
+  },
+  {
+    "id": "wrenmill-community-house",
+    "title": "Wrenmill Community House: a nonprofit homepage",
+    "short": "Nonprofit website",
+    "category": "Website",
+    "label": "Concept demo",
+    "year": 2026,
+    "folder": "wrenmill-community-house",
+    "summary": "A one-page homepage for a small-town community house: this week's events, programs, hall rental, volunteer sign-up and a donate block.",
+    "cover": "wrenmill-community-house/cover.webp",
+    "coverAlt": "Wrenmill Community House homepage with an illustrated hall",
+    "demo": "wrenmill-community-house/demo/index.html",
+    "demoLabel": "Open the live homepage",
+    "downloads": [
+      "wrenmill-community-house/samples/Wrenmill-Community-House-homepage-DEMO.pdf"
+    ],
+    "gallery": [
+      {
+        "src": "wrenmill-community-house/screenshots/detail-programs.webp",
+        "alt": "Programs that stay on the calendar"
+      },
+      {
+        "src": "wrenmill-community-house/screenshots/detail-hall.webp",
+        "alt": "Hall rental rates and desk hours"
+      },
+      {
+        "src": "wrenmill-community-house/screenshots/mobile.webp",
+        "alt": "The homepage on a phone"
+      }
+    ]
+  },
+  {
+    "id": "juniper-rye",
+    "title": "Juniper & Rye Bakehouse",
+    "short": "Bakery website",
+    "category": "Website",
+    "label": "Concept demo",
+    "year": 2026,
+    "folder": "juniper-rye-bakehouse",
+    "summary": "A one-page site for a bakery: today's bake, the menu, preorders and hours.",
+    "cover": "juniper-rye-bakehouse/cover.webp",
+    "coverAlt": "Juniper and Rye Bakehouse homepage, headline: Slow bread for fast mornings",
+    "demo": "juniper-rye-bakehouse/demo/index.html",
+    "demoLabel": "Open the live site",
+    "downloads": [],
+    "gallery": [
+      {
+        "src": "juniper-rye-bakehouse/screenshots/juniper-rye-today.webp",
+        "alt": "On the rack today: the bake board"
+      },
+      {
+        "src": "juniper-rye-bakehouse/screenshots/juniper-rye-menu.webp",
+        "alt": "The three-column menu"
+      },
+      {
+        "src": "juniper-rye-bakehouse/screenshots/mobile.webp",
+        "alt": "The site on a phone"
+      }
+    ],
+    "features": [
+      "Today's bake board with items and prices",
+      "Full menu",
+      "Preorder-for-pickup section",
+      "Hours and location block",
+      "Self-hosted fonts (Fraunces, DM Sans)"
+    ]
+  },
+  {
+    "id": "cedar-clerk-wp-formatting",
+    "title": "Cedar & Clerk: WordPress article formatting",
+    "short": "WordPress formatting",
+    "category": "WordPress",
+    "label": "Concept demo",
+    "year": 2026,
+    "folder": "cedar-clerk-wp-formatting",
+    "summary": "A fully formatted WordPress article with SEO fields, a featured image, internal links and a reusable checklist for the rest of a batch.",
+    "cover": "cedar-clerk-wp-formatting/cover.webp",
+    "coverAlt": "Cedar and Clerk formatted article beside a WordPress settings panel",
+    "demo": "cedar-clerk-wp-formatting/demo/index.html",
+    "demoLabel": "Open the formatted article",
+    "downloads": [
+      "cedar-clerk-wp-formatting/samples/Cedar-Clerk-WP-formatting-sample-DEMO.pdf"
+    ],
+    "gallery": [
+      {
+        "src": "cedar-clerk-wp-formatting/screenshots/desktop-article.webp",
+        "alt": "The formatted article with its featured image"
+      },
+      {
+        "src": "cedar-clerk-wp-formatting/screenshots/pdf-page-2.webp",
+        "alt": "Page 2 of the PDF: the formatting checklist for the rest of a batch"
+      },
+      {
+        "src": "cedar-clerk-wp-formatting/screenshots/phone-top.webp",
+        "alt": "The article on a phone"
+      }
+    ],
+    "features": [
+      "Clean H2/H3 structure and a readable long-form layout",
+      "Featured image with alt text (1400 x 788, compressed)",
+      "SEO title (54/60) and meta description (146/155)",
+      "Categories, tags, a clean slug, and three descriptive internal links",
+      "Page 2 of the PDF is a formatting checklist, including a mixed-batch order"
+    ]
+  },
+  {
+    "id": "ordinary-mechanics-explainer",
+    "title": "Ordinary Mechanics: a YouTube explainer script",
+    "short": "YouTube script",
+    "category": "Writing",
+    "label": "Concept demo",
+    "year": 2026,
+    "folder": "ordinary-mechanics-explainer",
+    "summary": "A full timed explainer script on why your ears pop on planes. Title and thumbnail options, a 15-second hook, sourced voiceover and a paste-ready description.",
+    "cover": "ordinary-mechanics-explainer/cover.webp",
+    "coverAlt": "Ordinary Mechanics script page, headline: Why your ears pop at 35,000 feet",
+    "demo": "ordinary-mechanics-explainer/demo/index.html",
+    "demoLabel": "Open the script",
+    "downloads": [
+      "ordinary-mechanics-explainer/samples/Ordinary-Mechanics-YouTube-explainer-script-DEMO.pdf"
+    ],
+    "gallery": [
+      {
+        "src": "ordinary-mechanics-explainer/screenshots/detail-titles.webp",
+        "alt": "Title and thumbnail options, with the pick marked"
+      },
+      {
+        "src": "ordinary-mechanics-explainer/screenshots/detail-hook.webp",
+        "alt": "The first 15 seconds, broken down"
+      },
+      {
+        "src": "ordinary-mechanics-explainer/screenshots/detail-script.webp",
+        "alt": "Timed two-column script: voiceover beside visuals"
+      }
+    ]
+  },
+  {
+    "id": "kettle-creek-ads",
+    "title": "Kettle Creek Heating & Air: short-form ad scripts",
+    "short": "Ad script pack",
+    "category": "Ads",
+    "label": "Concept demo",
+    "year": 2026,
+    "folder": "kettle-creek-heating-air",
+    "summary": "Twelve hooks and three timed 9:16 video ad scripts for a heating and air company, plus a test plan.",
+    "cover": "kettle-creek-heating-air/cover.webp",
+    "coverAlt": "Kettle Creek ad script pack, headline: Twelve hooks. Three scripts. One cold night.",
+    "demo": "kettle-creek-heating-air/demo/index.html",
+    "demoLabel": "Open the script pack",
+    "downloads": [
+      "kettle-creek-heating-air/samples/Kettle-Creek-ad-script-pack-DEMO.pdf"
+    ],
+    "gallery": [
+      {
+        "src": "kettle-creek-heating-air/screenshots/kettle-creek-hooks.webp",
+        "alt": "The hook bank, grouped by angle"
+      },
+      {
+        "src": "kettle-creek-heating-air/screenshots/kettle-creek-scripts.webp",
+        "alt": "A timed 9:16 script"
+      },
+      {
+        "src": "kettle-creek-heating-air/screenshots/mobile.webp",
+        "alt": "The pack on a phone"
+      }
+    ]
+  },
+  {
+    "id": "pine-ember-etsy-listing",
+    "title": "Pine & Ember: Etsy listing makeover",
+    "short": "Etsy listing",
+    "category": "Writing",
+    "label": "Concept demo",
+    "year": 2026,
+    "folder": "pine-ember-etsy-listing",
+    "summary": "A before-and-after Etsy listing rewrite for a candle shop, checked against Etsy's title, tag and photo limits.",
+    "cover": "pine-ember-etsy-listing/cover.webp",
+    "coverAlt": "Pine and Ember Etsy listing before and after, with rule checks",
+    "demo": "pine-ember-etsy-listing/demo/index.html",
+    "demoLabel": "Open the before and after",
+    "downloads": [
+      "pine-ember-etsy-listing/samples/etsy-listing-makeover-demo.pdf"
+    ],
+    "gallery": []
+  },
+  {
+    "id": "ridgeline-claims-copy-pack",
+    "title": "Ridgeline Claims: B2B short-form copy pack",
+    "short": "B2B copy pack",
+    "category": "Writing",
+    "label": "Spec sample",
+    "year": 2026,
+    "folder": "ridgeline-claims-copy-pack",
+    "summary": "Email, web and social copy for a claims-workflow software company, written for a VP of Claims at a regional insurer.",
+    "cover": "ridgeline-claims-copy-pack/cover.webp",
+    "coverAlt": "Ridgeline Claims email subject line and landing-page headline: Every storm claim, one queue",
+    "demo": null,
+    "downloads": [
+      "ridgeline-claims-copy-pack/samples/Sample-4-B2B-ShortForm-ClaimsTech-SPEC.pdf"
+    ],
+    "reading": "ridgeline-claims-copy-pack/samples/Sample-4-B2B-ShortForm-ClaimsTech-SPEC.md",
+    "gallery": [
+      {
+        "src": "ridgeline-claims-copy-pack/screenshots/page-1.webp",
+        "alt": "Page 1 of the PDF"
+      },
+      {
+        "src": "ridgeline-claims-copy-pack/screenshots/page-2.webp",
+        "alt": "Page 2 of the PDF"
+      }
+    ]
+  },
+  {
+    "id": "spec-writing-pack",
+    "title": "Spec writing pack: blog, email and an SEO page",
+    "short": "Writing pack",
+    "category": "Writing",
+    "label": "Spec sample",
+    "year": 2026,
+    "folder": "spec-writing-pack",
+    "summary": "Three writing samples: a blog post on artist statements, a newsletter and social set repurposed from it, and an SEO category page on impact-resistant shingles.",
+    "cover": "spec-writing-pack/cover.webp",
+    "coverAlt": "Three writing samples: a blog post, an email and an SEO page",
+    "demo": null,
+    "downloads": [
+      {
+        "file": "spec-writing-pack/samples/Sample-1-Blog-Artist-Statement.pdf",
+        "label": "Download Sample 1 PDF: blog post"
+      },
+      {
+        "file": "spec-writing-pack/samples/Sample-2-Email-and-Social-Repurpose.pdf",
+        "label": "Download Sample 2 PDF: email and social"
+      },
+      {
+        "file": "spec-writing-pack/samples/Sample-3-SEO-Category-Page-Roofing.pdf",
+        "label": "Download Sample 3 PDF: SEO page"
+      }
+    ],
+    "gallery": [
+      {
+        "src": "spec-writing-pack/screenshots/sample-1.webp",
+        "alt": "Sample 1: How to Write an Artist Statement Collectors Actually Read"
+      },
+      {
+        "src": "spec-writing-pack/screenshots/sample-2.webp",
+        "alt": "Sample 2: the email and social repurpose"
+      },
+      {
+        "src": "spec-writing-pack/screenshots/sample-3.webp",
+        "alt": "Sample 3: an SEO category page on impact-resistant shingles"
+      }
+    ],
+    "galleryStyle": "pages"
+  },
+  {
+    "id": "ridgeline-plumbing-local-seo",
+    "title": "Ridgeline Plumbing Co.: local SEO before and after",
+    "short": "Local SEO demo",
+    "category": "SEO",
+    "label": "Concept demo",
+    "year": 2026,
+    "folder": "ridgeline-plumbing-local-seo",
+    "summary": "A before-and-after on-page SEO rewrite for a plumber's site: titles, meta descriptions, headings, alt text, business details and tap-to-call.",
+    "cover": "ridgeline-plumbing-local-seo/cover.webp",
+    "coverAlt": "Local SEO scorecard comparing before and after on-page checks",
+    "demo": "ridgeline-plumbing-local-seo/demo/case-study.html",
+    "demoLabel": "Open the case sheet",
+    "extraLinks": [
+      {
+        "label": "Before site",
+        "href": "ridgeline-plumbing-local-seo/demo/before/index.html"
+      },
+      {
+        "label": "After site",
+        "href": "ridgeline-plumbing-local-seo/demo/after/index.html"
+      }
+    ],
+    "downloads": [
+      "ridgeline-plumbing-local-seo/samples/local-seo-before-after-demo.pdf"
+    ],
+    "gallery": [
+      {
+        "src": "ridgeline-plumbing-local-seo/screenshots/before.webp",
+        "alt": "Before: the made-up plumber's homepage with missing titles and no tap-to-call"
+      },
+      {
+        "src": "ridgeline-plumbing-local-seo/screenshots/after.webp",
+        "alt": "After: the same page with a clear title, one H1 and tap-to-call"
+      }
+    ]
+  },
+  {
+    "id": "painter-facebook-posting-plan",
+    "title": "Facebook posting plan for a painting company",
+    "short": "Facebook posting plan",
+    "category": "Ads",
+    "label": "Concept demo",
+    "year": 2026,
+    "folder": "painter-facebook-posting-plan",
+    "summary": "A one-page organic Facebook plan for a house painter, with five ready-to-use post drafts.",
+    "cover": "painter-facebook-posting-plan/cover.webp",
+    "coverAlt": "A finished Facebook before-and-after post for a made-up painting company, beside the four post types to rotate",
+    "demo": null,
+    "downloads": [
+      "painter-facebook-posting-plan/samples/Facebook-posting-plan-EXAMPLE.pdf"
+    ],
+    "reading": "painter-facebook-posting-plan/samples/facebook-posting-plan-EXAMPLE.md",
+    "gallery": []
+  },
+  {
+    "id": "writer-civic-va-setup",
+    "title": "Week-1 VA setup for a writer and civic lead",
+    "short": "VA operating setup",
+    "category": "VA",
+    "label": "Concept demo",
+    "year": 2026,
+    "folder": "writer-civic-va-setup",
+    "summary": "A week-one system that turns voice notes into tasks, stages publishing work and keeps civic follow-ups from slipping.",
+    "cover": "writer-civic-va-setup/cover.webp",
+    "coverAlt": "Week-1 operating setup page with a tracker table",
+    "demo": "writer-civic-va-setup/demo/index.html",
+    "demoLabel": "Open the setup page",
+    "downloads": [],
+    "gallery": [
+      {
+        "src": "writer-civic-va-setup/screenshots/mobile.webp",
+        "alt": "The setup page on a phone"
+      }
+    ]
+  },
+  {
+    "id": "prestashop-quickbooks-import",
+    "title": "PrestaShop to QuickBooks Desktop import",
+    "short": "Order import script",
+    "category": "Automation",
+    "label": "Spec sample",
+    "year": 2026,
+    "folder": "prestashop-quickbooks-import",
+    "summary": "A PHP script that turns PrestaShop orders into a QuickBooks Desktop IIF invoice file, with test orders you can run offline.",
+    "cover": "prestashop-quickbooks-import/cover.webp",
+    "coverAlt": "A sample PrestaShop order beside the QuickBooks invoice lines it becomes",
+    "demo": null,
+    "downloads": [
+      "prestashop-quickbooks-import/samples/prestashop-quickbooks-sample.zip",
+      "prestashop-quickbooks-import/samples/ps2qb.php"
+    ],
+    "gallery": [],
+    "snippets": [
+      {
+        "file": "prestashop-quickbooks-import/samples/sample-orders.iif",
+        "caption": "sample-orders.iif: what the script wrote for the two test orders"
+      }
+    ],
+    "labelNote": "A sample script with made-up test orders. Not a paid implementation, and not connected to anyone's QuickBooks file."
+  },
+  {
+    "id": "roofing-claim-job-tracker",
+    "title": "Roofing claim and job tracker",
+    "short": "Roofing job tracker",
+    "category": "Spreadsheet",
+    "label": "Concept demo",
+    "year": 2026,
+    "folder": "roofing-claim-job-tracker",
+    "summary": "An Excel tracker for insurance-claim roofing jobs, plus a plain-language homeowner leave-behind.",
+    "cover": "roofing-claim-job-tracker/cover.webp",
+    "coverAlt": "The Jobs sheet of the roofing tracker with three SAMPLE rows",
+    "demo": null,
+    "downloads": [
+      "roofing-claim-job-tracker/samples/Roofing-Claim-Job-Tracker-SAMPLE.xlsx",
+      "roofing-claim-job-tracker/samples/Hail-Claim-Homeowner-Leave-Behind-SAMPLE.pdf"
+    ],
+    "reading": "roofing-claim-job-tracker/samples/Hail-Claim-Homeowner-Leave-Behind-SAMPLE.md",
+    "readingTitle": "The homeowner leave-behind",
+    "gallery": []
+  },
+  {
+    "id": "keyset-vs-offset",
+    "title": "OFFSET pagination gets slower every page. Keyset doesn't.",
+    "short": "Keyset pagination",
+    "category": "Technical writing",
+    "label": "Spec sample",
+    "year": 2026,
+    "folder": "keyset-vs-offset-postgresql",
+    "summary": "A four-page write-up with a benchmark you can rerun. Skipping 1.9 million rows took 345 ms with OFFSET and 0.02 ms with keyset pagination.",
+    "cover": "keyset-vs-offset-postgresql/cover.webp",
+    "coverAlt": "Line chart: OFFSET query time climbs to 345 ms while keyset stays near zero",
+    "demo": null,
+    "downloads": [
+      "keyset-vs-offset-postgresql/samples/Keyset-vs-OFFSET-PostgreSQL-SAMPLE.pdf",
+      "keyset-vs-offset-postgresql/samples/keyset_bench.py"
+    ],
+    "gallery": [
+      {
+        "src": "keyset-vs-offset-postgresql/screenshots/keyset-pdf-p1.webp",
+        "alt": "Page 1 of the write-up"
+      },
+      {
+        "src": "keyset-vs-offset-postgresql/screenshots/keyset-pdf-p2.webp",
+        "alt": "Page 2 of the write-up"
+      }
+    ],
+    "galleryStyle": "pages",
+    "snippets": [
+      {
+        "file": "keyset-vs-offset-postgresql/samples/keyset_bench.py",
+        "lines": [
+          1,
+          32
+        ],
+        "caption": "The first lines of keyset_bench.py"
+      }
+    ],
+    "labelNote": "An unpublished technical write-up with a benchmark you can rerun. Not client work, and not a published clip."
+  },
+  {
+    "id": "mcp-stateless-revision",
+    "title": "MCP dropped the session. What changes for server builders.",
+    "short": "MCP explainer",
+    "category": "Technical writing",
+    "label": "Spec sample",
+    "year": 2026,
+    "folder": "mcp-stateless-revision",
+    "summary": "An explainer of the Model Context Protocol's 2026 revision to a stateless model, written from the official spec.",
+    "cover": "mcp-stateless-revision/cover.webp",
+    "coverAlt": "Article title: MCP dropped the session. What changes for server builders.",
+    "demo": "mcp-stateless-revision/demo/index.html",
+    "demoLabel": "Open the HTML article",
+    "downloads": [
+      "mcp-stateless-revision/samples/MCP-Stateless-Revision-SAMPLE.pdf"
+    ],
+    "reading": "mcp-stateless-revision/samples/MCP-stateless-revision-SAMPLE.md",
+    "gallery": []
+  },
+  {
+    "id": "cadaver-synod-history",
+    "title": "The Pope Who Was Put on Trial Nine Months After He Died",
+    "short": "History short",
+    "category": "Writing",
+    "label": "Spec sample",
+    "year": 2026,
+    "folder": "cadaver-synod-history",
+    "summary": "A 600-word history short about the Cadaver Synod of 897, written from public historical sources.",
+    "cover": "cadaver-synod-history/cover.webp",
+    "coverAlt": "Typeset title: The Pope Who Was Put on Trial Nine Months After He Died",
+    "demo": null,
+    "downloads": [
+      "cadaver-synod-history/samples/The-Pope-Who-Was-Put-on-Trial-SAMPLE.pdf"
+    ],
+    "reading": "cadaver-synod-history/samples/The-Pope-Who-Was-Put-on-Trial.md",
+    "gallery": []
+  },
+  {
+    "id": "buster-keaton-bio-podcast",
+    "title": "Buster Keaton: mini bio and podcast structure",
+    "short": "Bio and show outline",
+    "category": "Writing",
+    "label": "Spec sample",
+    "year": 2026,
+    "folder": "buster-keaton-bio-podcast",
+    "summary": "An IMDb-style short bio, a longer mini bio and a 45-minute podcast run-of-show about Buster Keaton.",
+    "cover": "buster-keaton-bio-podcast/cover.webp",
+    "coverAlt": "A short Buster Keaton bio above a 45-minute podcast run of show",
+    "demo": null,
+    "downloads": [
+      "buster-keaton-bio-podcast/samples/Buster-Keaton-bio-and-podcast-outline-SAMPLE.pdf"
+    ],
+    "reading": "buster-keaton-bio-podcast/samples/sample-imdb-bio-and-podcast-structure.md",
+    "gallery": [],
+    "labelNote": "A format sample about a historical public figure, built from public sources. Not a client biography."
+  }
+]
