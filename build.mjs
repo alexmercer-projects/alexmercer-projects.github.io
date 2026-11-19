@@ -444,6 +444,10 @@ fs.writeFileSync(path.join(DIST, '404.html'), head({ title: `Page not found | ${
   `<main id="main"><div class="wrap" style="padding-block:72px 96px"><p class="label" style="color:var(--muted)">Error 404</p><h1 style="font-weight:800;font-size:clamp(40px,9vw,88px);letter-spacing:-.045em;line-height:.92;margin:12px 0 20px">That page isn't here.</h1><p style="font-size:19px;max-width:30em;margin-bottom:28px">The work and the email address are still where they were.</p><p style="display:flex;flex-wrap:wrap;gap:12px"><a class="btn btn--ink" href="index.html#work">See the work</a><a class="btn btn--accent" href="${mailto}">Email Alex</a></p></div></main>` + footer(''));
 // GitHub Pages: .nojekyll serves every file as it is, without a Jekyll pass.
 fs.writeFileSync(path.join(DIST, '.nojekyll'), '');
+// A CNAME file keeps the custom domain attached when Actions publishes dist/.
+if (SITE_URL) {
+  fs.writeFileSync(path.join(DIST, 'CNAME'), `${new URL(SITE_URL).hostname}\n`);
+}
 fs.writeFileSync(path.join(DIST, 'robots.txt'), site.noindex ? 'User-agent: *\nDisallow: /\n' : `User-agent: *\nAllow: /\n${SITE_URL ? `\nSitemap: ${SITE_URL}/sitemap.xml\n` : ''}`);
 if (SITE_URL) {
   const urls = ['/', ...pieces.map((p) => `/work/${p.id}/`)];

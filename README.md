@@ -30,7 +30,7 @@ Then open http://localhost:8000. Opening `dist/index.html` straight from disk mo
 
 ## Live site
 
-The site is at [https://alexmercer-projects.github.io/](https://alexmercer-projects.github.io/).
+The site is at [https://alexmercerprojects.com/](https://alexmercerprojects.com/).
 
 `url` in `site.json` is set to that address so canonical links, the sitemap and the share image use the full URL. A GitHub Actions workflow runs `node build.mjs` on every push to `main` and publishes the `dist` folder to GitHub Pages.
 
