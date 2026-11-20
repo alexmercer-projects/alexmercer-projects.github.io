@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alderwick Family Clinic: WCAG 2.2 AA accessibility audit (concept demo)</title>
+  <meta name="description" content="Concept demo of a WCAG 2.2 Level AA accessibility audit report for Alderwick Family Clinic, a fictional clinic website: severity summary, scope and method, 19 example findings mapped to success criteria, before-and-after code fixes, a remediation plan and a PDF note. Built by Alex Mercer.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#f3f1ea">
+  <meta property="og:title" content="Alderwick Family Clinic accessibility audit, concept demo">
+  <meta property="og:description" content="A sample WCAG 2.2 AA audit report for a made-up clinic website. The site doesn’t exist; every finding is an example.">
+  <meta property="og:type" content="website">
+  <link rel="preload" href="fonts/Geist.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/GeistMono.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2323407a'/%3E%3Cpath d='M16 7v18M7 16h18' stroke='%23f3f1ea' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+  <script>if(!/[?&]static\b/.test(location.search)&&!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('anim');</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <aside class="demo-bar" aria-label="About this demo">
+    <p><b>Concept demo by Alex Mercer.</b> Alderwick Family Clinic and its website are made up. Nothing was actually tested; every finding is an example.</p>
+    <a href="../index.html">Back to the portfolio</a>
+  </aside>
+
+  <header class="top">
+    <div class="wrap top__inner">
+      <a class="logo" href="#main">
+        <svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="9" fill="currentColor"/><path d="M20 9.5v21M9.5 20h21" stroke="#f3f1ea" stroke-width="4.6" stroke-linecap="round"/></svg>
+        <span class="logo__word"><span>Alderwick Family Clinic</span><small>Accessibility audit</small></span>
+      </a>
+      <nav class="top__nav" aria-label="Report sections">
+        <a href="#summary">Summary</a>
+        <a href="#scope">Scope</a>
+        <a href="#findings">Findings</a>
+        <a href="#fixes">Fixes</a>
+        <a href="#plan">Plan</a>
+        <a href="#pdf">PDFs</a>
+      </nav>
+      <a class="btn btn--dl top__dl" href="Alderwick-accessibility-audit-DEMO.pdf"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19.5h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>PDF<span class="sr"> of this report</span></span></a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-h">
+      <div class="wrap">
+        <div class="hero__head">
+          <div>
+            <p class="eyebrow">WCAG 2.2 Level AA audit report</p>
+            <h1 id="hero-h">19 barriers on the clinic site. <em>3 stop patients cold.</em></h1>
+            <p class="hero__lede">A keyboard user can’t get out of the booking window, the appointment form has no labels, and the patient portal won’t accept a pasted password. Here’s each issue, who it affects, the success criterion it fails, and the fix.</p>
+          </div>
+          <div class="proj">
+          <dl>
+            <div><dt>Site</dt><dd>alderwickclinic.example</dd></div>
+            <div><dt>Standard</dt><dd>WCAG 2.2, Level A + AA</dd></div>
+            <div><dt>Scope</dt><dd>6 pages + 1 PDF</dd></div>
+            <div><dt>Report date</dt><dd>Nov 18, 2026</dd></div>
+          </dl>
+          <p class="proj__stamp"><span class="stamp">Example findings</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" id="summary" aria-labelledby="sum-h">
+      <div class="wrap">
+        <div class="sec__head rv">
+          <p class="eyebrow">Executive summary</p>
+          <h2 id="sum-h">Where the site stands</h2>
+        </div>
+        <div class="kpis">
+          <div class="kpi kpi--lead rv">
+            <p class="kpi__k">Issues found</p>
+            <p class="kpi__v">19</p>
+            <p class="kpi__s">22 success criteria failed: 11 issues at Level A, 8 at Level AA</p>
+          </div>
+          <div class="kpi kpi--critical rv">
+            <p class="kpi__k"><span class="sev sev--critical">Critical</span></p>
+            <p class="kpi__v">3</p>
+            <p class="kpi__s">Stops some people from finishing a key task (booking, logging in) at all.</p>
+          </div>
+          <div class="kpi kpi--high rv">
+            <p class="kpi__k"><span class="sev sev--high">High</span></p>
+            <p class="kpi__v">7</p>
+            <p class="kpi__s">A key task is possible but hard, or content is missing for some users.</p>
+          </div>
+          <div class="kpi kpi--medium rv">
+            <p class="kpi__k"><span class="sev sev--medium">Medium</span></p>
+            <p class="kpi__v">6</p>
+            <p class="kpi__s">Causes real friction or confusion, usually with a workaround.</p>
+          </div>
+          <div class="kpi kpi--low rv">
+            <p class="kpi__k"><span class="sev sev--low">Low</span></p>
+            <p class="kpi__v">3</p>
+            <p class="kpi__s">Minor, but quick to fix and worth doing.</p>
+          </div>
+        </div>
+        <div class="sumrow">
+          <figure class="card bars rv">
+            <figcaption class="card__h">Issues by severity</figcaption>
+            <div class="stack" aria-hidden="true"><span class="stack__s stack__s--critical" style="flex:3"></span><span class="stack__s stack__s--high" style="flex:7"></span><span class="stack__s stack__s--medium" style="flex:6"></span><span class="stack__s stack__s--low" style="flex:3"></span></div>
+            <ul class="legend"><li><span class="dot dot--critical" aria-hidden="true"></span>Critical <b>3</b></li><li><span class="dot dot--high" aria-hidden="true"></span>High <b>7</b></li><li><span class="dot dot--medium" aria-hidden="true"></span>Medium <b>6</b></li><li><span class="dot dot--low" aria-hidden="true"></span>Low <b>3</b></li></ul>
+            <p class="card__h card__h--2">Findings by WCAG principle (some touch two)</p>
+            <ul class="pbars"><li><span class="pbars__k">Perceivable</span><span class="pbars__t" aria-hidden="true"><span style="width:100.0%"></span></span><b>10</b></li><li><span class="pbars__k">Operable</span><span class="pbars__t" aria-hidden="true"><span style="width:70.0%"></span></span><b>7</b></li><li><span class="pbars__k">Understandable</span><span class="pbars__t" aria-hidden="true"><span style="width:50.0%"></span></span><b>5</b></li><li><span class="pbars__k">Robust</span><span class="pbars__t" aria-hidden="true"><span style="width:30.0%"></span></span><b>3</b></li></ul>
+            <p class="bars__new"><span class="new">New in 2.2</span> 4 findings fall under criteria added in WCAG 2.2 (2.4.11, 2.5.8, 3.2.6, 3.3.8). Older audits and many scanners don’t check these.</p>
+          </figure>
+          <div class="card verdict rv">
+            <p class="card__h">Bottom line</p>
+            <p class="verdict__t">The site doesn’t meet WCAG 2.2 AA today. The good news is that most fixes live in shared templates and one stylesheet, so roughly 16–23 hours of development, plus captioning and PDF work, clears every Critical and High issue across the whole site.</p>
+            <p class="card__h card__h--2">Fix these first</p>
+            <ol class="first"><li><a href="#f-01"><span class="first__n">01</span><span>The “Book online” window can’t be closed or left with a keyboard</span></a></li><li><a href="#f-02"><span class="first__n">02</span><span>Appointment form fields have no labels, only placeholder text</span></a></li><li><a href="#f-03"><span class="first__n">03</span><span>Patient portal login blocks paste and password managers</span></a></li></ol>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" id="scope" aria-labelledby="scope-h">
+      <div class="wrap">
+        <div class="sec__head rv">
+          <p class="eyebrow">Scope and method</p>
+          <h2 id="scope-h">What was checked, and how</h2>
+          <p class="sec__lede">The pages were picked around the tasks patients come to do: find a doctor, book, log in, pay, and fill in the intake form. Each one goes through the same six checks. For this demo the site is fictional, so this describes the method, not results from real testing.</p>
+        </div>
+        <div class="scope">
+          <div class="card rv">
+            <table class="pages">
+              <caption class="card__h">Pages in scope</caption>
+              <thead><tr><th scope="col">Page</th><th scope="col">Path</th><th scope="col">What’s on it</th></tr></thead>
+              <tbody><tr><th scope="row">Home</th><td><code>/</code></td><td>Hero, services, insurance strip, welcome video, footer</td></tr><tr><th scope="row">Find a provider</th><td><code>/providers</code></td><td>12 provider cards with photos, filters</td></tr><tr><th scope="row">Book an appointment</th><td><code>/book</code></td><td>Request form, “Book online” window, calendar</td></tr><tr><th scope="row">Patient portal login</th><td><code>/portal/login</code></td><td>Username and password form</td></tr><tr><th scope="row">Pay a bill</th><td><code>/billing/pay</code></td><td>Payment form, statement lookup</td></tr><tr><th scope="row">Información para pacientes</th><td><code>/es</code></td><td>Spanish patient-information page</td></tr><tr><th scope="row">New-patient intake form</th><td><code>intake-form.pdf</code></td><td>4-page fillable PDF</td></tr></tbody>
+            </table>
+          </div>
+          <ol class="method"><li class="rv"><span class="method__n" aria-hidden="true">01</span><div><h3>Automated scan</h3><p>Run axe-core and Lighthouse on every page at desktop and phone widths. A scan catches roughly a third of issues, so it’s where the audit starts, not where it ends.</p></div></li><li class="rv"><span class="method__n" aria-hidden="true">02</span><div><h3>Keyboard pass</h3><p>Use every page with only Tab, Shift+Tab, Enter, Space, Esc and the arrow keys. Can you reach everything, see where you are, and get out of every popup?</p></div></li><li class="rv"><span class="method__n" aria-hidden="true">03</span><div><h3>Screen reader pass</h3><p>Book an appointment and log in with NVDA and Firefox on Windows and VoiceOver and Safari on iPhone. Check names, roles, headings, links and error messages.</p></div></li><li class="rv"><span class="method__n" aria-hidden="true">04</span><div><h3>Zoom and reflow</h3><p>Zoom to 200% and 400%, and check the layout at 320 CSS px wide. Turn on the text-spacing overrides and look for clipped or overlapping text.</p></div></li><li class="rv"><span class="method__n" aria-hidden="true">05</span><div><h3>Color and contrast</h3><p>Measure text and control colors with a contrast checker, and check that no information depends on color alone.</p></div></li><li class="rv"><span class="method__n" aria-hidden="true">06</span><div><h3>Documents and media</h3><p>Check PDFs with a PDF accessibility checker and the reading-order tools in a PDF editor. Check videos for captions and transcripts.</p></div></li></ol>
+        </div>
+        <div class="sevdefs rv">
+          <h3 class="card__h">How severity is rated</h3>
+          <dl><div><dt><span class="sev sev--critical">Critical</span></dt><dd>Stops some people from finishing a key task (booking, logging in) at all.</dd></div><div><dt><span class="sev sev--high">High</span></dt><dd>A key task is possible but hard, or content is missing for some users.</dd></div><div><dt><span class="sev sev--medium">Medium</span></dt><dd>Causes real friction or confusion, usually with a workaround.</dd></div><div><dt><span class="sev sev--low">Low</span></dt><dd>Minor, but quick to fix and worth doing.</dd></div></dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" id="findings" aria-labelledby="find-h">
+      <div class="wrap">
+        <div class="sec__head sec__head--row rv">
+          <div>
+            <p class="eyebrow">Findings</p>
+            <h2 id="find-h">All 19 issues</h2>
+            <p class="sec__lede">Each one is mapped to the WCAG 2.2 success criterion it fails, with a link to the criterion.</p>
+          </div>
+          <div class="filter" role="group" aria-label="Show findings by severity" hidden>
+            <button type="button" aria-pressed="true" data-sev="all">All <span>19</span></button><button type="button" aria-pressed="false" data-sev="critical">Critical <span>3</span></button><button type="button" aria-pressed="false" data-sev="high">High <span>7</span></button><button type="button" aria-pressed="false" data-sev="medium">Medium <span>6</span></button><button type="button" aria-pressed="false" data-sev="low">Low <span>3</span></button>
+          </div>
+        </div>
+        <p class="sr" id="find-status" aria-live="polite"></p>
+        <div class="card tblcard">
+          <table class="ft" role="table">
+            <caption class="sr">Accessibility findings, with WCAG success criterion, severity, location, who is affected and the fix</caption>
+            <thead role="rowgroup"><tr role="row"><th scope="col" role="columnheader">#</th><th scope="col" role="columnheader">Issue</th><th scope="col" role="columnheader">WCAG 2.2</th><th scope="col" role="columnheader">Severity</th><th scope="col" role="columnheader">Where and who</th><th scope="col" role="columnheader">Fix</th></tr></thead>
+            <tbody role="rowgroup">
+              <tr role="row" id="f-01" data-sev="critical" class="ft__r ft__r--critical">
+                <td role="cell" class="ft__id">01</td>
+                <th scope="row" role="rowheader" class="ft__issue"><span class="ft__title">The “Book online” window can’t be closed or left with a keyboard</span><span class="ft__prob">Tab cycles inside the booking window forever. The close “×” is a <code>&lt;div&gt;</code> with a click handler, so it can’t be reached, and Esc does nothing. The only way out is to reload the page.</span></th>
+                <td role="cell" class="ft__sc"><span class="ft__lab" aria-hidden="true">WCAG</span><span class="sc"><a href="https://www.w3.org/TR/WCAG22/#no-keyboard-trap" class="sc__n">2.1.2</a> No Keyboard Trap <span class="sc__l">(A)</span></span><span class="sc"><a href="https://www.w3.org/TR/WCAG22/#name-role-value" class="sc__n">4.1.2</a> Name, Role, Value <span class="sc__l">(A)</span></span></td>
+                <td role="cell" class="ft__sev"><span class="sev sev--critical">Critical</span></td>
+                <td role="cell" class="ft__where"><span class="ft__lab">Where</span>Book an appointment; every “Book online” button<span class="ft__lab">Affects</span><span class="ft__who">Keyboard-only, switch and screen reader users</span></td>
+                <td role="cell" class="ft__fix"><span class="ft__lab">Fix</span>Use a real <code>&lt;button&gt;</code> to close, let Esc close it, and send focus back to the button that opened it. A native <code>&lt;dialog&gt;</code> opened with <code>showModal()</code> does most of this for free. <a class="ft__more" href="#fix-trap">Before and after code</a></td>
+              </tr>
+              <tr role="row" id="f-02" data-sev="critical" class="ft__r ft__r--critical">
+                <td role="cell" class="ft__id">02</td>
+                <th scope="row" role="rowheader" class="ft__issue"><span class="ft__title">Appointment form fields have no labels, only placeholder text</span><span class="ft__prob">Fields are announced as “edit text, blank”. Date of birth is three unlabeled selects. The hint text vanishes as soon as someone starts typing.</span></th>
+                <td role="cell" class="ft__sc"><span class="ft__lab" aria-hidden="true">WCAG</span><span class="sc"><a href="https://www.w3.org/TR/WCAG22/#info-and-relationships" class="sc__n">1.3.1</a> Info and Relationships <span class="sc__l">(A)</span></span><span class="sc"><a href="https://www.w3.org/TR/WCAG22/#labels-or-instructions" class="sc__n">3.3.2</a> Labels or Instructions <span class="sc__l">(A)</span></span><span class="sc"><a href="https://www.w3.org/TR/WCAG22/#name-role-value" class="sc__n">4.1.2</a> Name, Role, Value <span class="sc__l">(A)</span></span></td>
+                <td role="cell" class="ft__sev"><span class="sev sev--critical">Critical</span></td>
+                <td role="cell" class="ft__where"><span class="ft__lab">Where</span>Book an appointment: request form (7 fields)<span class="ft__lab">Affects</span><span class="ft__who">Screen reader and voice-control users; anyone who loses track once the hint disappears</span></td>
+                <td role="cell" class="ft__fix"><span class="ft__lab">Fix</span>Give every field a visible <code>&lt;label for&gt;</code>, group date of birth in a <code>&lt;fieldset&gt;</code> with a <code>&lt;legend&gt;</code>, and add autocomplete tokens (<code>given-name</code>, <code>bday-day</code> and so on). <a class="ft__more" href="#fix-labels">Before and after code</a></td>
+              </tr>
+              <tr role="row" id="f-03" data-sev="critical" class="ft__r ft__r--critical">
+                <td role="cell" class="ft__id">03</td>
+                <th scope="row" role="rowheader" class="ft__issue"><span class="ft__title">Patient portal login blocks paste and password managers</span><span class="ft__prob">The password field cancels paste (<code>onpaste=&quot;return false&quot;</code>) and sets <code>autocomplete=&quot;off&quot;</code>, so the only way in is to recall and retype the password from memory.</span></th>
+                <td role="cell" class="ft__sc"><span class="ft__lab" aria-hidden="true">WCAG</span><span class="sc"><a href="https://www.w3.org/TR/WCAG22/#accessible-authentication-minimum" class="sc__n">3.3.8</a> Accessible Authentication (Minimum) <span class="sc__l">(AA)</span> <span class="new">New in 2.2</span></span></td>
+                <td role="cell" class="ft__sev"><span class="sev sev--critical">Critical</span></td>
+                <td role="cell" class="ft__where"><span class="ft__lab">Where</span>Patient portal login<span class="ft__lab">Affects</span><span class="ft__who">People with memory or cognitive disabilities, dyslexia, and anyone who relies on a password manager</span></td>
+                <td role="cell" class="ft__fix"><span class="ft__lab">Fix</span>Remove the paste block. Use <code>autocomplete=&quot;username&quot;</code> and <code>autocomplete=&quot;current-password&quot;</code> so browsers and password managers can fill the form.</td>
+              </tr>
+              <tr role="row" id="f-04" data-sev="high" class="ft__r ft__r--high">
+                <td role="cell" class="ft__id">04</td>
+                <th scope="row" role="rowheader" class="ft__issue"><span class="ft__title">Provider photos and the insurance logo strip have no text alternative</span><span class="ft__prob">Headshots have no alt attribute, so screen readers read the file name (“dr_okafor_final2.jpg”). The accepted-insurance strip is one image holding nine plan names, with no text version.</span></th>
+                <td role="cell" class="ft__sc"><span class="ft__lab" aria-hidden="true">WCAG</span><span class="sc"><a href="https://www.w3.org/TR/WCAG22/#non-text-content" class="sc__n">1.1.1</a> Non-text Content <span class="sc__l">(A)</span></span></td>
+                <td role="cell" class="ft__sev"><span class="sev sev--high">High</span></td>
+                <td role="cell" class="ft__where"><span class="ft__lab">Where</span>Find a provider (12 photos); Home (insurance strip)<span class="ft__lab">Affects</span><span class="ft__who">Screen reader users</span></td>
+                <td role="cell" class="ft__fix"><span class="ft__lab">Fix</span>Mark headshots as decorative (<code>alt=&quot;&quot;</code>) because the name is right next to them. Replace the logo strip with a real list of plan names. <a class="ft__more" href="#fix-alt">Before and after code</a></td>
+              </tr>
+              <tr role="row" id="f-05" data-sev="high" class="ft__r ft__r--high">
+                <td role="cell" class="ft__id">05</td>
+                <th scope="row" role="rowheader" class="ft__issue"><span class="ft__title">Gray body text is too light (2.81:1)</span><span class="ft__prob">Text in <code>#9a9a9a</code> on white measures 2.81:1. Normal-size text needs at least 4.5:1.</span></th>
+                <td role="cell" class="ft__sc"><span class="ft__lab" aria-hidden="true">WCAG</span><span class="sc"><a href="https://www.w3.org/TR/WCAG22/#contrast-minimum" class="sc__n">1.4.3</a> Contrast (Minimum) <span class="sc__l">(AA)</span></span></td>
+                <td role="cell" class="ft__sev"><span class="sev sev--high">High</span></td>
+                <td role="cell" class="ft__where"><span class="ft__lab">Where</span>All pages: hours, addresses, form hints<span class="ft__lab">Affects</span><span class="ft__who">People with low vision or color-vision deficiency, older patients, anyone on a phone in daylight</span></td>
+                <td role="cell" class="ft__fix"><span class="ft__lab">Fix</span>Darken it to <code>#5c6670</code>, which measures 5.85:1 and keeps the same quiet look. <a class="ft__more" href="#fix-contrast">Before and after code</a></td>
+              </tr>
+              <tr role="row" id="f-06" data-sev="high" class="ft__r ft__r--high">
+                <td role="cell" class="ft__id">06</td>
+                <th scope="row" role="rowheader" class="ft__issue"><span class="ft__title">White text on the teal “Book now” button is hard to read (2.41:1)</span><span class="ft__prob">White 16px text on <code>#3fb8af</code> measures 2.41:1. The label isn’t large text, so it needs 4.5:1.</span></th>
+                <td role="cell" class="ft__sc"><span class="ft__lab" aria-hidden="true">WCAG</span><span class="sc"><a href="https://www.w3.org/TR/WCAG22/#contrast-minimum" class="sc__n">1.4.3</a> Contrast (Minimum) <span class="sc__l">(AA)</span></span></td>
+                <td role="cell" class="ft__sev"><span class="sev sev--high">High</span></td>
+                <td role="cell" class="ft__where"><span class="ft__lab">Where</span>Header and Home hero: “Book now” and “Pay a bill” buttons<span class="ft__lab">Affects</span><span class="ft__who">People with low vision or color-vision deficiency</span></td>
+                <td role="cell" class="ft__fix"><span class="ft__lab">Fix</span>Use a deeper teal, <code>#1f6f69</code>, which measures 5.93:1 with white text. Keep <code>#3fb8af</code> for decoration only. <a class="ft__more" href="#fix-contrast">Before and after code</a></td>
+              </tr>
+              <tr role="row" id="f-07" data-sev="high" class="ft__r ft__r--high">
+                <td role="cell" class="ft__id">07</td>
+                <th scope="row" role="rowheader" class="ft__issue"><span class="ft__title">Focus outline removed site-wide</span><span class="ft__prob">The theme sets <code>*:focus { outline: none }</code> with nothing to replace it, so there is no way to see which link, button or field is active.</span></th>
+                <td role="cell" class="ft__sc"><span class="ft__lab" aria-hidden="true">WCAG</span><span class="sc"><a href="https://www.w3.org/TR/WCAG22/#focus-visible" class="sc__n">2.4.7</a> Focus Visible <span class="sc__l">(AA)</span></span></td>
+                <td role="cell" class="ft__sev"><span class="sev sev--high">High</span></td>
+                <td role="cell" class="ft__where"><span class="ft__lab">Where</span>All pages (theme stylesheet)<span class="ft__lab">Affects</span><span class="ft__who">Keyboard-only users, switch users, people using screen magnifiers</span></td>
+                <td role="cell" class="ft__fix"><span class="ft__lab">Fix</span>Delete the rule and add a clear <code>:focus-visible</code> style: a 3px outline with an offset, in a color that has at least 3:1 contrast against the page. <a class="ft__more" href="#fix-focus">Before and after code</a></td>
+              </tr>
+              <tr role="row" id="f-08" data-sev="high" class="ft__r ft__r--high">
+                <td role="cell" class="ft__id">08</td>
+                <th scope="row" role="rowheader" class="ft__issue"><span class="ft__title">Welcome video has no captions</span><span class="ft__prob">The embedded video has no caption track, and the auto-generated captions are switched off.</span></th>
+                <td role="cell" class="ft__sc"><span class="ft__lab" aria-hidden="true">WCAG</span><span class="sc"><a href="https://www.w3.org/TR/WCAG22/#captions-prerecorded" class="sc__n">1.2.2</a> Captions (Prerecorded) <span class="sc__l">(A)</span></span></td>
+                <td role="cell" class="ft__sev"><span class="sev sev--high">High</span></td>
+                <td role="cell" class="ft__where"><span class="ft__lab">Where</span>Home: 90-second “Welcome to Alderwick” video<span class="ft__lab">Affects</span><span class="ft__who">Deaf and hard-of-hearing patients; anyone watching with the sound off</span></td>
+                <td role="cell" class="ft__fix"><span class="ft__lab">Fix</span>Add an edited WebVTT caption file (check names and medical terms by hand) and link a text transcript under the video.</td>
+              </tr>
+              <tr role="row" id="f-09" data-sev="high" class="ft__r ft__r--high">
+                <td role="cell" class="ft__id">09</td>
+                <th scope="row" role="rowheader" class="ft__issue"><span class="ft__title">Form errors are shown by a red border only</span><span class="ft__prob">A missing or invalid field just turns its border red. There is no message, and screen readers announce nothing.</span></th>
+                <td role="cell" class="ft__sc"><span class="ft__lab" aria-hidden="true">WCAG</span><span class="sc"><a href="https://www.w3.org/TR/WCAG22/#error-identification" class="sc__n">3.3.1</a> Error Identification <span class="sc__l">(A)</span></span><span class="sc"><a href="https://www.w3.org/TR/WCAG22/#use-of-color" class="sc__n">1.4.1</a> Use of Color <span class="sc__l">(A)</span></span></td>
+                <td role="cell" class="ft__sev"><span class="sev sev--high">High</span></td>
+                <td role="cell" class="ft__where"><span class="ft__lab">Where</span>Book an appointment; Pay a bill<span class="ft__lab">Affects</span><span class="ft__who">Screen reader users; people who can’t tell red from gray</span></td>
+                <td role="cell" class="ft__fix"><span class="ft__lab">Fix</span>Write the error as text next to the field, link it with <code>aria-describedby</code>, set <code>aria-invalid=&quot;true&quot;</code>, and on submit move focus to an error summary at the top of the form.</td>
+              </tr>
+              <tr role="row" id="f-10" data-sev="high" class="ft__r ft__r--high">
+                <td role="cell" class="ft__id">10</td>
+                <th scope="row" role="rowheader" class="ft__issue"><span class="ft__title">New-patient intake PDF is untagged</span><span class="ft__prob">The PDF has no tags, so it reads as one block of text. Reading order jumps between the two columns, and the 38 form fields have no names.</span></th>
+                <td role="cell" class="ft__sc"><span class="ft__lab" aria-hidden="true">WCAG</span><span class="sc"><a href="https://www.w3.org/TR/WCAG22/#info-and-relationships" class="sc__n">1.3.1</a> Info and Relationships <span class="sc__l">(A)</span></span><span class="sc"><a href="https://www.w3.org/TR/WCAG22/#meaningful-sequence" class="sc__n">1.3.2</a> Meaningful Sequence <span class="sc__l">(A)</span></span><span class="sc"><a href="https://www.w3.org/TR/WCAG22/#name-role-value" class="sc__n">4.1.2</a> Name, Role, Value <span class="sc__l">(A)</span></span></td>
+                <td role="cell" class="ft__sev"><span class="sev sev--high">High</span></td>
+                <td role="cell" class="ft__where"><span class="ft__lab">Where</span>New-patient intake form (4-page PDF)<span class="ft__lab">Affects</span><span class="ft__who">Screen reader users; people filling the form on a phone or with assistive tech</span></td>
+                <td role="cell" class="ft__fix"><span class="ft__lab">Fix</span>Retag the PDF and fix the reading order, name every field, and set the title and language. The steps are in the PDF note below. <a class="ft__more" href="#pdf">PDF steps</a></td>
+              </tr>
+              <tr role="row" id="f-11" data-sev="medium" class="ft__r ft__r--medium">
+                <td role="cell" class="ft__id">11</td>
+                <th scope="row" role="rowheader" class="ft__issue"><span class="ft__title">Cookie banner and sticky header cover the focused element</span><span class="ft__prob">The 140px cookie banner fixed to the bottom of the screen hides links as you tab down the page. When tabbing back up, the sticky header hides them too.</span></th>
+                <td role="cell" class="ft__sc"><span class="ft__lab" aria-hidden="true">WCAG</span><span class="sc"><a href="https://www.w3.org/TR/WCAG22/#focus-not-obscured-minimum" class="sc__n">2.4.11</a> Focus Not Obscured (Minimum) <span class="sc__l">(AA)</span> <span class="new">New in 2.2</span></span></td>
+                <td role="cell" class="ft__sev"><span class="sev sev--medium">Medium</span></td>
+                <td role="cell" class="ft__where"><span class="ft__lab">Where</span>All pages until the cookie banner is dismissed<span class="ft__lab">Affects</span><span class="ft__who">Keyboard users, especially when zoomed in</span></td>
+                <td role="cell" class="ft__fix"><span class="ft__lab">Fix</span>Put the banner’s buttons first in the tab order and don’t let it cover content (or make it a non-modal bar that pushes the page up). Add <code>scroll-padding-top</code> equal to the header height.</td>
+              </tr>
+              <tr role="row" id="f-12" data-sev="medium" class="ft__r ft__r--medium">
+                <td role="cell" class="ft__id">12</td>
+                <th scope="row" role="rowheader" class="ft__issue"><span class="ft__title">Headings are styled divs, and the real ones skip levels</span><span class="ft__prob">“Our services” and “Locations” look like headings but are &lt;div class=&quot;title&quot;&gt;. The headings that do exist go from h1 straight to h4 because h4 had the right font size.</span></th>
+                <td role="cell" class="ft__sc"><span class="ft__lab" aria-hidden="true">WCAG</span><span class="sc"><a href="https://www.w3.org/TR/WCAG22/#info-and-relationships" class="sc__n">1.3.1</a> Info and Relationships <span class="sc__l">(A)</span></span><span class="sc"><a href="https://www.w3.org/TR/WCAG22/#headings-and-labels" class="sc__n">2.4.6</a> Headings and Labels <span class="sc__l">(AA)</span></span></td>
+                <td role="cell" class="ft__sev"><span class="sev sev--medium">Medium</span></td>
+                <td role="cell" class="ft__where"><span class="ft__lab">Where</span>Home, Find a provider<span class="ft__lab">Affects</span><span class="ft__who">Screen reader users who move around the page by heading</span></td>
+                <td role="cell" class="ft__fix"><span class="ft__lab">Fix</span>Mark up every visual heading as a heading, in order (h1, then h2, then h3), and size them with CSS instead of picking a level for its looks. <a class="ft__more" href="#fix-headings">Before and after code</a></td>
+              </tr>
+              <tr role="row" id="f-13" data-sev="medium" class="ft__r ft__r--medium">
+                <td role="cell" class="ft__id">13</td>
+                <th scope="row" role="rowheader" class="ft__issue"><span class="ft__title">“Read more” and “Click here” links don’t say where they go</span><span class="ft__prob">A links list reads “Read more, Read more, Read more…”. The card titles sit in a separate element, so the surrounding text doesn’t give the link its meaning.</span></th>
+                <td role="cell" class="ft__sc"><span class="ft__lab" aria-hidden="true">WCAG</span><span class="sc"><a href="https://www.w3.org/TR/WCAG22/#link-purpose-in-context" class="sc__n">2.4.4</a> Link Purpose (In Context) <span class="sc__l">(A)</span></span></td>
+                <td role="cell" class="ft__sev"><span class="sev sev--medium">Medium</span></td>
+                <td role="cell" class="ft__where"><span class="ft__lab">Where</span>Home (6 links), Services (3 links), footer<span class="ft__lab">Affects</span><span class="ft__who">Screen reader users who list links on the page; voice-control users</span></td>
+                <td role="cell" class="ft__fix"><span class="ft__lab">Fix</span>Make the link text say where it goes (“Pediatric care”), or make the card title the link itself. <a class="ft__more" href="#fix-links">Before and after code</a></td>
+              </tr>
+              <tr role="row" id="f-14" data-sev="medium" class="ft__r ft__r--medium">
+                <td role="cell" class="ft__id">14</td>
+                <th scope="row" role="rowheader" class="ft__issue"><span class="ft__title">Calendar days and social icons are tiny targets</span><span class="ft__prob">Calendar days are 20×20 CSS px with a 2px gap. The footer social icons are 16×16 and sit right next to each other.</span></th>
+                <td role="cell" class="ft__sc"><span class="ft__lab" aria-hidden="true">WCAG</span><span class="sc"><a href="https://www.w3.org/TR/WCAG22/#target-size-minimum" class="sc__n">2.5.8</a> Target Size (Minimum) <span class="sc__l">(AA)</span> <span class="new">New in 2.2</span></span></td>
+                <td role="cell" class="ft__sev"><span class="sev sev--medium">Medium</span></td>
+                <td role="cell" class="ft__where"><span class="ft__lab">Where</span>Booking calendar; footer social icons<span class="ft__lab">Affects</span><span class="ft__who">People with tremors or limited dexterity; most people on a phone</span></td>
+                <td role="cell" class="ft__fix"><span class="ft__lab">Fix</span>Make targets at least 24×24 CSS px, or space them so a 24px circle around each one doesn’t overlap a neighbor. 44px is better for the calendar.</td>
+              </tr>
+              <tr role="row" id="f-15" data-sev="medium" class="ft__r ft__r--medium">
+                <td role="cell" class="ft__id">15</td>
+                <th scope="row" role="rowheader" class="ft__issue"><span class="ft__title">Form field borders are nearly invisible (1.49:1)</span><span class="ft__prob">Input borders in <code>#cfd4d9</code> on white measure 1.49:1. Borders that show where a field is need 3:1.</span></th>
+                <td role="cell" class="ft__sc"><span class="ft__lab" aria-hidden="true">WCAG</span><span class="sc"><a href="https://www.w3.org/TR/WCAG22/#non-text-contrast" class="sc__n">1.4.11</a> Non-text Contrast <span class="sc__l">(AA)</span></span></td>
+                <td role="cell" class="ft__sev"><span class="sev sev--medium">Medium</span></td>
+                <td role="cell" class="ft__where"><span class="ft__lab">Where</span>All forms<span class="ft__lab">Affects</span><span class="ft__who">People with low vision; anyone who has to find the fields</span></td>
+                <td role="cell" class="ft__fix"><span class="ft__lab">Fix</span>Use <code>#7d8791</code> for field borders (3.65:1), or add a filled background that meets 3:1.</td>
+              </tr>
+              <tr role="row" id="f-16" data-sev="medium" class="ft__r ft__r--medium">
+                <td role="cell" class="ft__id">16</td>
+                <th scope="row" role="rowheader" class="ft__issue"><span class="ft__title">Pay a bill page needs sideways scrolling when zoomed</span><span class="ft__prob">The page sits in a fixed 960px container. At 320 CSS px wide, every line has to be scrolled sideways to read.</span></th>
+                <td role="cell" class="ft__sc"><span class="ft__lab" aria-hidden="true">WCAG</span><span class="sc"><a href="https://www.w3.org/TR/WCAG22/#reflow" class="sc__n">1.4.10</a> Reflow <span class="sc__l">(AA)</span></span></td>
+                <td role="cell" class="ft__sev"><span class="sev sev--medium">Medium</span></td>
+                <td role="cell" class="ft__where"><span class="ft__lab">Where</span>Pay a bill<span class="ft__lab">Affects</span><span class="ft__who">People who zoom to 400% or use large text on small screens</span></td>
+                <td role="cell" class="ft__fix"><span class="ft__lab">Fix</span>Change <code>width: 960px</code> to <code>max-width: 960px</code> with fluid padding, and let the two-column layout stack on narrow screens.</td>
+              </tr>
+              <tr role="row" id="f-17" data-sev="low" class="ft__r ft__r--low">
+                <td role="cell" class="ft__id">17</td>
+                <th scope="row" role="rowheader" class="ft__issue"><span class="ft__title">Pages don’t declare their language</span><span class="ft__prob">The <code>&lt;html&gt;</code> element has no lang attribute. The Spanish page gets read with English pronunciation.</span></th>
+                <td role="cell" class="ft__sc"><span class="ft__lab" aria-hidden="true">WCAG</span><span class="sc"><a href="https://www.w3.org/TR/WCAG22/#language-of-page" class="sc__n">3.1.1</a> Language of Page <span class="sc__l">(A)</span></span><span class="sc"><a href="https://www.w3.org/TR/WCAG22/#language-of-parts" class="sc__n">3.1.2</a> Language of Parts <span class="sc__l">(AA)</span></span></td>
+                <td role="cell" class="ft__sev"><span class="sev sev--low">Low</span></td>
+                <td role="cell" class="ft__where"><span class="ft__lab">Where</span>All pages; Spanish patient-information page<span class="ft__lab">Affects</span><span class="ft__who">Screen reader users (wrong voice and pronunciation)</span></td>
+                <td role="cell" class="ft__fix"><span class="ft__lab">Fix</span>Add <code>lang=&quot;en&quot;</code> site-wide and <code>lang=&quot;es&quot;</code> on the Spanish page. Use lang on any Spanish phrases inside English pages too.</td>
+              </tr>
+              <tr role="row" id="f-18" data-sev="low" class="ft__r ft__r--low">
+                <td role="cell" class="ft__id">18</td>
+                <th scope="row" role="rowheader" class="ft__issue"><span class="ft__title">Four pages share the same title</span><span class="ft__prob">Four of the six pages are titled “Alderwick Family Clinic | Home”.</span></th>
+                <td role="cell" class="ft__sc"><span class="ft__lab" aria-hidden="true">WCAG</span><span class="sc"><a href="https://www.w3.org/TR/WCAG22/#page-titled" class="sc__n">2.4.2</a> Page Titled <span class="sc__l">(A)</span></span></td>
+                <td role="cell" class="ft__sev"><span class="sev sev--low">Low</span></td>
+                <td role="cell" class="ft__where"><span class="ft__lab">Where</span>Find a provider, Book an appointment, Pay a bill, Spanish page<span class="ft__lab">Affects</span><span class="ft__who">Screen reader users; anyone with several tabs open</span></td>
+                <td role="cell" class="ft__fix"><span class="ft__lab">Fix</span>Give each page a unique title that leads with the page: “Book an appointment | Alderwick Family Clinic”.</td>
+              </tr>
+              <tr role="row" id="f-19" data-sev="low" class="ft__r ft__r--low">
+                <td role="cell" class="ft__id">19</td>
+                <th scope="row" role="rowheader" class="ft__issue"><span class="ft__title">The phone number moves between pages</span><span class="ft__prob">The call link sits in the header on four pages, but only in the footer on the two pages where people most often need help.</span></th>
+                <td role="cell" class="ft__sc"><span class="ft__lab" aria-hidden="true">WCAG</span><span class="sc"><a href="https://www.w3.org/TR/WCAG22/#consistent-help" class="sc__n">3.2.6</a> Consistent Help <span class="sc__l">(A)</span> <span class="new">New in 2.2</span></span></td>
+                <td role="cell" class="ft__sev"><span class="sev sev--low">Low</span></td>
+                <td role="cell" class="ft__where"><span class="ft__lab">Where</span>Book an appointment, Pay a bill<span class="ft__lab">Affects</span><span class="ft__who">People with cognitive disabilities who look for help in a familiar spot</span></td>
+                <td role="cell" class="ft__fix"><span class="ft__lab">Fix</span>Keep the phone and contact links in the same place, in the same order, on every page.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" id="fixes" aria-labelledby="fix-h">
+      <div class="wrap">
+        <div class="sec__head rv">
+          <p class="eyebrow">Fixes</p>
+          <h2 id="fix-h">Before and after, in code</h2>
+          <p class="sec__lede">The fixes most teams ask about, written against the clinic’s example markup. The same patterns work in WordPress, Squarespace code blocks or any hand-built site.</p>
+        </div>
+        <div class="fixes">
+          <article class="fix rv" id="fix-alt" aria-labelledby="fix-alt-h">
+            <div class="fix__text">
+              <p class="fix__meta"><span class="sc"><a href="https://www.w3.org/TR/WCAG22/#non-text-content" class="sc__n">1.1.1</a> Non-text Content <span class="sc__l">(A)</span></span> <span class="fix__refs">Findings <a href="#f-04">#04</a></span></p>
+              <h3 id="fix-alt-h">Text alternatives</h3>
+              <p>Decide what each image is for. A photo next to the doctor’s name adds nothing for a screen reader, so it gets an empty alt. An image that holds information needs that information as text.</p>
+            </div>
+            
+            <div class="fix__code">
+              <figure class="code code--before"><figcaption><span class="tag tag--before">Before</span></figcaption><pre><code>&lt;img src=&quot;dr_okafor_final2.jpg&quot;&gt;
+&lt;span class=&quot;name&quot;&gt;Dr. Ama Okafor&lt;/span&gt;
+
+<span class="cm">&lt;!-- nine plan names, all inside one picture --&gt;</span>
+&lt;img src=&quot;insurance-logos.png&quot;&gt;</code></pre></figure>
+              <figure class="code code--after"><figcaption><span class="tag tag--after">After</span></figcaption><pre><code>&lt;img src=&quot;dr-okafor.jpg&quot; alt=&quot;&quot;&gt;
+&lt;span class=&quot;name&quot;&gt;Dr. Ama Okafor&lt;/span&gt;
+
+&lt;h3&gt;Insurance we accept&lt;/h3&gt;
+&lt;ul class=&quot;plans&quot;&gt;
+  &lt;li&gt;Example Health Plan&lt;/li&gt;
+  &lt;li&gt;Sample Mutual&lt;/li&gt;
+  <span class="cm">&lt;!-- … one item per plan --&gt;</span>
+&lt;/ul&gt;</code></pre></figure>
+            </div>
+          </article>
+          <article class="fix rv" id="fix-contrast" aria-labelledby="fix-contrast-h">
+            <div class="fix__text">
+              <p class="fix__meta"><span class="sc"><a href="https://www.w3.org/TR/WCAG22/#contrast-minimum" class="sc__n">1.4.3</a> Contrast (Minimum) <span class="sc__l">(AA)</span></span> <span class="fix__refs">Findings <a href="#f-05">#05</a>, <a href="#f-06">#06</a></span></p>
+              <h3 id="fix-contrast-h">Color contrast</h3>
+              <p>Both pairs keep the clinic’s look but get dark enough to read. These ratios are computed with the WCAG relative-luminance formula and truncated, not rounded up.</p>
+            </div>
+            <div class="sws"><div class="sw sw--bad"><svg class="sw__demo" viewBox="0 0 200 58" role="img" aria-label="Failing example: Open 8–6 weekdays in #9a9a9a on #ffffff"><rect width="200" height="58" fill="#ffffff"/><text x="100" y="34" text-anchor="middle" fill="#9a9a9a" font-family="Geist, sans-serif" font-size="15" font-weight="600">Open 8–6 weekdays</text></svg><p><b>Before</b> <code>#9a9a9a</code> on <code>#ffffff</code></p><p class="sw__r">2.81:1 <span>fails 4.5:1</span></p></div><div class="sw sw--ok"><svg class="sw__demo" viewBox="0 0 200 58" role="img" aria-label="Passing example: Open 8–6 weekdays in #5c6670 on #ffffff"><rect width="200" height="58" fill="#ffffff"/><text x="100" y="34" text-anchor="middle" fill="#5c6670" font-family="Geist, sans-serif" font-size="15" font-weight="600">Open 8–6 weekdays</text></svg><p><b>After</b> <code>#5c6670</code> on <code>#ffffff</code></p><p class="sw__r">5.85:1 <span>passes 4.5:1</span></p></div><div class="sw sw--bad"><svg class="sw__demo" viewBox="0 0 200 58" role="img" aria-label="Failing example: Book now in #ffffff on #3fb8af"><rect width="200" height="58" fill="#3fb8af"/><text x="100" y="34" text-anchor="middle" fill="#ffffff" font-family="Geist, sans-serif" font-size="15" font-weight="600">Book now</text></svg><p><b>Before</b> <code>#ffffff</code> on <code>#3fb8af</code></p><p class="sw__r">2.41:1 <span>fails 4.5:1</span></p></div><div class="sw sw--ok"><svg class="sw__demo" viewBox="0 0 200 58" role="img" aria-label="Passing example: Book now in #ffffff on #1f6f69"><rect width="200" height="58" fill="#1f6f69"/><text x="100" y="34" text-anchor="middle" fill="#ffffff" font-family="Geist, sans-serif" font-size="15" font-weight="600">Book now</text></svg><p><b>After</b> <code>#ffffff</code> on <code>#1f6f69</code></p><p class="sw__r">5.93:1 <span>passes 4.5:1</span></p></div></div>
+            <div class="fix__code">
+              <figure class="code code--before"><figcaption><span class="tag tag--before">Before</span></figcaption><pre><code>.meta    { color: #9a9a9a; }  <span class="cm">/* on #fff */</span>
+.btn-book { background: #3fb8af;
+            color: #fff; }</code></pre></figure>
+              <figure class="code code--after"><figcaption><span class="tag tag--after">After</span></figcaption><pre><code>.meta    { color: #5c6670; }  <span class="cm">/* on #fff */</span>
+.btn-book { background: #1f6f69;
+            color: #fff; }</code></pre></figure>
+            </div>
+          </article>
+          <article class="fix rv" id="fix-labels" aria-labelledby="fix-labels-h">
+            <div class="fix__text">
+              <p class="fix__meta"><span class="sc"><a href="https://www.w3.org/TR/WCAG22/#labels-or-instructions" class="sc__n">3.3.2</a> Labels or Instructions <span class="sc__l">(A)</span></span> <span class="fix__refs">Findings <a href="#f-02">#02</a></span></p>
+              <h3 id="fix-labels-h">Form labels</h3>
+              <p>Placeholders aren’t labels. A visible label stays put, is read by screen readers, and gives voice-control users a name to say (“click First name”).</p>
+            </div>
+            
+            <div class="fix__code">
+              <figure class="code code--before"><figcaption><span class="tag tag--before">Before</span></figcaption><pre><code>&lt;input type=&quot;text&quot; placeholder=&quot;First name&quot;&gt;
+
+&lt;select name=&quot;dob_m&quot;&gt;…&lt;/select&gt;
+&lt;select name=&quot;dob_d&quot;&gt;…&lt;/select&gt;
+&lt;select name=&quot;dob_y&quot;&gt;…&lt;/select&gt;</code></pre></figure>
+              <figure class="code code--after"><figcaption><span class="tag tag--after">After</span></figcaption><pre><code>&lt;label for=&quot;fname&quot;&gt;First name&lt;/label&gt;
+&lt;input id=&quot;fname&quot; type=&quot;text&quot;
+       autocomplete=&quot;given-name&quot;&gt;
+
+&lt;fieldset&gt;
+  &lt;legend&gt;Date of birth&lt;/legend&gt;
+  &lt;label for=&quot;dob-m&quot;&gt;Month&lt;/label&gt;
+  &lt;select id=&quot;dob-m&quot;
+          autocomplete=&quot;bday-month&quot;&gt;…&lt;/select&gt;
+  <span class="cm">&lt;!-- same for Day and Year --&gt;</span>
+&lt;/fieldset&gt;</code></pre></figure>
+            </div>
+          </article>
+          <article class="fix rv" id="fix-focus" aria-labelledby="fix-focus-h">
+            <div class="fix__text">
+              <p class="fix__meta"><span class="sc"><a href="https://www.w3.org/TR/WCAG22/#focus-visible" class="sc__n">2.4.7</a> Focus Visible <span class="sc__l">(AA)</span></span> <span class="fix__refs">Findings <a href="#f-07">#07</a></span></p>
+              <h3 id="fix-focus-h">Visible focus</h3>
+              <p>Don’t remove the outline. Replace it with one that’s easier to see than the browser default, and only show it for keyboard focus.</p>
+            </div>
+            
+            <div class="fix__code">
+              <figure class="code code--before"><figcaption><span class="tag tag--before">Before</span></figcaption><pre><code><span class="cm">/* theme.css */</span>
+*:focus { outline: none; }</code></pre></figure>
+              <figure class="code code--after"><figcaption><span class="tag tag--after">After</span></figcaption><pre><code><span class="cm">/* #1f6f69 is 5.93:1 on #fff */</span>
+:focus-visible {
+  outline: 3px solid #1f6f69;
+  outline-offset: 2px;
+  border-radius: 4px;
+}</code></pre></figure>
+            </div>
+          </article>
+          <article class="fix rv" id="fix-trap" aria-labelledby="fix-trap-h">
+            <div class="fix__text">
+              <p class="fix__meta"><span class="sc"><a href="https://www.w3.org/TR/WCAG22/#no-keyboard-trap" class="sc__n">2.1.2</a> No Keyboard Trap <span class="sc__l">(A)</span></span> <span class="fix__refs">Findings <a href="#f-01">#01</a></span></p>
+              <h3 id="fix-trap-h">Keyboard trap in the booking window</h3>
+              <p>A modal should hold focus while it’s open, but there always has to be a way out. The native <code>&lt;dialog&gt;</code> element gives you Esc to close and a proper modal state.</p>
+            </div>
+            
+            <div class="fix__code">
+              <figure class="code code--before"><figcaption><span class="tag tag--before">Before</span></figcaption><pre><code>&lt;div class=&quot;modal&quot; id=&quot;book&quot;&gt;
+  &lt;div class=&quot;x&quot; onclick=&quot;hide()&quot;&gt;×&lt;/div&gt;
+  …
+&lt;/div&gt;
+&lt;script&gt;
+  <span class="cm">// sends Tab back to the first field, forever</span>
+  last.onblur = () =&gt; first.focus();
+&lt;/script&gt;</code></pre></figure>
+              <figure class="code code--after"><figcaption><span class="tag tag--after">After</span></figcaption><pre><code>&lt;dialog id=&quot;book&quot; aria-labelledby=&quot;book-h&quot;&gt;
+  &lt;h2 id=&quot;book-h&quot;&gt;Book online&lt;/h2&gt;
+  &lt;button type=&quot;button&quot; class=&quot;x&quot;
+          aria-label=&quot;Close&quot;&gt;×&lt;/button&gt;
+  …
+&lt;/dialog&gt;
+&lt;script&gt;
+  const d = document.querySelector(&#x27;#book&#x27;);
+  let opener;
+  function openBook(btn) {
+    opener = btn;
+    d.showModal();  <span class="cm">// Esc now closes it</span>
+  }
+  d.querySelector(&#x27;.x&#x27;).onclick =
+    () =&gt; d.close();
+  d.addEventListener(&#x27;close&#x27;,
+    () =&gt; opener.focus());
+&lt;/script&gt;</code></pre></figure>
+            </div>
+          </article>
+          <article class="fix rv" id="fix-headings" aria-labelledby="fix-headings-h">
+            <div class="fix__text">
+              <p class="fix__meta"><span class="sc"><a href="https://www.w3.org/TR/WCAG22/#info-and-relationships" class="sc__n">1.3.1</a> Info and Relationships <span class="sc__l">(A)</span></span> <span class="fix__refs">Findings <a href="#f-12">#12</a></span></p>
+              <h3 id="fix-headings-h">Heading structure</h3>
+              <p>Screen reader users jump between headings to scan a page, the way sighted people scan bold text. The levels should describe the outline, and CSS should handle the size.</p>
+            </div>
+            
+            <div class="fix__code">
+              <figure class="code code--before"><figcaption><span class="tag tag--before">Before</span></figcaption><pre><code>&lt;h1&gt;Alderwick Family Clinic&lt;/h1&gt;
+&lt;div class=&quot;title&quot;&gt;Our services&lt;/div&gt;
+&lt;h4&gt;Pediatric care&lt;/h4&gt;
+&lt;h4&gt;Women’s health&lt;/h4&gt;</code></pre></figure>
+              <figure class="code code--after"><figcaption><span class="tag tag--after">After</span></figcaption><pre><code>&lt;h1&gt;Family care in the valley&lt;/h1&gt;
+&lt;h2&gt;Our services&lt;/h2&gt;
+&lt;h3 class=&quot;card-title&quot;&gt;Pediatric care&lt;/h3&gt;
+&lt;h3 class=&quot;card-title&quot;&gt;Women’s health&lt;/h3&gt;</code></pre></figure>
+            </div>
+          </article>
+          <article class="fix rv" id="fix-links" aria-labelledby="fix-links-h">
+            <div class="fix__text">
+              <p class="fix__meta"><span class="sc"><a href="https://www.w3.org/TR/WCAG22/#link-purpose-in-context" class="sc__n">2.4.4</a> Link Purpose (In Context) <span class="sc__l">(A)</span></span> <span class="fix__refs">Findings <a href="#f-13">#13</a></span></p>
+              <h3 id="fix-links-h">Link purpose</h3>
+              <p>Every link should make sense on its own, because that’s how screen readers list them. Usually the best fix is to make the card title the link.</p>
+            </div>
+            
+            <div class="fix__code">
+              <figure class="code code--before"><figcaption><span class="tag tag--before">Before</span></figcaption><pre><code>&lt;div class=&quot;card&quot;&gt;
+  &lt;div class=&quot;title&quot;&gt;Pediatric care&lt;/div&gt;
+  &lt;p&gt;Checkups and shots from birth to 18.&lt;/p&gt;
+  &lt;a href=&quot;/pediatrics&quot;&gt;Read more&lt;/a&gt;
+&lt;/div&gt;</code></pre></figure>
+              <figure class="code code--after"><figcaption><span class="tag tag--after">After</span></figcaption><pre><code>&lt;div class=&quot;card&quot;&gt;
+  &lt;h3&gt;
+    &lt;a href=&quot;/pediatrics&quot;&gt;Pediatric care&lt;/a&gt;
+  &lt;/h3&gt;
+  &lt;p&gt;Checkups and shots from birth to 18.&lt;/p&gt;
+&lt;/div&gt;</code></pre></figure>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" id="plan" aria-labelledby="plan-h">
+      <div class="wrap">
+        <div class="sec__head rv">
+          <p class="eyebrow">Remediation plan</p>
+          <h2 id="plan-h">What to fix, in what order</h2>
+          <p class="sec__lede">Ordered by harm first, then by effort. Hours are rough estimates for a developer who already knows the site’s templates.</p>
+        </div>
+        <ol class="plan">
+          <li class="plan__i rv">
+            <p class="plan__when">Week 1</p>
+            <div class="plan__body">
+              <h3>Unblock booking and login</h3>
+              <p>These four stop people from booking or logging in. Most are small markup and CSS changes in shared templates, so one fix covers every page.</p>
+              <ul class="plan__ids" aria-label="Findings in this phase"><li><a href="#f-01" class="pchip pchip--critical"><span class="sr">Finding </span>01<span class="sr">, Critical</span></a></li><li><a href="#f-02" class="pchip pchip--critical"><span class="sr">Finding </span>02<span class="sr">, Critical</span></a></li><li><a href="#f-03" class="pchip pchip--critical"><span class="sr">Finding </span>03<span class="sr">, Critical</span></a></li><li><a href="#f-07" class="pchip pchip--high"><span class="sr">Finding </span>07<span class="sr">, High</span></a></li></ul>
+            </div>
+            <p class="plan__eff">6–9 hours of dev time</p>
+          </li>
+          <li class="plan__i rv">
+            <p class="plan__when">Weeks 2–3</p>
+            <div class="plan__body">
+              <h3>Fix what’s missing or hard to read</h3>
+              <p>Color changes are one stylesheet edit. Alt text and captions need someone who knows the content. The intake PDF can be retagged, or rebuilt as an accessible web form.</p>
+              <ul class="plan__ids" aria-label="Findings in this phase"><li><a href="#f-04" class="pchip pchip--high"><span class="sr">Finding </span>04<span class="sr">, High</span></a></li><li><a href="#f-05" class="pchip pchip--high"><span class="sr">Finding </span>05<span class="sr">, High</span></a></li><li><a href="#f-06" class="pchip pchip--high"><span class="sr">Finding </span>06<span class="sr">, High</span></a></li><li><a href="#f-08" class="pchip pchip--high"><span class="sr">Finding </span>08<span class="sr">, High</span></a></li><li><a href="#f-09" class="pchip pchip--high"><span class="sr">Finding </span>09<span class="sr">, High</span></a></li><li><a href="#f-10" class="pchip pchip--high"><span class="sr">Finding </span>10<span class="sr">, High</span></a></li></ul>
+            </div>
+            <p class="plan__eff">10–14 hours, plus captioning and PDF time</p>
+          </li>
+          <li class="plan__i rv">
+            <p class="plan__when">Within 45 days</p>
+            <div class="plan__body">
+              <h3>Clean up structure and friction</h3>
+              <p>Template-level fixes for headings, link text, target sizes, page titles and language, plus the cookie banner and the Pay a bill layout.</p>
+              <ul class="plan__ids" aria-label="Findings in this phase"><li><a href="#f-11" class="pchip pchip--medium"><span class="sr">Finding </span>11<span class="sr">, Medium</span></a></li><li><a href="#f-12" class="pchip pchip--medium"><span class="sr">Finding </span>12<span class="sr">, Medium</span></a></li><li><a href="#f-13" class="pchip pchip--medium"><span class="sr">Finding </span>13<span class="sr">, Medium</span></a></li><li><a href="#f-14" class="pchip pchip--medium"><span class="sr">Finding </span>14<span class="sr">, Medium</span></a></li><li><a href="#f-15" class="pchip pchip--medium"><span class="sr">Finding </span>15<span class="sr">, Medium</span></a></li><li><a href="#f-16" class="pchip pchip--medium"><span class="sr">Finding </span>16<span class="sr">, Medium</span></a></li><li><a href="#f-17" class="pchip pchip--low"><span class="sr">Finding </span>17<span class="sr">, Low</span></a></li><li><a href="#f-18" class="pchip pchip--low"><span class="sr">Finding </span>18<span class="sr">, Low</span></a></li><li><a href="#f-19" class="pchip pchip--low"><span class="sr">Finding </span>19<span class="sr">, Low</span></a></li></ul>
+            </div>
+            <p class="plan__eff">8–12 hours</p>
+          </li>
+          <li class="plan__i rv">
+            <p class="plan__when">Ongoing</p>
+            <div class="plan__body">
+              <h3>Keep it fixed</h3>
+              <p>Add an automated accessibility check to the build so new pages can’t ship with the basics broken. Give content editors a one-page checklist (alt text, link text, headings, captions). Retest the key tasks after each release, and publish an accessibility statement with a phone number and email for reporting problems.</p>
+              
+            </div>
+            <p class="plan__eff">About an hour a month</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="sec" id="pdf" aria-labelledby="pdf-h">
+      <div class="wrap pdf">
+        <div class="pdf__intro rv">
+          <p class="eyebrow">PDF remediation</p>
+          <h2 id="pdf-h">The intake form, step by step</h2>
+          <p class="sec__lede">PDFs on a website fall under the same WCAG criteria as the pages. For a form patients have to fill in, the questions to ask are whether a screen reader can read it in the right order and whether every field says what it wants.</p>
+          <div class="card pdf__aside">
+            <p class="card__h">Retag or rebuild?</p>
+            <p>A 4-page form that changes once a year is worth retagging. If it changes often, rebuild it as an accessible web form that emails the clinic, and the PDF problem goes away.</p>
+          </div>
+        </div>
+        <ol class="steps"><li class="rv"><span class="steps__n" aria-hidden="true">1</span><div><h3>Fix the source first</h3><p>If the Word or InDesign file exists, use real headings, lists and table headers there and export with tags turned on. That beats tagging by hand after the fact.</p></div></li><li class="rv"><span class="steps__n" aria-hidden="true">2</span><div><h3>Tag the structure</h3><p>Every block gets the right tag: H1 to H3 for headings, P for text, L and LI for lists, Table with TH header cells. Page numbers, rules and other decoration are marked as artifacts so they’re skipped.</p></div></li><li class="rv"><span class="steps__n" aria-hidden="true">3</span><div><h3>Set the reading order</h3><p>Order the tags so the left column is read fully before the right one, and every label comes right before its field. Check it with the reading-order tool and by listening with a screen reader.</p></div></li><li class="rv"><span class="steps__n" aria-hidden="true">4</span><div><h3>Name every form field</h3><p>Give each of the 38 fields a tooltip (the TU entry) that a screen reader reads aloud, like “Date of birth, MM/DD/YYYY”. Set the tab order to follow the structure, and group radio buttons under one name.</p></div></li><li class="rv"><span class="steps__n" aria-hidden="true">5</span><div><h3>Describe images, set properties</h3><p>Add alt text to the logo and the body diagram. Set the document title, show it in the title bar instead of the file name, and set the language to English.</p></div></li><li class="rv"><span class="steps__n" aria-hidden="true">6</span><div><h3>Check, then check by hand</h3><p>Run a PDF/UA checker and the built-in accessibility check in a PDF editor, then fill in the whole form with NVDA and with the keyboard only. Automated checks pass plenty of PDFs that are still unusable.</p></div></li></ol>
+      </div>
+    </section>
+
+    <section class="sec sec--note" aria-labelledby="note-h">
+      <div class="wrap">
+        <div class="note rv">
+          <h2 id="note-h">About this report</h2>
+          <p>This is a concept demo of the audit reports I write. Alderwick Family Clinic, its website and its intake form are made up. Nothing was scanned or tested, and every finding, count and estimate is an example. The WCAG 2.2 success criteria, levels and contrast math are real.</p>
+          <p>An audit is a snapshot of how a site works against WCAG on the day it’s checked. It isn’t a legal opinion or a certification.</p>
+          <p class="note__self">This page was built to the same standard: real headings in order, a skip link, visible focus, text contrast of at least 4.5:1 (the two “before” swatches above are pictures of the failing colors, on purpose), and a findings table that works without JavaScript. It was checked with axe-core and a keyboard pass.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__inner">
+      <p><span class="foot__mark">Alderwick Family Clinic</span> · accessibility audit · concept demo, example findings only</p>
+      <p>Built by Alex Mercer · <a href="mailto:alexmercer.projects@gmail.com">alexmercer.projects@gmail.com</a> · <a href="https://alexmercerprojects.com/">Portfolio</a></p>
+    </div>
+  </footer>
+  <script src="js/app.js" defer></script>
+</body>
+</html>
