@@ -134,6 +134,40 @@
     "labelNote": "The job seeker, employers and school are made up. Every number is example data, and no results are claimed."
   },
   {
+    "id": "alderwick-accessibility-audit",
+    "title": "Alderwick Family Clinic: a WCAG 2.2 AA accessibility audit",
+    "short": "Accessibility audit",
+    "category": "Accessibility",
+    "label": "Concept demo",
+    "year": 2026,
+    "folder": "alderwick-accessibility-audit",
+    "summary": "A sample WCAG 2.2 AA audit for a clinic website: 19 example findings with who each one affects and the fix, before-and-after code, a remediation plan and a PDF of the report.",
+    "cover": "alderwick-accessibility-audit/cover.webp",
+    "coverAlt": "The audit summary: 19 barriers on the clinic site, 3 that stop patients cold, with issue counts by severity",
+    "demo": "alderwick-accessibility-audit/demo/index.html",
+    "demoLabel": "Open the audit report",
+    "downloads": [
+      {
+        "file": "alderwick-accessibility-audit/samples/Alderwick-accessibility-audit-DEMO.pdf",
+        "label": "Download the report PDF"
+      }
+    ],
+    "gallery": [
+      {
+        "src": "alderwick-accessibility-audit/screenshots/detail-findings.webp",
+        "alt": "The findings table with success criterion, severity, who is affected and the fix"
+      },
+      {
+        "src": "alderwick-accessibility-audit/screenshots/detail-fixes.webp",
+        "alt": "Before-and-after code for common fixes"
+      },
+      {
+        "src": "alderwick-accessibility-audit/screenshots/mobile.webp",
+        "alt": "The report on a phone"
+      }
+    ]
+  },
+  {
     "id": "bramblewick-holiday-ads",
     "title": "Bramblewick Gift Co.: holiday Facebook ads",
     "short": "Facebook ad set",
