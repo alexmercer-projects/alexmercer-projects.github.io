@@ -41,6 +41,52 @@
     "coverPhone": "tamarack-budget-tracker/cover-phone.webp"
   },
   {
+    "id": "thistledown-wholesale-prospects",
+    "title": "Thistledown Coffee Roasters: a wholesale prospect list",
+    "short": "Wholesale lead list",
+    "category": "Lead research",
+    "label": "Concept demo",
+    "year": 2026,
+    "folder": "thistledown-wholesale-prospects",
+    "summary": "A lead list of 40 places that could buy a small roaster's coffee wholesale, each with a contact, a fit score, the reason it fits and its source. As a page you can filter and a real Excel file.",
+    "cover": "thistledown-wholesale-prospects/cover.webp",
+    "coverAlt": "The prospect list: search and filters above rows with the business, town, contact, a fit score, why it fits, a suggested first line and the source",
+    "demo": "thistledown-wholesale-prospects/demo/index.html",
+    "demoLabel": "Open the prospect list",
+    "downloads": [
+      {
+        "file": "thistledown-wholesale-prospects/samples/Thistledown-wholesale-prospects-DEMO.xlsx",
+        "label": "Download the Excel file"
+      },
+      {
+        "file": "thistledown-wholesale-prospects/samples/Thistledown-wholesale-prospects-DEMO.csv",
+        "label": "Download the CSV"
+      }
+    ],
+    "gallery": [
+      {
+        "src": "thistledown-wholesale-prospects/screenshots/detail-list.webp",
+        "alt": "The list with search, filters and the first rows, each with a contact, fit score, reason and source"
+      },
+      {
+        "src": "thistledown-wholesale-prospects/screenshots/detail-scoring.webp",
+        "alt": "The five-part scoring rubric, a worked example and counts by type and town"
+      },
+      {
+        "src": "thistledown-wholesale-prospects/screenshots/detail-checks.webp",
+        "alt": "Quality checks: sources and dates on every row, no guessed emails, places left off and duplicates merged"
+      },
+      {
+        "src": "thistledown-wholesale-prospects/screenshots/detail-handoff.webp",
+        "alt": "What each workbook tab does and a suggested first week grouped by town"
+      },
+      {
+        "src": "thistledown-wholesale-prospects/screenshots/mobile.webp",
+        "alt": "The page on a phone"
+      }
+    ]
+  },
+  {
     "id": "brightwater-resume-makeover",
     "title": "Noa Brightwater: a resume and LinkedIn makeover",
     "short": "Resume makeover",
