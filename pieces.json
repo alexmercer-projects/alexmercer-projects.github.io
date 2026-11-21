@@ -41,6 +41,71 @@
     "coverPhone": "tamarack-budget-tracker/cover-phone.webp"
   },
   {
+    "id": "tollhaven-shopify-product-page",
+    "title": "Tollhaven Trouser Co.: a Shopify product page section",
+    "short": "Shopify product page",
+    "category": "Shopify",
+    "label": "Concept demo",
+    "year": 2026,
+    "folder": "tollhaven-shopify-product-page",
+    "summary": "A Shopify product section for an apparel shop, with the size guide next to the sizes, separate lengths, clear sold-out states and a delivery date under the price. The demo is the section itself, rendered from its Liquid.",
+    "cover": "tollhaven-shopify-product-page/cover.webp",
+    "coverAlt": "A trouser product page with Navy, waist 32 and Regular length picked, a delivery estimate, a size guide link and an Only 1 left note above the Add to cart button",
+    "demo": "tollhaven-shopify-product-page/demo/index.html",
+    "demoLabel": "Try the product page",
+    "downloads": [
+      {
+        "file": "tollhaven-shopify-product-page/samples/tollhaven-product-section-theme-files.zip",
+        "label": "Download the theme files"
+      }
+    ],
+    "gallery": [
+      {
+        "src": "tollhaven-shopify-product-page/screenshots/detail-page.webp",
+        "alt": "The product page with Navy, 32 Regular picked, one left in stock and the price on the button"
+      },
+      {
+        "src": "tollhaven-shopify-product-page/screenshots/detail-soldout.webp",
+        "alt": "Khaki 32 Regular picked: sold-out sizes crossed out, the button reads Sold out in this size, and an email-me form appears"
+      },
+      {
+        "src": "tollhaven-shopify-product-page/screenshots/detail-guide.webp",
+        "alt": "The size guide panel: waist and inseam typed in, and the finder suggests 32 Regular with a between-sizes note"
+      },
+      {
+        "src": "tollhaven-shopify-product-page/screenshots/detail-garment.webp",
+        "alt": "The garment measurements tab in centimetres, with a diagram of where each measurement is taken"
+      },
+      {
+        "src": "tollhaven-shopify-product-page/screenshots/detail-cart.webp",
+        "alt": "The demo cart drawer showing the item and how far it is from free shipping"
+      },
+      {
+        "src": "tollhaven-shopify-product-page/screenshots/detail-questions.webp",
+        "alt": "Six common product page questions and the choice the section makes for each"
+      },
+      {
+        "src": "tollhaven-shopify-product-page/screenshots/detail-editor.webp",
+        "alt": "A drawing of the theme editor built from the section schema, with the Shipping and delivery settings open"
+      },
+      {
+        "src": "tollhaven-shopify-product-page/screenshots/detail-files.webp",
+        "alt": "The theme file tree, a code excerpt and the real test output"
+      },
+      {
+        "src": "tollhaven-shopify-product-page/screenshots/mobile.webp",
+        "alt": "On a phone: the sticky add-to-cart bar after scrolling past the main button, and the size guide as a bottom sheet in centimetres"
+      }
+    ],
+    "extraLinks": [
+      {
+        "label": "Source and tests on GitHub",
+        "href": "https://github.com/alexmercer-projects/tollhaven-shopify-product-page"
+      }
+    ],
+    "labelNote": "The shop, product, prices and stock are made up, and so are the contact details. Tested offline with LiquidJS and headless Chrome; not installed on a real Shopify store, and no sales or results are claimed."
+  },
+  {
     "id": "copperwick-quote-automation",
     "title": "Copperwick Moving Co.: a quote request automation",
     "short": "Form-to-sheet automation",
