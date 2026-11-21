@@ -41,6 +41,67 @@
     "coverPhone": "tamarack-budget-tracker/cover-phone.webp"
   },
   {
+    "id": "copperwick-quote-automation",
+    "title": "Copperwick Moving Co.: a quote request automation",
+    "short": "Form-to-sheet automation",
+    "category": "Automation",
+    "label": "Concept demo",
+    "year": 2026,
+    "folder": "copperwick-quote-automation",
+    "summary": "A form-to-sheet-to-email automation in Google Apps Script: every quote request logged, checked for spam, typos and repeats, routed to the right estimator and confirmed, with reminders. The demo runs the real code.",
+    "cover": "copperwick-quote-automation/cover.webp",
+    "coverAlt": "A quote form next to the script's run log, the email it would send and the Requests sheet below",
+    "demo": "copperwick-quote-automation/demo/index.html",
+    "demoLabel": "Try the automation",
+    "downloads": [
+      {
+        "file": "copperwick-quote-automation/samples/copperwick-quote-automation-apps-script.zip",
+        "label": "Download the Apps Script project"
+      },
+      {
+        "file": "copperwick-quote-automation/samples/Copperwick-quote-requests-DEMO.xlsx",
+        "label": "Download the sample sheet"
+      }
+    ],
+    "gallery": [
+      {
+        "src": "copperwick-quote-automation/screenshots/detail-try.webp",
+        "alt": "The Try it box: a quote form, the step-by-step run log, the email it would send and the Requests sheet"
+      },
+      {
+        "src": "copperwick-quote-automation/screenshots/detail-sheet.webp",
+        "alt": "The Requests tab with reference numbers, statuses, estimators and reply-by times"
+      },
+      {
+        "src": "copperwick-quote-automation/screenshots/detail-emails.webp",
+        "alt": "The confirmation to the customer, the alert to the estimator and the repeat heads-up"
+      },
+      {
+        "src": "copperwick-quote-automation/screenshots/detail-follow.webp",
+        "alt": "A missed request on a timeline next to the morning digest email"
+      },
+      {
+        "src": "copperwick-quote-automation/screenshots/detail-edges.webp",
+        "alt": "Six edge cases: simultaneous requests, the email quota, moved columns, errors, typos and repeats"
+      },
+      {
+        "src": "copperwick-quote-automation/screenshots/detail-setup.webp",
+        "alt": "Setup steps, a code excerpt from Rules.gs and the test run"
+      },
+      {
+        "src": "copperwick-quote-automation/screenshots/mobile.webp",
+        "alt": "The page on a phone"
+      }
+    ],
+    "extraLinks": [
+      {
+        "label": "Source and tests on GitHub",
+        "href": "https://github.com/alexmercer-projects/copperwick-quote-automation"
+      }
+    ],
+    "labelNote": "The business is made up, and so is every name and contact detail. Tested offline against stand-ins for Google's services; not installed for a real business, and no results are claimed."
+  },
+  {
     "id": "thistledown-wholesale-prospects",
     "title": "Thistledown Coffee Roasters: a wholesale prospect list",
     "short": "Wholesale lead list",
