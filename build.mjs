@@ -52,6 +52,7 @@ const featured = pieces.find((p) => p.featured) || pieces[0];
 // Each piece lives at /work/<id>/ with demo/, files/ and img/ beside its index.html.
 const assetUrl = (p, rel) => {
   // rel is relative to pieces/. Files inside the piece's demo folder are served from that demo copy.
+  if (/^https?:\/\//.test(rel)) return rel; // outside links (e.g. a source repo) pass through
   const inFolder = rel.startsWith(p.folder + '/') ? rel.slice(p.folder.length + 1) : rel;
   if (inFolder.startsWith('demo/')) return inFolder;
   if (rel === p.cover) return 'img/cover.webp';
