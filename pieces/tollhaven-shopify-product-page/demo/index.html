@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tollhaven Trouser Co.: a Shopify product page section (concept demo) · Alex Mercer</title>
+  <meta name="description" content="Concept demo: a Shopify Online Store 2.0 product section for a made-up trouser brand, with a size guide by the size picker, separate lengths, clear sold-out states, a delivery estimate and a sticky add-to-cart bar on phones.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#f3f1ec">
+  <meta property="og:title" content="Shopify product page section, concept demo">
+  <meta property="og:description" content="A Liquid section for apparel product pages: size guide by the picker, Short/Regular/Long lengths, sold-out and not-made states, delivery dates and a sticky phone bar. Made-up brand, example data.">
+  <meta property="og:type" content="website">
+  <link rel="preload" href="fonts/Geist.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/InstrumentSerif.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232f4535'/%3E%3Cpath d='M10 8h12l1 6-2 10h-4l-1-8-1 8h-4L9 14z' fill='%23f3f1ec'/%3E%3C/svg%3E">
+  <script>if(!/[?&]static\b/.test(location.search)&&!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('anim');</script>
+</head>
+<body>
+<div class="am-demo-bar" role="note" style="font:14px/1.45 system-ui,-apple-system,'Segoe UI',sans-serif;background:#0f0f0f;color:#f3f3ef;padding:10px 16px;display:flex;flex-wrap:wrap;gap:6px 18px;justify-content:space-between;align-items:center;position:relative;z-index:50"><span><b>Concept demo by Alex Mercer.</b> Tollhaven Trouser Co., its products, prices and stock are made up. Example data, not client work, and nothing here can be bought.</span><a href="../index.html" style="color:#f3f3ef;text-decoration:underline;text-underline-offset:3px">Back to Alex Mercer&#39;s portfolio</a></div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap top__inner">
+    <a class="logo" href="#main"><span class="logo__mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M10 7h12l1.2 6.5L21 25h-4l-1-8.5-1 8.5h-4L8.8 13.5z" fill="currentColor"/></svg></span><span class="logo__word"><span>Tollhaven Trouser Co.</span><small>Shopify product section</small></span></a>
+    <nav class="nav" aria-label="Sections"><a href="#page">The page</a><a href="#questions">Questions</a><a href="#chart">Size chart</a><a href="#editor">Theme editor</a><a href="#files">Files and tests</a><a href="#install">Install</a></nav>
+    <a class="btn btn--solid btn--sm" href="tollhaven-product-section-theme-files.zip" download><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3v10m0 0-4-4m4 4 4-4M4 16h12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Theme files</span></a>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero wrap">
+  <div class="hero__copy">
+    <p class="eyebrow">Shopify · Online Store 2.0 section · Liquid + JavaScript</p>
+    <h1>A trouser page that answers <em>“what size?”</em> before anyone has to ask.</h1>
+    <p class="lede">Tollhaven Trouser Co. is a made-up shop selling one chino in four colors, six waists and three lengths. This is the product section I'd build for it: the size guide sits right next to the sizes, length is its own choice, sold-out and never-made sizes look different, the delivery date is under the price, and on a phone the add-to-cart button follows you down the page.</p>
+    <div class="hero__cta">
+      <a class="btn btn--solid" href="#page">Try the product page</a>
+      <a class="btn btn--line" href="tollhaven-product-section-theme-files.zip" download>Download the theme files <span class="muted" data-size-of="tollhaven-product-section-theme-files.zip">(zip, 24 KB)</span></a>
+    </div>
+  </div>
+  <aside class="filecard reveal" aria-label="What the section adds">
+    <div class="filecard__top"><span class="dot" aria-hidden="true"></span><code>sections/th-main-product.liquid</code><span class="tag">OS 2.0</span></div>
+    <ol class="filecard__list">
+      <li><b>Size guide by the size picker</b><span>Opens a side panel with a size finder, body and garment tables, in or cm</span></li>
+      <li><b>Length as its own option</b><span>Short, Regular, Long, each with the inseam printed on it</span></li>
+      <li><b>Sold out vs not made</b><span>Crossed out and still tappable, with an email-me form; combinations that don't exist are dashed</span></li>
+      <li><b>Delivery date under the price</b><span>Counts the warehouse's cutoff, weekends and closed days</span></li>
+      <li><b>Sticky add-to-cart on phones</b><span>Shows once the main button is gone, hides at the footer</span></li>
+      <li><b>Every bit of copy is a setting</b><span>Owners change wording and rules in the theme editor, not the code</span></li>
+    </ol>
+    <p class="filecard__foot">3 Liquid files, 2 JS files, 1 CSS file, 1 template. No apps.</p>
+  </aside>
+</section>
+
+<section class="wrap facts" aria-label="At a glance">
+  <div><span class="facts__k">Works with</span><span class="facts__v">Online Store 2.0 themes; written to Dawn's conventions</span></div>
+  <div><span class="facts__k">Apps needed</span><span class="facts__v">None. Back-in-stock requests go to the store's contact inbox</span></div>
+  <div><span class="facts__k">Sample product</span><span class="facts__v">68 variants: 8 sold out, 4 never made</span></div>
+  <div><span class="facts__k">Automated tests</span><span class="facts__v"><b data-test-count>33</b> passing, run offline</span></div>
+</section>
+
+<section class="band band--store" id="page">
+  <div class="wrap">
+    <div class="sechead">
+      <p class="eyebrow">01 · The product page</p>
+      <h2>The real section, rendered from the Liquid.</h2>
+      <p>Everything inside the frame below is the theme section itself, rendered locally from the <code>.liquid</code> files against the sample product, and running the same CSS and JavaScript that go in the zip. Only the cart is pretend.</p>
+    </div>
+    <div class="try" role="group" aria-label="Things to try">
+      <span class="try__label">Try:</span>
+      <button type="button" class="chip" data-try="olive">Olive, then waist 28</button>
+      <button type="button" class="chip" data-try="none">Waist 38 (no Short is made)</button>
+      <button type="button" class="chip" data-try="soldout">Khaki 32 Regular (sold out)</button>
+      <button type="button" class="chip" data-try="guide">Open the size guide</button>
+      <button type="button" class="chip" data-try="low">Navy 32 Regular (1 left)</button>
+    </div>
+    <div class="browser" id="store">
+      <div class="browser__bar" aria-hidden="true"><span></span><span></span><span></span><div class="browser__url">tollhaven-trouser.example/products/field-chino</div></div>
+      <div class="store">
+        <div class="store__announce">Free US shipping over $100 · Free 30-day returns</div>
+        <div class="store__nav">
+          <span class="store__menu" aria-hidden="true"><i></i><i></i></span>
+          <span class="store__brand">Tollhaven</span>
+          <nav class="store__links" aria-label="Store menu (demo, not links)"><span>Trousers</span><span>Shorts</span><span>Fit guide</span><span>About</span></nav>
+          <span class="store__cart" data-cart-count aria-label="Cart, 0 items">Cart (0)</span>
+        </div>
+        <p class="store__crumbs"><span>Home</span> / <span>Trousers</span> / <span>The Field Chino</span></p>
+        <div class="store__product">
+<!-- render:start -->
+<link rel="stylesheet" href="theme/th-product.css">
+<script src="theme/th-product-core.js" defer></script>
+<script src="theme/th-product.js" defer></script><section
+  class="th-product"
+  id="ThProduct-main"
+  data-th-product
+  data-section="main"
+  data-preselect-size="false"
+  data-update-url="true"
+  data-money-format="${{amount}}"
+  data-cart-add-url="/cart/add"
+  data-color-option="Color"
+  data-size-option="Waist"
+>
+  <div class="th-product__grid">
+    <div class="th-media" data-th-media>
+      <div class="th-media__stage" data-th-stage tabindex="0" aria-label="Product images"><figure class="th-media__item" data-th-media-item data-color="Khaki" data-media-id="3300001"><img src="img/field-chino-khaki-front.svg" loading="eager" width="800" height="1000" alt="Khaki · Front of the Field Chino, laid flat" sizes="(min-width: 990px) 55vw, 100vw" decoding="async">
+          </figure><figure class="th-media__item" data-th-media-item data-color="Khaki" data-media-id="3300002"><img src="img/field-chino-khaki-back.svg" loading="lazy" width="800" height="1000" alt="Khaki · Back, with button-through back pockets" sizes="(min-width: 990px) 55vw, 100vw" decoding="async">
+          </figure><figure class="th-media__item" data-th-media-item data-color="Khaki" data-media-id="3300003"><img src="img/field-chino-khaki-detail.svg" loading="lazy" width="800" height="1000" alt="Khaki · Close-up of the waistband, button and slant pocket" sizes="(min-width: 990px) 55vw, 100vw" decoding="async">
+          </figure><figure class="th-media__item" data-th-media-item data-color="Khaki" data-media-id="3300004"><img src="img/field-chino-khaki-fabric.svg" loading="lazy" width="800" height="1000" alt="Khaki · The 9 oz stretch twill, up close" sizes="(min-width: 990px) 55vw, 100vw" decoding="async">
+          </figure><figure class="th-media__item" data-th-media-item data-color="Olive" data-media-id="3300005" hidden><img src="img/field-chino-olive-front.svg" loading="lazy" width="800" height="1000" alt="Olive · Front of the Field Chino, laid flat" sizes="(min-width: 990px) 55vw, 100vw" decoding="async">
+          </figure><figure class="th-media__item" data-th-media-item data-color="Olive" data-media-id="3300006" hidden><img src="img/field-chino-olive-back.svg" loading="lazy" width="800" height="1000" alt="Olive · Back, with button-through back pockets" sizes="(min-width: 990px) 55vw, 100vw" decoding="async">
+          </figure><figure class="th-media__item" data-th-media-item data-color="Olive" data-media-id="3300007" hidden><img src="img/field-chino-olive-detail.svg" loading="lazy" width="800" height="1000" alt="Olive · Close-up of the waistband, button and slant pocket" sizes="(min-width: 990px) 55vw, 100vw" decoding="async">
+          </figure><figure class="th-media__item" data-th-media-item data-color="Olive" data-media-id="3300008" hidden><img src="img/field-chino-olive-fabric.svg" loading="lazy" width="800" height="1000" alt="Olive · The 9 oz stretch twill, up close" sizes="(min-width: 990px) 55vw, 100vw" decoding="async">
+          </figure><figure class="th-media__item" data-th-media-item data-color="Navy" data-media-id="3300009" hidden><img src="img/field-chino-navy-front.svg" loading="lazy" width="800" height="1000" alt="Navy · Front of the Field Chino, laid flat" sizes="(min-width: 990px) 55vw, 100vw" decoding="async">
+          </figure><figure class="th-media__item" data-th-media-item data-color="Navy" data-media-id="3300010" hidden><img src="img/field-chino-navy-back.svg" loading="lazy" width="800" height="1000" alt="Navy · Back, with button-through back pockets" sizes="(min-width: 990px) 55vw, 100vw" decoding="async">
+          </figure><figure class="th-media__item" data-th-media-item data-color="Navy" data-media-id="3300011" hidden><img src="img/field-chino-navy-detail.svg" loading="lazy" width="800" height="1000" alt="Navy · Close-up of the waistband, button and slant pocket" sizes="(min-width: 990px) 55vw, 100vw" decoding="async">
+          </figure><figure class="th-media__item" data-th-media-item data-color="Navy" data-media-id="3300012" hidden><img src="img/field-chino-navy-fabric.svg" loading="lazy" width="800" height="1000" alt="Navy · The 9 oz stretch twill, up close" sizes="(min-width: 990px) 55vw, 100vw" decoding="async">
+          </figure><figure class="th-media__item" data-th-media-item data-color="Charcoal" data-media-id="3300013" hidden><img src="img/field-chino-charcoal-front.svg" loading="lazy" width="800" height="1000" alt="Charcoal · Front of the Field Chino, laid flat" sizes="(min-width: 990px) 55vw, 100vw" decoding="async">
+          </figure><figure class="th-media__item" data-th-media-item data-color="Charcoal" data-media-id="3300014" hidden><img src="img/field-chino-charcoal-back.svg" loading="lazy" width="800" height="1000" alt="Charcoal · Back, with button-through back pockets" sizes="(min-width: 990px) 55vw, 100vw" decoding="async">
+          </figure><figure class="th-media__item" data-th-media-item data-color="Charcoal" data-media-id="3300015" hidden><img src="img/field-chino-charcoal-detail.svg" loading="lazy" width="800" height="1000" alt="Charcoal · Close-up of the waistband, button and slant pocket" sizes="(min-width: 990px) 55vw, 100vw" decoding="async">
+          </figure><figure class="th-media__item" data-th-media-item data-color="Charcoal" data-media-id="3300016" hidden><img src="img/field-chino-charcoal-fabric.svg" loading="lazy" width="800" height="1000" alt="Charcoal · The 9 oz stretch twill, up close" sizes="(min-width: 990px) 55vw, 100vw" decoding="async">
+          </figure></div>
+      <div class="th-media__thumbs" data-th-thumbs role="group" aria-label="Choose an image"><button type="button" class="th-media__thumb" data-th-thumb="3300001" data-color="Khaki" aria-label="Show image: Khaki · Front of the Field Chino, laid flat">
+            <img src="img/field-chino-khaki-front.svg" loading="lazy" width="100" height="125" alt="" decoding="async">
+          </button><button type="button" class="th-media__thumb" data-th-thumb="3300002" data-color="Khaki" aria-label="Show image: Khaki · Back, with button-through back pockets">
+            <img src="img/field-chino-khaki-back.svg" loading="lazy" width="100" height="125" alt="" decoding="async">
+          </button><button type="button" class="th-media__thumb" data-th-thumb="3300003" data-color="Khaki" aria-label="Show image: Khaki · Close-up of the waistband, button and slant pocket">
+            <img src="img/field-chino-khaki-detail.svg" loading="lazy" width="100" height="125" alt="" decoding="async">
+          </button><button type="button" class="th-media__thumb" data-th-thumb="3300004" data-color="Khaki" aria-label="Show image: Khaki · The 9 oz stretch twill, up close">
+            <img src="img/field-chino-khaki-fabric.svg" loading="lazy" width="100" height="125" alt="" decoding="async">
+          </button><button type="button" class="th-media__thumb" data-th-thumb="3300005" data-color="Olive" aria-label="Show image: Olive · Front of the Field Chino, laid flat" hidden>
+            <img src="img/field-chino-olive-front.svg" loading="lazy" width="100" height="125" alt="" decoding="async">
+          </button><button type="button" class="th-media__thumb" data-th-thumb="3300006" data-color="Olive" aria-label="Show image: Olive · Back, with button-through back pockets" hidden>
+            <img src="img/field-chino-olive-back.svg" loading="lazy" width="100" height="125" alt="" decoding="async">
+          </button><button type="button" class="th-media__thumb" data-th-thumb="3300007" data-color="Olive" aria-label="Show image: Olive · Close-up of the waistband, button and slant pocket" hidden>
+            <img src="img/field-chino-olive-detail.svg" loading="lazy" width="100" height="125" alt="" decoding="async">
+          </button><button type="button" class="th-media__thumb" data-th-thumb="3300008" data-color="Olive" aria-label="Show image: Olive · The 9 oz stretch twill, up close" hidden>
+            <img src="img/field-chino-olive-fabric.svg" loading="lazy" width="100" height="125" alt="" decoding="async">
+          </button><button type="button" class="th-media__thumb" data-th-thumb="3300009" data-color="Navy" aria-label="Show image: Navy · Front of the Field Chino, laid flat" hidden>
+            <img src="img/field-chino-navy-front.svg" loading="lazy" width="100" height="125" alt="" decoding="async">
+          </button><button type="button" class="th-media__thumb" data-th-thumb="3300010" data-color="Navy" aria-label="Show image: Navy · Back, with button-through back pockets" hidden>
+            <img src="img/field-chino-navy-back.svg" loading="lazy" width="100" height="125" alt="" decoding="async">
+          </button><button type="button" class="th-media__thumb" data-th-thumb="3300011" data-color="Navy" aria-label="Show image: Navy · Close-up of the waistband, button and slant pocket" hidden>
+            <img src="img/field-chino-navy-detail.svg" loading="lazy" width="100" height="125" alt="" decoding="async">
+          </button><button type="button" class="th-media__thumb" data-th-thumb="3300012" data-color="Navy" aria-label="Show image: Navy · The 9 oz stretch twill, up close" hidden>
+            <img src="img/field-chino-navy-fabric.svg" loading="lazy" width="100" height="125" alt="" decoding="async">
+          </button><button type="button" class="th-media__thumb" data-th-thumb="3300013" data-color="Charcoal" aria-label="Show image: Charcoal · Front of the Field Chino, laid flat" hidden>
+            <img src="img/field-chino-charcoal-front.svg" loading="lazy" width="100" height="125" alt="" decoding="async">
+          </button><button type="button" class="th-media__thumb" data-th-thumb="3300014" data-color="Charcoal" aria-label="Show image: Charcoal · Back, with button-through back pockets" hidden>
+            <img src="img/field-chino-charcoal-back.svg" loading="lazy" width="100" height="125" alt="" decoding="async">
+          </button><button type="button" class="th-media__thumb" data-th-thumb="3300015" data-color="Charcoal" aria-label="Show image: Charcoal · Close-up of the waistband, button and slant pocket" hidden>
+            <img src="img/field-chino-charcoal-detail.svg" loading="lazy" width="100" height="125" alt="" decoding="async">
+          </button><button type="button" class="th-media__thumb" data-th-thumb="3300016" data-color="Charcoal" aria-label="Show image: Charcoal · The 9 oz stretch twill, up close" hidden>
+            <img src="img/field-chino-charcoal-fabric.svg" loading="lazy" width="100" height="125" alt="" decoding="async">
+          </button></div>
+      <div class="th-media__dots" data-th-dots aria-hidden="true"></div>
+    </div>
+
+    <div class="th-info"><div class="th-title" data-block="title"><p class="th-title__vendor">Tollhaven Trouser Co.</p><h1 class="th-title__name">The Field Chino</h1><p class="th-title__sub">Straight leg · 9 oz stretch twill</p></div><div class="th-price" data-th-price data-block="price">
+              <span class="th-price__now" data-th-price-now>$98</span>
+              <s class="th-price__was" data-th-price-was hidden>$0</s>
+            </div><div
+              class="th-ship" data-th-ship data-block="shipping"
+              data-free-cents="10000"
+              data-time-zone="America/New_York"
+              data-cutoff="14"
+              data-transit-min="2"
+              data-transit-max="5"
+              data-holidays="2026-11-26, 2026-12-25, 2027-01-01"
+            >
+              <svg class="th-ship__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h11v8H3zM14 10h4l3 3v2h-7z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="7" cy="17" r="1.8" fill="currentColor"/><circle cx="17.5" cy="17" r="1.8" fill="currentColor"/></svg>
+              <div>
+                <p class="th-ship__line"><strong>Free US shipping over $100.</strong> <span>Free returns and exchanges for 30 days.</span></p>
+                <p class="th-ship__eta" data-th-eta>Ships in 1 to 2 business days.</p>
+              </div>
+            </div><div class="th-picker" data-th-picker data-soldout-style="strike" data-block="picker"><fieldset class="th-option th-option--color" data-th-option="0" data-name="Color">
+      <legend class="th-option__legend">Color<span class="th-option__picked" data-th-picked>: Khaki</span></legend><div class="th-option__values"><input class="th-visually-hidden" type="radio" id="Th-main-0-0" name="th-main-0" value="Khaki" form="th-form-main" data-th-value checked><label class="th-swatch" for="Th-main-0-0" title="Khaki">
+              <span class="th-swatch__chip" style="--chip: var(--th-color-khaki, #bbb)"></span>
+              <span class="th-visually-hidden">Khaki</span>
+            </label><input class="th-visually-hidden" type="radio" id="Th-main-0-1" name="th-main-0" value="Olive" form="th-form-main" data-th-value><label class="th-swatch" for="Th-main-0-1" title="Olive">
+              <span class="th-swatch__chip" style="--chip: var(--th-color-olive, #bbb)"></span>
+              <span class="th-visually-hidden">Olive</span>
+            </label><input class="th-visually-hidden" type="radio" id="Th-main-0-2" name="th-main-0" value="Navy" form="th-form-main" data-th-value><label class="th-swatch" for="Th-main-0-2" title="Navy">
+              <span class="th-swatch__chip" style="--chip: var(--th-color-navy, #bbb)"></span>
+              <span class="th-visually-hidden">Navy</span>
+            </label><input class="th-visually-hidden" type="radio" id="Th-main-0-3" name="th-main-0" value="Charcoal" form="th-form-main" data-th-value><label class="th-swatch" for="Th-main-0-3" title="Charcoal">
+              <span class="th-swatch__chip" style="--chip: var(--th-color-charcoal, #bbb)"></span>
+              <span class="th-visually-hidden">Charcoal</span>
+            </label></div><p class="th-option__missing" data-th-missing hidden>Pick a color first.</p>
+    </fieldset><fieldset class="th-option th-option--size" data-th-option="1" data-name="Waist">
+      <legend class="th-option__legend">Waist<span class="th-option__picked" data-th-picked></span></legend><button type="button" class="th-link th-option__guide" data-th-guide-open aria-haspopup="dialog" aria-controls="ThGuide-main">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M2.5 7.5h15v5h-15z" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M5.5 7.5v2M8.5 7.5v3M11.5 7.5v2M14.5 7.5v3" stroke="currentColor" stroke-width="1.4"/></svg>
+          Size guide
+        </button><div class="th-option__values"><input class="th-visually-hidden" type="radio" id="Th-main-1-0" name="th-main-1" value="28" form="th-form-main" data-th-value><label class="th-pill" for="Th-main-1-0">
+              <span class="th-pill__value">28</span><span class="th-pill__state" data-th-state></span>
+            </label><input class="th-visually-hidden" type="radio" id="Th-main-1-1" name="th-main-1" value="30" form="th-form-main" data-th-value><label class="th-pill" for="Th-main-1-1">
+              <span class="th-pill__value">30</span><span class="th-pill__state" data-th-state></span>
+            </label><input class="th-visually-hidden" type="radio" id="Th-main-1-2" name="th-main-1" value="32" form="th-form-main" data-th-value><label class="th-pill" for="Th-main-1-2">
+              <span class="th-pill__value">32</span><span class="th-pill__state" data-th-state></span>
+            </label><input class="th-visually-hidden" type="radio" id="Th-main-1-3" name="th-main-1" value="34" form="th-form-main" data-th-value><label class="th-pill" for="Th-main-1-3">
+              <span class="th-pill__value">34</span><span class="th-pill__state" data-th-state></span>
+            </label><input class="th-visually-hidden" type="radio" id="Th-main-1-4" name="th-main-1" value="36" form="th-form-main" data-th-value><label class="th-pill" for="Th-main-1-4">
+              <span class="th-pill__value">36</span><span class="th-pill__state" data-th-state></span>
+            </label><input class="th-visually-hidden" type="radio" id="Th-main-1-5" name="th-main-1" value="38" form="th-form-main" data-th-value><label class="th-pill" for="Th-main-1-5">
+              <span class="th-pill__value">38</span><span class="th-pill__state" data-th-state></span>
+            </label></div><div class="th-option__note"><p>Fits true to waist size. Between sizes? Size up; the waistband has about ½ in of give.</p></div><p class="th-option__missing" data-th-missing hidden>Pick a waist first.</p>
+    </fieldset><fieldset class="th-option th-option--length" data-th-option="2" data-name="Length">
+      <legend class="th-option__legend">Length<span class="th-option__picked" data-th-picked></span></legend><div class="th-option__values"><input class="th-visually-hidden" type="radio" id="Th-main-2-0" name="th-main-2" value="Short" form="th-form-main" data-th-value><label class="th-pill" for="Th-main-2-0">
+              <span class="th-pill__value">Short</span><span class="th-pill__sub">30 in inseam</span><span class="th-pill__state" data-th-state></span>
+            </label><input class="th-visually-hidden" type="radio" id="Th-main-2-1" name="th-main-2" value="Regular" form="th-form-main" data-th-value><label class="th-pill" for="Th-main-2-1">
+              <span class="th-pill__value">Regular</span><span class="th-pill__sub">32 in inseam</span><span class="th-pill__state" data-th-state></span>
+            </label><input class="th-visually-hidden" type="radio" id="Th-main-2-2" name="th-main-2" value="Long" form="th-form-main" data-th-value><label class="th-pill" for="Th-main-2-2">
+              <span class="th-pill__value">Long</span><span class="th-pill__sub">34 in inseam</span><span class="th-pill__state" data-th-state></span>
+            </label></div><p class="th-option__missing" data-th-missing hidden>Pick a length first.</p>
+    </fieldset></div><dialog class="th-guide" id="ThGuide-main" data-th-guide aria-labelledby="ThGuideTitle-main">
+  <div class="th-guide__panel">
+    <header class="th-guide__head">
+      <div>
+        <p class="th-guide__kicker">The Field Chino</p>
+        <h2 class="th-guide__title" id="ThGuideTitle-main">Size guide</h2>
+      </div>
+      <div class="th-units" role="group" aria-label="Units">
+        <button type="button" class="th-units__btn" data-th-unit="in" aria-pressed="true">in</button>
+        <button type="button" class="th-units__btn" data-th-unit="cm" aria-pressed="false">cm</button>
+      </div>
+      <button type="button" class="th-guide__close" data-th-guide-close aria-label="Close size guide"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+    </header>
+
+    <div class="th-tabs" role="tablist" aria-label="Size guide sections">
+      <button type="button" role="tab" class="th-tabs__tab" id="ThTabFind-main" aria-controls="ThPanelFind-main" aria-selected="true" data-th-tab>Find my size</button>
+      <button type="button" role="tab" class="th-tabs__tab" id="ThTabBody-main" aria-controls="ThPanelBody-main" aria-selected="false" tabindex="-1" data-th-tab>Body<span class="th-tabs__long"> measurements</span></button>
+      <button type="button" role="tab" class="th-tabs__tab" id="ThTabGarment-main" aria-controls="ThPanelGarment-main" aria-selected="false" tabindex="-1" data-th-tab>Garment<span class="th-tabs__long"> measurements</span></button>
+    </div>
+
+    <div class="th-guide__body">
+      <section role="tabpanel" id="ThPanelFind-main" aria-labelledby="ThTabFind-main" class="th-find" data-th-panel>
+        <p class="th-guide__lede">Measure yourself, not a pair you own. Two numbers are enough.</p>
+        <form class="th-find__form" data-th-find novalidate>
+          <label class="th-field">
+            <span class="th-field__label">Waist, where you wear your trousers</span>
+            <span class="th-field__input"><input type="number" inputmode="decimal" step="0.25" min="0" name="waist" data-th-find-waist placeholder="32"><span class="th-field__unit" data-th-unit-label>in</span></span>
+          </label>
+          <label class="th-field">
+            <span class="th-field__label">Inseam, crotch to the floor, no shoes</span>
+            <span class="th-field__input"><input type="number" inputmode="decimal" step="0.25" min="0" name="inseam" data-th-find-inseam placeholder="31.5"><span class="th-field__unit" data-th-unit-label>in</span></span>
+          </label>
+        </form>
+        <div class="th-find__result" data-th-find-result aria-live="polite">
+          <p class="th-find__empty">Your size shows here as you type.</p>
+        </div>
+        <button type="button" class="th-btn th-btn--add th-find__apply" data-th-find-apply hidden>Choose this size</button>
+      </section>
+
+      <section role="tabpanel" id="ThPanelBody-main" aria-labelledby="ThTabBody-main" data-th-panel hidden>
+        <p class="th-guide__lede"><strong>Your body</strong>, measured over light clothing. Use this to pick a size.</p>
+        <div class="th-table-wrap" tabindex="0" role="region" aria-label="Body measurements by size">
+          <table class="th-table">
+            <thead><tr><th scope="col">Size</th><th scope="col">28</th><th scope="col">30</th><th scope="col">32</th><th scope="col">34</th><th scope="col">36</th><th scope="col">38</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Waist</th><td data-th-measure="27.5,28.75">27.5–28.75</td><td data-th-measure="29.5,30.75">29.5–30.75</td><td data-th-measure="31.5,32.75">31.5–32.75</td><td data-th-measure="33.5,34.75">33.5–34.75</td><td data-th-measure="35.5,36.75">35.5–36.75</td><td data-th-measure="37.5,38.75">37.5–38.75</td></tr>
+              <tr><th scope="row">Hip</th><td data-th-measure="35,36.5">35–36.5</td><td data-th-measure="37,38.5">37–38.5</td><td data-th-measure="39,40.5">39–40.5</td><td data-th-measure="41,42.5">41–42.5</td><td data-th-measure="43,44.5">43–44.5</td><td data-th-measure="45,46.5">45–46.5</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="th-table-wrap" tabindex="0" role="region" aria-label="Inseam by length">
+          <table class="th-table th-table--lengths">
+            <thead><tr><th scope="col">Length</th><th scope="col">Short</th><th scope="col">Regular</th><th scope="col">Long</th></tr></thead>
+            <tbody><tr><th scope="row">Your inseam</th><td data-th-measure="29,30.5">29–30.5</td><td data-th-measure="31,32.5">31–32.5</td><td data-th-measure="33,34.5">33–34.5</td></tr></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section role="tabpanel" id="ThPanelGarment-main" aria-labelledby="ThTabGarment-main" data-th-panel hidden>
+        <p class="th-guide__lede"><strong>The trousers</strong>, laid flat and measured after washing. Use this to compare with a pair you like. These are not body sizes: a 32 measures 33½ in at the waistband.</p>
+        <div class="th-garment">
+          <svg class="th-garment__fig" viewBox="0 0 220 260" role="img" aria-label="Where each garment measurement is taken">
+            <path d="M52 30h116l6 70-14 140h-42l-8-118h-0l-8 118H60L46 100z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M52 30h116v12H52z" fill="none" stroke="currentColor" stroke-width="2"/>
+            <g stroke="#b5532d" stroke-width="2" fill="#b5532d">
+              <path d="M56 22h108"/><path d="M52 22l6-4v8zM168 22l-6-4v8z"/>
+              <path d="M110 44v76" stroke-dasharray="4 3"/>
+              <path d="M54 108h52"/>
+              <path d="M62 248h40"/>
+              <path d="M116 124l6 112" stroke-dasharray="4 3"/>
+            </g>
+            <g font-family="inherit" font-size="11" fill="currentColor">
+              <text x="110" y="14" text-anchor="middle">A</text><text x="118" y="86">B</text><text x="78" y="102" text-anchor="middle">C</text><text x="82" y="259" text-anchor="middle">D</text><text x="128" y="186">E</text>
+            </g>
+          </svg>
+          <div class="th-table-wrap" tabindex="0" role="region" aria-label="Garment measurements by size">
+            <table class="th-table">
+              <thead><tr><th scope="col">Size</th><th scope="col">28</th><th scope="col">30</th><th scope="col">32</th><th scope="col">34</th><th scope="col">36</th><th scope="col">38</th></tr></thead>
+              <tbody>
+                <tr><th scope="row"><span class="th-key">A</span>Waistband, all round</th><td data-th-measure="29.5">29.5</td><td data-th-measure="31.5">31.5</td><td data-th-measure="33.5">33.5</td><td data-th-measure="35.5">35.5</td><td data-th-measure="37.5">37.5</td><td data-th-measure="39.5">39.5</td></tr>
+                <tr><th scope="row"><span class="th-key">B</span>Front rise</th><td data-th-measure="10.25">10.25</td><td data-th-measure="10.5">10.5</td><td data-th-measure="10.75">10.75</td><td data-th-measure="11">11</td><td data-th-measure="11.25">11.25</td><td data-th-measure="11.5">11.5</td></tr>
+                <tr><th scope="row"><span class="th-key">C</span>Thigh, flat</th><td data-th-measure="11.75">11.75</td><td data-th-measure="12.25">12.25</td><td data-th-measure="12.75">12.75</td><td data-th-measure="13.25">13.25</td><td data-th-measure="13.75">13.75</td><td data-th-measure="14.25">14.25</td></tr>
+                <tr><th scope="row"><span class="th-key">D</span>Leg opening, flat</th><td data-th-measure="7.5">7.5</td><td data-th-measure="7.75">7.75</td><td data-th-measure="8">8</td><td data-th-measure="8.25">8.25</td><td data-th-measure="8.5">8.5</td><td data-th-measure="8.75">8.75</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <p class="th-guide__small"><span class="th-key">E</span> Finished inseam: Short <span data-th-measure="30">30</span>, Regular <span data-th-measure="32">32</span>, Long <span data-th-measure="34">34</span> <span data-th-unit-label>in</span>. Measurements can vary by about ¼ in from pair to pair.</p>
+      </section>
+    </div>
+  </div>
+</dialog>
+<div class="th-buy" data-th-buy data-block="buy"><form method="post" action="/cart/add" accept-charset="UTF-8" id="th-form-main" class="th-buy__form" novalidate="novalidate" enctype="multipart/form-data"><input type="hidden" name="form_type" value="product"><input type="hidden" name="utf8" value="✓"><input type="hidden" name="id" value="47110001" data-th-variant-input disabled>
+                <noscript>
+                  <label class="th-noscript">Size
+                    <select name="id"><option value="47110001">Khaki / 28 / Short</option><option value="47110002">Khaki / 28 / Regular</option><option value="47110003">Khaki / 28 / Long</option><option value="47110004">Khaki / 30 / Short</option><option value="47110005">Khaki / 30 / Regular</option><option value="47110006">Khaki / 30 / Long</option><option value="47110007">Khaki / 32 / Short</option><option value="47110008" disabled>Khaki / 32 / Regular (sold out)</option><option value="47110009">Khaki / 32 / Long</option><option value="47110010">Khaki / 34 / Short</option><option value="47110011" disabled>Khaki / 34 / Regular (sold out)</option><option value="47110012">Khaki / 34 / Long</option><option value="47110013">Khaki / 36 / Short</option><option value="47110014">Khaki / 36 / Regular</option><option value="47110015">Khaki / 36 / Long</option><option value="47110016">Khaki / 38 / Regular</option><option value="47110017">Khaki / 38 / Long</option><option value="47110018" disabled>Olive / 28 / Short (sold out)</option><option value="47110019" disabled>Olive / 28 / Regular (sold out)</option><option value="47110020" disabled>Olive / 28 / Long (sold out)</option><option value="47110021">Olive / 30 / Short</option><option value="47110022">Olive / 30 / Regular</option><option value="47110023">Olive / 30 / Long</option><option value="47110024">Olive / 32 / Short</option><option value="47110025">Olive / 32 / Regular</option><option value="47110026">Olive / 32 / Long</option><option value="47110027">Olive / 34 / Short</option><option value="47110028">Olive / 34 / Regular</option><option value="47110029">Olive / 34 / Long</option><option value="47110030">Olive / 36 / Short</option><option value="47110031">Olive / 36 / Regular</option><option value="47110032">Olive / 36 / Long</option><option value="47110033">Olive / 38 / Regular</option><option value="47110034">Olive / 38 / Long</option><option value="47110035">Navy / 28 / Short</option><option value="47110036">Navy / 28 / Regular</option><option value="47110037">Navy / 28 / Long</option><option value="47110038">Navy / 30 / Short</option><option value="47110039">Navy / 30 / Regular</option><option value="47110040">Navy / 30 / Long</option><option value="47110041">Navy / 32 / Short</option><option value="47110042">Navy / 32 / Regular</option><option value="47110043">Navy / 32 / Long</option><option value="47110044">Navy / 34 / Short</option><option value="47110045">Navy / 34 / Regular</option><option value="47110046">Navy / 34 / Long</option><option value="47110047">Navy / 36 / Short</option><option value="47110048">Navy / 36 / Regular</option><option value="47110049" disabled>Navy / 36 / Long (sold out)</option><option value="47110050">Navy / 38 / Regular</option><option value="47110051" disabled>Navy / 38 / Long (sold out)</option><option value="47110052">Charcoal / 28 / Short</option><option value="47110053">Charcoal / 28 / Regular</option><option value="47110054">Charcoal / 28 / Long</option><option value="47110055" disabled>Charcoal / 30 / Short (sold out)</option><option value="47110056">Charcoal / 30 / Regular</option><option value="47110057">Charcoal / 30 / Long</option><option value="47110058">Charcoal / 32 / Short</option><option value="47110059">Charcoal / 32 / Regular</option><option value="47110060">Charcoal / 32 / Long</option><option value="47110061">Charcoal / 34 / Short</option><option value="47110062">Charcoal / 34 / Regular</option><option value="47110063">Charcoal / 34 / Long</option><option value="47110064">Charcoal / 36 / Short</option><option value="47110065">Charcoal / 36 / Regular</option><option value="47110066">Charcoal / 36 / Long</option><option value="47110067">Charcoal / 38 / Regular</option><option value="47110068">Charcoal / 38 / Long</option></select>
+                  </label>
+                </noscript>
+                <p class="th-stock" data-th-stock aria-live="polite" hidden></p>
+                <button type="submit" class="th-btn th-btn--add" data-th-add data-label-add="Add to cart" data-label-soldout="Sold out in this size" data-label-none="Not made in this size" data-label-choose="Choose a {option}">
+                  <span data-th-add-label>Add to cart</span>
+                  <span class="th-btn__price" data-th-add-price>$98</span>
+                </button>
+                <p class="th-buy__error" data-th-error role="alert" hidden></p></form><div class="th-notify" data-th-notify hidden><form method="post" action="/contact#th-notify-main" accept-charset="UTF-8" id="th-notify-main" class="th-notify__form"><input type="hidden" name="form_type" value="contact"><input type="hidden" name="utf8" value="✓"><p class="th-notify__title"><strong>Email me when it&#39;s back:</strong> <span data-th-notify-variant></span></p>
+                    <input type="hidden" name="contact[tags]" value="back-in-stock">
+                    <input type="hidden" name="contact[body]" value="" data-th-notify-body>
+                    <div class="th-notify__row">
+                      <label class="th-visually-hidden" for="ThNotifyEmail-main">Email</label>
+                      <input type="email" id="ThNotifyEmail-main" name="contact[email]" autocomplete="email" placeholder="you@example.com" required>
+                      <button type="submit" class="th-btn th-btn--ghost">Email me</button>
+                    </div>
+                    <p class="th-notify__small">One email when this size is restocked. Nothing else.</p></form></div></div><div class="th-desc rte" data-block="description"><p>A straight-leg chino in a 9 oz cotton twill with 2% stretch, garment washed so it is soft from the first wear. Mid rise, a little room through the thigh, and a leg that sits clean over a boot or a sneaker.</p><p>Made in three lengths, so most people can skip the tailor.</p></div><details class="th-fold" data-block="fit">
+              <summary>Fit<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 8l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+              <div class="th-fold__body rte"><p>Mid rise, straight leg, a little room through the thigh. To compare with a pair you already own, use the garment measurements in the size guide.</p></div>
+            </details><details class="th-fold" data-block="fabric">
+              <summary>Fabric and care<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 8l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+              <div class="th-fold__body rte"><p>98% cotton, 2% elastane, 9 oz twill, garment washed. Machine wash cold, hang dry. Expect under 1% shrinkage.</p></div>
+            </details><details class="th-fold" data-block="returns">
+              <summary>Shipping and returns<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 8l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+              <div class="th-fold__body rte"><p>Ships from our warehouse in 1 to 2 business days. Free returns and exchanges for 30 days, unworn with tags.</p></div>
+            </details></div>
+  </div><div class="th-sticky" data-th-sticky aria-hidden="true" inert>
+      <div class="th-sticky__inner">
+        <span class="th-sticky__swatch" data-th-sticky-swatch></span>
+        <div class="th-sticky__text">
+          <strong>The Field Chino</strong>
+          <span data-th-sticky-summary>Khaki / 28 / Short</span>
+        </div>
+        <button type="button" class="th-btn th-btn--add th-btn--sm" data-th-sticky-add>Add to cart</button>
+      </div>
+    </div><script type="application/json" data-th-json>{"id":8800771,"handle":"field-chino","title":"The Field Chino","vendor":"Tollhaven Trouser Co.","type":"Trousers","url":"/products/field-chino","price":9800,"price_min":9800,"price_max":9800,"compare_at_price":null,"available":true,"description":"<p>A straight-leg chino in a 9 oz cotton twill with 2% stretch, garment washed so it is soft from the first wear. Mid rise, a little room through the thigh, and a leg that sits clean over a boot or a sneaker.</p><p>Made in three lengths, so most people can skip the tailor.</p>","options":["Color","Waist","Length"],"options_with_values":[{"name":"Color","position":1,"values":["Khaki","Olive","Navy","Charcoal"]},{"name":"Waist","position":2,"values":["28","30","32","34","36","38"]},{"name":"Length","position":3,"values":["Short","Regular","Long"]}],"variants":[{"id":47110001,"title":"Khaki / 28 / Short","option1":"Khaki","option2":"28","option3":"Short","options":["Khaki","28","Short"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":17,"inventory_management":"shopify","sku":"TH-FC-KHA-28S","featured_media":{"alt":"Khaki · Front of the Field Chino, laid flat"}},{"id":47110002,"title":"Khaki / 28 / Regular","option1":"Khaki","option2":"28","option3":"Regular","options":["Khaki","28","Regular"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":24,"inventory_management":"shopify","sku":"TH-FC-KHA-28R","featured_media":{"alt":"Khaki · Front of the Field Chino, laid flat"}},{"id":47110003,"title":"Khaki / 28 / Long","option1":"Khaki","option2":"28","option3":"Long","options":["Khaki","28","Long"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":8,"inventory_management":"shopify","sku":"TH-FC-KHA-28L","featured_media":{"alt":"Khaki · Front of the Field Chino, laid flat"}},{"id":47110004,"title":"Khaki / 30 / Short","option1":"Khaki","option2":"30","option3":"Short","options":["Khaki","30","Short"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":15,"inventory_management":"shopify","sku":"TH-FC-KHA-30S","featured_media":{"alt":"Khaki · Front of the Field Chino, laid flat"}},{"id":47110005,"title":"Khaki / 30 / Regular","option1":"Khaki","option2":"30","option3":"Regular","options":["Khaki","30","Regular"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":3,"inventory_management":"shopify","sku":"TH-FC-KHA-30R","featured_media":{"alt":"Khaki · Front of the Field Chino, laid flat"}},{"id":47110006,"title":"Khaki / 30 / Long","option1":"Khaki","option2":"30","option3":"Long","options":["Khaki","30","Long"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":29,"inventory_management":"shopify","sku":"TH-FC-KHA-30L","featured_media":{"alt":"Khaki · Front of the Field Chino, laid flat"}},{"id":47110007,"title":"Khaki / 32 / Short","option1":"Khaki","option2":"32","option3":"Short","options":["Khaki","32","Short"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":13,"inventory_management":"shopify","sku":"TH-FC-KHA-32S","featured_media":{"alt":"Khaki · Front of the Field Chino, laid flat"}},{"id":47110008,"title":"Khaki / 32 / Regular","option1":"Khaki","option2":"32","option3":"Regular","options":["Khaki","32","Regular"],"price":9800,"compare_at_price":null,"available":false,"inventory_quantity":0,"inventory_management":"shopify","sku":"TH-FC-KHA-32R","featured_media":{"alt":"Khaki · Front of the Field Chino, laid flat"}},{"id":47110009,"title":"Khaki / 32 / Long","option1":"Khaki","option2":"32","option3":"Long","options":["Khaki","32","Long"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":2,"inventory_management":"shopify","sku":"TH-FC-KHA-32L","featured_media":{"alt":"Khaki · Front of the Field Chino, laid flat"}},{"id":47110010,"title":"Khaki / 34 / Short","option1":"Khaki","option2":"34","option3":"Short","options":["Khaki","34","Short"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":11,"inventory_management":"shopify","sku":"TH-FC-KHA-34S","featured_media":{"alt":"Khaki · Front of the Field Chino, laid flat"}},{"id":47110011,"title":"Khaki / 34 / Regular","option1":"Khaki","option2":"34","option3":"Regular","options":["Khaki","34","Regular"],"price":9800,"compare_at_price":null,"available":false,"inventory_quantity":0,"inventory_management":"shopify","sku":"TH-FC-KHA-34R","featured_media":{"alt":"Khaki · Front of the Field Chino, laid flat"}},{"id":47110012,"title":"Khaki / 34 / Long","option1":"Khaki","option2":"34","option3":"Long","options":["Khaki","34","Long"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":25,"inventory_management":"shopify","sku":"TH-FC-KHA-34L","featured_media":{"alt":"Khaki · Front of the Field Chino, laid flat"}},{"id":47110013,"title":"Khaki / 36 / Short","option1":"Khaki","option2":"36","option3":"Short","options":["Khaki","36","Short"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":9,"inventory_management":"shopify","sku":"TH-FC-KHA-36S","featured_media":{"alt":"Khaki · Front of the Field Chino, laid flat"}},{"id":47110014,"title":"Khaki / 36 / Regular","option1":"Khaki","option2":"36","option3":"Regular","options":["Khaki","36","Regular"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":16,"inventory_management":"shopify","sku":"TH-FC-KHA-36R","featured_media":{"alt":"Khaki · Front of the Field Chino, laid flat"}},{"id":47110015,"title":"Khaki / 36 / Long","option1":"Khaki","option2":"36","option3":"Long","options":["Khaki","36","Long"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":23,"inventory_management":"shopify","sku":"TH-FC-KHA-36L","featured_media":{"alt":"Khaki · Front of the Field Chino, laid flat"}},{"id":47110016,"title":"Khaki / 38 / Regular","option1":"Khaki","option2":"38","option3":"Regular","options":["Khaki","38","Regular"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":30,"inventory_management":"shopify","sku":"TH-FC-KHA-38R","featured_media":{"alt":"Khaki · Front of the Field Chino, laid flat"}},{"id":47110017,"title":"Khaki / 38 / Long","option1":"Khaki","option2":"38","option3":"Long","options":["Khaki","38","Long"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":14,"inventory_management":"shopify","sku":"TH-FC-KHA-38L","featured_media":{"alt":"Khaki · Front of the Field Chino, laid flat"}},{"id":47110018,"title":"Olive / 28 / Short","option1":"Olive","option2":"28","option3":"Short","options":["Olive","28","Short"],"price":9800,"compare_at_price":null,"available":false,"inventory_quantity":0,"inventory_management":"shopify","sku":"TH-FC-OLI-28S","featured_media":{"alt":"Olive · Front of the Field Chino, laid flat"}},{"id":47110019,"title":"Olive / 28 / Regular","option1":"Olive","option2":"28","option3":"Regular","options":["Olive","28","Regular"],"price":9800,"compare_at_price":null,"available":false,"inventory_quantity":0,"inventory_management":"shopify","sku":"TH-FC-OLI-28R","featured_media":{"alt":"Olive · Front of the Field Chino, laid flat"}},{"id":47110020,"title":"Olive / 28 / Long","option1":"Olive","option2":"28","option3":"Long","options":["Olive","28","Long"],"price":9800,"compare_at_price":null,"available":false,"inventory_quantity":0,"inventory_management":"shopify","sku":"TH-FC-OLI-28L","featured_media":{"alt":"Olive · Front of the Field Chino, laid flat"}},{"id":47110021,"title":"Olive / 30 / Short","option1":"Olive","option2":"30","option3":"Short","options":["Olive","30","Short"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":19,"inventory_management":"shopify","sku":"TH-FC-OLI-30S","featured_media":{"alt":"Olive · Front of the Field Chino, laid flat"}},{"id":47110022,"title":"Olive / 30 / Regular","option1":"Olive","option2":"30","option3":"Regular","options":["Olive","30","Regular"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":26,"inventory_management":"shopify","sku":"TH-FC-OLI-30R","featured_media":{"alt":"Olive · Front of the Field Chino, laid flat"}},{"id":47110023,"title":"Olive / 30 / Long","option1":"Olive","option2":"30","option3":"Long","options":["Olive","30","Long"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":10,"inventory_management":"shopify","sku":"TH-FC-OLI-30L","featured_media":{"alt":"Olive · Front of the Field Chino, laid flat"}},{"id":47110024,"title":"Olive / 32 / Short","option1":"Olive","option2":"32","option3":"Short","options":["Olive","32","Short"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":17,"inventory_management":"shopify","sku":"TH-FC-OLI-32S","featured_media":{"alt":"Olive · Front of the Field Chino, laid flat"}},{"id":47110025,"title":"Olive / 32 / Regular","option1":"Olive","option2":"32","option3":"Regular","options":["Olive","32","Regular"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":24,"inventory_management":"shopify","sku":"TH-FC-OLI-32R","featured_media":{"alt":"Olive · Front of the Field Chino, laid flat"}},{"id":47110026,"title":"Olive / 32 / Long","option1":"Olive","option2":"32","option3":"Long","options":["Olive","32","Long"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":8,"inventory_management":"shopify","sku":"TH-FC-OLI-32L","featured_media":{"alt":"Olive · Front of the Field Chino, laid flat"}},{"id":47110027,"title":"Olive / 34 / Short","option1":"Olive","option2":"34","option3":"Short","options":["Olive","34","Short"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":15,"inventory_management":"shopify","sku":"TH-FC-OLI-34S","featured_media":{"alt":"Olive · Front of the Field Chino, laid flat"}},{"id":47110028,"title":"Olive / 34 / Regular","option1":"Olive","option2":"34","option3":"Regular","options":["Olive","34","Regular"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":3,"inventory_management":"shopify","sku":"TH-FC-OLI-34R","featured_media":{"alt":"Olive · Front of the Field Chino, laid flat"}},{"id":47110029,"title":"Olive / 34 / Long","option1":"Olive","option2":"34","option3":"Long","options":["Olive","34","Long"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":29,"inventory_management":"shopify","sku":"TH-FC-OLI-34L","featured_media":{"alt":"Olive · Front of the Field Chino, laid flat"}},{"id":47110030,"title":"Olive / 36 / Short","option1":"Olive","option2":"36","option3":"Short","options":["Olive","36","Short"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":13,"inventory_management":"shopify","sku":"TH-FC-OLI-36S","featured_media":{"alt":"Olive · Front of the Field Chino, laid flat"}},{"id":47110031,"title":"Olive / 36 / Regular","option1":"Olive","option2":"36","option3":"Regular","options":["Olive","36","Regular"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":20,"inventory_management":"shopify","sku":"TH-FC-OLI-36R","featured_media":{"alt":"Olive · Front of the Field Chino, laid flat"}},{"id":47110032,"title":"Olive / 36 / Long","option1":"Olive","option2":"36","option3":"Long","options":["Olive","36","Long"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":27,"inventory_management":"shopify","sku":"TH-FC-OLI-36L","featured_media":{"alt":"Olive · Front of the Field Chino, laid flat"}},{"id":47110033,"title":"Olive / 38 / Regular","option1":"Olive","option2":"38","option3":"Regular","options":["Olive","38","Regular"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":11,"inventory_management":"shopify","sku":"TH-FC-OLI-38R","featured_media":{"alt":"Olive · Front of the Field Chino, laid flat"}},{"id":47110034,"title":"Olive / 38 / Long","option1":"Olive","option2":"38","option3":"Long","options":["Olive","38","Long"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":18,"inventory_management":"shopify","sku":"TH-FC-OLI-38L","featured_media":{"alt":"Olive · Front of the Field Chino, laid flat"}},{"id":47110035,"title":"Navy / 28 / Short","option1":"Navy","option2":"28","option3":"Short","options":["Navy","28","Short"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":25,"inventory_management":"shopify","sku":"TH-FC-NAV-28S","featured_media":{"alt":"Navy · Front of the Field Chino, laid flat"}},{"id":47110036,"title":"Navy / 28 / Regular","option1":"Navy","option2":"28","option3":"Regular","options":["Navy","28","Regular"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":9,"inventory_management":"shopify","sku":"TH-FC-NAV-28R","featured_media":{"alt":"Navy · Front of the Field Chino, laid flat"}},{"id":47110037,"title":"Navy / 28 / Long","option1":"Navy","option2":"28","option3":"Long","options":["Navy","28","Long"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":16,"inventory_management":"shopify","sku":"TH-FC-NAV-28L","featured_media":{"alt":"Navy · Front of the Field Chino, laid flat"}},{"id":47110038,"title":"Navy / 30 / Short","option1":"Navy","option2":"30","option3":"Short","options":["Navy","30","Short"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":23,"inventory_management":"shopify","sku":"TH-FC-NAV-30S","featured_media":{"alt":"Navy · Front of the Field Chino, laid flat"}},{"id":47110039,"title":"Navy / 30 / Regular","option1":"Navy","option2":"30","option3":"Regular","options":["Navy","30","Regular"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":30,"inventory_management":"shopify","sku":"TH-FC-NAV-30R","featured_media":{"alt":"Navy · Front of the Field Chino, laid flat"}},{"id":47110040,"title":"Navy / 30 / Long","option1":"Navy","option2":"30","option3":"Long","options":["Navy","30","Long"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":14,"inventory_management":"shopify","sku":"TH-FC-NAV-30L","featured_media":{"alt":"Navy · Front of the Field Chino, laid flat"}},{"id":47110041,"title":"Navy / 32 / Short","option1":"Navy","option2":"32","option3":"Short","options":["Navy","32","Short"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":21,"inventory_management":"shopify","sku":"TH-FC-NAV-32S","featured_media":{"alt":"Navy · Front of the Field Chino, laid flat"}},{"id":47110042,"title":"Navy / 32 / Regular","option1":"Navy","option2":"32","option3":"Regular","options":["Navy","32","Regular"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":1,"inventory_management":"shopify","sku":"TH-FC-NAV-32R","featured_media":{"alt":"Navy · Front of the Field Chino, laid flat"}},{"id":47110043,"title":"Navy / 32 / Long","option1":"Navy","option2":"32","option3":"Long","options":["Navy","32","Long"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":12,"inventory_management":"shopify","sku":"TH-FC-NAV-32L","featured_media":{"alt":"Navy · Front of the Field Chino, laid flat"}},{"id":47110044,"title":"Navy / 34 / Short","option1":"Navy","option2":"34","option3":"Short","options":["Navy","34","Short"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":19,"inventory_management":"shopify","sku":"TH-FC-NAV-34S","featured_media":{"alt":"Navy · Front of the Field Chino, laid flat"}},{"id":47110045,"title":"Navy / 34 / Regular","option1":"Navy","option2":"34","option3":"Regular","options":["Navy","34","Regular"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":26,"inventory_management":"shopify","sku":"TH-FC-NAV-34R","featured_media":{"alt":"Navy · Front of the Field Chino, laid flat"}},{"id":47110046,"title":"Navy / 34 / Long","option1":"Navy","option2":"34","option3":"Long","options":["Navy","34","Long"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":10,"inventory_management":"shopify","sku":"TH-FC-NAV-34L","featured_media":{"alt":"Navy · Front of the Field Chino, laid flat"}},{"id":47110047,"title":"Navy / 36 / Short","option1":"Navy","option2":"36","option3":"Short","options":["Navy","36","Short"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":17,"inventory_management":"shopify","sku":"TH-FC-NAV-36S","featured_media":{"alt":"Navy · Front of the Field Chino, laid flat"}},{"id":47110048,"title":"Navy / 36 / Regular","option1":"Navy","option2":"36","option3":"Regular","options":["Navy","36","Regular"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":24,"inventory_management":"shopify","sku":"TH-FC-NAV-36R","featured_media":{"alt":"Navy · Front of the Field Chino, laid flat"}},{"id":47110049,"title":"Navy / 36 / Long","option1":"Navy","option2":"36","option3":"Long","options":["Navy","36","Long"],"price":9800,"compare_at_price":null,"available":false,"inventory_quantity":0,"inventory_management":"shopify","sku":"TH-FC-NAV-36L","featured_media":{"alt":"Navy · Front of the Field Chino, laid flat"}},{"id":47110050,"title":"Navy / 38 / Regular","option1":"Navy","option2":"38","option3":"Regular","options":["Navy","38","Regular"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":15,"inventory_management":"shopify","sku":"TH-FC-NAV-38R","featured_media":{"alt":"Navy · Front of the Field Chino, laid flat"}},{"id":47110051,"title":"Navy / 38 / Long","option1":"Navy","option2":"38","option3":"Long","options":["Navy","38","Long"],"price":9800,"compare_at_price":null,"available":false,"inventory_quantity":0,"inventory_management":"shopify","sku":"TH-FC-NAV-38L","featured_media":{"alt":"Navy · Front of the Field Chino, laid flat"}},{"id":47110052,"title":"Charcoal / 28 / Short","option1":"Charcoal","option2":"28","option3":"Short","options":["Charcoal","28","Short"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":29,"inventory_management":"shopify","sku":"TH-FC-CHA-28S","featured_media":{"alt":"Charcoal · Front of the Field Chino, laid flat"}},{"id":47110053,"title":"Charcoal / 28 / Regular","option1":"Charcoal","option2":"28","option3":"Regular","options":["Charcoal","28","Regular"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":13,"inventory_management":"shopify","sku":"TH-FC-CHA-28R","featured_media":{"alt":"Charcoal · Front of the Field Chino, laid flat"}},{"id":47110054,"title":"Charcoal / 28 / Long","option1":"Charcoal","option2":"28","option3":"Long","options":["Charcoal","28","Long"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":20,"inventory_management":"shopify","sku":"TH-FC-CHA-28L","featured_media":{"alt":"Charcoal · Front of the Field Chino, laid flat"}},{"id":47110055,"title":"Charcoal / 30 / Short","option1":"Charcoal","option2":"30","option3":"Short","options":["Charcoal","30","Short"],"price":9800,"compare_at_price":null,"available":false,"inventory_quantity":0,"inventory_management":"shopify","sku":"TH-FC-CHA-30S","featured_media":{"alt":"Charcoal · Front of the Field Chino, laid flat"}},{"id":47110056,"title":"Charcoal / 30 / Regular","option1":"Charcoal","option2":"30","option3":"Regular","options":["Charcoal","30","Regular"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":11,"inventory_management":"shopify","sku":"TH-FC-CHA-30R","featured_media":{"alt":"Charcoal · Front of the Field Chino, laid flat"}},{"id":47110057,"title":"Charcoal / 30 / Long","option1":"Charcoal","option2":"30","option3":"Long","options":["Charcoal","30","Long"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":18,"inventory_management":"shopify","sku":"TH-FC-CHA-30L","featured_media":{"alt":"Charcoal · Front of the Field Chino, laid flat"}},{"id":47110058,"title":"Charcoal / 32 / Short","option1":"Charcoal","option2":"32","option3":"Short","options":["Charcoal","32","Short"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":25,"inventory_management":"shopify","sku":"TH-FC-CHA-32S","featured_media":{"alt":"Charcoal · Front of the Field Chino, laid flat"}},{"id":47110059,"title":"Charcoal / 32 / Regular","option1":"Charcoal","option2":"32","option3":"Regular","options":["Charcoal","32","Regular"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":9,"inventory_management":"shopify","sku":"TH-FC-CHA-32R","featured_media":{"alt":"Charcoal · Front of the Field Chino, laid flat"}},{"id":47110060,"title":"Charcoal / 32 / Long","option1":"Charcoal","option2":"32","option3":"Long","options":["Charcoal","32","Long"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":16,"inventory_management":"shopify","sku":"TH-FC-CHA-32L","featured_media":{"alt":"Charcoal · Front of the Field Chino, laid flat"}},{"id":47110061,"title":"Charcoal / 34 / Short","option1":"Charcoal","option2":"34","option3":"Short","options":["Charcoal","34","Short"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":23,"inventory_management":"shopify","sku":"TH-FC-CHA-34S","featured_media":{"alt":"Charcoal · Front of the Field Chino, laid flat"}},{"id":47110062,"title":"Charcoal / 34 / Regular","option1":"Charcoal","option2":"34","option3":"Regular","options":["Charcoal","34","Regular"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":30,"inventory_management":"shopify","sku":"TH-FC-CHA-34R","featured_media":{"alt":"Charcoal · Front of the Field Chino, laid flat"}},{"id":47110063,"title":"Charcoal / 34 / Long","option1":"Charcoal","option2":"34","option3":"Long","options":["Charcoal","34","Long"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":14,"inventory_management":"shopify","sku":"TH-FC-CHA-34L","featured_media":{"alt":"Charcoal · Front of the Field Chino, laid flat"}},{"id":47110064,"title":"Charcoal / 36 / Short","option1":"Charcoal","option2":"36","option3":"Short","options":["Charcoal","36","Short"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":21,"inventory_management":"shopify","sku":"TH-FC-CHA-36S","featured_media":{"alt":"Charcoal · Front of the Field Chino, laid flat"}},{"id":47110065,"title":"Charcoal / 36 / Regular","option1":"Charcoal","option2":"36","option3":"Regular","options":["Charcoal","36","Regular"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":2,"inventory_management":"shopify","sku":"TH-FC-CHA-36R","featured_media":{"alt":"Charcoal · Front of the Field Chino, laid flat"}},{"id":47110066,"title":"Charcoal / 36 / Long","option1":"Charcoal","option2":"36","option3":"Long","options":["Charcoal","36","Long"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":12,"inventory_management":"shopify","sku":"TH-FC-CHA-36L","featured_media":{"alt":"Charcoal · Front of the Field Chino, laid flat"}},{"id":47110067,"title":"Charcoal / 38 / Regular","option1":"Charcoal","option2":"38","option3":"Regular","options":["Charcoal","38","Regular"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":19,"inventory_management":"shopify","sku":"TH-FC-CHA-38R","featured_media":{"alt":"Charcoal · Front of the Field Chino, laid flat"}},{"id":47110068,"title":"Charcoal / 38 / Long","option1":"Charcoal","option2":"38","option3":"Long","options":["Charcoal","38","Long"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":26,"inventory_management":"shopify","sku":"TH-FC-CHA-38L","featured_media":{"alt":"Charcoal · Front of the Field Chino, laid flat"}}],"media":[{"id":3300001,"media_type":"image","alt":"Khaki · Front of the Field Chino, laid flat","view":"front","src":"img/field-chino-khaki-front.svg","width":800,"height":1000},{"id":3300002,"media_type":"image","alt":"Khaki · Back, with button-through back pockets","view":"back","src":"img/field-chino-khaki-back.svg","width":800,"height":1000},{"id":3300003,"media_type":"image","alt":"Khaki · Close-up of the waistband, button and slant pocket","view":"detail","src":"img/field-chino-khaki-detail.svg","width":800,"height":1000},{"id":3300004,"media_type":"image","alt":"Khaki · The 9 oz stretch twill, up close","view":"fabric","src":"img/field-chino-khaki-fabric.svg","width":800,"height":1000},{"id":3300005,"media_type":"image","alt":"Olive · Front of the Field Chino, laid flat","view":"front","src":"img/field-chino-olive-front.svg","width":800,"height":1000},{"id":3300006,"media_type":"image","alt":"Olive · Back, with button-through back pockets","view":"back","src":"img/field-chino-olive-back.svg","width":800,"height":1000},{"id":3300007,"media_type":"image","alt":"Olive · Close-up of the waistband, button and slant pocket","view":"detail","src":"img/field-chino-olive-detail.svg","width":800,"height":1000},{"id":3300008,"media_type":"image","alt":"Olive · The 9 oz stretch twill, up close","view":"fabric","src":"img/field-chino-olive-fabric.svg","width":800,"height":1000},{"id":3300009,"media_type":"image","alt":"Navy · Front of the Field Chino, laid flat","view":"front","src":"img/field-chino-navy-front.svg","width":800,"height":1000},{"id":3300010,"media_type":"image","alt":"Navy · Back, with button-through back pockets","view":"back","src":"img/field-chino-navy-back.svg","width":800,"height":1000},{"id":3300011,"media_type":"image","alt":"Navy · Close-up of the waistband, button and slant pocket","view":"detail","src":"img/field-chino-navy-detail.svg","width":800,"height":1000},{"id":3300012,"media_type":"image","alt":"Navy · The 9 oz stretch twill, up close","view":"fabric","src":"img/field-chino-navy-fabric.svg","width":800,"height":1000},{"id":3300013,"media_type":"image","alt":"Charcoal · Front of the Field Chino, laid flat","view":"front","src":"img/field-chino-charcoal-front.svg","width":800,"height":1000},{"id":3300014,"media_type":"image","alt":"Charcoal · Back, with button-through back pockets","view":"back","src":"img/field-chino-charcoal-back.svg","width":800,"height":1000},{"id":3300015,"media_type":"image","alt":"Charcoal · Close-up of the waistband, button and slant pocket","view":"detail","src":"img/field-chino-charcoal-detail.svg","width":800,"height":1000},{"id":3300016,"media_type":"image","alt":"Charcoal · The 9 oz stretch twill, up close","view":"fabric","src":"img/field-chino-charcoal-fabric.svg","width":800,"height":1000}],"featured_media":{"id":3300001,"media_type":"image","alt":"Khaki · Front of the Field Chino, laid flat","view":"front","src":"img/field-chino-khaki-front.svg","width":800,"height":1000},"selected_or_first_available_variant":{"id":47110001,"title":"Khaki / 28 / Short","option1":"Khaki","option2":"28","option3":"Short","options":["Khaki","28","Short"],"price":9800,"compare_at_price":null,"available":true,"inventory_quantity":17,"inventory_management":"shopify","sku":"TH-FC-KHA-28S","featured_media":{"alt":"Khaki · Front of the Field Chino, laid flat"}},"has_only_default_variant":false,"metafields":{"custom":{"size_chart":{"value":{"sizes":["28","30","32","34","36","38"],"body":{"waist":[[27.5,28.75],[29.5,30.75],[31.5,32.75],[33.5,34.75],[35.5,36.75],[37.5,38.75]],"hip":[[35,36.5],[37,38.5],[39,40.5],[41,42.5],[43,44.5],[45,46.5]]},"garment":{"waist":[29.5,31.5,33.5,35.5,37.5,39.5],"front_rise":[10.25,10.5,10.75,11,11.25,11.5],"thigh":[11.75,12.25,12.75,13.25,13.75,14.25],"leg_opening":[7.5,7.75,8,8.25,8.5,8.75]},"lengths":[{"name":"Short","inseam":30,"fits":[29,30.5]},{"name":"Regular","inseam":32,"fits":[31,32.5]},{"name":"Long","inseam":34,"fits":[33,34.5]}]}}}}}</script>
+  <script type="application/json" data-th-stock-json>{"47110005":3,"47110009":2,"47110028":3,"47110042":1,"47110065":2,"_":0}</script>
+  <script type="application/json" data-th-chart-json>{"sizes":["28","30","32","34","36","38"],"body":{"waist":[[27.5,28.75],[29.5,30.75],[31.5,32.75],[33.5,34.75],[35.5,36.75],[37.5,38.75]],"hip":[[35,36.5],[37,38.5],[39,40.5],[41,42.5],[43,44.5],[45,46.5]]},"garment":{"waist":[29.5,31.5,33.5,35.5,37.5,39.5],"front_rise":[10.25,10.5,10.75,11,11.25,11.5],"thigh":[11.75,12.25,12.75,13.25,13.75,14.25],"leg_opening":[7.5,7.75,8,8.25,8.5,8.75]},"lengths":[{"name":"Short","inseam":30,"fits":[29,30.5]},{"name":"Regular","inseam":32,"fits":[31,32.5]},{"name":"Long","inseam":34,"fits":[33,34.5]}]}</script>
+</section>
+<!-- render:end -->
+        </div>
+        <div class="fits" aria-label="How it fits (store content, not part of the section)">
+          <div><span class="fits__k">Rise</span><h3>Mid, not low</h3><p>10¾ in front rise in a 32, so it sits at the hip bone and stays there when you sit down.</p></div>
+          <div><span class="fits__k">Leg</span><h3>Straight from the knee</h3><p>8 in leg opening in a 32: clean over a boot, no pooling over a sneaker.</p></div>
+          <div><span class="fits__k">Length</span><h3>Three inseams</h3><p>30, 32 and 34 in, finished with a single-needle hem that can be let down about 1 in.</p></div>
+        </div>
+        <footer class="store__footer" data-th-sticky-stop>
+          <div><b>Tollhaven Trouser Co.</b><span>A made-up shop for this demo.</span></div>
+          <div><span>(555) 010-0148</span><span>help@example.com</span></div>
+          <div class="muted">Store footer · the sticky bar hides here</div>
+        </footer>
+      </div>
+    </div>
+    <p class="note">On a phone, scroll past the Add to cart button and a bar slides up from the bottom; it tucks away again at the store footer. Dates in the delivery line are worked out live for a warehouse in New York with a 2 PM cutoff.</p>
+  </div>
+</section>
+
+<div class="drawer" data-drawer hidden>
+  <div class="drawer__scrim" data-drawer-close></div>
+  <aside class="drawer__panel" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" tabindex="-1">
+    <header class="drawer__head"><h2 id="drawerTitle">Your cart</h2><button type="button" class="drawer__x" data-drawer-close aria-label="Close cart"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button></header>
+    <div class="drawer__ship" data-drawer-ship></div>
+    <ul class="drawer__items" data-drawer-items></ul>
+    <footer class="drawer__foot">
+      <div class="drawer__total"><span>Subtotal</span><b data-drawer-total>$0</b></div>
+      <button type="button" class="btn btn--solid btn--block" disabled>Check out</button>
+      <p class="muted small">Demo cart. In the theme, the section posts to Shopify's <code>/cart/add.js</code> and hands off to the theme's own cart drawer.</p>
+    </footer>
+  </aside>
+</div>
+
+<section class="band" id="questions">
+  <div class="wrap">
+    <div class="sechead">
+      <p class="eyebrow">02 · Questions it answers</p>
+      <h2>Six things store owners keep asking about apparel product pages.</h2>
+      <p>These come up again and again in Shopify's own community forum. Here's the call I made on each, and the setting that changes it if a store wants it the other way.</p>
+    </div>
+    <div class="qgrid">
+      <article class="q reveal"><p class="q__n">01</p><h3>Where should the size guide go?</h3><p>Right beside the label of the size option, where the question comes up. It opens a side panel (a bottom sheet on phones) so nobody loses their place, and it starts on a two-number size finder instead of a wall of tables.</p><p class="q__set">Setting: <code>Size guide link next to the size option</code></p></article>
+      <article class="q reveal"><p class="q__n">02</p><h3>How do I show Short, Regular and Long?</h3><p>As its own row of three, after the waist, with the inseam printed on each one. A 32 Long is two plain choices rather than one of 18 crammed into a single dropdown.</p><p class="q__set">Setting: <code>Show inseam under each length</code></p></article>
+      <article class="q reveal"><p class="q__n">03</p><h3>Sold-out sizes: grey out, hide, or notify?</h3><p>Crossed out but still tappable, so the range doesn't look picked over, and picking one swaps the button for an “email me when it's back” form. A combination that's never made gets a dashed outline and says so, so it isn't mistaken for a restock.</p><p class="q__set">Setting: <code>Sold-out sizes</code> · show or hide</p></article>
+      <article class="q reveal"><p class="q__n">04</p><h3>Is a sticky add-to-cart bar on mobile worth it?</h3><p>Only after the real button scrolls off, and never over the footer. It shows the color and size picked; if no size is picked yet it scrolls back up to the sizes and says what's missing.</p><p class="q__set">Setting: <code>Sticky add-to-cart bar</code></p></article>
+      <article class="q reveal"><p class="q__n">05</p><h3>Body measurements or garment measurements?</h3><p>Both, on separate tabs with plain labels. Body tells you which size to pick; garment (laid flat, with a diagram) lets you compare with a pair you own. The chart says outright that a 32 measures 33½ in at the band.</p><p class="q__set">Data: <code>custom.size_chart</code> metafield</p></article>
+      <article class="q reveal"><p class="q__n">06</p><h3>Show shipping on the product page or at checkout?</h3><p>Under the price: the free-shipping threshold, the returns line and an arrival window worked out from the warehouse's cutoff, weekends and closed days. The cart then shows how far off free shipping is.</p><p class="q__set">Settings: threshold, time zone, cutoff, transit days, closed days</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="band band--tint" id="chart">
+  <div class="wrap split">
+    <div class="split__copy">
+      <p class="eyebrow">03 · The size chart</p>
+      <h2>One metafield per product, typed once.</h2>
+      <p>The guide, the finder and the inseam labels all read one JSON metafield on the product, <code>custom.size_chart</code>. A second style with different measurements gets its own chart; products without one simply don't show a guide.</p>
+      <ul class="ticks">
+        <li>Stored in inches; the guide switches to cm and back (it opens in cm unless the browser is set to US English)</li>
+        <li>Body ranges have gaps on purpose, so “between sizes” advice can kick in</li>
+        <li>The finder says when someone is outside the range instead of guessing</li>
+        <li>Length fit ranges drive the Short, Regular or Long pick</li>
+      </ul>
+    </div>
+    <figure class="code reveal">
+      <figcaption><span>custom.size_chart</span><span class="muted">JSON metafield · excerpt</span></figcaption>
+<pre><code><!-- chart:start -->{
+  <span class="tok-k">&quot;sizes<span class="tok-s">&quot;</span>: [&quot;</span><span class="tok-n">28</span><span class="tok-s">&quot;, &quot;</span><span class="tok-n">30</span><span class="tok-s">&quot;, &quot;</span><span class="tok-n">32</span><span class="tok-s">&quot;, &quot;</span><span class="tok-n">34</span><span class="tok-s">&quot;, &quot;</span><span class="tok-n">36</span><span class="tok-s">&quot;, &quot;</span><span class="tok-n">38</span><span class="tok-s">&quot;],
+  <span class="tok-k">&quot;</span>body<span class="tok-s">&quot;</span>: {
+    <span class="tok-k">&quot;</span>waist<span class="tok-s">&quot;</span>: [[<span class="tok-n">27.5</span>, <span class="tok-n">28.75</span>], [<span class="tok-n">29.5</span>, <span class="tok-n">30.75</span>], [<span class="tok-n">31.5</span>, <span class="tok-n">32.75</span>], &quot;</span>…<span class="tok-s">&quot;],
+    <span class="tok-k">&quot;</span>hip<span class="tok-s">&quot;</span>: [&quot;</span>…<span class="tok-s">&quot;]
+  },
+  <span class="tok-k">&quot;</span>garment<span class="tok-s">&quot;</span>: {
+    <span class="tok-k">&quot;</span>waist<span class="tok-s">&quot;</span>: [<span class="tok-n">29.5</span>, <span class="tok-n">31.5</span>, <span class="tok-n">33.5</span>, <span class="tok-n">35.5</span>, <span class="tok-n">37.5</span>, <span class="tok-n">39.5</span>],
+    <span class="tok-k">&quot;</span>front_rise<span class="tok-s">&quot;</span>: [&quot;</span>…<span class="tok-s">&quot;],
+    <span class="tok-k">&quot;</span>thigh<span class="tok-s">&quot;</span>: [&quot;</span>…<span class="tok-s">&quot;],
+    <span class="tok-k">&quot;</span>leg_opening<span class="tok-s">&quot;</span>: [&quot;</span>…<span class="tok-s">&quot;]
+  },
+  <span class="tok-k">&quot;</span>lengths<span class="tok-s">&quot;</span>: [
+    { <span class="tok-k">&quot;</span>name<span class="tok-s">&quot;</span>: &quot;</span>Short<span class="tok-s">&quot;, <span class="tok-k">&quot;</span>inseam<span class="tok-s">&quot;</span>: <span class="tok-n">30</span>, <span class="tok-k">&quot;</span>fits<span class="tok-s">&quot;</span>: [<span class="tok-n">29</span>, <span class="tok-n">30.5</span>] },
+    { <span class="tok-k">&quot;</span>name<span class="tok-s">&quot;</span>: &quot;</span>Regular<span class="tok-s">&quot;, <span class="tok-k">&quot;</span>inseam<span class="tok-s">&quot;</span>: <span class="tok-n">32</span>, <span class="tok-k">&quot;</span>fits<span class="tok-s">&quot;</span>: [<span class="tok-n">31</span>, <span class="tok-n">32.5</span>] },
+    { <span class="tok-k">&quot;</span>name<span class="tok-s">&quot;</span>: &quot;</span>Long<span class="tok-s">&quot;, <span class="tok-k">&quot;</span>inseam<span class="tok-s">&quot;</span>: <span class="tok-n">34</span>, <span class="tok-k">&quot;</span>fits&quot;</span>: [<span class="tok-n">33</span>, <span class="tok-n">34.5</span>] }
+  ]
+}<!-- chart:end --></code></pre>
+    </figure>
+  </div>
+</section>
+
+<section class="band" id="editor">
+  <div class="wrap">
+    <div class="sechead">
+      <p class="eyebrow">04 · Theme editor</p>
+      <h2>What the store owner sees.</h2>
+      <p>Every block can be moved, hidden or reworded in Online Store › Customize. This panel is drawn straight from the section's schema, so it lists exactly the settings in the file.</p>
+    </div>
+<!-- editor:start -->
+<div class="editor reveal" role="img" aria-label="A drawing of Shopify's theme editor: the block list on the left, a preview in the middle, and the Shipping and delivery settings on the right, all taken from the section schema">
+  <div class="editor__side">
+    <h4>Default product</h4>
+    <div class="editor__group">Template</div>
+    <div class="editor__row editor__row--section"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2.5" y="3" width="11" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M5 6.5h6M5 9.5h4" stroke="currentColor" stroke-width="1.3"/></svg><span>Product (Tollhaven)</span></div>
+    <div class="editor__row"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2.5" y="3" width="11" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M5 6.5h6M5 9.5h4" stroke="currentColor" stroke-width="1.3"/></svg><span>Title</span></div><div class="editor__row"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2.5" y="3" width="11" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M5 6.5h6M5 9.5h4" stroke="currentColor" stroke-width="1.3"/></svg><span>Price</span></div><div class="editor__row is-on"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2.5" y="3" width="11" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M5 6.5h6M5 9.5h4" stroke="currentColor" stroke-width="1.3"/></svg><span>Shipping and delivery</span></div><div class="editor__row"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2.5" y="3" width="11" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M5 6.5h6M5 9.5h4" stroke="currentColor" stroke-width="1.3"/></svg><span>Variant picker</span></div><div class="editor__row"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2.5" y="3" width="11" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M5 6.5h6M5 9.5h4" stroke="currentColor" stroke-width="1.3"/></svg><span>Buy buttons</span></div><div class="editor__row"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2.5" y="3" width="11" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M5 6.5h6M5 9.5h4" stroke="currentColor" stroke-width="1.3"/></svg><span>Description</span></div><div class="editor__row"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2.5" y="3" width="11" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M5 6.5h6M5 9.5h4" stroke="currentColor" stroke-width="1.3"/></svg><span>Fit</span></div><div class="editor__row"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2.5" y="3" width="11" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M5 6.5h6M5 9.5h4" stroke="currentColor" stroke-width="1.3"/></svg><span>Fabric and care</span></div><div class="editor__row"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2.5" y="3" width="11" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M5 6.5h6M5 9.5h4" stroke="currentColor" stroke-width="1.3"/></svg><span>Shipping and returns</span></div>
+    <div class="editor__add">+ Add block</div>
+    <div class="editor__group" style="margin-top:14px">Section settings</div>
+    <div style="max-height:250px;overflow:hidden"><div class="editor__group">Options</div><div class="editor__field"><span>Color option name</span><div class="editor__input">Color</div><small>Images whose alt text matches the color are shown for that color.</small></div><div class="editor__field"><span>Size option name</span><div class="editor__input">Waist</div><small>The size guide link sits next to this option.</small></div><div class="editor__field"><div class="editor__check"><span class="editor__box"></span><span>Preselect the first size in stock</span></div><small>Off: shoppers pick a size on purpose, which cuts wrong-size orders.</small></div><div class="editor__field"><div class="editor__check"><span class="editor__box is-on"></span><span>Put the chosen variant in the address bar</span></div></div><div class="editor__field"><span>Show &quot;Only N left&quot; at or below</span><div class="editor__range"><i style="--p:30.0%"></i><b>3</b></div></div><div class="editor__group">Phones</div><div class="editor__field"><div class="editor__check"><span class="editor__box is-on"></span><span>Sticky add-to-cart bar</span></div><small>Appears once the main button scrolls away, hides at the footer.</small></div><div class="editor__field"><span>Sticky bar button</span><div class="editor__input">Add to cart</div></div></div>
+  </div>
+  <div class="editor__canvas"><img src="img/editor-preview.webp" alt="" width="840" height="712" loading="lazy"></div>
+  <div class="editor__panel">
+    <div class="editor__head">Shipping and delivery</div>
+    <div class="editor__field"><span>Free shipping over (whole dollars)</span><div class="editor__input">100</div></div><div class="editor__field"><span>Free shipping line</span><div class="editor__input">Free US shipping over $[amount].</div><small>[amount] is replaced with the number above.</small></div><div class="editor__field"><span>Returns line</span><div class="editor__input">Free returns and exchanges for 30 days.</div></div><div class="editor__field"><span>Warehouse time zone</span><div class="editor__input">America/New_York</div><small>An IANA name such as America/Chicago.</small></div><div class="editor__field"><span>Same-day cutoff (24 h)</span><div class="editor__range"><i style="--p:50.0%"></i><b>14</b></div></div><div class="editor__field"><span>Transit, fastest (business days)</span><div class="editor__range"><i style="--p:11.1%"></i><b>2</b></div></div><div class="editor__field"><span>Transit, slowest (business days)</span><div class="editor__range"><i style="--p:30.8%"></i><b>5</b></div></div><div class="editor__field"><span>Days the warehouse is closed</span><div class="editor__input">2026-11-26, 2026-12-25, 2027-01-01</div><small>YYYY-MM-DD, separated by commas.</small></div><div class="editor__field"><span>Text if the estimate can't be worked out</span><div class="editor__input">Ships in 1 to 2 business days.</div></div>
+  </div>
+</div>
+<p class="editor__note">7 section settings and 26 block settings across 7 block types.</p>
+<!-- editor:end -->
+  </div>
+</section>
+
+<section class="band band--dark" id="files">
+  <div class="wrap">
+    <div class="sechead sechead--light">
+      <p class="eyebrow">05 · Files and tests</p>
+      <h2>Small enough to read in one sitting.</h2>
+      <p>The decisions (which sizes are sold out, what the button says, the size finder, delivery dates) live in one file with no page code in it, so they can be tested on their own. The section's markup is tested by rendering it with LiquidJS against the sample product.</p>
+    </div>
+    <div class="files">
+      <div class="tree reveal">
+<!-- tree:start -->
+<ul><li><span class="dir" style="margin:0;font-family:var(--mono);font-size:13px">theme/</span><ul><li><span class="dir" style="margin:0;font-family:var(--mono);font-size:13px">sections/</span><ul><li>th-main-product.liquid<span class="sz">15 KB</span><span>markup, blocks and schema</span></li></ul></li><li><span class="dir" style="margin:0;font-family:var(--mono);font-size:13px">snippets/</span><ul><li>th-variant-picker.liquid<span class="sz">3.9 KB</span><span>option rows, swatches, pills</span></li><li>th-size-guide.liquid<span class="sz">7.7 KB</span><span>finder, body and garment tabs</span></li></ul></li><li><span class="dir" style="margin:0;font-family:var(--mono);font-size:13px">assets/</span><ul><li>th-product-core.js<span class="sz">8.3 KB</span><span>the decisions, no DOM</span></li><li>th-product.js<span class="sz">19 KB</span><span>wiring, gallery, sticky bar</span></li><li>th-product.css<span class="sz">17 KB</span><span>all styles, scoped th-</span></li></ul></li><li><span class="dir" style="margin:0;font-family:var(--mono);font-size:13px">templates/</span><ul><li>product.tollhaven.json<span class="sz">1.7 KB</span><span>block order and defaults</span></li></ul></li></ul></li><li><span class="dir" style="margin:0;font-family:var(--mono);font-size:13px">tests/</span><ul><li>core.test.mjs<span>variants, size finder, dates</span></li><li>render.test.mjs<span>renders the Liquid, checks schema</span></li></ul></li></ul>
+<!-- tree:end -->
+      </div>
+      <figure class="code code--dark reveal">
+        <figcaption><span>assets/th-product-core.js</span><span class="muted">valueStates()</span></figcaption>
+<pre><code><!-- snippet:start --><span class="tok-c">// For one option, how each value looks given what is picked in the others.</span>
+<span class="tok-c">// <span class="tok-s">'available'</span>  at least one matching variant can be bought</span>
+<span class="tok-c">// <span class="tok-s">'soldout'</span>    matching variants exist but none can be bought</span>
+<span class="tok-c">// <span class="tok-s">'none'</span>       no variant is made with this combination</span>
+<span class="tok-k">function</span> valueStates(product, selections, optionIndex) {
+  <span class="tok-k">var</span> values = optionValues(product, optionIndex);
+  <span class="tok-k">var</span> out = {};
+  values.forEach(<span class="tok-k">function</span> (value) {
+    <span class="tok-k">var</span> found = <span class="tok-p">false</span>, available = <span class="tok-p">false</span>;
+    product.variants.forEach(<span class="tok-k">function</span> (v) {
+      <span class="tok-k">if</span> (v.options[optionIndex] !== value) <span class="tok-k">return</span>;
+      <span class="tok-k">for</span> (<span class="tok-k">var</span> j = 0; j &lt; v.options.length; j++) {
+        <span class="tok-k">if</span> (j === optionIndex) continue;
+        <span class="tok-k">if</span> (selections[j] != <span class="tok-p">null</span> &amp;&amp; v.options[j] !== selections[j]) <span class="tok-k">return</span>;
+      }
+      found = <span class="tok-p">true</span>;
+      <span class="tok-k">if</span> (v.available) available = <span class="tok-p">true</span>;
+    });
+    out[value] = available ? <span class="tok-s">'available'</span> : (found ? <span class="tok-s">'soldout'</span> : <span class="tok-s">'none'</span>);
+  });
+  <span class="tok-k">return</span> out;
+}<!-- snippet:end --></code></pre>
+      </figure>
+    </div>
+    <figure class="testout reveal">
+      <figcaption><span>node --test</span><span class="muted">real output, captured when this page was built</span></figcaption>
+<pre><code><!-- tests:start --><span class="t-ok">✔</span> the sample has 68 variants: 4 colors x 6 waists x 3 lengths, less 38 Short in each color 
+<span class="t-ok">✔</span> variantFor needs every option picked 
+<span class="t-ok">✔</span> waist states follow the color picked 
+<span class="t-ok">✔</span> a waist is only sold out for a length when that exact combination is 
+<span class="t-ok">✔</span> 38 Short is &quot;not made&quot;, which is different from sold out 
+<span class="t-ok">✔</span> colors show as sold out only when nothing in the picked size is left 
+<span class="t-ok">✔</span> the button asks for what is missing, in order 
+<span class="t-ok">✔</span> size finder: inside a range 
+<span class="t-ok">✔</span> size finder: between two sizes suggests the larger, mentions the smaller 
+<span class="t-ok">✔</span> size finder: top of a size mentions the next one up 
+<span class="t-ok">✔</span> size finder: works in cm 
+<span class="t-ok">✔</span> size finder: out of range says so instead of guessing 
+<span class="t-ok">✔</span> measurements print as fractions in inches and whole cm 
+<span class="t-ok">✔</span> delivery: before the cutoff on a weekday ships today 
+<span class="t-ok">✔</span> delivery: after the cutoff ships the next business day 
+<span class="t-ok">✔</span> delivery: the cutoff is in the warehouse time zone, not the shopper's 
+<span class="t-ok">✔</span> delivery: a closed day is skipped for shipping too 
+<span class="t-ok">✔</span> delivery: clock change weekend still counts days right 
+<span class="t-ok">✔</span> money and free shipping 
+<span class="t-ok">✔</span> schema is valid JSON and every block type has a name 
+<span class="t-ok">✔</span> every setting the Liquid reads is defined in the schema 
+<span class="t-ok">✔</span> the template only uses blocks and settings the schema has 
+<span class="t-ok">✔</span> one radio per option value, all tied to the product form 
+<span class="t-ok">✔</span> sizes start unpicked by default so nobody buys a size by accident 
+<span class="t-ok">✔</span> with preselect on, the first available size is checked 
+<span class="t-ok">✔</span> length pills show the inseam 
+<span class="t-ok">✔</span> product JSON, low-stock list and size chart are embedded and parse 
+<span class="t-ok">✔</span> only the current color's images are shown at first 
+<span class="t-ok">✔</span> size guide: body and garment tables are separate and labelled 
+<span class="t-ok">✔</span> without JavaScript there is still a plain size select 
+<span class="t-ok">✔</span> back-in-stock form is a separate contact form, not nested in the cart form 
+<span class="t-ok">✔</span> turning the sticky bar off removes it 
+<span class="t-ok">✔</span> a product with no size chart renders without the guide 
+<span class="t-dim">ℹ tests 33</span>
+<span class="t-dim">ℹ suites 0</span>
+<span class="t-dim">ℹ pass 33</span>
+<span class="t-dim">ℹ fail 0</span>
+<span class="t-dim">ℹ cancelled 0</span>
+<span class="t-dim">ℹ skipped 0</span>
+<span class="t-dim">ℹ todo 0</span><!-- tests:end --></code></pre>
+    </figure>
+  </div>
+</section>
+
+<section class="band" id="install">
+  <div class="wrap split split--top">
+    <div class="split__copy">
+      <p class="eyebrow">06 · Install</p>
+      <h2>About an hour on a duplicate theme.</h2>
+      <ol class="steps">
+        <li><b>Duplicate the live theme</b> and work on the copy.</li>
+        <li><b>Upload the files</b> from the zip into <code>sections/</code>, <code>snippets/</code>, <code>assets/</code> and <code>templates/</code> (Edit code › Add a new file, or Shopify CLI).</li>
+        <li><b>Add the metafield</b>: Settings › Custom data › Products › <code>custom.size_chart</code>, type JSON, and paste the example chart.</li>
+        <li><b>Set swatch colors</b> at the top of <code>th-product.css</code>, one line per color.</li>
+        <li><b>Name the images</b> so their alt text starts with the color (“Olive · Back view”). That's how the gallery follows the color.</li>
+        <li><b>Assign the template</b> “tollhaven” to the product, check it on a phone, then publish.</li>
+      </ol>
+    </div>
+    <aside class="honest reveal">
+      <h3>What was tested, and what wasn't</h3>
+      <p><b>Tested:</b> the core logic (33 automated tests, including weekends, holidays and the clock change), the Liquid rendered with LiquidJS against a 68-variant sample product, and the page in headless Chrome at desktop and phone widths with no console errors.</p>
+      <p><b>Not tested:</b> a real Shopify store. Shopify-only parts (the <code>form</code> tag, <code>image_url</code>, <code>money</code>, <code>/cart/add.js</code>, the theme editor) were stood in for locally. Every theme's cart drawer is different, so the section fires a <code>th:cart:added</code> event for the theme to listen to, and falls back to the cart page.</p>
+      <p><b>Limits:</b> built for up to three options. Stock counts only show where the store tracks inventory.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="wrap getit">
+  <div>
+    <h2>Take the files.</h2>
+    <p>The section, both snippets, the JS and CSS, the template, an example size chart and install notes. Source and tests are on GitHub.</p>
+  </div>
+  <div class="getit__btns">
+    <a class="btn btn--solid" href="tollhaven-product-section-theme-files.zip" download>Theme files <span class="muted" data-size-of="tollhaven-product-section-theme-files.zip">(zip, 24 KB)</span></a>
+    <a class="btn btn--line" href="https://github.com/alexmercer-projects/tollhaven-shopify-product-page">Source and tests on GitHub</a>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__inner">
+    <p><b>Concept demo by Alex Mercer.</b> Tollhaven Trouser Co., The Field Chino, its prices, stock, phone (555) 010-0148 and help@example.com are made up. Not client work, not installed on a real store, and no sales or results are claimed. Fonts: Geist and Instrument Serif (SIL Open Font License). Product drawings are original SVG.</p>
+    <a href="https://alexmercerprojects.com/">alexmercerprojects.com</a>
+  </div>
+</footer>
+
+<script src="js/demo.js" defer></script>
+</body>
+</html>

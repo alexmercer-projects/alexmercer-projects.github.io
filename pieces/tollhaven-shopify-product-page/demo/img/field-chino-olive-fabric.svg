@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+<defs>
+  <radialGradient id="bg" cx="50%" cy="38%" r="75%"><stop offset="0" stop-color="#eeede6"/><stop offset="1" stop-color="#dfdfd3"/></radialGradient>
+  <linearGradient id="cloth" x1="0" x2="1" y1="0" y2="0">
+    <stop offset="0" stop-color="#5a5936"/><stop offset=".22" stop-color="#69683f"/><stop offset=".5" stop-color="#767547"/><stop offset=".78" stop-color="#69683f"/><stop offset="1" stop-color="#585735"/>
+  </linearGradient>
+  <linearGradient id="fall" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#000" stop-opacity="0"/><stop offset=".8" stop-color="#000" stop-opacity=".05"/><stop offset="1" stop-color="#000" stop-opacity=".12"/></linearGradient>
+  <pattern id="twill" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(-38)"><rect width="6" height="6" fill="none"/><path d="M0 1.5h6" stroke="#fff" stroke-opacity=".07" stroke-width="1.4"/><path d="M0 4.5h6" stroke="#000" stroke-opacity=".06" stroke-width="1"/></pattern>
+  <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="14"/></filter>
+</defs>
+<rect x="-400" y="-400" width="1600" height="1800" fill="url(#bg)"/>
+<rect x="0" y="0" width="800" height="1000" fill="url(#cloth)"/>
+<rect width="800" height="1000" fill="url(#twill)"/>
+<rect width="800" height="1000" fill="url(#twill)" transform="scale(2.2)" opacity=".7"/>
+<path d="M0 640 Q400 600 800 650 L800 1000 L0 1000Z" fill="#5e5e39"/>
+<path d="M0 640 Q400 600 800 650 L800 1000 L0 1000Z" fill="url(#twill)"/>
+<path d="M0 640 Q400 600 800 650" fill="none" stroke="#000" stroke-opacity=".22" stroke-width="5"/>
+<path d="M0 668 Q400 628 800 678 M0 684 Q400 644 800 694" fill="none" stroke="#a3a165" stroke-width="2.4" stroke-dasharray="9 7" opacity=".85"/>
+<g transform="rotate(-3 470 790)"><rect x="380" y="740" width="200" height="96" rx="3" fill="#f3eee4"/><rect x="380" y="740" width="200" height="96" rx="3" fill="none" stroke="#000" stroke-opacity=".12"/><path d="M406 772h148M406 792h110M406 812h80" stroke="#6b6253" stroke-width="5" stroke-linecap="round" opacity=".55"/></g>
+<rect width="800" height="1000" fill="url(#fall)" opacity=".7"/>
+</svg>
