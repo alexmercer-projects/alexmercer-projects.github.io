@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Copperwick Moving Co.: quote request automation (concept demo) · Alex Mercer</title>
+  <meta name="description" content="Concept demo: a Google Forms to Google Sheets to email automation in Apps Script for a made-up moving company. Each quote request is logged, checked, routed to an estimator and confirmed, with reminders and a morning digest.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#f3efe7">
+  <meta property="og:title" content="Quote request automation, concept demo">
+  <meta property="og:description" content="Form to sheet to email in Google Apps Script: logging, spam and typo checks, repeat detection, routing by town, reply-by times, reminders and a morning digest. Made-up business, example data.">
+  <meta property="og:type" content="website">
+  <link rel="preload" href="fonts/Geist.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/InstrumentSerif.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23a4502a'/%3E%3Cpath d='M8 20.5h16M10 20.5v-6l6-4.5 6 4.5v6' fill='none' stroke='%23f3efe7' stroke-width='2.2' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <script>if(!/[?&]static\b/.test(location.search)&&!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('anim');</script>
+</head>
+<body>
+<div class="am-demo-bar" role="note" style="font:14px/1.45 system-ui,-apple-system,'Segoe UI',sans-serif;background:#0f0f0f;color:#f3f3ef;padding:10px 16px;display:flex;flex-wrap:wrap;gap:6px 18px;justify-content:space-between;align-items:center;position:relative;z-index:50"><span><b>Concept demo by Alex Mercer.</b> Copperwick Moving Co., its towns, staff and customers are made up. Example data, not client work, and nothing here sends real email.</span><a href="../index.html" style="color:#f3f3ef;text-decoration:underline;text-underline-offset:3px">Back to Alex Mercer&#39;s portfolio</a></div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap top__inner">
+    <a class="logo" href="#main"><span class="logo__mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M6 21.5h20M9 21.5v-7.5l7-5.5 7 5.5v7.5" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/><path d="M13.5 21.5v-4h5v4" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"/></svg></span><span class="logo__word"><span>Copperwick Moving</span><small>Quote automation</small></span></a>
+    <nav class="nav" aria-label="Sections"><a href="#how">How it works</a><a href="#try">Try it</a><a href="#sheet">The sheet</a><a href="#emails">Emails</a><a href="#follow">Follow-up</a><a href="#edges">Edge cases</a><a href="#setup">Setup</a></nav>
+    <a class="btn btn--solid btn--sm" href="copperwick-quote-automation-apps-script.zip" download><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3v10m0 0-4-4m4 4 4-4M4 16h12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Script</span></a>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero wrap">
+  <div class="hero__copy">
+    <p class="eyebrow">Form → Sheet → Email automation · Google Apps Script</p>
+    <h1>Quote requests that file themselves, <em>find the right person and get a reply.</em></h1>
+    <p class="lede">A made-up mover, Copperwick Moving Co., gets quote requests from a Google Form and from its website. This is the automation I'd set up for it: every request lands in one Google Sheet with a reference number, goes to the right estimator by town, and the customer gets a confirmation straight away. Repeats, typos and spam get caught, and if a request sits unanswered, someone hears about it.</p>
+    <div class="hero__cta"><a class="btn btn--solid" href="#try">Send a test request</a><a class="btn btn--ghost" href="copperwick-quote-automation-apps-script.zip" download><span>Download the script (<span data-size="zip">zip, 15 KB</span>)</span></a></div>
+  </div>
+  <aside class="minute" aria-label="What happens to one request">
+    <div class="minute__head"><span class="dot"></span><span>One request, start to finish</span><span class="minute__ref mono" id="hero-ref">CWM-2611-0011</span></div>
+    <ol class="minute__list" id="hero-steps">
+      <li><span class="t mono">0.0 s</span><b>Form submitted</b><span>Diego Ramos, 3 bedrooms, Pell Corner → Easton Mills</span></li>
+      <li><span class="t mono">0.3 s</span><b>Checked</b><span>Not spam, email looks right, not a repeat</span></li>
+      <li><span class="t mono">0.4 s</span><b>Routed</b><span>Pell Corner is North, so it goes to Rosa Delgado</span></li>
+      <li><span class="t mono">0.6 s</span><b>Row added to the sheet</b><span>Status New, reply by 10:47 AM</span></li>
+      <li><span class="t mono">1.4 s</span><b>Two emails out</b><span>An alert to Rosa, a confirmation to Diego</span></li>
+      <li class="later"><span class="t mono">later</span><b>Watched</b><span>Still New at 10:47? Rosa and the office get a reminder</span></li>
+    </ol>
+    <p class="minute__foot mono">Timings are illustrative. Example data.</p>
+  </aside>
+</section>
+
+<section class="facts wrap" aria-label="At a glance">
+  <div><span class="facts__k">Runs on</span><span class="facts__v">Google Sheets, Forms and Gmail, through Apps Script</span></div>
+  <div><span class="facts__k">Cost to run</span><span class="facts__v">$0 on a Google account. No Zapier or Make plan.</span></div>
+  <div><span class="facts__k">Checks per request</span><span class="facts__v">Spam, contact details, repeats, routing, priority</span></div>
+  <div><span class="facts__k">Automated tests</span><span class="facts__v"><b data-tests>33</b> passing, run offline</span></div>
+</section>
+
+<section class="band" id="how" aria-labelledby="how-h">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><p class="eyebrow">01 · How it works</p><h2 id="how-h">Seven steps, in order, <em>every time.</em></h2></div>
+      <p>Each step is a small plain-JavaScript function in <code>Rules.gs</code>. The part that talks to Google (reading the sheet, sending mail) is kept separate in <code>Code.gs</code>, so the rules can be tested without a Google account, and the "Try it" box below runs the exact same file.</p>
+    </div>
+    <ol class="flow reveal">
+      <li><span class="flow__n mono">1</span><h3>Request comes in</h3><p>From a Google Form linked to the sheet, or the website's own form posting to the script.</p></li>
+      <li><span class="flow__n mono">2</span><h3>Spam check</h3><p>A hidden field only bots fill in, and a limit on links in the notes. Spam is logged, never emailed.</p></li>
+      <li><span class="flow__n mono">3</span><h3>Contact check</h3><p>Email format, common domain typos like <span class="mono">gmial.com</span>, phone length, a sane move date.</p></li>
+      <li><span class="flow__n mono">4</span><h3>Repeat check</h3><p>Same email or phone with an open request in the last 14 days? Update that row instead of adding one.</p></li>
+      <li><span class="flow__n mono">5</span><h3>Routing</h3><p>The town they're leaving picks the area and estimator. Long-distance moves go to one person.</p></li>
+      <li><span class="flow__n mono">6</span><h3>Priority + reply-by</h3><p>Moving within 7 days is Rush. The reply-by time counts business hours only, Mon to Sat, 8 to 6.</p></li>
+      <li><span class="flow__n mono">7</span><h3>Write and send</h3><p>One row on the sheet, an alert to the estimator, a confirmation to the customer.</p></li>
+    </ol>
+    <div class="timers reveal">
+      <p class="eyebrow">Then, on a timer</p>
+      <div><b>Every hour</b><span>Anything still New past its reply-by time gets one reminder, to the estimator and the office.</span></div>
+      <div><b>Every morning at 7</b><span>A digest to the office: yesterday's count, open requests per estimator, what's overdue, who moves this week.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="try" id="try" aria-labelledby="try-h">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><p class="eyebrow">02 · Try it</p><h2 id="try-h">Send a request and <em>watch what the script does.</em></h2></div>
+      <p>This runs <code>Rules.gs</code> and <code>Emails.gs</code> in your browser against a copy of the sheet. Nothing is sent anywhere: the emails are shown here instead. Pick an example or fill it in yourself.</p>
+    </div>
+    <div class="presets reveal" role="group" aria-label="Example requests">
+      <button type="button" class="chip" data-preset="normal">A normal request</button>
+      <button type="button" class="chip" data-preset="rush">Moving in 3 days</button>
+      <button type="button" class="chip" data-preset="repeat">Same person again</button>
+      <button type="button" class="chip" data-preset="typo">Typo in the email</button>
+      <button type="button" class="chip" data-preset="long">Long distance</button>
+      <button type="button" class="chip" data-preset="spam">A spam bot</button>
+    </div>
+    <div class="lab reveal">
+      <form class="qform card" id="qform" novalidate>
+        <div class="qform__head"><span class="qform__title">Get a moving quote</span><span class="qform__sub">The form a customer fills in</span></div>
+        <div class="grid2">
+          <label>Your name<input name="name" autocomplete="off" required></label>
+          <label>Phone<input name="phone" inputmode="tel" autocomplete="off"></label>
+        </div>
+        <label>Email<input name="email" type="text" inputmode="email" autocomplete="off"></label>
+        <div class="grid2">
+          <label>Move date<input name="moveDate" type="date"></label>
+          <label>Home size<select name="homeSize" id="f-size"></select></label>
+        </div>
+        <div class="grid2">
+          <label>Moving from<select name="fromTown" id="f-from"></select></label>
+          <label>Moving to<select name="toTown" id="f-to"></select></label>
+        </div>
+        <label>Anything we should know?<textarea name="notes" rows="2"></textarea></label>
+        <label class="honeypot" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
+        <div class="qform__foot">
+          <button class="btn btn--solid" type="submit">Submit request</button>
+          <label class="bot"><input type="checkbox" id="f-bot"> Pretend I'm a bot (fill the hidden field)</label>
+        </div>
+      </form>
+      <div class="run">
+        <div class="console card--dark" aria-live="polite">
+          <div class="console__bar"><span class="lights" aria-hidden="true"><i></i><i></i><i></i></span><span class="mono">processRequest() · run log</span><span class="console__status mono" id="run-status">waiting</span></div>
+          <ol class="console__log mono" id="run-log"><li class="idle">Submit the form or pick an example to start.</li></ol>
+        </div>
+        <div class="mail card" id="run-mail">
+          <div class="mail__tabs" role="tablist" id="mail-tabs"></div>
+          <div class="mail__body" id="mail-body"><p class="muted">Emails the script would send show up here.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="sheetwrap reveal">
+      <div class="sheetwrap__head"><div><b>Requests</b> tab <span class="muted">· newest at the bottom, like the real sheet</span></div><button type="button" class="linkbtn" id="reset">Reset the demo sheet</button></div>
+      <div class="sheet" id="live-sheet" tabindex="0" role="region" aria-label="Requests sheet, scrolls sideways"></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="sheet" aria-labelledby="sheet-h">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><p class="eyebrow">03 · The sheet</p><h2 id="sheet-h">One Google Sheet, four tabs, <em>no code to change settings.</em></h2></div>
+      <p>The office works in the Requests tab and updates the Status column. Who covers which town, office hours, the reply window and the rush cutoff all live in tabs anyone can edit.</p>
+    </div>
+    <div class="tabsheet reveal">
+      <div class="tabsheet__tabs" role="tablist" id="sheet-tabs">
+        <button role="tab" aria-selected="true" data-tab="requests">Requests</button>
+        <button role="tab" aria-selected="false" data-tab="routing">Routing</button>
+        <button role="tab" aria-selected="false" data-tab="settings">Settings</button>
+        <button role="tab" aria-selected="false" data-tab="log">Log</button>
+      </div>
+      <div class="sheet sheet--tall" id="tab-sheet" tabindex="0" role="tabpanel" aria-label="Sheet tab, scrolls sideways"></div>
+    </div>
+    <ul class="notes reveal">
+      <li><b>Columns are found by their header.</b> Move them, hide them or add your own; the script looks each one up by name.</li>
+      <li><b>A Status dropdown</b> with New, Contacted, Quoted, Booked, Lost, Check contact and Spam, so the reminders and the digest know what's still open.</li>
+      <li><b>Reply by</b> is worked out from office hours, so a request at 9 PM on Saturday is due Monday morning, not in the middle of the night.</li>
+      <li><b>The Log tab</b> keeps a line for every run, every skipped email and every error, with the request attached, so nothing is lost silently.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="emails" id="emails" aria-labelledby="emails-h">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><p class="eyebrow">04 · The emails</p><h2 id="emails-h">Short, specific, <em>written for the person reading.</em></h2></div>
+      <p>The customer gets the details back and a name and time to expect a call. The estimator gets everything needed to phone them, with Rush and anything to double-check at the top. Each email has a plain-text version too.</p>
+    </div>
+    <div class="mails reveal" id="mail-samples"></div>
+  </div>
+</section>
+
+<section class="band" id="follow" aria-labelledby="follow-h">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><p class="eyebrow">05 · Follow-up</p><h2 id="follow-h">Nothing sits unanswered <em>without someone hearing about it.</em></h2></div>
+      <p>Two time-driven triggers do the chasing, so nobody has to remember to check the sheet.</p>
+    </div>
+    <div class="follow reveal">
+      <div class="day card">
+        <p class="day__title"><b>A request that gets missed</b><span class="muted"> · one Tuesday</span></p>
+        <ol class="day__line" id="day-line"></ol>
+      </div>
+      <div class="digest card">
+        <div class="mail__meta"><span><b>To</b> office@example.com</span><span><b>Sent</b> 7:00 AM, every day</span></div>
+        <div class="mail__subject" id="digest-subject"></div>
+        <div class="mail__html" id="digest-html"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="edges" id="edges" aria-labelledby="edges-h">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><p class="eyebrow">06 · Edge cases</p><h2 id="edges-h">What happens <em>when things go wrong.</em></h2></div>
+      <p>Most small automations work on the happy path and break quietly on everything else. These are the cases I planned for. Each is handled in the code and checked by the tests in the repo, using stand-ins for Google's services.</p>
+    </div>
+    <div class="cards reveal">
+      <article class="edge"><h3>Two requests in the same second</h3><p>Each run takes a script lock first, so two submissions can't grab the same row or reference number. If the lock can't be had in 30 seconds, the request is written to the Log tab instead of dropped.</p><span class="edge__fn mono">LockService</span></article>
+      <article class="edge"><h3>Gmail's daily limit</h3><p>Apps Script can email 100 recipients a day on a free Google account and 1,500 on Workspace. The script checks what's left before every send; if it's out, the row is still saved and the skip goes in the Log.</p><span class="edge__fn mono">getRemainingDailyQuota()</span></article>
+      <article class="edge"><h3>Someone rearranges the sheet</h3><p>Columns are matched by header text, not position, so dragging "Phone" next to "Name" or adding a "Crew" column doesn't send data into the wrong place.</p><span class="edge__fn mono">readRequests_()</span></article>
+      <article class="edge"><h3>The script itself fails</h3><p>Any error is caught, the full request is saved to the Log with the error, and the office gets an email saying so. The customer's details are never only in a failed run.</p><span class="edge__fn mono">handleRequest_()</span></article>
+      <article class="edge"><h3>A typo in the email</h3><p><span class="mono">grace@gmial.com</span> would bounce. The row is marked Check contact and the estimator is told, but no confirmation goes to the bad address.</p><span class="edge__fn mono">validateRequest()</span></article>
+      <article class="edge"><h3>The same person, twice</h3><p>People resubmit when they don't hear back. The second one updates the first row (new date, extra notes, a repeat count) and pings the estimator instead of making a second lead.</p><span class="edge__fn mono">findDuplicate()</span></article>
+    </div>
+  </div>
+</section>
+
+<section class="band band--ink" id="setup" aria-labelledby="setup-h">
+  <div class="wrap">
+    <div class="sec-head sec-head--light reveal">
+      <div><p class="eyebrow eyebrow--light">07 · Setup and handoff</p><h2 id="setup-h">About twenty minutes to install, <em>and it's yours.</em></h2></div>
+      <p>The script runs in the business's own Google account. No outside service, no monthly plan, nothing that stops working if I disappear.</p>
+    </div>
+    <div class="setup reveal">
+      <ol class="steps">
+        <li><b>Make the sheet.</b> Import the sample workbook into Google Sheets, or start from your own sheet; setup adds any missing tabs.</li>
+        <li><b>Link the form.</b> In Google Forms, Responses → Link to Sheets. Match the question titles in <code>FORM_FIELDS</code> if yours differ.</li>
+        <li><b>Paste the script.</b> Extensions → Apps Script, then add <code>Code.gs</code>, <code>Rules.gs</code> and <code>Emails.gs</code>.</li>
+        <li><b>Fill in two tabs.</b> Routing (town, area, estimator, email) and Settings (hours, reply window, rush cutoff, emails).</li>
+        <li><b>Run <code>setup()</code> once</b> and accept Google's permission prompt. It creates the three triggers and the Status dropdown.</li>
+        <li><b>Optional: your website form.</b> Deploy as a web app and point the site's form at it. Same rules, source shows "Website".</li>
+      </ol>
+      <div class="code card--dark">
+        <div class="console__bar"><span class="lights" aria-hidden="true"><i></i><i></i><i></i></span><span class="mono">Rules.gs · the repeat check inside processRequest()</span></div>
+        <pre class="mono" id="snippet"><span class="tok-k">var</span> dup = <span class="tok-f">findDuplicate</span>(req, ctx.rows, now, cfg);
+<span class="tok-k">if</span> (dup) {
+  <span class="tok-k">var</span> prev = dup.row;
+  <span class="tok-f">step</span>(<span class="tok-s">'Duplicate check'</span>, <span class="tok-s">'Same '</span> + dup.on + <span class="tok-s">' as '</span> + prev.ref + <span class="tok-s">' ('</span> + prev.status + <span class="tok-s">'). Added to that row instead of making a new one.'</span>, <span class="tok-s">'warn'</span>);
+  <span class="tok-k">var</span> merged = <span class="tok-f">mergeIntoRow</span>(prev, req, now, check);
+  <span class="tok-f">step</span>(<span class="tok-s">'Sheet'</span>, <span class="tok-s">'Updated '</span> + prev.ref + <span class="tok-s">': repeat count '</span> + merged.repeats + <span class="tok-s">', newest details kept'</span>);
+  <span class="tok-k">if</span> (prev.estimatorEmail) {
+    emails.<span class="tok-f">push</span>({ to: prev.estimatorEmail, kind: <span class="tok-s">'repeat'</span>, ref: prev.ref });
+    <span class="tok-f">step</span>(<span class="tok-s">'Email'</span>, <span class="tok-s">'Heads-up to '</span> + prev.estimator + <span class="tok-s">': this person asked again'</span>, <span class="tok-s">'mail'</span>);
+  }
+  <span class="tok-f">step</span>(<span class="tok-s">'Customer email'</span>, <span class="tok-s">'Not sent again (they already have '</span> + prev.ref + <span class="tok-s">')'</span>, <span class="tok-s">'skip'</span>);
+  <span class="tok-k">return</span> { outcome: <span class="tok-s">'merged'</span>, row: merged, index: dup.index, emails: emails, log: log };
+}
+<span class="tok-f">step</span>(<span class="tok-s">'Duplicate check'</span>, <span class="tok-s">'No open request with this email or phone in the last '</span> + cfg.duplicateDays + <span class="tok-s">' days'</span>);</pre>
+      </div>
+    </div>
+    <div class="handoff reveal">
+      <div class="tests card--dark">
+        <div class="console__bar"><span class="lights" aria-hidden="true"><i></i><i></i><i></i></span><span class="mono">node --test tests/</span></div>
+        <pre class="mono" id="tests"><span class="ok">✔</span> setup makes the tabs, headers, status dropdown and three triggers
+<span class="ok">✔</span> columns are found by header, even after someone moves them
+<span class="ok">✔</span> when the email quota is used up the row is still saved and the skip is logged
+<span class="ok">✔</span> the morning digest goes to the office
+<span class="ok">✔</span> if the lock is busy for 30 seconds, the request goes to the Log instead of being dropped
+<span class="ok">✔</span> a long-distance move goes to the long-distance person
+<span class="ok">✔</span> an unknown town goes to the office and is noted
+<span class="ok">✔</span> a broken email is held too
+<span class="ok">✔</span> past and far-out move dates are noted but still logged
+<span class="ok">✔</span> the same person again updates their row instead of adding one
+<span class="ok">✔</span> duplicates match on phone too, but not closed or old rows
+<span class="ok">✔</span> emails escape whatever people type
+<span class="dim">… 21 more</span>
+
+<span class="ok">ℹ tests 33  ·  pass 33  ·  fail 0</span></pre>
+      </div>
+      <div class="dl">
+        <a class="dl__item" href="copperwick-quote-automation-apps-script.zip" download><span class="dl__k mono">ZIP</span><span><b>The Apps Script project</b><small>Code.gs, Rules.gs, Emails.gs, appsscript.json and the setup notes · <span data-size="zipkb">15 KB</span></small></span></a>
+        <a class="dl__item" href="Copperwick-quote-requests-DEMO.xlsx" download><span class="dl__k mono">XLSX</span><span><b>The sample sheet</b><small>Requests, Routing, Settings and Log tabs with the example data · <span data-size="xlsx">11 KB</span></small></span></a>
+        <p class="dl__note">Built and tested offline against stand-ins for Google's services (the tests are in the repo). It hasn't been installed for a real business, and no real email was sent.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__inner">
+    <p><b>Concept demo by Alex Mercer.</b> Copperwick Moving Co., its towns, estimators and customers, and every phone number (555-01xx) and email (example.com) here are made up. Not client work, and no results are claimed.</p>
+    <p><a href="https://alexmercerprojects.com/">alexmercerprojects.com</a> · <a href="mailto:alexmercer.projects@gmail.com">alexmercer.projects@gmail.com</a></p>
+  </div>
+</footer>
+<noscript><p class="nojs">The "Try it" box and the sheet previews need JavaScript. The script itself is in the download.</p></noscript>
+<script src="js/rules.js"></script>
+<script src="js/emails.js"></script>
+<script src="js/demo-data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
