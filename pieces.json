@@ -41,6 +41,59 @@
     "coverPhone": "tamarack-budget-tracker/cover-phone.webp"
   },
   {
+    "id": "harborline-florida-probate-explainer",
+    "title": "Harborline Estate & Probate: a plain-English Florida probate explainer",
+    "short": "Florida probate explainer",
+    "category": "Legal writing",
+    "label": "Concept demo",
+    "year": 2026,
+    "folder": "harborline-florida-probate-explainer",
+    "summary": "A practice-area article for a made-up Florida probate firm on summary vs. formal administration, written for families rather than lawyers. Every rule links to the 2026 statute behind it, including the new $150,000 summary limit.",
+    "cover": "harborline-florida-probate-explainer/cover.webp",
+    "coverAlt": "A law firm article titled Do I have to go through probate in Florida, with an at-a-glance panel: $150,000 summary administration limit, 3 months for creditor claims, 2 years outside limit",
+    "demo": "harborline-florida-probate-explainer/demo/index.html",
+    "demoLabel": "Read the article",
+    "downloads": [
+      {
+        "file": "harborline-florida-probate-explainer/samples/harborline-florida-probate-guide-DEMO.pdf",
+        "label": "Download the PDF"
+      }
+    ],
+    "gallery": [
+      {
+        "src": "harborline-florida-probate-explainer/screenshots/detail-summary.webp",
+        "alt": "The summary administration section, with a New in 2026 note on the limit going from $75,000 to $150,000"
+      },
+      {
+        "src": "harborline-florida-probate-explainer/screenshots/detail-flow.webp",
+        "alt": "A five-step which path fits decision flow with yes and no answers"
+      },
+      {
+        "src": "harborline-florida-probate-explainer/screenshots/detail-table.webp",
+        "alt": "A comparison table of no administration, summary administration and formal administration"
+      },
+      {
+        "src": "harborline-florida-probate-explainer/screenshots/detail-faq.webp",
+        "alt": "The FAQ with one answer open, above the call to action"
+      },
+      {
+        "src": "harborline-florida-probate-explainer/screenshots/detail-notes.webp",
+        "alt": "Writer's notes: reading level 7.4, keyword plan, Florida Bar rules and accuracy checks"
+      },
+      {
+        "src": "harborline-florida-probate-explainer/screenshots/mobile.webp",
+        "alt": "Three phone screens: the top of the article, the decision flow and the comparison table as stacked cards"
+      }
+    ],
+    "extraLinks": [
+      {
+        "label": "Sources and checks on GitHub",
+        "href": "https://github.com/alexmercer-projects/harborline-florida-probate-explainer"
+      }
+    ],
+    "labelNote": "The firm, phone number and email are made up, and this is not client work. The law is real and sourced as of Nov. 22, 2026, but it has not been reviewed by a Florida-licensed attorney and is not legal advice."
+  },
+  {
     "id": "alderbend-wordpress-theme",
     "title": "Alderbend Landscape Co.: a from-scratch WordPress block theme",
     "short": "WordPress block theme",
