@@ -41,6 +41,71 @@
     "coverPhone": "tamarack-budget-tracker/cover-phone.webp"
   },
   {
+    "id": "alderbend-wordpress-theme",
+    "title": "Alderbend Landscape Co.: a from-scratch WordPress block theme",
+    "short": "WordPress block theme",
+    "category": "WordPress",
+    "label": "Concept demo",
+    "year": 2026,
+    "folder": "alderbend-wordpress-theme",
+    "summary": "A WordPress block theme written from scratch for a made-up landscaper: design tokens in theme.json, 16 patterns, two custom blocks including a quote form that validates and escapes everything, and tests. The demo site is a static copy of the real theme running in WordPress.",
+    "cover": "alderbend-wordpress-theme/cover.webp",
+    "coverAlt": "The Alderbend home page: a headline reading Yards that look settled in from the first spring, a garden illustration in an arch, and a dark strip of four facts",
+    "demo": "alderbend-wordpress-theme/demo/index.html",
+    "demoLabel": "Read the write-up and open the demo",
+    "downloads": [
+      {
+        "file": "alderbend-wordpress-theme/samples/alderbend-theme.zip",
+        "label": "Download the theme"
+      }
+    ],
+    "gallery": [
+      {
+        "src": "alderbend-wordpress-theme/screenshots/desktop-services.webp",
+        "alt": "The Services page: six service rows with checklists, then the process steps"
+      },
+      {
+        "src": "alderbend-wordpress-theme/screenshots/desktop-projects.webp",
+        "alt": "The Projects page: a three-column grid of illustrated sample projects"
+      },
+      {
+        "src": "alderbend-wordpress-theme/screenshots/desktop-project.webp",
+        "alt": "A single sample project page with a large illustration, date and category"
+      },
+      {
+        "src": "alderbend-wordpress-theme/screenshots/desktop-contact.webp",
+        "alt": "The Contact page: the quote request form beside a panel of contact details"
+      },
+      {
+        "src": "alderbend-wordpress-theme/screenshots/desktop-clay-variation.webp",
+        "alt": "The home page with the Clay and sage style variation applied from the Styles panel"
+      },
+      {
+        "src": "alderbend-wordpress-theme/screenshots/editor-contact.webp",
+        "alt": "The Contact page open in the WordPress block editor with the Quote request form block selected"
+      },
+      {
+        "src": "alderbend-wordpress-theme/screenshots/mobile-home.webp",
+        "alt": "The home page on a phone, 390 pixels wide"
+      },
+      {
+        "src": "alderbend-wordpress-theme/screenshots/mobile-menu.webp",
+        "alt": "The phone menu open: Services, Projects, About and Contact on a dark green panel"
+      }
+    ],
+    "extraLinks": [
+      {
+        "label": "Just the demo site",
+        "href": "alderbend-wordpress-theme/demo/site/index.html"
+      },
+      {
+        "label": "Source and tests on GitHub",
+        "href": "https://github.com/alexmercer-projects/alderbend-wordpress-theme"
+      }
+    ],
+    "labelNote": "The company, towns, projects and phone number are made up. Tested on a local WordPress 7.1.5 with PHP lint, PHPCS and headless Chrome; not used on a real site, and no results are claimed. The demo site is a static copy because GitHub Pages can't run PHP, so the quote form can't send anything there."
+  },
+  {
     "id": "tollhaven-shopify-product-page",
     "title": "Tollhaven Trouser Co.: a Shopify product page section",
     "short": "Shopify product page",
