@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alderbend: a from-scratch WordPress block theme (concept demo) · Alex Mercer</title>
+<meta name="description" content="Concept demo: a WordPress block theme written from scratch for a made-up landscaping business, with theme.json tokens, patterns, two custom blocks, tests and a static copy of the rendered site.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#f4f1ea">
+<meta property="og:title" content="Alderbend: a from-scratch WordPress block theme, concept demo">
+<meta property="og:description" content="Block theme, patterns, two dynamic blocks, a hardened quote form, tests and the rendered site. Made-up business, example content.">
+<meta property="og:type" content="website">
+<link rel="preload" href="fonts/Geist.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/InstrumentSerif.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232f5039'/%3E%3Cpath d='M8 25C8 13 14 7 25 7c0 11-6 18-17 18Z' fill='%23f4f1ea'/%3E%3C/svg%3E">
+</head>
+<body>
+<div class="am-demo-bar" role="note" style="font:14px/1.45 system-ui,-apple-system,'Segoe UI',sans-serif;background:#0f0f0f;color:#f3f3ef;padding:10px 16px;display:flex;flex-wrap:wrap;gap:6px 18px;justify-content:space-between;align-items:center;position:relative;z-index:50"><span><b>Concept demo by Alex Mercer.</b> Alderbend Landscape Co., its towns, projects and phone number are made up. Example content, not client work.</span><a href="https://alexmercerprojects.com/" style="color:#f3f3ef;text-decoration:underline;text-underline-offset:3px">Back to Alex Mercer&#39;s portfolio</a></div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap top__inner">
+  <a class="logo" href="#main"><span class="logo__mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M8 25C8 13 14 7 25 7c0 11-6 18-17 18Z" fill="currentColor"/></svg></span><span class="logo__word"><span>Alderbend</span><small>WordPress block theme</small></span></a>
+  <nav class="nav" aria-label="Sections"><a href="#demo">The demo</a><a href="#inside">What's inside</a><a href="#code">Code</a><a href="#files">Files</a><a href="#checks">Checks</a><a href="#install">Install</a></nav>
+  <a class="btn btn--solid btn--sm" href="alderbend-theme.zip" download><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3v10m0 0-4-4m4 4 4-4M4 16h12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Theme .zip</span></a>
+</div></header>
+<main id="main">
+<section class="hero wrap">
+  <div>
+    <p class="eyebrow">WordPress · Block theme · PHP, theme.json, patterns</p>
+    <h1>A WordPress theme written from scratch for a <em>small landscaping business.</em></h1>
+    <p class="lede">No starter theme, no framework, no page builder. A full-site-editing theme for a made-up landscaper: design tokens in <code>theme.json</code>, 16 patterns, two small custom blocks, a quote form that checks and escapes everything, and tests you can read.</p>
+    <div class="cta-row">
+      <a class="btn btn--solid" href="site/">Open the demo site</a>
+      <a class="btn btn--line" href="https://github.com/alexmercer-projects/alderbend-wordpress-theme">Read the code on GitHub</a>
+    </div>
+    <p class="hero__note small muted">Alderbend Landscape Co. is made up, and so are its towns, projects and phone number. This is a concept demo, not client work, and it has not run on a real business's site. The demo site is a static copy of the theme running in a real WordPress; it is explained under <a href="#honest">what was tested</a>.</p>
+  </div>
+  <div class="frame"><div class="frame__bar"><i></i><i></i><i></i><span>localhost, WordPress 7.1.5, Alderbend theme</span></div><img src="img/desktop-home.webp" alt="The Alderbend home page: a headline, a garden illustration in an arch, and a dark facts strip." width="1440" height="1000"></div>
+</section>
+
+<div class="facts"><div class="wrap facts__grid">
+  <div class="fact"><b>16</b><span>block patterns, from hero to FAQ</span></div>
+  <div class="fact"><b>2</b><span>custom dynamic blocks (<code>block.json</code> + PHP render)</span></div>
+  <div class="fact"><b>120</b><span>automated checks passing, 0 failing</span></div>
+  <div class="fact"><b>250</b><span>blocks opened in the real editor, 0 invalid</span></div>
+  <div class="fact"><b>15 KB</b><span>of theme CSS (the rest is <code>theme.json</code>)</span></div>
+</div></div>
+
+<section class="block" id="demo"><div class="wrap">
+  <p class="eyebrow">The real thing</p>
+  <h2>The theme, rendered.</h2>
+  <p class="sub">Both frames below are the actual demo site. It was exported from the theme running in WordPress on my machine, so every link, the phone menu and the town checker work. The quote form only explains itself, because GitHub Pages cannot run PHP.</p>
+  <div class="live">
+    <div><div class="frame"><div class="frame__bar"><i></i><i></i><i></i><span>site/ (static export of the running theme)</span></div><iframe src="site/" title="Alderbend demo site, desktop" loading="lazy"></iframe></div>
+    <div class="live__cap small muted"><span>Scroll inside the frame, or <a href="site/">open it full screen</a>.</span><span>Pages: Home, Services, Projects (+ 6 sample projects), About, Contact.</span></div></div>
+    <div><div class="phone"><iframe src="site/" title="Alderbend demo site, phone width" loading="lazy"></iframe></div><p class="small muted" style="text-align:center;margin-top:12px">Same site at phone width. Try the menu button.</p></div>
+  </div>
+  <div class="shots">
+    <figure class="shot "><div class="frame"><img src="img/desktop-services.webp" alt="Services. Six rows built from one pattern, then the process, FAQ and call to action." loading="lazy"></div><figcaption><b>Services.</b> Six rows built from one pattern, then the process, FAQ and call to action.</figcaption></figure>
+    <figure class="shot "><div class="frame"><img src="img/desktop-projects.webp" alt="Projects. A Query Loop with featured images, 3-column grid, pagination ready." loading="lazy"></div><figcaption><b>Projects.</b> A Query Loop with featured images, 3-column grid, pagination ready.</figcaption></figure>
+    <figure class="shot "><div class="frame"><img src="img/desktop-contact.webp" alt="Contact. The quote form block next to a soft panel. Errors and success are announced." loading="lazy"></div><figcaption><b>Contact.</b> The quote form block next to a soft panel. Errors and success are announced.</figcaption></figure>
+    <figure class="shot "><div class="frame"><img src="img/desktop-clay-variation.webp" alt="Style variation. "Clay and sage" swaps the palette from the Styles panel, no CSS change." loading="lazy"></div><figcaption><b>Style variation.</b> "Clay and sage" swaps the palette from the Styles panel, no CSS change.</figcaption></figure>
+    <figure class="shot "><div class="frame"><img src="img/editor-contact.webp" alt="In the block editor. The Contact page with the Quote request form block selected, in WordPress 7.1.5." loading="lazy"></div><figcaption><b>In the block editor.</b> The Contact page with the Quote request form block selected, in WordPress 7.1.5.</figcaption></figure>
+    <figure class="shot shot--phone"><div class="frame"><img src="img/mobile-home.webp" alt="Phone, 390 px. No sideways scrolling on any page; the header CTA moves into the menu." loading="lazy"></div><figcaption><b>Phone, 390 px.</b> No sideways scrolling on any page; the header CTA moves into the menu.</figcaption></figure>
+  </div>
+</div></section>
+
+<section class="block" id="inside"><div class="wrap">
+  <p class="eyebrow">What's inside</p>
+  <h2>Everything a small-business site needs, nothing it doesn't.</h2>
+  <div class="cards">
+    <div class="card"><span class="k">theme.json v3</span><h3>Design tokens, not CSS</h3><p>8-colour palette, a fluid type scale, a spacing scale, shadow and radius presets, and styling for headings, links, buttons, navigation and more. 7.2 KB of JSON drives most of the look.</p></div>
+    <div class="card"><span class="k">8 templates · 2 parts</span><h3>Full site editing</h3><p>Front page, page, wide page, projects index, archive, single project, search and 404, with a header and footer part. Everything is editable in the Site Editor.</p></div>
+    <div class="card"><span class="k">16 patterns</span><h3>Real block markup</h3><p>Hero, facts strip, services, projects, process, seasons, service area, call to action, FAQ and more. PHP patterns, so links use <code>home_url()</code> and text is translatable.</p></div>
+    <div class="card"><span class="k">2 dynamic blocks</span><h3>Service area checker</h3><p>Lists towns with a route day and lets a visitor type theirs. Server-rendered, with 1.8 KB of JavaScript loaded only on pages that have the block.</p></div>
+    <div class="card"><span class="k">admin-post.php</span><h3>Quote request form</h3><p>Nonce, honeypot, per-field validation, a one-minute rate limit, header-injection-safe subject and an email to the site owner. Errors keep what was typed.</p></div>
+    <div class="card"><span class="k">6 block styles · 1 variation</span><h3>Choices in the editor</h3><p>Card and soft-panel groups, arch images, checklist lists, kicker paragraphs, ghost buttons, and a second colour scheme in the Styles panel.</p></div>
+    <div class="card"><span class="k">accessibility</span><h3>Built in, then checked</h3><p>Skip link, one <code>h1</code> per page, landmarks, visible focus rings, labelled fields with <code>aria-invalid</code> and described errors, <code>role="status"</code> notices, reduced-motion support.</p></div>
+    <div class="card"><span class="k">performance</span><h3>Small and local</h3><p>Home page: 80 KB HTML, 36 KB CSS, 100 KB fonts, 41 KB images, 47 KB script. No CDN, no tracking, no Google Fonts.</p></div>
+    <div class="card"><span class="k">i18n</span><h3>Translation-ready</h3><p>Every string uses the <code>alderbend</code> text domain and there is a generated <code>.pot</code> file with 239 strings.</p></div>
+  </div>
+</div></section>
+
+<section class="block" id="code"><div class="wrap">
+  <p class="eyebrow">Code excerpts</p>
+  <h2>Read the parts that matter.</h2>
+  <p class="sub">These snippets are pulled from the files in the repository when this page is built, so they match the code. Full files are on <a href="https://github.com/alexmercer-projects/alderbend-wordpress-theme">GitHub</a>.</p>
+  <figure class="code"><div class="code__head"><b>theme.json: tokens</b><span>palette, layout and fluid type live here, not in CSS</span></div><pre><code><span class="tk-n">"layout"</span>: { <span class="tk-n">"contentSize"</span>: <span class="tk-s">"42rem"</span>, <span class="tk-n">"wideSize"</span>: <span class="tk-s">"74rem"</span> },
+<span class="tk-n">"color"</span>: {
+	<span class="tk-n">"defaultPalette"</span>: <span class="tk-k">false</span>,
+	<span class="tk-n">"defaultDuotone"</span>: <span class="tk-k">false</span>,
+	<span class="tk-n">"palette"</span>: [
+		{ <span class="tk-n">"slug"</span>: <span class="tk-s">"base"</span>, <span class="tk-n">"name"</span>: <span class="tk-s">"Cream"</span>, <span class="tk-n">"color"</span>: <span class="tk-s">"#f7f3ea"</span> },
+		{ <span class="tk-n">"slug"</span>: <span class="tk-s">"surface"</span>, <span class="tk-n">"name"</span>: <span class="tk-s">"Sand"</span>, <span class="tk-n">"color"</span>: <span class="tk-s">"#ece4d2"</span> },
+		{ <span class="tk-n">"slug"</span>: <span class="tk-s">"sage"</span>, <span class="tk-n">"name"</span>: <span class="tk-s">"Sage"</span>, <span class="tk-n">"color"</span>: <span class="tk-s">"#d3dccb"</span> },
+		{ <span class="tk-n">"slug"</span>: <span class="tk-s">"contrast"</span>, <span class="tk-n">"name"</span>: <span class="tk-s">"Ink"</span>, <span class="tk-n">"color"</span>: <span class="tk-s">"#1c2a22"</span> },
+		{ <span class="tk-n">"slug"</span>: <span class="tk-s">"muted"</span>, <span class="tk-n">"name"</span>: <span class="tk-s">"Moss ink"</span>, <span class="tk-n">"color"</span>: <span class="tk-s">"#46564b"</span> },
+		{ <span class="tk-n">"slug"</span>: <span class="tk-s">"primary"</span>, <span class="tk-n">"name"</span>: <span class="tk-s">"Fern"</span>, <span class="tk-n">"color"</span>: <span class="tk-s">"#2f5039"</span> },
+		{ <span class="tk-n">"slug"</span>: <span class="tk-s">"primary-dark"</span>, <span class="tk-n">"name"</span>: <span class="tk-s">"Deep fern"</span>, <span class="tk-n">"color"</span>: <span class="tk-s">"#1f3a29"</span> },
+		{ <span class="tk-n">"slug"</span>: <span class="tk-s">"accent"</span>, <span class="tk-n">"name"</span>: <span class="tk-s">"Clay"</span>, <span class="tk-n">"color"</span>: <span class="tk-s">"#a94a28"</span> }
+	],
+	<span class="tk-n">"gradients"</span>: [
+	…</code></pre></figure>
+<figure class="code"><div class="code__head"><b>patterns/hero.php</b><span>a pattern is real block markup plus escaped, translatable strings</span></div><pre><code>&lt;div class=<span class="tk-s">"wp-block-columns alignwide are-vertically-aligned-center ab-hero__cols"</span>&gt;&lt;!-- wp:column {<span class="tk-s">"verticalAlignment"</span>:<span class="tk-s">"center"</span>,<span class="tk-s">"width"</span>:<span class="tk-s">"56%"</span>} --&gt;
+&lt;div class=<span class="tk-s">"wp-block-column is-vertically-aligned-center"</span> style=<span class="tk-s">"flex-basis:56%"</span>&gt;&lt;!-- wp:paragraph {<span class="tk-s">"className"</span>:<span class="tk-s">"is-style-alderbend-kicker"</span>} --&gt;
+&lt;p class=<span class="tk-s">"is-style-alderbend-kicker"</span>&gt;&lt;?php <span class="tk-t">esc_html_e</span>( <span class="tk-s">'Landscape design and building in Millbrook Ridge'</span>, <span class="tk-s">'alderbend'</span> ); ?&gt;&lt;/p&gt;
+&lt;!-- /wp:paragraph --&gt;
+
+&lt;!-- wp:heading {<span class="tk-s">"level"</span>:1} --&gt;
+&lt;h1 class=<span class="tk-s">"wp-block-heading"</span>&gt;&lt;?php <span class="tk-t">esc_html_e</span>( <span class="tk-s">'Yards that look settled in from the first spring.'</span>, <span class="tk-s">'alderbend'</span> ); ?&gt;&lt;/h1&gt;
+&lt;!-- /wp:heading --&gt;
+
+&lt;!-- wp:paragraph {<span class="tk-s">"fontSize"</span>:<span class="tk-s">"large"</span>,<span class="tk-s">"textColor"</span>:<span class="tk-s">"muted"</span>} --&gt;
+&lt;p class=<span class="tk-s">"has-muted-color has-text-color has-large-font-size"</span>&gt;&lt;?php <span class="tk-t">esc_html_e</span>( <span class="tk-s">'Alderbend designs and builds patios, paths, walls and planting for homes in six towns. One crew from first sketch to last mulch, and a written quote before anything starts.'</span>, <span class="tk-s">'alderbend'</span> ); ?&gt;&lt;/p&gt;
+&lt;!-- /wp:paragraph --&gt;
+
+&lt;!-- wp:buttons --&gt;
+&lt;div class=<span class="tk-s">"wp-block-buttons"</span>&gt;&lt;!-- wp:button --&gt;
+&lt;div class=<span class="tk-s">"wp-block-button"</span>&gt;&lt;a class=<span class="tk-s">"wp-block-button__link wp-element-button"</span> href=<span class="tk-s">"&lt;?php echo esc_url( home_url( '/contact/' ) ); ?&gt;"</span>&gt;&lt;?php <span class="tk-t">esc_html_e</span>( <span class="tk-s">'Ask for a free site walk'</span>, <span class="tk-s">'alderbend'</span> ); ?&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;!-- /wp:button --&gt;
+
+&lt;!-- wp:button {<span class="tk-s">"className"</span>:<span class="tk-s">"is-style-alderbend-ghost"</span>} --&gt;
+&lt;div class=<span class="tk-s">"wp-block-button is-style-alderbend-ghost"</span>&gt;&lt;a class=<span class="tk-s">"wp-block-button__link wp-element-button"</span> href=<span class="tk-s">"&lt;?php echo esc_url( home_url( '/projects/' ) ); ?&gt;"</span>&gt;&lt;?php <span class="tk-t">esc_html_e</span>( <span class="tk-s">'See recent projects'</span>, <span class="tk-s">'alderbend'</span> ); ?&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;!-- /wp:button --&gt;&lt;/div&gt;
+&lt;!-- /wp:buttons --&gt;&lt;/div&gt;</code></pre></figure>
+<figure class="code"><div class="code__head"><b>blocks/service-area/render.php</b><span>dynamic block: clean the data, then escape on output</span></div><pre><code><span class="tk-v">$towns</span> = <span class="tk-t">alderbend_clean_towns</span>( <span class="tk-k">isset</span>( <span class="tk-v">$attributes</span>[<span class="tk-s">'towns'</span>] ) ? <span class="tk-v">$attributes</span>[<span class="tk-s">'towns'</span>] : <span class="tk-k">array</span>() );
+
+<span class="tk-k">if</span> ( <span class="tk-k">empty</span>( <span class="tk-v">$towns</span> ) ) {
+	<span class="tk-k">return</span>;
+}
+
+<span class="tk-v">$uid</span>      = <span class="tk-t">wp_unique_id</span>( <span class="tk-s">'ab-area-'</span> );
+<span class="tk-v">$wrapper</span>  = <span class="tk-t">get_block_wrapper_attributes</span>( <span class="tk-k">array</span>( <span class="tk-s">'class'</span> =&gt; <span class="tk-s">'ab-area'</span> ) );
+<span class="tk-v">$messages</span> = <span class="tk-k">array</span>(
+	<span class="tk-c">/* translators: 1: town name, 2: weekday. */</span>
+	<span class="tk-s">'found'</span>    =&gt; <span class="tk-t">__</span>( <span class="tk-s">'Yes, we are in %1$s. Our crew is there on %2$ss.'</span>, <span class="tk-s">'alderbend'</span> ),
+	<span class="tk-c">/* translators: %s: town name. */</span>
+	<span class="tk-s">'foundAny'</span> =&gt; <span class="tk-t">__</span>( <span class="tk-s">'Yes, we work in %s.'</span>, <span class="tk-s">'alderbend'</span> ),
+	<span class="tk-s">'missing'</span>  =&gt; <span class="tk-t">__</span>( <span class="tk-s">'That town is not on our route yet. Send a quote request anyway and we will tell you honestly.'</span>, <span class="tk-s">'alderbend'</span> ),
+);
+?&gt;
+&lt;div &lt;?php <span class="tk-k">echo</span> <span class="tk-v">$wrapper</span>; <span class="tk-c">// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Escaped by get_block_wrapper_attributes(). ?&gt; data-ab-area data-messages="&lt;?php echo esc_attr( wp_json_encode( $messages ) ); ?&gt;" data-towns="&lt;?php echo esc_attr( wp_json_encode( $towns ) ); ?&gt;"&gt;</span>
+	&lt;label class=<span class="tk-s">"ab-area__label"</span> for=<span class="tk-s">"&lt;?php echo esc_attr( $uid ); ?&gt;"</span>&gt;&lt;?php <span class="tk-t">esc_html_e</span>( <span class="tk-s">'Check your town'</span>, <span class="tk-s">'alderbend'</span> ); ?&gt;&lt;/label&gt;
+	&lt;input class=<span class="tk-s">"ab-area__input"</span> id=<span class="tk-s">"&lt;?php echo esc_attr( $uid ); ?&gt;"</span> type=<span class="tk-s">"text"</span> list=<span class="tk-s">"&lt;?php echo esc_attr( $uid ); ?&gt;-list"</span> autocomplete=<span class="tk-s">"off"</span> placeholder=<span class="tk-s">"&lt;?php esc_attr_e( 'Start typing a town', 'alderbend' ); ?&gt;"</span> aria-describedby=<span class="tk-s">"&lt;?php echo esc_attr( $uid ); ?&gt;-result"</span>&gt;
+	&lt;datalist id=<span class="tk-s">"&lt;?php echo esc_attr( $uid ); ?&gt;-list"</span>&gt;
+		&lt;?php <span class="tk-k">foreach</span> ( <span class="tk-v">$towns</span> <span class="tk-k">as</span> <span class="tk-v">$town</span> ) : ?&gt;
+			&lt;option value=<span class="tk-s">"&lt;?php echo esc_attr( $town['name'] ); ?&gt;"</span>&gt;&lt;/option&gt;
+		&lt;?php endforeach; ?&gt;
+	&lt;/datalist&gt;
+	&lt;p class=<span class="tk-s">"ab-area__result"</span> id=<span class="tk-s">"&lt;?php echo esc_attr( $uid ); ?&gt;-result"</span> role=<span class="tk-s">"status"</span> aria-live=<span class="tk-s">"polite"</span>&gt;&lt;/p&gt;
+	&lt;ul class=<span class="tk-s">"ab-area__list"</span>&gt;
+		&lt;?php <span class="tk-k">foreach</span> ( <span class="tk-v">$towns</span> <span class="tk-k">as</span> <span class="tk-v">$town</span> ) : ?&gt;
+			&lt;li&gt;
+				&lt;span class=<span class="tk-s">"ab-area__town"</span>&gt;&lt;?php <span class="tk-k">echo</span> <span class="tk-t">esc_html</span>( <span class="tk-v">$town</span>[<span class="tk-s">'name'</span>] ); ?&gt;&lt;/span&gt;
+				&lt;?php <span class="tk-k">if</span> ( <span class="tk-s">''</span> !== <span class="tk-v">$town</span>[<span class="tk-s">'day'</span>] ) : ?&gt;
+					&lt;span class=<span class="tk-s">"ab-area__day"</span>&gt;&lt;?php <span class="tk-k">echo</span> <span class="tk-t">esc_html</span>( <span class="tk-v">$town</span>[<span class="tk-s">'day'</span>] ); ?&gt;&lt;/span&gt;
+				&lt;?php endif; ?&gt;
+			&lt;/li&gt;
+		&lt;?php endforeach; ?&gt;
+	&lt;/ul&gt;</code></pre></figure>
+<figure class="code"><div class="code__head"><b>inc/quote-request.php: validation</b><span>a pure function, so it can be tested without a browser</span></div><pre><code><span class="tk-k">function</span> <span class="tk-t">alderbend_validate_quote</span>( <span class="tk-k">array</span> <span class="tk-v">$raw</span> ) {
+	<span class="tk-v">$values</span> = <span class="tk-k">array</span>(
+		<span class="tk-s">'name'</span>    =&gt; <span class="tk-k">isset</span>( <span class="tk-v">$raw</span>[<span class="tk-s">'name'</span>] ) ? <span class="tk-t">sanitize_text_field</span>( (string) <span class="tk-v">$raw</span>[<span class="tk-s">'name'</span>] ) : <span class="tk-s">''</span>,
+		<span class="tk-s">'email'</span>   =&gt; <span class="tk-k">isset</span>( <span class="tk-v">$raw</span>[<span class="tk-s">'email'</span>] ) ? <span class="tk-t">sanitize_email</span>( (string) <span class="tk-v">$raw</span>[<span class="tk-s">'email'</span>] ) : <span class="tk-s">''</span>,
+		<span class="tk-s">'phone'</span>   =&gt; <span class="tk-k">isset</span>( <span class="tk-v">$raw</span>[<span class="tk-s">'phone'</span>] ) ? <span class="tk-t">sanitize_text_field</span>( (string) <span class="tk-v">$raw</span>[<span class="tk-s">'phone'</span>] ) : <span class="tk-s">''</span>,
+		<span class="tk-s">'town'</span>    =&gt; <span class="tk-k">isset</span>( <span class="tk-v">$raw</span>[<span class="tk-s">'town'</span>] ) ? <span class="tk-t">sanitize_text_field</span>( (string) <span class="tk-v">$raw</span>[<span class="tk-s">'town'</span>] ) : <span class="tk-s">''</span>,
+		<span class="tk-s">'service'</span> =&gt; <span class="tk-k">isset</span>( <span class="tk-v">$raw</span>[<span class="tk-s">'service'</span>] ) ? <span class="tk-t">sanitize_text_field</span>( (string) <span class="tk-v">$raw</span>[<span class="tk-s">'service'</span>] ) : <span class="tk-s">''</span>,
+		<span class="tk-s">'message'</span> =&gt; <span class="tk-k">isset</span>( <span class="tk-v">$raw</span>[<span class="tk-s">'message'</span>] ) ? <span class="tk-t">sanitize_textarea_field</span>( (string) <span class="tk-v">$raw</span>[<span class="tk-s">'message'</span>] ) : <span class="tk-s">''</span>,
+	);
+	<span class="tk-v">$errors</span> = <span class="tk-k">array</span>();
+
+	<span class="tk-k">if</span> ( <span class="tk-s">''</span> === <span class="tk-v">$values</span>[<span class="tk-s">'name'</span>] ) {
+		<span class="tk-v">$errors</span>[<span class="tk-s">'name'</span>] = <span class="tk-t">__</span>( <span class="tk-s">'Please tell us your name.'</span>, <span class="tk-s">'alderbend'</span> );
+	} <span class="tk-k">elseif</span> ( <span class="tk-t">mb_strlen</span>( <span class="tk-v">$values</span>[<span class="tk-s">'name'</span>] ) &gt; 80 ) {
+		<span class="tk-v">$errors</span>[<span class="tk-s">'name'</span>] = <span class="tk-t">__</span>( <span class="tk-s">'That name is a bit long. 80 characters at most.'</span>, <span class="tk-s">'alderbend'</span> );
+	}
+
+	<span class="tk-k">if</span> ( <span class="tk-s">''</span> === <span class="tk-v">$values</span>[<span class="tk-s">'email'</span>] || ! <span class="tk-t">is_email</span>( <span class="tk-v">$values</span>[<span class="tk-s">'email'</span>] ) ) {
+		<span class="tk-v">$errors</span>[<span class="tk-s">'email'</span>] = <span class="tk-t">__</span>( <span class="tk-s">'That email address does not look right.'</span>, <span class="tk-s">'alderbend'</span> );
+	}
+
+	<span class="tk-k">if</span> ( <span class="tk-s">''</span> !== <span class="tk-v">$values</span>[<span class="tk-s">'phone'</span>] &amp;&amp; ! <span class="tk-t">preg_match</span>( <span class="tk-s">'/^[0-9+().\s-]{7,20}$/'</span>, <span class="tk-v">$values</span>[<span class="tk-s">'phone'</span>] ) ) {
+		<span class="tk-v">$errors</span>[<span class="tk-s">'phone'</span>] = <span class="tk-t">__</span>( <span class="tk-s">'Use digits, spaces and dashes only, 7 to 20 characters.'</span>, <span class="tk-s">'alderbend'</span> );
+	}
+
+	<span class="tk-k">if</span> ( <span class="tk-s">''</span> === <span class="tk-v">$values</span>[<span class="tk-s">'town'</span>] ) {
+		<span class="tk-v">$errors</span>[<span class="tk-s">'town'</span>] = <span class="tk-t">__</span>( <span class="tk-s">'Which town is the job in?'</span>, <span class="tk-s">'alderbend'</span> );
+	} <span class="tk-k">elseif</span> ( <span class="tk-t">mb_strlen</span>( <span class="tk-v">$values</span>[<span class="tk-s">'town'</span>] ) &gt; 60 ) {
+		<span class="tk-v">$errors</span>[<span class="tk-s">'town'</span>] = <span class="tk-t">__</span>( <span class="tk-s">'That town name is too long.'</span>, <span class="tk-s">'alderbend'</span> );
+	}
+
+	<span class="tk-k">if</span> ( <span class="tk-t">mb_strlen</span>( <span class="tk-v">$values</span>[<span class="tk-s">'message'</span>] ) &lt; 10 ) {
+		<span class="tk-v">$errors</span>[<span class="tk-s">'message'</span>] = <span class="tk-t">__</span>( <span class="tk-s">'A sentence or two about the space helps us a lot (10 characters at least).'</span>, <span class="tk-s">'alderbend'</span> );
+	} <span class="tk-k">elseif</span> ( <span class="tk-t">mb_strlen</span>( <span class="tk-v">$values</span>[<span class="tk-s">'message'</span>] ) &gt; 3000 ) {
+		<span class="tk-v">$errors</span>[<span class="tk-s">'message'</span>] = <span class="tk-t">__</span>( <span class="tk-s">'Please keep it under 3,000 characters.'</span>, <span class="tk-s">'alderbend'</span> );
+	}
+
+	<span class="tk-k">return</span> <span class="tk-k">array</span>(
+	…</code></pre></figure>
+<figure class="code"><div class="code__head"><b>inc/quote-request.php: the handler</b><span>nonce, honeypot, then a one-minute rate limit per visitor</span></div><pre><code><span class="tk-k">function</span> <span class="tk-t">alderbend_handle_quote</span>() {
+	<span class="tk-v">$back</span> = <span class="tk-t">wp_get_referer</span>();
+	<span class="tk-v">$back</span> = <span class="tk-v">$back</span> ? <span class="tk-v">$back</span> : <span class="tk-t">home_url</span>( <span class="tk-s">'/contact/'</span> );
+	<span class="tk-v">$back</span> = <span class="tk-t">remove_query_arg</span>( <span class="tk-k">array</span>( <span class="tk-s">'quote'</span>, <span class="tk-s">'qref'</span> ), <span class="tk-v">$back</span> );
+
+	<span class="tk-k">if</span> ( ! <span class="tk-k">isset</span>( <span class="tk-v">$_POST</span>[<span class="tk-s">'alderbend_nonce'</span>] ) || ! <span class="tk-t">wp_verify_nonce</span>( <span class="tk-t">sanitize_text_field</span>( <span class="tk-t">wp_unslash</span>( <span class="tk-v">$_POST</span>[<span class="tk-s">'alderbend_nonce'</span>] ) ), <span class="tk-s">'alderbend_quote'</span> ) ) {
+		<span class="tk-t">wp_die</span>( <span class="tk-t">esc_html__</span>( <span class="tk-s">'This form has expired. Please go back, reload the page and try again.'</span>, <span class="tk-s">'alderbend'</span> ), <span class="tk-s">''</span>, <span class="tk-k">array</span>( <span class="tk-s">'response'</span> =&gt; 403 ) );
+	}
+
+	<span class="tk-c">// Honeypot: real visitors never see or fill this field. Pretend success.</span>
+	<span class="tk-k">if</span> ( ! <span class="tk-k">empty</span>( <span class="tk-v">$_POST</span>[<span class="tk-s">'company_site'</span>] ) ) {
+		<span class="tk-t">wp_safe_redirect</span>( <span class="tk-t">add_query_arg</span>( <span class="tk-s">'quote'</span>, <span class="tk-s">'sent'</span>, <span class="tk-v">$back</span> ) . <span class="tk-s">'#quote-form'</span> );
+		<span class="tk-k">exit</span>;
+	}
+
+	<span class="tk-v">$ip_key</span> = <span class="tk-s">'alderbend_q_'</span> . <span class="tk-t">md5</span>( <span class="tk-k">isset</span>( <span class="tk-v">$_SERVER</span>[<span class="tk-s">'REMOTE_ADDR'</span>] ) ? <span class="tk-t">sanitize_text_field</span>( <span class="tk-t">wp_unslash</span>( <span class="tk-v">$_SERVER</span>[<span class="tk-s">'REMOTE_ADDR'</span>] ) ) : <span class="tk-s">'unknown'</span> );
+	<span class="tk-k">if</span> ( <span class="tk-t">get_transient</span>( <span class="tk-v">$ip_key</span> ) ) {
+		<span class="tk-t">wp_safe_redirect</span>( <span class="tk-t">add_query_arg</span>( <span class="tk-s">'quote'</span>, <span class="tk-s">'wait'</span>, <span class="tk-v">$back</span> ) . <span class="tk-s">'#quote-form'</span> );
+		<span class="tk-k">exit</span>;
+	}
+</code></pre></figure>
+<figure class="code"><div class="code__head"><b>blocks/service-area/view.js</b><span>about 1.8 KB of plain JavaScript, no framework, only where the block is used</span></div><pre><code><span class="tk-k">function</span> check() {
+	<span class="tk-k">var</span> value = input.value.trim().toLowerCase();
+	<span class="tk-k">var</span> match = <span class="tk-k">null</span>;
+	out.textContent = <span class="tk-s">''</span>;
+	out.removeAttribute( <span class="tk-s">'data-state'</span> );
+	root.querySelectorAll( <span class="tk-s">'.ab-area__list li'</span> ).<span class="tk-k">forEach</span>( <span class="tk-k">function</span> ( li ) {
+		li.classList.remove( <span class="tk-s">'is-match'</span> );
+	} );
+	<span class="tk-k">if</span> ( value.length &lt; 3 ) {
+		<span class="tk-k">return</span>;
+	}
+	towns.<span class="tk-k">forEach</span>( <span class="tk-k">function</span> ( t ) {
+		<span class="tk-k">if</span> ( ! match &amp;&amp; t.name.toLowerCase() === value ) {
+			match = t;
+		}
+	} );
+	<span class="tk-k">if</span> ( match ) {
+		out.textContent = match.day
+			? fill( messages.found, [ match.name, match.day ] )
+			: fill( messages.foundAny, [ match.name ] );
+		out.setAttribute( <span class="tk-s">'data-state'</span>, <span class="tk-s">'yes'</span> );
+		root.querySelectorAll( <span class="tk-s">'.ab-area__list li'</span> ).<span class="tk-k">forEach</span>( <span class="tk-k">function</span> ( li ) {
+			<span class="tk-k">if</span> ( li.querySelector( <span class="tk-s">'.ab-area__town'</span> ).textContent === match.name ) {
+				li.classList.add( <span class="tk-s">'is-match'</span> );
+			}
+		} );
+	} <span class="tk-k">else</span> <span class="tk-k">if</span> ( towns.<span class="tk-k">every</span>( <span class="tk-k">function</span> ( t ) { <span class="tk-k">return</span> t.name.toLowerCase().indexOf( value ) !== 0; } ) ) {
+		out.textContent = messages.missing;
+		out.setAttribute( <span class="tk-s">'data-state'</span>, <span class="tk-s">'no'</span> );
+	}
+}</code></pre></figure>
+</div></section>
+
+<section class="block" id="files"><div class="wrap">
+  <p class="eyebrow">File tree</p>
+  <h2>63 files, 1,589 lines of PHP.</h2>
+  <div class="two">
+    <div class="tree" aria-label="Theme file tree">alderbend/
+├── assets/ <em>19 files</em>
+│   ├── css/ <em>1 file</em>
+│   │   └── theme.css <em>only what theme.json cannot say</em>
+│   ├── fonts/ <em>5 files</em>
+│   └── images/ <em>13 files</em>
+├── blocks/ <em>9 files</em>
+│   ├── quote-form/ <em>4 files</em>
+│   │   ├── block.json
+│   │   ├── editor.asset.php
+│   │   ├── editor.js
+│   │   └── render.php
+│   └── service-area/ <em>5 files</em>
+│       ├── block.json
+│       ├── editor.asset.php
+│       ├── editor.js
+│       ├── render.php
+│       └── view.js
+├── inc/ <em>2 files</em>
+│   ├── blocks.php <em>registers the two blocks</em>
+│   └── quote-request.php <em>validation and the form handler</em>
+├── languages/ <em>1 file</em>
+│   └── alderbend.pot <em>239 translatable strings</em>
+├── parts/ <em>2 files</em>
+│   ├── footer.html
+│   └── header.html
+├── patterns/ <em>16 files</em>
+│   ├── about.php
+│   ├── contact.php
+│   ├── cta.php
+│   ├── facts-strip.php
+│   ├── faq.php
+│   ├── featured-projects.php
+│   ├── footer-inner.php
+│   ├── header-inner.php
+│   ├── hero.php
+│   ├── home-button.php
+│   ├── page-heading.php
+│   ├── process.php
+│   ├── seasons.php
+│   ├── service-area.php
+│   ├── services-detail.php
+│   └── services-grid.php
+├── styles/ <em>1 file</em>
+│   └── clay.json <em>second colour scheme</em>
+├── templates/ <em>8 files</em>
+│   ├── 404.html
+│   ├── archive.html
+│   ├── front-page.html
+│   ├── index.html
+│   ├── page-wide.html
+│   ├── page.html
+│   ├── search.html
+│   └── single.html
+├── functions.php <em>setup, enqueue, block styles</em>
+├── readme.txt <em>WordPress-style readme</em>
+├── screenshot.png <em>shown on the Themes screen</em>
+├── style.css <em>theme header only</em>
+└── theme.json <em>design tokens and block defaults</em></div>
+    <div><div class="tree" aria-label="Repository layout">alexmercer-projects/alderbend-wordpress-theme
+├── theme/alderbend/   <em>the theme you install</em>
+├── tests/             <em>in-WordPress checks and HTTP tests</em>
+├── tools/             <em>screenshots, static export, link and editor checks</em>
+├── demo/              <em>seed script, demo bar, picture files for the sample posts</em>
+├── docs/              <em>this page and the static copy of the demo site</em>
+└── phpcs.xml.dist     <em>WordPress-Extra + WordPress-Docs rules</em></div>
+    <p class="small muted" style="margin-top:14px">Fonts: Fraunces and Figtree, self-hosted, SIL Open Font License (texts in <code>assets/fonts/</code>). Illustrations: original SVG drawn for this demo by <code>tools/make_images.py</code>. No stock photos and no external requests.</p></div>
+  </div>
+</div></section>
+
+<section class="block" id="checks"><div class="wrap">
+  <p class="eyebrow">Real output</p>
+  <h2>What was run, and what it said.</h2>
+  <p class="sub">Run on WordPress 7.1.5, PHP 8.5.8 with SQLite, PHP's built-in server and headless Chrome. The raw output is below and in <code>docs/evidence/</code>.</p>
+  <div class="checks">
+    <div class="check"><b>0 errors</b><span>PHP lint on every PHP file, and PHPCS with the WordPress-Extra and WordPress-Docs rules</span></div>
+    <div class="check"><b>120 / 120</b><span>checks: theme.json, templates, patterns, blocks, validation, 54 inside WordPress and 66 over HTTP</span></div>
+    <div class="check"><b>250 blocks, 0 invalid</b><span>15 of 16 patterns opened in the real block editor and checked for block validation errors</span></div>
+    <div class="check"><b>0 horizontal scroll</b><span>at 1440 and 390 px on all 7 page types, no console errors (apart from the 404 page's 404 status), no outside requests</span></div>
+    <div class="check"><b>0 broken links</b><span>crawl of the static export: 15 pages and 25 assets checked; 0 problems</span></div>
+    <div class="check"><b>11 / 11</b><span>click-through checks on the export: phone menu, town checker, demo form</span></div>
+  </div>
+  <details class="out"><summary>Lint, PHPCS, tests inside WordPress and HTTP tests (120 checks)</summary><pre>== PHP lint ==
+lint done
+== PHPCS (WordPress-Extra, WordPress-Docs) ==
+...................... 22 / 22 (100%)
+
+
+Time: 4.14 secs; Memory: 16MB
+== Tests inside WordPress ==
+Theme
+  ok   theme is installed
+  ok   WordPress sees it as a block theme
+  ok   theme is active
+  ok   version header read
+theme.json
+  ok   palette has primary and accent
+  ok   two font families (Fraunces, Figtree)
+  ok   wide size is 74rem
+  ok   global stylesheet emits palette variables
+  ok   font files are declared in theme.json and exist on disk
+  ok   no Google Fonts request
+  ok   the Clay and sage style variation loads
+Templates and parts
+  ok   template front-page
+  ok   template page
+  ok   template page-wide
+  ok   template index
+  ok   template archive
+  ok   template single
+  ok   template search
+  ok   template 404
+  ok   part header
+  ok   part footer
+Patterns and blocks
+  ok   pattern alderbend/hero registered
+  ok   pattern alderbend/facts-strip registered
+  ok   pattern alderbend/services-grid registered
+  ok   pattern alderbend/featured-projects registered
+  ok   pattern alderbend/process registered
+  ok   pattern alderbend/seasons registered
+  ok   pattern alderbend/service-area registered
+  ok   pattern alderbend/cta registered
+  ok   pattern alderbend/faq registered
+  ok   pattern alderbend/services-detail registered
+  ok   pattern alderbend/about registered
+  ok   pattern alderbend/contact registered
+  ok   pattern alderbend/page-heading registered
+  ok   pattern alderbend/header-inner registered
+  ok   pattern alderbend/footer-inner registered
+  ok   block alderbend/service-area registered
+  ok   block alderbend/quote-form registered
+  ok   group block styles registered
+alderbend_clean_towns()
+  ok   drops empty, non-array and malformed rows
+  ok   trims names
+  ok   strips tags from names
+  ok   rejects a day outside Monday to Saturday
+  ok   non-array input gives an empty list
+alderbend_validate_quote()
+  ok   a complete request passes
+  ok   empty request flags name, email, town and message
+  ok   phone is optional
+  ok   bad email is rejected
+  ok   letters in the phone field are rejected
+  ok   a one-word message is rejected
+  ok   a 3,001 character message is rejected
+  ok   tags are stripped from the name
+  ok   a name over 80 characters is rejected
+alderbend_quote_subject()
+  ok   line breaks are removed from the subject (header injection)
+
+54 passed, 0 failed
+== HTTP tests ==
+Pages
+  ok   / returns 200
+  ok   / has "Yards that look settled"
+  ok   / has exactly one h1
+  ok   / sets the page language
+  ok   / loads nothing from a CDN
+  ok   / has header, main and footer landmarks
+  ok   /: every image has an alt attribute
+  ok   /services/ returns 200
+  ok   /services/ has "Services"
+  ok   /services/ has exactly one h1
+  ok   /services/ sets the page language
+  ok   /services/ loads nothing from a CDN
+  ok   /services/ has header, main and footer landmarks
+  ok   /services/: every image has an alt attribute
+  ok   /projects/ returns 200
+  ok   /projects/ has "Sample projects"
+  ok   /projects/ has exactly one h1
+  ok   /projects/ sets the page language
+  ok   /projects/ loads nothing from a CDN
+  ok   /projects/ has header, main and footer landmarks
+  ok   /projects/: every image has an alt attribute
+  ok   /about/ returns 200
+  ok   /about/ has "About"
+  ok   /about/ has exactly one h1
+  ok   /about/ sets the page language
+  ok   /about/ loads nothing from a CDN
+  ok   /about/ has header, main and footer landmarks
+  ok   /about/: every image has an alt attribute
+  ok   /contact/ returns 200
+  ok   /contact/ has "Contact"
+  ok   /contact/ has exactly one h1
+  ok   /contact/ sets the page language
+  ok   /contact/ loads nothing from a CDN
+  ok   /contact/ has header, main and footer landmarks
+  ok   /contact/: every image has an alt attribute
+  ok   /rain-garden/ returns 200
+  ok   /rain-garden/ has "Rain garden"
+  ok   /rain-garden/ has exactly one h1
+  ok   /rain-garden/ sets the page language
+  ok   /rain-garden/ loads nothing from a CDN
+  ok   /rain-garden/ has header, main and footer landmarks
+  ok   /rain-garden/: every image has an alt attribute
+  ok   unknown URL returns 404
+  ok   404 page uses the theme 404 template
+Assets
+  ok   theme.css is enqueued
+  ok   theme.css is served
+  ok   font-face rules point at the bundled Fraunces file
+  ok   Figtree woff2 is served from the theme
+  ok   service-area view script is loaded where the block is used
+  ok   service-area view script is not loaded on a page without the block
+  ok   skip link is present
+Service area block
+  ok   town list renders
+  ok   datalist renders
+  ok   towns and route days render
+Quote form round trip
+  ok   form carries a nonce
+  ok   bad nonce is refused with 403
+  ok   invalid input redirects back with an error token
+  ok   error page shows the message, marks the field and keeps what was typed
+  ok   honeypot gets a fake success
+  ok   honeypot sends no email
+  ok   valid request redirects with quote=sent
+  ok   one email goes to the site admin address
+  ok   subject names the service and town
+  ok   body carries the request
+  ok   a second request within a minute is held back
+  ok   success notice is announced with role=status
+
+66 passed, 0 failed
+exit: 0
+</pre></details>
+  <details class="out"><summary>WordPress.org Theme Check plugin (one required item, explained below)</summary><pre>Theme Check plugin: required items found
+
+- REQUIRED: The theme uses the register_block_type() function in the file inc/blocks.php. register_block_type() is plugin-territory functionality and must not be used in themes. Use a plugin instead. Line 16: register_block_type( get_theme_file_path( 'blocks/service-area' ) );Line 17: register_block_type( get_theme_file_path( 'blocks/quote-form' ) );
+- INFO: Possible Favicon found in functions.php. Favicons are handled by the Site Icon setting in the customizer since version 4.3.
+- INFO: Only one text-domain is being used in this theme. Make sure it matches the theme's slug correctly so that the theme will be compatible with WordPress.org language packs. The domain found is alderbend.
+</pre></details>
+  <details class="out"><summary>Block editor validation of every pattern</summary><pre>{"total":250,"invalid":[],"names":22}
+no validation messages
+other console errors: 1
+  warning: global-styles-css-custom-properties-inline-css was added to the iframe incorrectly. Please use block.json or enqueue_block_assets to add styles to the iframe. style#global-styles-css-custom-properties-inline-css
+</pre></details>
+  <details class="out"><summary>Click-through checks on the static export</summary><pre>  ok   phone shows the menu button
+  ok   menu button opens the overlay
+  ok   overlay lists Services, Projects, About, Contact
+  ok   close button closes it
+  ok   desktop shows the links, not the menu button
+  ok   town checker: Ketterby is served on Wednesdays
+  ok   town checker highlights the matching row
+  ok   town checker: unknown town gets an honest no
+  ok   town checker: stays quiet under 3 characters
+  ok   demo form explains that nothing is sent
+  ok   demo form does not navigate away
+no console errors
+
+11 passed, 0 failed
+</pre></details>
+</div></section>
+
+<section class="block" id="install"><div class="wrap">
+  <p class="eyebrow">Install</p>
+  <h2>Three ways to try it.</h2>
+  <ol class="steps">
+    <li><b>Upload the zip.</b> In WordPress go to Appearance, Themes, Add New, Upload Theme and pick <code>alderbend-theme.zip</code> (273 KB). Activate it. Needs WordPress 6.5 or newer.</li>
+    <li><b>Make the pages.</b> The header links expect pages with the slugs <code>services</code>, <code>projects</code>, <code>about</code> and <code>contact</code>. Set a Home page as the front page and Projects as the posts page. Or let the seed script do it, with the made-up content:
+<pre>git clone https://github.com/alexmercer-projects/alderbend-wordpress-theme
+cp -r alderbend-wordpress-theme/theme/alderbend wp-content/themes/
+WP="wp --path=/path/to/wordpress" bash alderbend-wordpress-theme/demo/seed.sh</pre></li>
+    <li><b>Make it yours.</b> Change colours and type in Appearance, Editor, Styles (or edit <code>theme.json</code>), swap the text in the patterns, and set the quote form's recipient under Settings, General (it uses the site admin email).</li>
+  </ol>
+  <p class="small muted" style="margin-top:14px">To run the checks yourself you need PHP 8, WP-CLI, PHPCS with the WordPress standards, Node 22 and Chrome; <code>tools/run-tests.sh</code> lists the rest.</p>
+</div></section>
+
+<section class="block" id="honest"><div class="wrap">
+  <p class="eyebrow">Straight talk</p>
+  <h2>What was tested, and what wasn't.</h2>
+  <div class="honest">
+    <div><h3>Tested</h3><ul>
+      <li>Runs on WordPress 7.1.5, PHP 8.5.8 (SQLite database, PHP built-in server), activated as a normal theme.</li>
+      <li>PHP lint and PHPCS (WordPress-Extra, WordPress-Docs) clean; the Theme Check plugin's only required item is explained at right.</li>
+      <li>15 of the 16 patterns (all but the one-button 404 pattern) and both blocks open in the block editor without validation errors.</li>
+      <li>The quote form: bad nonce refused, bad input redirected with messages, honeypot, rate limit and the email contents, tested against a stand-in for <code>wp_mail()</code>.</li>
+      <li>Headless Chrome at 1440 and 390 px: no horizontal scroll, no console errors (the 404 page's own 404 status aside), no outside requests; phone menu and town checker clicked through.</li>
+    </ul></div>
+    <div><h3>Not tested, or not claimed</h3><ul>
+      <li>MySQL or MariaDB, Apache or nginx, other PHP versions (the header says 7.4+ but I only ran 8.5), multisite, caching or SEO plugins.</li>
+      <li>Firefox, Safari, real phones, screen readers, or an accessibility audit tool. The accessibility features are there; I haven't had them independently reviewed.</li>
+      <li>Real email delivery. On a live site, mail depends on the host or an SMTP plugin.</li>
+      <li>The WordPress.org theme review. Theme Check flags <code>register_block_type()</code> because blocks are "plugin territory" there; I kept the two blocks in the theme because they are part of this one site's design. To list it on wordpress.org they would move into a plugin.</li>
+      <li>The demo here is static: forms don't send and nothing runs PHP. It is a rendered copy, not a hosted WordPress. No client, traffic, leads or results are claimed.</li>
+    </ul></div>
+  </div>
+</div></section>
+
+<section class="block" id="downloads"><div class="wrap">
+  <p class="eyebrow">Downloads</p>
+  <h2>Take it apart.</h2>
+  <div class="dl">
+    <a href="alderbend-theme.zip" download><b>alderbend-theme.zip</b><span>The installable theme folder, 273 KB. GPL v2 or later, fonts under the OFL.</span></a>
+    <a href="https://github.com/alexmercer-projects/alderbend-wordpress-theme"><b>Source on GitHub</b><span>Theme, 120 checks, PHPCS config, export and screenshot tools, commit history.</span></a>
+    <a href="site/"><b>The demo site</b><span>Static copy of the rendered theme: 15 folders, no PHP, no tracking.</span></a>
+  </div>
+</div></section>
+</main>
+<footer class="foot"><div class="wrap">
+  <p><b>Alex Mercer</b>. Freelance web developer. This page is a concept demo for a made-up business and is not client work.</p>
+  <p>Theme code: GPL v2 or later. Fonts: SIL Open Font License. Illustrations: original, drawn for this demo.</p>
+  <p><a href="https://alexmercerprojects.com/">alexmercerprojects.com</a></p>
+</div></footer>
+</body>
+</html>
