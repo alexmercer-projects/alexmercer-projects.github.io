@@ -41,6 +41,75 @@
     "coverPhone": "tamarack-budget-tracker/cover-phone.webp"
   },
   {
+    "id": "fernhollow-customer-list-cleanup",
+    "title": "Fernhollow Supply Co.: a customer list cleanup",
+    "short": "Customer list cleanup",
+    "category": "Data cleanup",
+    "label": "Concept demo",
+    "year": 2026,
+    "folder": "fernhollow-customer-list-cleanup",
+    "summary": "A Python script that cleaned a messy 250-row customer CSV for a made-up supply company: formats fixed, 34 repeats merged into the customers they belong to, every change logged, and the 15 judgment calls left for a person instead of guessed.",
+    "cover": "fernhollow-customer-list-cleanup/cover.webp",
+    "coverAlt": "Customer list cleanup page: 250 messy rows in, 211 clean customers out, with a panel showing 5 junk rows dropped, 34 repeats merged and 1,187 cells fixed",
+    "demo": "fernhollow-customer-list-cleanup/demo/index.html",
+    "demoLabel": "See the before and after",
+    "downloads": [
+      {
+        "file": "fernhollow-customer-list-cleanup/samples/fernhollow-customers-cleanup-DEMO.xlsx",
+        "label": "Download the workbook"
+      },
+      {
+        "file": "fernhollow-customer-list-cleanup/samples/fernhollow-customers-CLEAN.csv",
+        "label": "Download the clean CSV"
+      },
+      {
+        "file": "fernhollow-customer-list-cleanup/samples/fernhollow-cleanup-output-DEMO.zip",
+        "label": "Download all the reports"
+      }
+    ],
+    "gallery": [
+      {
+        "src": "fernhollow-customer-list-cleanup/screenshots/detail-before-after.webp",
+        "alt": "Sample rows after cleaning, with fixed cells marked in green, two unusable emails outlined for review, and the email typo fix explained below"
+      },
+      {
+        "src": "fernhollow-customer-list-cleanup/screenshots/detail-rules.webp",
+        "alt": "Rule cards with counts and a before and after example: spacing and capitals, street address, dates, account type, state, phone format"
+      },
+      {
+        "src": "fernhollow-customer-list-cleanup/screenshots/detail-repeats.webp",
+        "alt": "Four merged customers, each showing the kept row after the merge next to the row merged into it, and what was filled in or moved to Notes"
+      },
+      {
+        "src": "fernhollow-customer-list-cleanup/screenshots/detail-kept-apart.webp",
+        "alt": "Look-alike rows kept apart on purpose: same name in two towns, one email shared by two businesses, similar names in one ZIP"
+      },
+      {
+        "src": "fernhollow-customer-list-cleanup/screenshots/detail-review.webp",
+        "alt": "The list of 15 things left for a person, with the row, customer ID, field and reason"
+      },
+      {
+        "src": "fernhollow-customer-list-cleanup/screenshots/detail-log.webp",
+        "alt": "The searchable change log filtered to email domain typos, with before and after values"
+      },
+      {
+        "src": "fernhollow-customer-list-cleanup/screenshots/detail-files.webp",
+        "alt": "The downloads (workbook, clean CSV, reports, original file) and an example run of the script"
+      },
+      {
+        "src": "fernhollow-customer-list-cleanup/screenshots/mobile.webp",
+        "alt": "Three phone screens: the top of the page, a merged customer and the review list"
+      }
+    ],
+    "extraLinks": [
+      {
+        "label": "Code and tests on GitHub",
+        "href": "https://github.com/alexmercer-projects/fernhollow-customer-list-cleanup"
+      }
+    ],
+    "labelNote": "The business is made up, and so is every customer in the file: the towns, people, 555-01xx phone numbers and example.com emails. The messy file was generated to look like a real export. Not client work, and no results are claimed."
+  },
+  {
     "id": "harborline-florida-probate-explainer",
     "title": "Harborline Estate & Probate: a plain-English Florida probate explainer",
     "short": "Florida probate explainer",

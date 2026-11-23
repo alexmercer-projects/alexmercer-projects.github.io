@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fernhollow Supply Co.: customer list cleanup (concept demo)</title>
+  <meta name="description" content="A messy 250-row customer CSV cleaned with a Python script: formats fixed, repeats merged, every change logged and the judgment calls left to a person.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#14302a">
+  <link rel="preload" href="fonts/SchibstedGrotesk.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2314302a'/%3E%3Cpath d='M8 10h16M8 16h11M8 22h7' stroke='%23f0b34a' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E">
+</head>
+<body>
+<div class="am-demo-bar" role="note" style="font:14px/1.45 system-ui,-apple-system,'Segoe UI',sans-serif;background:#0f0f0f;color:#f3f3ef;padding:10px 16px;display:flex;flex-wrap:wrap;gap:6px 18px;justify-content:space-between;align-items:center;position:relative;z-index:50"><span><b>Concept demo by Alex Mercer.</b> Fictional business, not client work. Fernhollow Supply Co. and every customer, phone number and email in the file are made up.</span><a href="../index.html" style="color:#f3f3ef;text-decoration:underline;text-underline-offset:3px">Back to Alex Mercer&#39;s portfolio</a></div>
+
+<header class="site">
+  <div class="wrap site__in">
+    <a class="brand" href="#top" aria-label="Fernhollow Supply Co. customer list cleanup, top of page">
+      <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="9"/><path d="M10 13h20M10 20h14M10 27h8"/><circle cx="29" cy="27" r="3.2"/></svg>
+      <span class="brand__name">Fernhollow Supply Co.<small>Customer list cleanup</small></span>
+    </a>
+    <nav class="site__nav" aria-label="Sections">
+      <a href="#before-after">Before and after</a>
+      <a href="#repeats">Repeats</a>
+      <a href="#review">Left for a person</a>
+      <a class="site__cta" href="#files">Get the files</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero__in">
+      <div class="hero__text">
+        <p class="eyebrow">Data cleanup &middot; CSV and Excel &middot; Python</p>
+        <h1><span data-stat="rows_in">250</span> messy rows in. <em><span data-stat="customers_out">211</span> clean customers out.</em></h1>
+        <p class="deck">A made-up restaurant supply company in northern New England had a customer list pasted together from an old CRM export, a trade show sign-up sheet and a spreadsheet someone kept on the side. I wrote a script that fixes what can be fixed safely, merges the repeats, writes down every change, and hands back a short list of things a person should decide.</p>
+        <div class="hero__actions">
+          <a class="btn btn--solid" href="#before-after">See the before and after</a>
+          <a class="btn" href="https://github.com/alexmercer-projects/fernhollow-customer-list-cleanup">Read the code</a>
+        </div>
+      </div>
+      <figure class="funnel" aria-label="What happened to the rows">
+        <ol>
+          <li><b data-stat="rows_in">250</b><span>rows in the file</span></li>
+          <li class="minus"><b>&minus;<span data-stat="removed">5</span></b><span>junk rows: blanks, a test entry, a header pasted twice</span></li>
+          <li class="minus"><b>&minus;<span data-stat="rows_merged">34</span></b><span>repeats merged into the customer they belong to</span></li>
+          <li class="total"><b data-stat="customers_out">211</b><span>customers, one row each</span></li>
+        </ol>
+        <div class="funnel__foot">
+          <p><b data-stat="cells_changed">1,187</b> cells fixed, every one logged with its before and after</p>
+          <p><b data-stat="review_items">15</b> questions left for a person, none of them guessed at</p>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <section class="band" id="before-after" aria-labelledby="ba-h">
+    <div class="wrap">
+      <div class="head">
+        <p class="kicker">01 &middot; Before and after</p>
+        <h2 id="ba-h">Some of the worst rows, as they came in</h2>
+        <p class="lede">Flip between the original file and the cleaned rows. Changed cells are marked, and a cell with a dotted outline is one the script refused to guess at. Tap or hover a cell to see why. A&nbsp;<span class="mono">&middot;</span> stands for a stray space.</p>
+      </div>
+      <div class="toggle" role="group" aria-label="Show the rows">
+        <button type="button" class="toggle__b is-on" data-view="before" aria-pressed="true">Before</button>
+        <button type="button" class="toggle__b" data-view="after" aria-pressed="false">After</button>
+      </div>
+      <div class="sheet" tabindex="0" role="region" aria-label="Sample rows, scrolls sideways">
+        <table class="grid" id="ba-table"></table>
+      </div>
+      <p class="why" id="ba-why" aria-live="polite">Pick a marked cell to see what happened to it.</p>
+    </div>
+  </section>
+
+  <section class="band band--tint" aria-labelledby="rules-h">
+    <div class="wrap">
+      <div class="head">
+        <p class="kicker">02 &middot; What got fixed</p>
+        <h2 id="rules-h">Thirteen rules, each one boring on purpose</h2>
+        <p class="lede">Every fix follows a written rule, and a rule only fires when the right answer is clear from the value itself or from the rest of the file. The numbers are cells changed in this file.</p>
+      </div>
+      <div class="rules" id="rules"></div>
+    </div>
+  </section>
+
+  <section class="band" id="repeats" aria-labelledby="rep-h">
+    <div class="wrap">
+      <div class="head">
+        <p class="kicker">03 &middot; Repeats</p>
+        <h2 id="rep-h"><span data-stat="rows_merged">34</span> repeat rows, merged without losing anything</h2>
+        <p class="lede">Two rows count as the same customer when they share an email or a phone number and the business names agree, or when the names match and the ZIP does too. The row with the most recent order is kept, its blanks are filled from the other row, and anything that disagrees goes into Notes instead of being thrown away.</p>
+      </div>
+      <div class="dups" id="dups"></div>
+      <div class="apart">
+        <h3>Looked like repeats, kept apart on purpose</h3>
+        <p>Merging two real customers is worse than leaving a repeat in, so these stayed separate.</p>
+        <ul id="apart"></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band--ink" id="review" aria-labelledby="rev-h">
+    <div class="wrap">
+      <div class="head">
+        <p class="kicker">04 &middot; Left for a person</p>
+        <h2 id="rev-h"><span data-stat="review_items">15</span> things I wouldn't guess at</h2>
+        <p class="lede">A phone number with a digit missing, an email without an @, two different places sharing one email address. Each one is left exactly as it was and listed with the reason, so someone who knows the customers can settle it in a few minutes. In the clean file these customers are marked Needs Review.</p>
+      </div>
+      <div class="sheet sheet--dark" tabindex="0" role="region" aria-label="Review list, scrolls sideways">
+        <table class="grid grid--review" id="review-table"></table>
+      </div>
+      <details class="removed">
+        <summary>The <span data-stat="removed">5</span> rows that were dropped</summary>
+        <ul id="removed"></ul>
+      </details>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="log-h">
+    <div class="wrap">
+      <div class="head">
+        <p class="kicker">05 &middot; The change log</p>
+        <h2 id="log-h">Every change, searchable</h2>
+        <p class="lede">Nothing changes silently. This is the same log that ships as changes.csv and as a tab in the workbook: row number, field, before, after and the rule.</p>
+      </div>
+      <div class="filters">
+        <label class="field"><span>Search</span><input type="search" id="q" placeholder="A business, a value, a row number" autocomplete="off"></label>
+        <label class="field"><span>Rule</span><select id="rule"><option value="">All rules</option></select></label>
+        <p class="count" id="log-count" aria-live="polite"></p>
+      </div>
+      <div class="sheet" tabindex="0" role="region" aria-label="Change log, scrolls sideways">
+        <table class="grid grid--log" id="log-table"></table>
+      </div>
+      <button type="button" class="btn more" id="more">Show 40 more</button>
+    </div>
+  </section>
+
+  <section class="band band--tint" id="files" aria-labelledby="files-h">
+    <div class="wrap">
+      <div class="head">
+        <p class="kicker">06 &middot; What you get back</p>
+        <h2 id="files-h">The files, and how it runs</h2>
+        <p class="lede">The original file is never touched. Every run writes a fresh set of outputs, so the same script can clean next month's export too.</p>
+      </div>
+      <div class="files">
+        <a class="file" href="files/fernhollow-customers-cleanup-DEMO.xlsx" download>
+          <span class="file__ext">XLSX</span><b>The workbook</b><span>Read Me, Clean, Changes, Duplicates, Needs Review, Removed and the Original, one tab each. Rows to check are shaded.</span><small data-size="fernhollow-customers-cleanup-DEMO.xlsx"></small>
+        </a>
+        <a class="file" href="files/fernhollow-customers-CLEAN.csv" download>
+          <span class="file__ext">CSV</span><b>The clean list</b><span>211 customers with an ID, and Source Rows pointing back to the original file. Ready to import.</span><small data-size="fernhollow-customers-CLEAN.csv"></small>
+        </a>
+        <a class="file" href="files/fernhollow-cleanup-output-DEMO.zip" download>
+          <span class="file__ext">ZIP</span><b>All the reports</b><span>The clean list, changes.csv, duplicates.csv, needs-review.csv and removed-rows.csv.</span><small data-size="fernhollow-cleanup-output-DEMO.zip"></small>
+        </a>
+        <a class="file" href="files/fernhollow-customers-RAW.csv" download>
+          <span class="file__ext">CSV</span><b>The messy original</b><span>The made-up file as it came in, so you can run the script yourself and compare.</span><small data-size="fernhollow-customers-RAW.csv"></small>
+        </a>
+      </div>
+      <div class="run">
+        <div class="run__text">
+          <h3>Running it</h3>
+          <ul class="ticks">
+            <li>Plain Python 3, standard library only. The Excel workbook needs openpyxl; without it you still get every CSV.</li>
+            <li>Columns are found by name, so a file with &ldquo;Company&rdquo; instead of &ldquo;Business Name&rdquo; still works.</li>
+            <li>The rules live in one file in plain lists: the account types, the state spellings, which states have one area code. Changing them for another business is a small edit.</li>
+            <li>37 tests cover each rule, the repeat matching and a full run on the sample file.</li>
+          </ul>
+        </div>
+        <pre class="term" aria-label="Example run"><code><span class="term__p">$</span> python3 clean.py customers.csv --out output/
+<span class="term__o"><span data-stat="rows_in">250</span> rows in, <span data-stat="removed">5</span> junk rows dropped, <span data-stat="rows_merged">34</span> repeats merged
+into <span data-stat="duplicate_groups">34</span> customers, <span data-stat="customers_out">211</span> customers out.
+<span data-stat="cells_changed">1187</span> cells fixed across <span data-stat="rows_changed">245</span> rows; <span data-stat="review_items">15</span> things
+for a person to check.</span>
+  output/changes.csv
+  output/duplicates.csv
+  output/fernhollow-customers-CLEAN.csv
+  output/fernhollow-customers-cleanup.xlsx
+  output/needs-review.csv
+  output/removed-rows.csv</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="how-h">
+    <div class="wrap how">
+      <div class="head">
+        <p class="kicker">07 &middot; For a real list</p>
+        <h2 id="how-h">How I'd handle yours</h2>
+      </div>
+      <ol class="steps">
+        <li><b>Look at a sample first.</b> Fifty rows or so is enough to see which problems the file really has and which columns matter.</li>
+        <li><b>Agree on the rules.</b> What counts as the same customer, which spellings map to what, what should never be changed. Written down before anything runs.</li>
+        <li><b>Run it and send back the review list.</b> You get the clean file, the change log and the short list of questions only you can answer.</li>
+        <li><b>Fold in your answers and keep the script.</b> The next export can go through the same rules.</li>
+      </ol>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <p><b>Concept demo.</b> Fernhollow Supply Co. is a made-up business, and so is every customer in the file: the towns, people, 555-01xx phone numbers and example.com emails. The messy file was generated by <code>tools/make_sample.py</code> to look like a real export. No real customer data was used, and this is not client work.</p>
+    <p><a href="https://github.com/alexmercer-projects/fernhollow-customer-list-cleanup">Code, tests and sample files on GitHub</a> &middot; <a href="../index.html">Alex Mercer's portfolio</a></p>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
