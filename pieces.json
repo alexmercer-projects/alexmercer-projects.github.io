@@ -41,6 +41,59 @@
     "coverPhone": "tamarack-budget-tracker/cover-phone.webp"
   },
   {
+    "id": "pellory-instagram-storytelling-plan",
+    "title": "Pellory Ceramics: a 30-day Instagram storytelling plan",
+    "short": "Instagram storytelling plan",
+    "category": "Social media",
+    "label": "Concept demo",
+    "year": 2026,
+    "folder": "pellory-instagram-storytelling-plan",
+    "summary": "A month of Instagram for a made-up one-person pottery studio, built around the owner's own story. A 30-day calendar, six shot-by-shot Reel storyboards, three carousels designed as real slides, length-checked captions, a Story sequence and a plan for measuring it, all shown on phone mockups.",
+    "cover": "pellory-instagram-storytelling-plan/cover.webp",
+    "coverAlt": "Instagram plan page: the headline Thirty days of Instagram for a one-woman pottery studio, next to a phone showing an illustrated profile grid for @pellory.studio",
+    "demo": "pellory-instagram-storytelling-plan/demo/index.html",
+    "demoLabel": "See the plan",
+    "downloads": [
+      {
+        "file": "pellory-instagram-storytelling-plan/samples/Pellory-Instagram-plan-DEMO.pdf",
+        "label": "Download the plan PDF"
+      }
+    ],
+    "gallery": [
+      {
+        "src": "pellory-instagram-storytelling-plan/screenshots/detail-calendar.webp",
+        "alt": "The 30-day publishing calendar: a Monday to Sunday grid color-coded by content pillar, with format, working title and goal on each day"
+      },
+      {
+        "src": "pellory-instagram-storytelling-plan/screenshots/detail-reels.webp",
+        "alt": "A Reel storyboard: a phone frame showing the current shot with its on-screen text, beside the hook, audio note and shot list"
+      },
+      {
+        "src": "pellory-instagram-storytelling-plan/screenshots/detail-carousels.webp",
+        "alt": "A carousel shown in a phone feed frame with arrows and dots, next to thumbnails of all its slides"
+      },
+      {
+        "src": "pellory-instagram-storytelling-plan/screenshots/detail-captions.webp",
+        "alt": "Caption cards with the line before more highlighted, length meters for the first line and full caption, hashtags and alt text"
+      },
+      {
+        "src": "pellory-instagram-storytelling-plan/screenshots/detail-stories.webp",
+        "alt": "A seven-frame Story sequence counting down to the kiln opening, with poll, quiz, question, countdown, slider and link stickers"
+      },
+      {
+        "src": "pellory-instagram-storytelling-plan/screenshots/mobile.webp",
+        "alt": "Three phone screens: the top of the page, a Reel storyboard and a carousel"
+      }
+    ],
+    "extraLinks": [
+      {
+        "label": "Source on GitHub",
+        "href": "https://github.com/alexmercer-projects/pellory-instagram-storytelling-plan"
+      }
+    ],
+    "labelNote": "The studio, its owner, the town and every post, handle and number are made up. Nothing here was posted, and no follower counts or results are claimed. Not client work."
+  },
+  {
     "id": "quillmere-datasheet-generator",
     "title": "Quillmere Lighting Co.: spreadsheet to datasheet generator",
     "short": "Spreadsheet to datasheets",
