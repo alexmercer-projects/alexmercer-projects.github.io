@@ -41,6 +41,67 @@
     "coverPhone": "tamarack-budget-tracker/cover-phone.webp"
   },
   {
+    "id": "quillmere-datasheet-generator",
+    "title": "Quillmere Lighting Co.: spreadsheet to datasheet generator",
+    "short": "Spreadsheet to datasheets",
+    "category": "Document automation",
+    "label": "Concept demo",
+    "year": 2026,
+    "folder": "quillmere-datasheet-generator",
+    "summary": "A made-up lighting company's 16-product spreadsheet turned into print-ready datasheets. One designed template, one command: a PDF for every product plus an 18-page catalog, with the data and the actual print layout checked before anything is written.",
+    "cover": "quillmere-datasheet-generator/cover.webp",
+    "coverAlt": "Datasheet generator page: the headline 16 products in one spreadsheet, 16 print-ready datasheets out, next to a preview of the Strata 420 bollard datasheet",
+    "demo": "quillmere-datasheet-generator/demo/index.html",
+    "demoLabel": "See the sheets",
+    "downloads": [
+      {
+        "file": "quillmere-datasheet-generator/demo/files/quillmere-catalog-DEMO.pdf",
+        "label": "Download the catalog PDF"
+      },
+      {
+        "file": "quillmere-datasheet-generator/demo/files/quillmere-products.xlsx",
+        "label": "Download the spreadsheet"
+      },
+      {
+        "file": "quillmere-datasheet-generator/demo/files/quillmere-template.zip",
+        "label": "Download the template"
+      }
+    ],
+    "gallery": [
+      {
+        "src": "quillmere-datasheet-generator/screenshots/sheet-QL-PTH-50.webp",
+        "alt": "The Alder 500 path light datasheet: drawing, key figures, grouped specs, dimension drawing, finish swatches and ordering code"
+      },
+      {
+        "src": "quillmere-datasheet-generator/screenshots/detail-workflow.webp",
+        "alt": "How it works: spreadsheet rows, the template with its placeholders highlighted, and the finished sheet"
+      },
+      {
+        "src": "quillmere-datasheet-generator/screenshots/detail-checks.webp",
+        "alt": "What gets checked: four rule cards, an example validation report from a broken spreadsheet, and a description that runs past its text box"
+      },
+      {
+        "src": "quillmere-datasheet-generator/screenshots/detail-sheets.webp",
+        "alt": "The gallery of all 16 generated sheets with filter chips by product family"
+      },
+      {
+        "src": "quillmere-datasheet-generator/screenshots/detail-downloads.webp",
+        "alt": "Downloads: catalog PDF, workbook, CSV, print template, sample sheets and the validation report"
+      },
+      {
+        "src": "quillmere-datasheet-generator/screenshots/mobile.webp",
+        "alt": "Three phone screens: the top of the page, the workflow steps and the sheet gallery"
+      }
+    ],
+    "extraLinks": [
+      {
+        "label": "Code and tests on GitHub",
+        "href": "https://github.com/alexmercer-projects/quillmere-datasheet-generator"
+      }
+    ],
+    "labelNote": "The company is made up, and so is every product, spec and rating in the spreadsheet. Certifications are placeholders on purpose. Not client work, and no results are claimed."
+  },
+  {
     "id": "fernhollow-customer-list-cleanup",
     "title": "Fernhollow Supply Co.: a customer list cleanup",
     "short": "Customer list cleanup",
