@@ -41,6 +41,59 @@
     "coverPhone": "tamarack-budget-tracker/cover-phone.webp"
   },
   {
+    "id": "thirty-seconds-of-quiet-film-pitch-deck",
+    "title": "Thirty Seconds of Quiet: a feature film pitch deck",
+    "short": "Film pitch deck",
+    "category": "Pitch deck",
+    "label": "Concept demo",
+    "year": 2026,
+    "folder": "thirty-seconds-of-quiet-film-pitch-deck",
+    "summary": "A 16-slide pitch deck I wrote and designed for a made-up romantic comedy feature, from logline and tone to characters, the world, why now, audience and an illustrative format. It reads as a web page, runs full screen in present mode and prints to a 16:9 PDF, with every image drawn in SVG and CSS.",
+    "cover": "thirty-seconds-of-quiet-film-pitch-deck/cover.webp",
+    "coverAlt": "Pitch deck page: the headline A pitch deck for a romantic comedy that doesn't exist, above a title slide for Thirty Seconds of Quiet showing a Spanish-style house, palms and a jacaranda at sunset",
+    "demo": "thirty-seconds-of-quiet-film-pitch-deck/demo/index.html",
+    "demoLabel": "See the deck",
+    "downloads": [
+      {
+        "file": "thirty-seconds-of-quiet-film-pitch-deck/samples/Thirty-Seconds-of-Quiet-pitch-deck-DEMO.pdf",
+        "label": "Download the deck PDF"
+      }
+    ],
+    "gallery": [
+      {
+        "src": "thirty-seconds-of-quiet-film-pitch-deck/screenshots/detail-synopsis.webp",
+        "alt": "Synopsis slide: Twelve days, twenty-three rooms, one very loud man, with the story told in three acts"
+      },
+      {
+        "src": "thirty-seconds-of-quiet-film-pitch-deck/screenshots/detail-leads.webp",
+        "alt": "The leads slide: illustrated cards for Mara, a dialogue editor in headphones, and Theo, an estate-sale man, each with a quote and who they are, what they want and what they need"
+      },
+      {
+        "src": "thirty-seconds-of-quiet-film-pitch-deck/screenshots/detail-house.webp",
+        "alt": "The world slide: a numbered floor plan of the house with four set pieces marked"
+      },
+      {
+        "src": "thirty-seconds-of-quiet-film-pitch-deck/screenshots/detail-mood.webp",
+        "alt": "Look and feel slide: a mood board of golden-hour palms, jacaranda blossoms, a reel-to-reel tape deck, pool light and two people in a lit window"
+      },
+      {
+        "src": "thirty-seconds-of-quiet-film-pitch-deck/screenshots/detail-setpieces.webp",
+        "alt": "Set pieces slide: five illustrated scene cards, from a sofa auction to a packed house going quiet"
+      },
+      {
+        "src": "thirty-seconds-of-quiet-film-pitch-deck/screenshots/mobile.webp",
+        "alt": "Three phone screens: the top of the deck, the leads and the mood board, each slide reflowed into a card"
+      }
+    ],
+    "extraLinks": [
+      {
+        "label": "Source on GitHub",
+        "href": "https://github.com/alexmercer-projects/thirty-seconds-of-quiet-film-pitch-deck"
+      }
+    ],
+    "labelNote": "The film, Corbel Lane Pictures, the writer and every character, place and figure are made up. No talent, director, financier or distributor is attached, and the format and budget tier are illustrative. Not client work."
+  },
+  {
     "id": "halloway-mobile-storefront",
     "title": "Halloway & Co.: a mobile storefront you can install",
     "short": "Mobile storefront app",
