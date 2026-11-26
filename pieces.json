@@ -41,6 +41,49 @@
     "coverPhone": "tamarack-budget-tracker/cover-phone.webp"
   },
   {
+    "id": "halloway-mobile-storefront",
+    "title": "Halloway & Co.: a mobile storefront you can install",
+    "short": "Mobile storefront app",
+    "category": "Mobile app",
+    "label": "Concept demo",
+    "year": 2026,
+    "folder": "halloway-mobile-storefront",
+    "summary": "A mobile-first shop for a made-up canvas and leather workshop that installs to a phone like an app and keeps working offline. Search and filters, product pages with color and size pickers that know what's sold out, a cart with discount codes and live totals, a wishlist and a demo checkout that takes no payment, all in plain JavaScript with 39 tests.",
+    "cover": "halloway-mobile-storefront/cover.webp",
+    "coverAlt": "Storefront home page: the headline Canvas and leather, cut and stitched to be used hard, next to an illustration of a tote, a backpack, a wallet and a mug, above category cards",
+    "demo": "halloway-mobile-storefront/demo/index.html",
+    "demoLabel": "Open the shop",
+    "gallery": [
+      {
+        "src": "halloway-mobile-storefront/screenshots/mobile.webp",
+        "alt": "Four phone screens: the home page, a product page, the cart and the demo checkout, each with a bottom tab bar"
+      },
+      {
+        "src": "halloway-mobile-storefront/screenshots/detail-product.webp",
+        "alt": "Product page for a waxed canvas apron: picture gallery with thumbnails, color swatches, size buttons, stock message, quantity stepper and Add to cart"
+      },
+      {
+        "src": "halloway-mobile-storefront/screenshots/detail-shop.webp",
+        "alt": "Shop page with a search box, category chips, a filters button, sorting and a four-column grid of illustrated products"
+      },
+      {
+        "src": "halloway-mobile-storefront/screenshots/detail-cart.webp",
+        "alt": "Cart with three items, quantity steppers, a free shipping bar, a discount code applied and the subtotal, discount, shipping, tax and total"
+      },
+      {
+        "src": "halloway-mobile-storefront/screenshots/detail-checkout.webp",
+        "alt": "Demo checkout showing the no-payment notice, an error summary listing the empty fields, and the order summary"
+      }
+    ],
+    "extraLinks": [
+      {
+        "label": "Source on GitHub",
+        "href": "https://github.com/alexmercer-projects/halloway-mobile-storefront"
+      }
+    ],
+    "labelNote": "The shop, its maker, the town and every product, price, stock count and code are made up. The checkout takes no payment and nothing ships. Not client work."
+  },
+  {
     "id": "pellory-instagram-storytelling-plan",
     "title": "Pellory Ceramics: a 30-day Instagram storytelling plan",
     "short": "Instagram storytelling plan",
