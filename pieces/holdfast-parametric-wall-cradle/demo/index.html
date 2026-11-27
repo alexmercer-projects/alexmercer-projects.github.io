@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Holdfast Cradle: a parametric OpenSCAD wall mount | Brindle &amp; Bolt Workshop (concept demo)</title>
+  <meta name="description" content="Concept demo: a parametric OpenSCAD wall-mount cradle for a made-up maker shop, with Customizer presets, exported STLs, renders, a parameter table, printability notes and an in-browser 3D viewer.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2317191b'/%3E%3Cpath d='M9 8v16h14v-6' fill='none' stroke='%23d9773a' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preload" href="fonts/Archivo.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<div class="am-demo-bar" role="note" style="font:14px/1.45 system-ui,-apple-system,'Segoe UI',sans-serif;background:#0f0f0f;color:#f3f3ef;padding:10px 16px;display:flex;flex-wrap:wrap;gap:6px 18px;justify-content:space-between;align-items:center;position:relative;z-index:50"><span><b>Concept demo by Alex Mercer.</b> Fictional business, not client work. Brindle &amp; Bolt Workshop, its town and contact details are made up. The model and files are real, but these parts have not been printed or load-tested.</span><a href="../index.html" style="color:#f3f3ef;text-decoration:underline;text-underline-offset:3px">Back to Alex Mercer&#39;s portfolio</a></div>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Brindle &amp; Bolt Workshop, top of page">
+      <svg viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="9" fill="#17191b"/><path d="M10 8.5v17h14.5v-6.5" fill="none" stroke="#d9773a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="15.5" cy="13.5" r="2" fill="#f2eee6"/></svg>
+      <span><b>Brindle &amp; Bolt</b><small>Workshop · Calder Flats</small></span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#viewer">3D viewer</a>
+      <a href="#presets">Presets</a>
+      <a href="#anatomy">How it's built</a>
+      <a href="#parameters">Parameters</a>
+      <a href="#printing">Printing</a>
+      <a href="#files">Files</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Parametric OpenSCAD · Customizer · STL</div>
+        <h1>One model. <em>Any box</em> on your wall.</h1>
+        <p class="lede">The Holdfast Cradle is a wall mount for routers, power strips, hubs and remotes. Type in your device's size and OpenSCAD rebuilds the whole part: pocket, walls, screw holes, cable cutouts and vents, ready to slice with no supports.</p>
+        <div class="hero-actions">
+          <a class="btn solid" href="cad/holdfast-cradle.scad" download>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>
+            Get the .scad file
+          </a>
+          <a class="btn" href="#parameters">See all 35 parameters</a>
+        </div>
+        <div class="spec-strip">
+          <div><b>4</b><span>ready presets</span></div>
+          <div><b>35</b><span>Customizer settings</span></div>
+          <div><b>0</b><span>supports needed</span></div>
+          <div><b>21/21</b><span>model checks pass</span></div>
+        </div>
+      </div>
+
+      <div id="viewer" class="viewer" aria-label="3D viewer">
+        <div class="viewer-top">
+          <div class="tabs" role="tablist" aria-label="Presets" id="viewer-tabs"></div>
+          <div class="viewer-live"><i></i>Live STL</div>
+        </div>
+        <div class="stage" id="stage">
+          <div class="loading" id="loading">Loading model…</div>
+          <div class="dims" id="dims" aria-live="polite"></div>
+          <div class="hint">Drag to turn<br>Scroll or pinch to zoom</div>
+        </div>
+        <div class="viewer-bar">
+          <div class="toggles">
+            <button class="toggle" id="t-device" aria-pressed="true">Device</button>
+            <button class="toggle" id="t-wall" aria-pressed="false">On the wall</button>
+            <button class="toggle" id="t-xray" aria-pressed="false">X-ray</button>
+            <button class="toggle" id="t-spin" aria-pressed="false">Turntable</button>
+          </div>
+          <a class="dl" id="viewer-dl" href="#" download>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>
+            <span>STL</span>
+          </a>
+        </div>
+        <p class="viewer-note" id="viewer-note"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="presets">
+    <div class="wrap">
+      <div class="head-row">
+        <div>
+          <div class="eyebrow">Four presets, one file</div>
+          <h2>Pick a starting point, then make it yours.</h2>
+        </div>
+        <p class="lede">Each preset is a saved Customizer parameter set in <span class="mono">holdfast-cradle.json</span>. The pictures are OpenSCAD renders of the exported STL files, so what you see is the mesh you download.</p>
+      </div>
+      <div class="presets" id="preset-cards"></div>
+    </div>
+  </section>
+
+  <section class="block" id="anatomy">
+    <div class="wrap">
+      <div class="anatomy">
+        <figure class="anatomy-fig" id="anatomy-fig">
+          <img src="renders/web/holdfast-upright-router-hero.webp" width="1200" height="900" alt="OpenSCAD render of the upright router preset: a tall back plate with two keyholes, a floor with a cord slot and a row of vent slots, sloped side walls and a short front lip" loading="lazy">
+          <span class="pin" style="left:25%;top:27%">1</span>
+          <span class="pin" style="left:58%;top:62%">2</span>
+          <span class="pin" style="left:30.5%;top:58.5%">3</span>
+          <span class="pin" style="left:85.5%;top:70%">4</span>
+          <span class="pin" style="left:39%;top:70%">5</span>
+          <span class="pin" style="left:80%;top:34%">6</span>
+        </figure>
+        <div>
+          <div class="eyebrow">Anatomy</div>
+          <h2>Every feature is a setting.</h2>
+          <ol class="parts">
+            <li><div><b>Teardrop keyholes</b><span>Hang the cradle on two screws and lift it off again. The holes come to a 45° point on top, so they print clean standing up.</span></div></li>
+            <li><div><b>Cord slot</b><span>Plugs drop through the floor right against the wall, so cables run down behind the device instead of out the front.</span></div></li>
+            <li><div><b>Vent slots</b><span>Rows of slots under the device. They size and centre themselves to whatever floor is left.</span></div></li>
+            <li><div><b>Sloped side walls</b><span>Tall at the back for grip, low at the front so you can reach in. No overhang: the slope is a top surface.</span></div></li>
+            <li><div><b>Front lip</b><span>Keeps the device from walking forward. Optional U-notch for a cable, and an optional pressed-in label.</span></div></li>
+            <li><div><b>Rounded, chamfered edges</b><span>Rounded corners and top edges, and a 0.4 mm chamfer on the first layer so elephant's foot doesn't show.</span></div></li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <div class="k">Step 1 · Profile</div>
+          <h3>Draw the side view, then extrude it</h3>
+          <p>The back plate, floor, slope and lip are one 2D outline, extruded across the width. Its corners are worked out point by point so faces land exactly where the pocket expects them.</p>
+          <svg viewBox="0 0 300 120" aria-hidden="true"><path d="M110 108 V14 Q110 10 114 10 H122 Q126 10 126 14 V56 L196 92 H206 Q210 92 210 96 V108 Z" fill="#f6d4bb" stroke="#b3561d" stroke-width="2"/><path d="M40 108 H270" stroke="#17191b" stroke-width="1.5"/><text x="20" y="26" font-family="JetBrains Mono, monospace" font-size="10" fill="#6b6f72">back</text><text x="222" y="100" font-family="JetBrains Mono, monospace" font-size="10" fill="#6b6f72">lip</text><text x="146" y="62" font-family="JetBrains Mono, monospace" font-size="10" fill="#6b6f72">slope</text></svg>
+        </div>
+        <div class="step">
+          <div class="k">Step 2 · Footprint</div>
+          <h3>Round it from above, chamfer the base</h3>
+          <p>The extrusion is trimmed by a rounded rectangle, then by a slab that is 0.4 mm smaller at the bed. That gives soft vertical corners and a crisp first layer.</p>
+          <svg viewBox="0 0 300 120" aria-hidden="true"><rect x="40" y="22" width="220" height="76" rx="14" fill="#f6d4bb" stroke="#b3561d" stroke-width="2"/><rect x="45" y="27" width="210" height="66" rx="10" fill="none" stroke="#b3561d" stroke-width="1" stroke-dasharray="4 4"/><text x="58" y="66" font-family="JetBrains Mono, monospace" font-size="10" fill="#6b6f72">corner_radius · bed_chamfer</text></svg>
+        </div>
+        <div class="step">
+          <div class="k">Step 3 · Cuts</div>
+          <h3>Subtract the pocket and features</h3>
+          <p>The device pocket (with a 45° fillet at the floor), cable notch, vents, cord slot, screw holes and label are cut from that solid. Every cut is its own module.</p>
+          <svg viewBox="0 0 300 120" aria-hidden="true"><rect x="40" y="22" width="220" height="76" rx="12" fill="#f6d4bb" stroke="#b3561d" stroke-width="2"/><rect x="50" y="34" width="200" height="56" rx="6" fill="#fbf9f5" stroke="#17191b" stroke-width="1.5"/><rect x="105" y="40" width="90" height="10" rx="5" fill="#17191b"/><g fill="#17191b"><rect x="64" y="58" width="6" height="22" rx="3"/><rect x="78" y="58" width="6" height="22" rx="3"/><rect x="92" y="58" width="6" height="22" rx="3"/><rect x="106" y="58" width="6" height="22" rx="3"/><rect x="120" y="58" width="6" height="22" rx="3"/><rect x="134" y="58" width="6" height="22" rx="3"/><rect x="148" y="58" width="6" height="22" rx="3"/><rect x="162" y="58" width="6" height="22" rx="3"/><rect x="176" y="58" width="6" height="22" rx="3"/><rect x="190" y="58" width="6" height="22" rx="3"/><rect x="204" y="58" width="6" height="22" rx="3"/><rect x="218" y="58" width="6" height="22" rx="3"/><rect x="232" y="58" width="6" height="22" rx="3"/></g></svg>
+        </div>
+      </div>
+
+<pre class="code" aria-label="The first Customizer settings in holdfast-cradle.scad"><span class="c">/* [Device to hold] */</span>
+<span class="c">// Device width, left to right (mm)</span>
+<span class="n">device_width</span> = <span class="k">120</span>; <span class="c">// [20:1:400]</span>
+<span class="c">// Device depth, measured out from the wall (mm)</span>
+<span class="n">device_depth</span> = <span class="k">40</span>; <span class="c">// [10:1:200]</span>
+
+<span class="c">/* [Fit and tolerance] */</span>
+<span class="c">// Gap added on every side of the device. 0.6 suits most FDM printers (mm)</span>
+<span class="n">clearance</span> = <span class="k">0.6</span>; <span class="c">// [0:0.1:2]</span>
+
+<span class="c">/* [Mounting] */</span>
+<span class="n">mount_style</span> = <span class="s">"keyhole"</span>; <span class="c">// [keyhole, countersunk, none]</span></pre>
+    </div>
+  </section>
+
+  <section class="block" id="parameters">
+    <div class="wrap">
+      <div class="head-row">
+        <div>
+          <div class="eyebrow">Parameter table</div>
+          <h2>All 35 settings, and what each preset changes.</h2>
+        </div>
+        <p class="lede">This table is generated from the Customizer block at the top of the .scad file, so it can't drift from the model. Values marked in orange differ from the default.</p>
+      </div>
+      <div class="ptable-tools">
+        <div class="chips" id="param-chips" role="group" aria-label="Filter by section"></div>
+        <div class="legend"><i></i>changed from default</div>
+      </div>
+      <div class="table-wrap">
+        <table class="params" id="param-table">
+          <thead><tr><th>Parameter</th><th>What it does</th><th>Default</th><th>Range</th><th>Power strip</th><th>Router</th><th>USB hub</th><th>Remotes</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="printing">
+    <div class="wrap">
+      <div class="head-row">
+        <div>
+          <div class="eyebrow">Printability</div>
+          <h2>Designed for the printer, not just the screen.</h2>
+        </div>
+        <p class="lede">The cradle prints the way it hangs: floor down on the bed. These notes explain the choices in the model and give starting settings. They are starting points, not test results.</p>
+      </div>
+      <div class="print-grid">
+        <div class="note">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#17191b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18M7 20V6h3v9l7 0v5"/></svg></div>
+          <h3>Orientation</h3>
+          <p>Floor on the bed, back plate standing up. The side walls act as gussets for the back joint, and the 45° fillet inside the pocket adds material where the floor meets the plate.</p>
+        </div>
+        <div class="note">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#17191b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 7.5 7.5a6.4 6.4 0 1 0 9 0Z"/></svg></div>
+          <h3>Overhangs</h3>
+          <p>Nothing needs supports. Holes in the back plate are teardrops with a 45° point, the countersink cone is 90°, the cable notch is round at the bottom, and every slope is a top surface.</p>
+        </div>
+        <div class="note">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#17191b" stroke-width="1.8" stroke-linecap="round"><path d="M5 4v16M9 4v16M13 4v16M17 4v16"/></svg></div>
+          <h3>Wall thickness</h3>
+          <p>Walls step in 0.4 mm so they come out as whole perimeters with a 0.4 mm nozzle (2.4 mm is six lines). Odd widths leave thin gap fill that's weaker and slower to print.</p>
+        </div>
+        <div class="note">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#17191b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="6" width="16" height="12" rx="1.5"/><rect x="7.5" y="9" width="9" height="6" rx=".5"/></svg></div>
+          <h3>Tolerance</h3>
+          <p>One number, <span class="mono">clearance</span>, is added on every side of the device.</p>
+          <table class="fit-table"><thead><tr><th>Fit</th><th>clearance</th><th>When</th></tr></thead><tbody>
+            <tr><td>Snug</td><td>0.3 mm</td><td>well-tuned printer</td></tr>
+            <tr><td>Standard</td><td>0.6 mm</td><td>most printers</td></tr>
+            <tr><td>Easy</td><td>1.0 mm</td><td>rubber feet, texture</td></tr>
+          </tbody></table>
+        </div>
+        <div class="note wide">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#17191b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h10M4 17h13"/></svg></div>
+          <h3>Starting slicer settings</h3>
+          <div class="settings">
+            <div><span>Material</span><b>PETG near warm gear; PLA otherwise</b></div>
+            <div><span>Layer height</span><b>0.2 mm</b></div>
+            <div><span>Walls</span><b>4 perimeters</b></div>
+            <div><span>Top / bottom</span><b>5 / 4 layers</b></div>
+            <div><span>Infill</span><b>25% gyroid</b></div>
+            <div><span>Supports</span><b>off</b></div>
+            <div><span>Brim</span><b>only for the 290 mm tray</b></div>
+            <div><span>Label</span><b>0.6 mm deep = 3 layers</b></div>
+          </div>
+          <p>PLA softens around 55 to 60 °C, and a router or power brick can keep a closed pocket warm, so PETG or ASA is the safer pick there.</p>
+        </div>
+        <div class="note wide" id="bed-fit">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#17191b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m7 15 8-8"/></svg></div>
+          <h3>Will it fit your bed?</h3>
+          <p>Worked out from each preset's footprint. "Diagonal" means it fits only when turned 45° on the bed.</p>
+          <table class="fit-table" id="bed-table"></table>
+        </div>
+        <div class="note">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#17191b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M8.5 12h7M12 8.5v7"/></svg></div>
+          <h3>Screws</h3>
+          <p>Defaults suit 4 mm (#8 / M4) pan or countersunk screws with a 8.5 mm head. Use wall anchors in drywall. Keyholes keep 1.8 mm of plate in front of the screw head.</p>
+        </div>
+      </div>
+      <div class="caution">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2 20h20L12 3Z"/><path d="M12 10v4M12 17.5v.01"/></svg>
+        <p><b>Not load-tested.</b> These presets have not been printed or weighed down here, so there's no rated load. Before trusting a printed cradle with something heavy or over a desk, test it with the real device and a margin, and check the screws and anchors suit your wall.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="checks">
+    <div class="wrap">
+      <div class="head-row">
+        <div>
+          <div class="eyebrow">Checks</div>
+          <h2>Every export is checked before it ships.</h2>
+        </div>
+        <p class="lede"><span class="mono">tools/build.py</span> exports each preset and reads the STL back: closed mesh, flat on the bed, and the size the model says it is. <span class="mono">tools/test.py</span> also tries settings that should fail.</p>
+      </div>
+      <div class="checks">
+        <div class="card">
+          <h3>Exported presets</h3>
+          <div style="overflow-x:auto"><table class="qa" id="qa-table"></table></div>
+        </div>
+        <div class="card">
+          <h3>Guard rails</h3>
+          <p style="font-size:14.5px;color:var(--ink-2);margin-top:8px">Settings that would make a broken or unprintable part stop the render with a plain message:</p>
+          <ul class="guards">
+            <li><div>Side walls taller than the back plate<code>back_height must be at least 2 mm taller than floor + side_height</code></div></li>
+            <li><div>Keyholes in a plate too thin to hide the screw head<code>keyholes need back_thickness of at least 4.5 mm</code></div></li>
+            <li><div>Screw holes that run past the top or into the floor<code>screw holes don't fit: raise back_height or lower hole_height</code></div></li>
+            <li><div>More screws than the width has room for<code>too many screws for this width</code></div></li>
+            <li><div>A cable notch wider than the lip<code>front_notch_width is wider than the front lip</code></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="files">
+    <div class="wrap">
+      <div class="head-row">
+        <div>
+          <div class="eyebrow">Files</div>
+          <h2>Download, customize, print.</h2>
+        </div>
+        <p class="lede">The source and presets are MIT licensed. Open the .scad in OpenSCAD 2021.01 or newer; it uses only built-in features, no libraries.</p>
+      </div>
+      <div class="files">
+        <ul class="file-list" id="file-list"></ul>
+        <div class="card howto">
+          <h3>Make your own size</h3>
+          <ol>
+            <li>Open <code>holdfast-cradle.scad</code> in OpenSCAD and turn on <b>Window › Customizer</b>.</li>
+            <li>Pick a preset from the drop-down, or start from the defaults.</li>
+            <li>Measure your device and enter width, depth and height. Leave <code>clearance</code> at 0.6 the first time.</li>
+            <li>Press <b>F6</b> to render, then <b>File › Export › STL</b>.</li>
+            <li>Slice floor-down with supports off, and print.</li>
+          </ol>
+          <p style="margin-top:14px;font-size:14.5px;color:var(--ink-2)">From a terminal, one preset at a time:</p>
+<pre class="code" style="margin-top:10px"><span class="n">openscad</span> -p holdfast-cradle.json -P usb-hub \
+  -o holdfast-usb-hub.stl holdfast-cradle.scad</pre>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#top">
+          <svg viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="9" fill="#2a2d30"/><path d="M10 8.5v17h14.5v-6.5" fill="none" stroke="#d9773a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="15.5" cy="13.5" r="2" fill="#f2eee6"/></svg>
+          <span><b>Brindle &amp; Bolt</b><small>Workshop · Calder Flats</small></span>
+        </a>
+        <p>Small-batch printed hardware for the stuff that lives on walls and under desks. Everything we sell starts as an open, editable model.</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <ul><li>118 Tinker Row</li><li>Calder Flats</li><li>Thu to Sat, 10 to 5</li></ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul><li><a href="tel:+15555550137">555-0137</a></li><li><a href="mailto:shop@example.com">shop@example.com</a></li></ul>
+      </div>
+    </div>
+    <div class="foot-legal">Concept demo by Alex Mercer. Brindle &amp; Bolt Workshop, Calder Flats and all contact details are made up. Model and code: MIT. Viewer: three.js (MIT). Fonts: Archivo and JetBrains Mono (SIL Open Font License).</div>
+  </div>
+</footer>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

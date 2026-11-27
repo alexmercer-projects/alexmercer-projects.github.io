@@ -1,0 +1,647 @@
+[
+  {
+    "name": "device_width",
+    "section": "Device to hold",
+    "description": "Device width, left to right",
+    "unit": "mm",
+    "type": "number",
+    "default": 120.0,
+    "range": {
+      "min": 20.0,
+      "step": 1.0,
+      "max": 400.0
+    },
+    "presets": {
+      "power-strip": 290.0,
+      "upright-router": 190.0,
+      "usb-hub": 105.0,
+      "remote-caddy": 150.0
+    }
+  },
+  {
+    "name": "device_depth",
+    "section": "Device to hold",
+    "description": "Device depth, measured out from the wall",
+    "unit": "mm",
+    "type": "number",
+    "default": 40.0,
+    "range": {
+      "min": 10.0,
+      "step": 1.0,
+      "max": 200.0
+    },
+    "presets": {
+      "power-strip": 52.0,
+      "upright-router": 46.0,
+      "usb-hub": 32.0,
+      "remote-caddy": 34.0
+    }
+  },
+  {
+    "name": "device_height",
+    "section": "Device to hold",
+    "description": "Device height. Only used for the see-through preview box",
+    "unit": "mm",
+    "type": "number",
+    "default": 110.0,
+    "range": {
+      "min": 5.0,
+      "step": 1.0,
+      "max": 300.0
+    },
+    "presets": {
+      "power-strip": 40.0,
+      "upright-router": 160.0,
+      "usb-hub": 22.0,
+      "remote-caddy": 175.0
+    }
+  },
+  {
+    "name": "clearance",
+    "section": "Fit and tolerance",
+    "description": "Gap added on every side of the device. 0.6 suits most FDM printers; use 0.3 for a snug fit, 1.0 for rubber-footed or textured devices",
+    "unit": "mm",
+    "type": "number",
+    "default": 0.6,
+    "range": {
+      "min": 0.0,
+      "step": 0.1,
+      "max": 2.0
+    },
+    "presets": {
+      "power-strip": 0.8,
+      "upright-router": 0.6,
+      "usb-hub": 0.4,
+      "remote-caddy": 1.0
+    }
+  },
+  {
+    "name": "wall",
+    "section": "Cradle shape",
+    "description": "Side and front wall thickness. Keep it a multiple of your line width (0.4 nozzle: 1.6, 2.0, 2.4, 3.2) so the slicer fills it with whole perimeters",
+    "unit": "mm",
+    "type": "number",
+    "default": 2.4,
+    "range": {
+      "min": 1.2,
+      "step": 0.4,
+      "max": 6.0
+    },
+    "presets": {
+      "power-strip": 2.4,
+      "upright-router": 2.8,
+      "usb-hub": 2.0,
+      "remote-caddy": 2.4
+    }
+  },
+  {
+    "name": "back_thickness",
+    "section": "Cradle shape",
+    "description": "Back plate thickness. Keyholes need at least 4.5 so the screw head can slide inside the plate",
+    "unit": "mm",
+    "type": "number",
+    "default": 5.0,
+    "range": {
+      "min": 3.0,
+      "step": 0.5,
+      "max": 10.0
+    },
+    "presets": {
+      "power-strip": 5.0,
+      "upright-router": 5.5,
+      "usb-hub": 3.0,
+      "remote-caddy": 4.0
+    }
+  },
+  {
+    "name": "floor_thickness",
+    "section": "Cradle shape",
+    "description": "Floor thickness",
+    "unit": "mm",
+    "type": "number",
+    "default": 3.0,
+    "range": {
+      "min": 1.6,
+      "step": 0.2,
+      "max": 8.0
+    },
+    "presets": {
+      "power-strip": 3.0,
+      "upright-router": 3.2,
+      "usb-hub": 2.4,
+      "remote-caddy": 3.0
+    }
+  },
+  {
+    "name": "back_height",
+    "section": "Cradle shape",
+    "description": "Total height of the back plate, from the bed up",
+    "unit": "mm",
+    "type": "number",
+    "default": 60.0,
+    "range": {
+      "min": 15.0,
+      "step": 1.0,
+      "max": 250.0
+    },
+    "presets": {
+      "power-strip": 62.0,
+      "upright-router": 110.0,
+      "usb-hub": 34.0,
+      "remote-caddy": 105.0
+    }
+  },
+  {
+    "name": "side_height",
+    "section": "Cradle shape",
+    "description": "Side wall height at the back, above the floor",
+    "unit": "mm",
+    "type": "number",
+    "default": 32.0,
+    "range": {
+      "min": 4.0,
+      "step": 1.0,
+      "max": 200.0
+    },
+    "presets": {
+      "power-strip": 30.0,
+      "upright-router": 60.0,
+      "usb-hub": 18.0,
+      "remote-caddy": 70.0
+    }
+  },
+  {
+    "name": "front_lip_height",
+    "section": "Cradle shape",
+    "description": "Front lip height above the floor. The side walls slope down to meet it",
+    "unit": "mm",
+    "type": "number",
+    "default": 12.0,
+    "range": {
+      "min": 0.0,
+      "step": 1.0,
+      "max": 150.0
+    },
+    "presets": {
+      "power-strip": 16.0,
+      "upright-router": 22.0,
+      "usb-hub": 10.0,
+      "remote-caddy": 36.0
+    }
+  },
+  {
+    "name": "corner_radius",
+    "section": "Cradle shape",
+    "description": "Radius of the vertical outside corners",
+    "unit": "mm",
+    "type": "number",
+    "default": 4.0,
+    "range": {
+      "min": 0.0,
+      "step": 0.5,
+      "max": 12.0
+    },
+    "presets": {
+      "power-strip": 4.0,
+      "upright-router": 5.0,
+      "usb-hub": 3.0,
+      "remote-caddy": 6.0
+    }
+  },
+  {
+    "name": "edge_radius",
+    "section": "Cradle shape",
+    "description": "Radius of the top edges seen from the side",
+    "unit": "mm",
+    "type": "number",
+    "default": 1.5,
+    "range": {
+      "min": 0.0,
+      "step": 0.25,
+      "max": 4.0
+    },
+    "presets": {
+      "power-strip": 1.5,
+      "upright-router": 2.0,
+      "usb-hub": 1.0,
+      "remote-caddy": 2.0
+    }
+  },
+  {
+    "name": "inner_fillet",
+    "section": "Cradle shape",
+    "description": "45 degree fillet where the floor meets the walls inside the pocket. Stiffens the back joint and prints with no overhang",
+    "unit": "mm",
+    "type": "number",
+    "default": 2.0,
+    "range": {
+      "min": 0.0,
+      "step": 0.5,
+      "max": 6.0
+    },
+    "presets": {
+      "power-strip": 2.0,
+      "upright-router": 3.0,
+      "usb-hub": 1.5,
+      "remote-caddy": 2.0
+    }
+  },
+  {
+    "name": "mount_style",
+    "section": "Mounting",
+    "description": "keyhole: hangs on screws already in the wall. countersunk: screwed through from inside. none: for adhesive strips",
+    "unit": "",
+    "type": "choice",
+    "default": "keyhole",
+    "options": [
+      "keyhole",
+      "countersunk",
+      "none"
+    ],
+    "presets": {
+      "power-strip": "countersunk",
+      "upright-router": "keyhole",
+      "usb-hub": "none",
+      "remote-caddy": "countersunk"
+    }
+  },
+  {
+    "name": "screw_count",
+    "section": "Mounting",
+    "description": "Number of screw holes, spread evenly across the back plate",
+    "unit": "",
+    "type": "number",
+    "default": 2.0,
+    "range": {
+      "min": 1.0,
+      "step": 1.0,
+      "max": 4.0
+    },
+    "presets": {
+      "power-strip": 3.0,
+      "upright-router": 2.0,
+      "usb-hub": 2.0,
+      "remote-caddy": 2.0
+    }
+  },
+  {
+    "name": "screw_shank",
+    "section": "Mounting",
+    "description": "Screw shank diameter. 4.0 suits #8 / M4 wood and anchor screws",
+    "unit": "mm",
+    "type": "number",
+    "default": 4.0,
+    "range": {
+      "min": 2.5,
+      "step": 0.1,
+      "max": 6.0
+    },
+    "presets": {
+      "power-strip": 4.0,
+      "upright-router": 4.0,
+      "usb-hub": 4.0,
+      "remote-caddy": 4.0
+    }
+  },
+  {
+    "name": "screw_head",
+    "section": "Mounting",
+    "description": "Screw head diameter",
+    "unit": "mm",
+    "type": "number",
+    "default": 8.5,
+    "range": {
+      "min": 5.0,
+      "step": 0.1,
+      "max": 12.0
+    },
+    "presets": {
+      "power-strip": 8.5,
+      "upright-router": 8.5,
+      "usb-hub": 8.5,
+      "remote-caddy": 8.5
+    }
+  },
+  {
+    "name": "keyhole_travel",
+    "section": "Mounting",
+    "description": "How far the keyhole slot runs up from the head hole",
+    "unit": "mm",
+    "type": "number",
+    "default": 8.0,
+    "range": {
+      "min": 4.0,
+      "step": 0.5,
+      "max": 20.0
+    },
+    "presets": {
+      "power-strip": 8.0,
+      "upright-router": 8.0,
+      "usb-hub": 8.0,
+      "remote-caddy": 8.0
+    }
+  },
+  {
+    "name": "hole_height",
+    "section": "Mounting",
+    "description": "Height of the screw holes' centre above the bed. 0 = automatic: midway up the plate, above the side walls when there is room",
+    "unit": "mm",
+    "type": "number",
+    "default": 0.0,
+    "range": {
+      "min": 0.0,
+      "step": 1.0,
+      "max": 240.0
+    },
+    "presets": {
+      "power-strip": 0.0,
+      "upright-router": 0.0,
+      "usb-hub": 0.0,
+      "remote-caddy": 90.0
+    }
+  },
+  {
+    "name": "hole_edge_margin",
+    "section": "Mounting",
+    "description": "Smallest distance from a screw hole centre to the plate's side edge",
+    "unit": "mm",
+    "type": "number",
+    "default": 14.0,
+    "range": {
+      "min": 8.0,
+      "step": 1.0,
+      "max": 60.0
+    },
+    "presets": {
+      "power-strip": 24.0,
+      "upright-router": 30.0,
+      "usb-hub": 14.0,
+      "remote-caddy": 28.0
+    }
+  },
+  {
+    "name": "front_notch_width",
+    "section": "Cable routing",
+    "description": "Width of the U-notch cut into the front lip, centred. 0 = no notch",
+    "unit": "mm",
+    "type": "number",
+    "default": 14.0,
+    "range": {
+      "min": 0.0,
+      "step": 1.0,
+      "max": 120.0
+    },
+    "presets": {
+      "power-strip": 0.0,
+      "upright-router": 0.0,
+      "usb-hub": 12.0,
+      "remote-caddy": 0.0
+    }
+  },
+  {
+    "name": "front_notch_position",
+    "section": "Cable routing",
+    "description": "Cut the notch at the left/right end of the lip instead of the centre",
+    "unit": "",
+    "type": "choice",
+    "default": "center",
+    "options": [
+      "center",
+      "left",
+      "right"
+    ],
+    "presets": {
+      "power-strip": "center",
+      "upright-router": "center",
+      "usb-hub": "center",
+      "remote-caddy": "center"
+    }
+  },
+  {
+    "name": "cord_slot",
+    "section": "Cable routing",
+    "description": "Slot through the floor along the back wall, for cords that drop down behind the device",
+    "unit": "",
+    "type": "boolean",
+    "default": true,
+    "presets": {
+      "power-strip": true,
+      "upright-router": true,
+      "usb-hub": false,
+      "remote-caddy": false
+    }
+  },
+  {
+    "name": "cord_slot_width",
+    "section": "Cable routing",
+    "description": "Cord slot width, front to back",
+    "unit": "mm",
+    "type": "number",
+    "default": 10.0,
+    "range": {
+      "min": 5.0,
+      "step": 1.0,
+      "max": 30.0
+    },
+    "presets": {
+      "power-strip": 12.0,
+      "upright-router": 12.0,
+      "usb-hub": 10.0,
+      "remote-caddy": 10.0
+    }
+  },
+  {
+    "name": "cord_slot_share",
+    "section": "Cable routing",
+    "description": "Cord slot length, as a share of the inside width",
+    "unit": "",
+    "type": "number",
+    "default": 0.5,
+    "range": {
+      "min": 0.2,
+      "step": 0.05,
+      "max": 0.9
+    },
+    "presets": {
+      "power-strip": 0.7,
+      "upright-router": 0.45,
+      "usb-hub": 0.5,
+      "remote-caddy": 0.5
+    }
+  },
+  {
+    "name": "floor_vents",
+    "section": "Ventilation",
+    "description": "Rows of vent slots through the floor (routers and power bricks run warm)",
+    "unit": "",
+    "type": "boolean",
+    "default": true,
+    "presets": {
+      "power-strip": false,
+      "upright-router": true,
+      "usb-hub": false,
+      "remote-caddy": true
+    }
+  },
+  {
+    "name": "vent_width",
+    "section": "Ventilation",
+    "description": "Vent slot width",
+    "unit": "mm",
+    "type": "number",
+    "default": 4.0,
+    "range": {
+      "min": 2.0,
+      "step": 0.5,
+      "max": 10.0
+    },
+    "presets": {
+      "power-strip": 4.0,
+      "upright-router": 4.0,
+      "usb-hub": 4.0,
+      "remote-caddy": 5.0
+    }
+  },
+  {
+    "name": "vent_rib",
+    "section": "Ventilation",
+    "description": "Solid strip between vent slots",
+    "unit": "mm",
+    "type": "number",
+    "default": 3.2,
+    "range": {
+      "min": 1.6,
+      "step": 0.4,
+      "max": 8.0
+    },
+    "presets": {
+      "power-strip": 3.2,
+      "upright-router": 3.2,
+      "usb-hub": 3.2,
+      "remote-caddy": 4.0
+    }
+  },
+  {
+    "name": "vent_margin",
+    "section": "Ventilation",
+    "description": "Keep vents this far from the inside walls",
+    "unit": "mm",
+    "type": "number",
+    "default": 6.0,
+    "range": {
+      "min": 3.0,
+      "step": 1.0,
+      "max": 20.0
+    },
+    "presets": {
+      "power-strip": 6.0,
+      "upright-router": 6.0,
+      "usb-hub": 6.0,
+      "remote-caddy": 8.0
+    }
+  },
+  {
+    "name": "label_text",
+    "section": "Label",
+    "description": "Text pressed into the front of the lip. Leave empty for none",
+    "unit": "",
+    "type": "text",
+    "default": "",
+    "presets": {
+      "power-strip": "POWER",
+      "upright-router": "",
+      "usb-hub": "",
+      "remote-caddy": "REMOTES"
+    }
+  },
+  {
+    "name": "label_size",
+    "section": "Label",
+    "description": "Label letter height",
+    "unit": "mm",
+    "type": "number",
+    "default": 5.0,
+    "range": {
+      "min": 3.0,
+      "step": 0.5,
+      "max": 12.0
+    },
+    "presets": {
+      "power-strip": 6.0,
+      "upright-router": 5.0,
+      "usb-hub": 5.0,
+      "remote-caddy": 9.0
+    }
+  },
+  {
+    "name": "label_depth",
+    "section": "Label",
+    "description": "How deep the label is pressed in. 0.6 = three 0.2 mm layers",
+    "unit": "mm",
+    "type": "number",
+    "default": 0.6,
+    "range": {
+      "min": 0.2,
+      "step": 0.2,
+      "max": 1.6
+    },
+    "presets": {
+      "power-strip": 0.6,
+      "upright-router": 0.6,
+      "usb-hub": 0.6,
+      "remote-caddy": 0.6
+    }
+  },
+  {
+    "name": "bed_chamfer",
+    "section": "Print and preview",
+    "description": "Chamfer on the first-layer edge, to hide elephant's foot",
+    "unit": "mm",
+    "type": "number",
+    "default": 0.4,
+    "range": {
+      "min": 0.0,
+      "step": 0.1,
+      "max": 1.2
+    },
+    "presets": {
+      "power-strip": 0.4,
+      "upright-router": 0.4,
+      "usb-hub": 0.4,
+      "remote-caddy": 0.4
+    }
+  },
+  {
+    "name": "show_device",
+    "section": "Print and preview",
+    "description": "Show the device as a see-through box in preview (never exported)",
+    "unit": "",
+    "type": "boolean",
+    "default": true,
+    "presets": {
+      "power-strip": true,
+      "upright-router": true,
+      "usb-hub": true,
+      "remote-caddy": true
+    }
+  },
+  {
+    "name": "facet_size",
+    "section": "Print and preview",
+    "description": "Curve smoothness: smallest facet size",
+    "unit": "mm",
+    "type": "number",
+    "default": 0.4,
+    "range": {
+      "min": 0.2,
+      "step": 0.1,
+      "max": 2.0
+    },
+    "presets": {
+      "power-strip": 0.4,
+      "upright-router": 0.4,
+      "usb-hub": 0.4,
+      "remote-caddy": 0.4
+    }
+  }
+]

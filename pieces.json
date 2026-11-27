@@ -41,6 +41,59 @@
     "coverPhone": "tamarack-budget-tracker/cover-phone.webp"
   },
   {
+    "id": "holdfast-parametric-wall-cradle",
+    "title": "Holdfast Cradle: a parametric OpenSCAD wall mount",
+    "short": "Parametric 3D model (OpenSCAD)",
+    "category": "3D modeling",
+    "label": "Concept demo",
+    "year": 2026,
+    "folder": "holdfast-parametric-wall-cradle",
+    "summary": "A parametric OpenSCAD wall mount I modelled for a made-up maker shop: enter a device's size and the cradle, screw holes, cable cutouts and vents rebuild, ready to print with no supports. It comes with 35 Customizer settings, four presets exported to STL, renders, printability notes, checks on every mesh and a 3D viewer you can turn in the browser.",
+    "cover": "holdfast-parametric-wall-cradle/cover.webp",
+    "coverAlt": "Demo page: the headline One model. Any box on your wall. next to a 3D viewer showing an orange printed cradle on a print bed, with a see-through box for the router it holds",
+    "demo": "holdfast-parametric-wall-cradle/demo/index.html",
+    "demoLabel": "Open the 3D viewer",
+    "downloads": [
+      {
+        "file": "holdfast-parametric-wall-cradle/samples/holdfast-cradle-model-and-stls-DEMO.zip",
+        "label": "Download the .scad and STLs (zip)"
+      }
+    ],
+    "gallery": [
+      {
+        "src": "holdfast-parametric-wall-cradle/screenshots/detail-presets.webp",
+        "alt": "Four preset cards with OpenSCAD renders: a long power strip tray, an upright router cradle, a shallow USB hub pocket and a deep remote caddy, each with its size, mount type and an STL button"
+      },
+      {
+        "src": "holdfast-parametric-wall-cradle/screenshots/detail-anatomy.webp",
+        "alt": "A render of the router cradle with six numbered features: teardrop keyholes, cord slot, vent slots, sloped side walls, front lip and rounded, chamfered edges"
+      },
+      {
+        "src": "holdfast-parametric-wall-cradle/screenshots/detail-viewer.webp",
+        "alt": "The 3D viewer in x-ray mode showing the remote caddy's edges, its size and triangle count, and toggles for the device, wall view, x-ray and turntable"
+      },
+      {
+        "src": "holdfast-parametric-wall-cradle/screenshots/detail-parameters.webp",
+        "alt": "Parameter table with section filters: each setting's description, default, range and its value in the four presets, with changed values marked"
+      },
+      {
+        "src": "holdfast-parametric-wall-cradle/screenshots/detail-printing.webp",
+        "alt": "Printability notes: orientation, overhangs, wall thickness, a tolerance table, starting slicer settings, a bed-size fit table and a not load-tested warning"
+      },
+      {
+        "src": "holdfast-parametric-wall-cradle/screenshots/mobile.webp",
+        "alt": "Three phone screens: the 3D viewer, a preset card and the parameter table as cards"
+      }
+    ],
+    "extraLinks": [
+      {
+        "label": "Source on GitHub",
+        "href": "https://github.com/alexmercer-projects/holdfast-parametric-wall-cradle"
+      }
+    ],
+    "labelNote": "Brindle & Bolt Workshop, its town and contact details are made up. The model, STL files and checks are real, but the parts have not been printed or load-tested, so no load rating is claimed. Not client work."
+  },
+  {
     "id": "thirty-seconds-of-quiet-film-pitch-deck",
     "title": "Thirty Seconds of Quiet: a feature film pitch deck",
     "short": "Film pitch deck",
