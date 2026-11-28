@@ -6,7 +6,7 @@ Every piece on the site comes from one entry in `pieces.json` plus one folder in
 
 1. Put the project folder in `pieces/`, for example `pieces/maple-street-menu/`.
 2. Add a `cover.webp` to that folder (see "The cover image" below).
-3. Copy an existing entry in `pieces.json`, paste it where you want the piece to appear, and change the fields.
+3. Copy an existing entry in `pieces.json`, paste it where you want the piece to appear, and change the fields. The array order is the display order, both in All and inside each category filter.
 4. Run `node build.mjs`.
 5. Open `dist/index.html` through a local server (see README.md) and check the card and the project page.
 
@@ -64,10 +64,10 @@ All file paths are relative to `pieces/`, so they start with the folder name.
 | `extraLinks` | More buttons next to the demo button: `{ "label": "Before site", "href": "<folder>/demo/before/index.html" }`. |
 | `galleryStyle` | `"ads"` for tall ad images, `"pages"` for document pages. Leave it out for screenshots. |
 | `labelNote` | Replaces the standard honesty note under the buttons, when the standard one does not fit the piece. |
-| `featured` | `true` on one piece only. It is shown large above the grid as "Fig. 1". Needs `coverWide`, `featuredTitle` and `featuredLine`. |
-| `coverWide` | A 1600 x 1000 image for the featured slot. |
+| `featured` | Optional, and currently unused. Set `true` on at most one piece to show it large above the grid as "Fig. 1". If no piece is featured, the homepage has no featured block and every piece appears in the grid, including in All. Needs `coverWide`, `featuredTitle` and `featuredLine`. |
+| `coverWide` | A 1600 x 1000 image for the featured slot, only needed if that piece is featured. |
 | `coverPhone` | Optional, featured piece only: a 780 x 940 phone screenshot shown in the featured slot on small screens. |
-| `featuredTitle`, `featuredLine` | The two lines of the featured caption. |
+| `featuredTitle`, `featuredLine` | The two lines of the featured caption, only needed if that piece is featured. |
 
 ## The cover image
 
