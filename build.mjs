@@ -46,7 +46,7 @@ pieces.forEach((p, i) => {
     ...(p.gallery || []).map((g) => g.src), ...(p.snippets || []).map((s) => s.file)].filter(Boolean);
   for (const f of need) if (!fs.existsSync(path.join(PIECES_DIR, f))) fail(`"${p.id}" points at pieces/${f}, which does not exist`);
 });
-const featured = pieces.find((p) => p.featured) || pieces[0];
+const featured = pieces.find((p) => p.featured) || null;
 
 // ---------- paths inside dist ----------
 // Each piece lives at /work/<id>/ with demo/, files/ and img/ beside its index.html.
@@ -163,7 +163,7 @@ function card(p, n) {
     if (main) exts = [main, ...exts.filter((e) => e !== main)];
   }
   const cover = `work/${p.id}/img/cover.webp`;
-  return `<li data-group="${esc(groupOf(p.category))}"${p === featured ? ' data-featured' : ''}>
+  return `<li data-group="${esc(groupOf(p.category))}"${featured && p === featured ? ' data-featured' : ''}>
   <a class="card" href="work/${p.id}/index.html">
     <span class="card__meta label"><span>N&#186; ${pad(n)} &#183; ${esc(p.category)}</span><span class="lab">${esc(p.label)}</span></span>
     <img src="${cover}" alt="${esc(p.coverAlt || p.title)}" width="1200" height="900" loading="lazy" decoding="async">
@@ -190,32 +190,32 @@ function homepage() {
   pieces.forEach((p) => { const g = groupOf(p.category); counts[g] = (counts[g] || 0) + 1; });
   const order = [...(site.filterOrder || []), ...Object.keys(counts).filter((g) => !(site.filterOrder || []).includes(g))]
     .filter((g) => counts[g]);
-  const fn = pieces.indexOf(featured) + 1;
+  const fn = featured ? pieces.indexOf(featured) + 1 : 0;
   const chips = [`<button class="chip" type="button" data-filter="all" aria-pressed="true">All <span>${pieces.length}</span></button>`,
     ...order.map((g) => `<button class="chip" type="button" data-filter="${esc(g)}" data-slug="${slugify(g)}" aria-pressed="false">${esc(g)} <span>${counts[g]}</span></button>`)].join('\n      ');
-  const fImg = featured.coverWide ? `work/${featured.id}/img/cover-wide.webp` : `work/${featured.id}/img/cover.webp`;
-  const fPhone = featured.coverPhone ? `work/${featured.id}/img/cover-phone.webp` : '';
+  const fImg = featured ? (featured.coverWide ? `work/${featured.id}/img/cover-wide.webp` : `work/${featured.id}/img/cover.webp`) : '';
+  const fPhone = featured && featured.coverPhone ? `work/${featured.id}/img/cover-phone.webp` : '';
   const FILTER_SLUGS = [...order.map((g) => slugify(g)), ...(order.includes('Automation') ? ['automations'] : [])];
   // Each tile opens the matching filtered work. "Something else" has no work of its own, so it opens that Services row.
   const STRIP = [['Websites', 'websites'], ['Spreadsheets', 'spreadsheets'], ['Ads', 'ads'], ['Writing', 'writing'], ['Automations', 'automation'], ['Something else', 'something-else']];
-  const fDl = (featured.downloads || []).find((d) => /\.xlsx$/i.test(dlName(d))) || (featured.downloads || [])[0];
+  const fDl = featured ? ((featured.downloads || []).find((d) => /\.xlsx$/i.test(dlName(d))) || (featured.downloads || [])[0]) : null;
 
   return head({
-    title: `${site.name}: websites, spreadsheets, ads and writing`,
-    description: 'Alex Mercer is a US-based freelancer who builds small-business websites, spreadsheets, ads and writing. Free sample first. Most jobs back within 24 hours.',
+    title: `${site.name} · websites, spreadsheets, ads and writing`,
+    description: 'Alex Mercer is a US-based freelancer who builds small-business websites, spreadsheets, ads and writing. You get a free sample first. Most jobs are done within 24 hours.',
     root: '', canonical: '/', image: '/assets/og.png',
   }) + `
 <main id="main">
 <section class="hero" aria-labelledby="hero-title">
   <div class="wrap">
-    <div class="hero__grid">
+    <div class="hero__grid${featured ? '' : ' hero__grid--plain'}">
       <div class="hero__copy">
         <p class="eyebrow label"><i aria-hidden="true"></i>Freelancer &#183; US-based &#183; Available now</p>
-        <h1 id="hero-title">Made with care, for small businesses that deserve better.</h1>
-        <p class="hero__intro">I'm Alex. Send me a specific job and I can get started immediately.</p>
+        <h1 id="hero-title">I build websites, spreadsheets, ads and writing for small businesses.</h1>
+        <p class="hero__intro">I'm Alex. Email me the job and I can usually start the same day.</p>
       </div>
 
-      <figure class="featured">
+      ${featured ? `<figure class="featured">
         <a class="featured__img" href="work/${featured.id}/index.html" tabindex="-1" aria-hidden="true">
           <picture>
             ${fPhone ? `<source media="(max-width: 699px)" srcset="${fPhone}" width="780" height="940">` : ''}
@@ -233,7 +233,7 @@ function homepage() {
             <a class="btn" href="work/${featured.id}/index.html">Details</a>
           </div>
         </figcaption>
-      </figure>
+      </figure>` : ''}
 
       <div class="hero__steps">
         <h2 class="label steps-head">How it works</h2>
@@ -283,7 +283,7 @@ ${pieces.map((p, i) => card(p, i + 1)).join('\n')}
     </div>
     <div class="services">
       <div class="services-head label" aria-hidden="true"><span>Service</span><span>Typical job</span><span style="text-align:right">Price</span></div>
-      ${SERVICES.map(([name, job, sample, price, extra]) => `<div class="service${extra ? ' ' + extra : ''}"${extra ? ' id="something-else"' : ''}><h3>${name}</h3><div class="service__job"><p>${job}</p>${sample ? `<p class="sample"><b>Free sample:</b> ${sample}</p>` : ''}</div><p class="price${price ? '' : ' quoted'}">${price || 'Quoted per job'}</p></div>`).join('\n      ')}
+      ${SERVICES.map(([name, job, sample, price, extra]) => `<div class="service${extra ? ' ' + extra : ''}"${extra ? ' id="something-else"' : ''}><h3>${name}</h3><div class="service__job"><p>${job}</p>${sample ? `<p class="sample"><b>Free sample.</b> ${sample}</p>` : ''}</div><p class="price${price ? '' : ' quoted'}">${price || 'Quoted per job'}</p></div>`).join('\n      ')}
     </div>
   </div>
 </section>
@@ -292,7 +292,7 @@ ${pieces.map((p, i) => card(p, i + 1)).join('\n')}
   <div class="wrap about__grid">
     <h2 id="about-title">About</h2>
     <div class="about__body">
-      <p class="about__lead">I'm Alex, a US-based freelancer. I build small websites, format and write, and make spreadsheets and ads. I work by email and can usually start right away.</p>
+      <p class="about__lead">I'm Alex, a US-based freelancer. I build small websites, write and format copy, and make spreadsheets and ads. I work by email and can usually start the same day.</p>
       <dl class="expect">
         <div><dt>Replies</dt><dd>I usually reply the same day.</dd></div>
         <div><dt>Your files</dt><dd>You own the finished files once it's paid for, and small revisions are included.</dd></div>
@@ -301,7 +301,7 @@ ${pieces.map((p, i) => card(p, i + 1)).join('\n')}
   </div>
 </section>
 </main>
-` + contact('Got a specific job?', 'Send the brief and any files to get started.') + footer('');
+` + contact('Got a specific job?', 'Email me the brief and any files and I will get started.') + footer('');
 }
 
 // ---------- project page ----------
@@ -408,7 +408,7 @@ ${gallery}${feats}${snip}${reading}
   </nav>
 </div>
 </main>
-` + contact('Want something like this?', 'Email me the job. You get a free sample first, and most jobs are done within 24 hours once the brief and files are ready.') + footer('../../');
+` + contact('Want something like this?', 'Email me the job. You get a free sample first. Most jobs are done within 24 hours once I have the brief and the files.') + footer('../../');
 }
 
 // ---------- write ----------
@@ -455,4 +455,4 @@ if (SITE_URL) {
   fs.writeFileSync(path.join(DIST, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${SITE_URL}${u}</loc></url>`).join('\n')}\n</urlset>\n`);
 }
 
-console.log(`Built ${pieces.length} pieces into dist/ (featured: ${featured.id}).`);
+console.log(`Built ${pieces.length} pieces into dist/${featured ? ` (featured: ${featured.id})` : ' (no featured piece)'}.`);

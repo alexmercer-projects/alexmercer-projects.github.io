@@ -9,7 +9,7 @@
     "folder": "tamarack-budget-tracker",
     "summary": "A budget and payment tracker for a home builder, as a live dashboard and a real Excel file. Budget vs paid by category, a filterable payments log, change orders and missing-receipt flags, all done with formulas.",
     "cover": "tamarack-budget-tracker/cover.webp",
-    "featured": true,
+    "featured": false,
     "coverWide": "tamarack-budget-tracker/cover-wide.webp",
     "coverAlt": "Tamarack Build Co. tracker dashboard: remaining balance, revised budget, paid to date and missing receipts",
     "demo": "tamarack-budget-tracker/demo/index.html",

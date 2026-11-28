@@ -23,7 +23,10 @@
     "Automation": "Automation",
     "Document automation": "Automation",
     "VA": "Automation",
-    "Pitch deck": "Writing"
+    "Pitch deck": "Writing",
+    "Marketing": "Ads",
+    "Print design": "Writing",
+    "Shopify": "Websites"
   },
   "filterOrder": [
     "Websites",

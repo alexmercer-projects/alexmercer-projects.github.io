@@ -18,8 +18,9 @@
 
     var apply = function (announce) {
       var shown = 0;
+      var featuredCount = items.filter(function (li) { return li.hasAttribute('data-featured'); }).length;
       items.forEach(function (li) {
-        // In "All", the featured piece is already shown large above the grid.
+        // In "All", a featured piece is hidden from the grid because it already sits large above it.
         var isFeatured = li.hasAttribute('data-featured');
         var match = current === 'all' ? !isFeatured : li.getAttribute('data-group') === current;
         var visible = match && (current !== 'all' || expanded || shown < initial);
@@ -27,14 +28,14 @@
         if (visible) shown++;
       });
       var total = current === 'all' ? items.length : shown;
-      if (moreWrap) moreWrap.hidden = current !== 'all' || items.length - 1 <= initial;
+      if (moreWrap) moreWrap.hidden = current !== 'all' || (items.length - featuredCount) <= initial;
       if (moreBtn) {
         moreBtn.innerHTML = expanded ? lessHtml : moreHtml;
         moreBtn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
       }
       if (status && announce) {
         status.textContent = current === 'all'
-          ? (expanded ? 'All ' + items.length + ' pieces.' : 'Showing ' + (shown + 1) + ' of ' + items.length + ' pieces.')
+          ? (expanded ? 'All ' + items.length + ' pieces.' : 'Showing ' + (shown + featuredCount) + ' of ' + items.length + ' pieces.')
           : 'Showing ' + total + (total === 1 ? ' piece' : ' pieces') + ' in this category.';
       }
     };
