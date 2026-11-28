@@ -96,33 +96,33 @@
     "labelNote": "The shop, product, prices and stock are made up, and so are the contact details. Tested offline with LiquidJS and headless Chrome; not installed on a real Shopify store, and no sales or results are claimed."
   },
   {
-    "id": "iveray-psychology",
-    "title": "Iveray Psychology: a one-page practice site",
+    "id": "linden-field-psychology",
+    "title": "Linden Field Psychology: a four-page practice site",
     "short": "Psychology practice site",
     "category": "Website",
     "label": "Concept demo",
     "year": 2026,
-    "folder": "iveray-psychology",
-    "summary": "A one-page site for a made-up psychology practice, with about, intake through an existing portal, a booking placeholder, office and telehealth details, and a 988 line. The site itself does not collect health information.",
-    "cover": "iveray-psychology/cover.webp",
-    "coverAlt": "Iveray Psychology homepage, with the headline A quiet place to start and a practice snapshot card",
-    "demo": "iveray-psychology/demo/index.html",
+    "folder": "linden-field-psychology",
+    "summary": "A four-page site for a made-up psychology practice, with home, services, about and getting started. Intake goes through a placeholder portal, sessions are by telehealth, and the site itself does not collect health information.",
+    "cover": "linden-field-psychology/cover.webp",
+    "coverAlt": "Linden Field Psychology homepage, with the headline Therapy that leaves room to talk things through and a Request an appointment button",
+    "demo": "linden-field-psychology/demo/index.html",
     "demoLabel": "Open the live site",
     "gallery": [
       {
-        "src": "iveray-psychology/screenshots/desktop.webp",
-        "alt": "The full homepage on a wide screen"
+        "src": "linden-field-psychology/screenshots/desktop.webp",
+        "alt": "The homepage on a wide screen, including the hours and introduction"
       },
       {
-        "src": "iveray-psychology/screenshots/intake.webp",
-        "alt": "The intake section, which sends people to an outside portal"
+        "src": "linden-field-psychology/screenshots/about.webp",
+        "alt": "The about page, with the placeholder portrait and demo credentials"
       },
       {
-        "src": "iveray-psychology/screenshots/mobile.webp",
+        "src": "linden-field-psychology/screenshots/mobile.webp",
         "alt": "The site on a phone"
       }
     ],
-    "labelNote": "The practice, clinician, credentials, town and contact details are made up. The intake button and booking times are for show, and the site does not collect health information. Not client work."
+    "labelNote": "The practice, clinician, credentials, town and contact details are made up. The portal link and booking times are for show, and the site does not collect health information. Not client work."
   },
   {
     "id": "alderbend-wordpress-theme",
