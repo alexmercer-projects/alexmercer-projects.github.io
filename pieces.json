@@ -1,494 +1,34 @@
 [
   {
-    "id": "tamarack-budget-tracker",
-    "title": "Tamarack Build Co.: a project budget and payment tracker",
-    "short": "Budget tracker",
-    "category": "Spreadsheet",
+    "id": "hollis-pike-repair",
+    "title": "Hollis & Pike Home Repair: a one-page trades site",
+    "short": "Trades website",
+    "category": "Website",
     "label": "Concept demo",
     "year": 2026,
-    "folder": "tamarack-budget-tracker",
-    "summary": "A budget and payment tracker for a home builder, as a live dashboard and a real Excel file. Budget vs paid by category, a filterable payments log, change orders and missing-receipt flags, all done with formulas.",
-    "cover": "tamarack-budget-tracker/cover.webp",
-    "featured": false,
-    "coverWide": "tamarack-budget-tracker/cover-wide.webp",
-    "coverAlt": "Tamarack Build Co. tracker dashboard: remaining balance, revised budget, paid to date and missing receipts",
-    "demo": "tamarack-budget-tracker/demo/index.html",
-    "demoLabel": "Open the live dashboard",
+    "folder": "hollis-pike-home-repair",
+    "summary": "A one-page site for a handyman and appliance repair business, with tap-to-call, starting prices, a service-area map, a photo quote form and an FAQ.",
+    "cover": "hollis-pike-home-repair/cover.webp",
+    "coverAlt": "Hollis and Pike Home Repair one-page site, headline: The little things, fixed properly",
+    "demo": "hollis-pike-home-repair/demo/index.html",
+    "demoLabel": "Open the live site",
     "downloads": [
-      "tamarack-budget-tracker/samples/Tamarack-budget-tracker-DEMO.xlsx",
-      "tamarack-budget-tracker/samples/Tamarack-budget-tracker-DEMO.pdf"
+      "hollis-pike-home-repair/samples/Hollis-Pike-home-repair-website-DEMO.pdf"
     ],
     "gallery": [
       {
-        "src": "tamarack-budget-tracker/screenshots/detail-budget.webp",
-        "alt": "Budget against paid, by trade, with a progress bar per category"
+        "src": "hollis-pike-home-repair/screenshots/detail-services.webp",
+        "alt": "Starting prices by job type"
       },
       {
-        "src": "tamarack-budget-tracker/screenshots/detail-payments.webp",
-        "alt": "Payments log with filters and missing-receipt flags"
+        "src": "hollis-pike-home-repair/screenshots/detail-quote.webp",
+        "alt": "Photo quote form"
       },
       {
-        "src": "tamarack-budget-tracker/screenshots/detail-workbook.webp",
-        "alt": "The Excel workbook's Budget vs Paid tab"
-      },
-      {
-        "src": "tamarack-budget-tracker/screenshots/mobile.webp",
-        "alt": "The dashboard on a phone"
+        "src": "hollis-pike-home-repair/screenshots/mobile.webp",
+        "alt": "The site on a phone, with the call button up top"
       }
-    ],
-    "featuredTitle": "Tamarack Build Co. budget and payment tracker",
-    "featuredLine": "A live dashboard and a real Excel file for a home builder.",
-    "coverPhone": "tamarack-budget-tracker/cover-phone.webp"
-  },
-  {
-    "id": "holdfast-parametric-wall-cradle",
-    "title": "Holdfast Cradle: a parametric OpenSCAD wall mount",
-    "short": "Parametric 3D model (OpenSCAD)",
-    "category": "3D modeling",
-    "label": "Concept demo",
-    "year": 2026,
-    "folder": "holdfast-parametric-wall-cradle",
-    "summary": "A parametric OpenSCAD wall mount I modelled for a made-up maker shop: enter a device's size and the cradle, screw holes, cable cutouts and vents rebuild, ready to print with no supports. It comes with 35 Customizer settings, four presets exported to STL, renders, printability notes, checks on every mesh and a 3D viewer you can turn in the browser.",
-    "cover": "holdfast-parametric-wall-cradle/cover.webp",
-    "coverAlt": "Demo page: the headline One model. Any box on your wall. next to a 3D viewer showing an orange printed cradle on a print bed, with a see-through box for the router it holds",
-    "demo": "holdfast-parametric-wall-cradle/demo/index.html",
-    "demoLabel": "Open the 3D viewer",
-    "downloads": [
-      {
-        "file": "holdfast-parametric-wall-cradle/samples/holdfast-cradle-model-and-stls-DEMO.zip",
-        "label": "Download the .scad and STLs (zip)"
-      }
-    ],
-    "gallery": [
-      {
-        "src": "holdfast-parametric-wall-cradle/screenshots/detail-presets.webp",
-        "alt": "Four preset cards with OpenSCAD renders: a long power strip tray, an upright router cradle, a shallow USB hub pocket and a deep remote caddy, each with its size, mount type and an STL button"
-      },
-      {
-        "src": "holdfast-parametric-wall-cradle/screenshots/detail-anatomy.webp",
-        "alt": "A render of the router cradle with six numbered features: teardrop keyholes, cord slot, vent slots, sloped side walls, front lip and rounded, chamfered edges"
-      },
-      {
-        "src": "holdfast-parametric-wall-cradle/screenshots/detail-viewer.webp",
-        "alt": "The 3D viewer in x-ray mode showing the remote caddy's edges, its size and triangle count, and toggles for the device, wall view, x-ray and turntable"
-      },
-      {
-        "src": "holdfast-parametric-wall-cradle/screenshots/detail-parameters.webp",
-        "alt": "Parameter table with section filters: each setting's description, default, range and its value in the four presets, with changed values marked"
-      },
-      {
-        "src": "holdfast-parametric-wall-cradle/screenshots/detail-printing.webp",
-        "alt": "Printability notes: orientation, overhangs, wall thickness, a tolerance table, starting slicer settings, a bed-size fit table and a not load-tested warning"
-      },
-      {
-        "src": "holdfast-parametric-wall-cradle/screenshots/mobile.webp",
-        "alt": "Three phone screens: the 3D viewer, a preset card and the parameter table as cards"
-      }
-    ],
-    "extraLinks": [
-      {
-        "label": "Source on GitHub",
-        "href": "https://github.com/alexmercer-projects/holdfast-parametric-wall-cradle"
-      }
-    ],
-    "labelNote": "Brindle & Bolt Workshop, its town and contact details are made up. The model, STL files and checks are real, but the parts have not been printed or load-tested, so no load rating is claimed. Not client work."
-  },
-  {
-    "id": "thirty-seconds-of-quiet-film-pitch-deck",
-    "title": "Thirty Seconds of Quiet: a feature film pitch deck",
-    "short": "Film pitch deck",
-    "category": "Pitch deck",
-    "label": "Concept demo",
-    "year": 2026,
-    "folder": "thirty-seconds-of-quiet-film-pitch-deck",
-    "summary": "A 16-slide pitch deck I wrote and designed for a made-up romantic comedy feature, from logline and tone to characters, the world, why now, audience and an illustrative format. It reads as a web page, runs full screen in present mode and prints to a 16:9 PDF, with every image drawn in SVG and CSS.",
-    "cover": "thirty-seconds-of-quiet-film-pitch-deck/cover.webp",
-    "coverAlt": "Pitch deck page: the headline A pitch deck for a romantic comedy that doesn't exist, above a title slide for Thirty Seconds of Quiet showing a Spanish-style house, palms and a jacaranda at sunset",
-    "demo": "thirty-seconds-of-quiet-film-pitch-deck/demo/index.html",
-    "demoLabel": "See the deck",
-    "downloads": [
-      {
-        "file": "thirty-seconds-of-quiet-film-pitch-deck/samples/Thirty-Seconds-of-Quiet-pitch-deck-DEMO.pdf",
-        "label": "Download the deck PDF"
-      }
-    ],
-    "gallery": [
-      {
-        "src": "thirty-seconds-of-quiet-film-pitch-deck/screenshots/detail-synopsis.webp",
-        "alt": "Synopsis slide: Twelve days, twenty-three rooms, one very loud man, with the story told in three acts"
-      },
-      {
-        "src": "thirty-seconds-of-quiet-film-pitch-deck/screenshots/detail-leads.webp",
-        "alt": "The leads slide: illustrated cards for Mara, a dialogue editor in headphones, and Theo, an estate-sale man, each with a quote and who they are, what they want and what they need"
-      },
-      {
-        "src": "thirty-seconds-of-quiet-film-pitch-deck/screenshots/detail-house.webp",
-        "alt": "The world slide: a numbered floor plan of the house with four set pieces marked"
-      },
-      {
-        "src": "thirty-seconds-of-quiet-film-pitch-deck/screenshots/detail-mood.webp",
-        "alt": "Look and feel slide: a mood board of golden-hour palms, jacaranda blossoms, a reel-to-reel tape deck, pool light and two people in a lit window"
-      },
-      {
-        "src": "thirty-seconds-of-quiet-film-pitch-deck/screenshots/detail-setpieces.webp",
-        "alt": "Set pieces slide: five illustrated scene cards, from a sofa auction to a packed house going quiet"
-      },
-      {
-        "src": "thirty-seconds-of-quiet-film-pitch-deck/screenshots/mobile.webp",
-        "alt": "Three phone screens: the top of the deck, the leads and the mood board, each slide reflowed into a card"
-      }
-    ],
-    "extraLinks": [
-      {
-        "label": "Source on GitHub",
-        "href": "https://github.com/alexmercer-projects/thirty-seconds-of-quiet-film-pitch-deck"
-      }
-    ],
-    "labelNote": "The film, Corbel Lane Pictures, the writer and every character, place and figure are made up. No talent, director, financier or distributor is attached, and the format and budget tier are illustrative. Not client work."
-  },
-  {
-    "id": "halloway-mobile-storefront",
-    "title": "Halloway & Co.: a mobile storefront you can install",
-    "short": "Mobile storefront app",
-    "category": "Mobile app",
-    "label": "Concept demo",
-    "year": 2026,
-    "folder": "halloway-mobile-storefront",
-    "summary": "A mobile-first shop for a made-up canvas and leather workshop that installs to a phone like an app and keeps working offline. Search and filters, product pages with color and size pickers that know what's sold out, a cart with discount codes and live totals, a wishlist and a demo checkout that takes no payment, all in plain JavaScript with 39 tests.",
-    "cover": "halloway-mobile-storefront/cover.webp",
-    "coverAlt": "Storefront home page: the headline Canvas and leather, cut and stitched to be used hard, next to an illustration of a tote, a backpack, a wallet and a mug, above category cards",
-    "demo": "halloway-mobile-storefront/demo/index.html",
-    "demoLabel": "Open the shop",
-    "gallery": [
-      {
-        "src": "halloway-mobile-storefront/screenshots/mobile.webp",
-        "alt": "Four phone screens: the home page, a product page, the cart and the demo checkout, each with a bottom tab bar"
-      },
-      {
-        "src": "halloway-mobile-storefront/screenshots/detail-product.webp",
-        "alt": "Product page for a waxed canvas apron: picture gallery with thumbnails, color swatches, size buttons, stock message, quantity stepper and Add to cart"
-      },
-      {
-        "src": "halloway-mobile-storefront/screenshots/detail-shop.webp",
-        "alt": "Shop page with a search box, category chips, a filters button, sorting and a four-column grid of illustrated products"
-      },
-      {
-        "src": "halloway-mobile-storefront/screenshots/detail-cart.webp",
-        "alt": "Cart with three items, quantity steppers, a free shipping bar, a discount code applied and the subtotal, discount, shipping, tax and total"
-      },
-      {
-        "src": "halloway-mobile-storefront/screenshots/detail-checkout.webp",
-        "alt": "Demo checkout showing the no-payment notice, an error summary listing the empty fields, and the order summary"
-      }
-    ],
-    "extraLinks": [
-      {
-        "label": "Source on GitHub",
-        "href": "https://github.com/alexmercer-projects/halloway-mobile-storefront"
-      }
-    ],
-    "labelNote": "The shop, its maker, the town and every product, price, stock count and code are made up. The checkout takes no payment and nothing ships. Not client work."
-  },
-  {
-    "id": "pellory-instagram-storytelling-plan",
-    "title": "Pellory Ceramics: a 30-day Instagram storytelling plan",
-    "short": "Instagram storytelling plan",
-    "category": "Social media",
-    "label": "Concept demo",
-    "year": 2026,
-    "folder": "pellory-instagram-storytelling-plan",
-    "summary": "A month of Instagram for a made-up one-person pottery studio, built around the owner's own story. A 30-day calendar, six shot-by-shot Reel storyboards, three carousels designed as real slides, length-checked captions, a Story sequence and a plan for measuring it, all shown on phone mockups.",
-    "cover": "pellory-instagram-storytelling-plan/cover.webp",
-    "coverAlt": "Instagram plan page: the headline Thirty days of Instagram for a one-woman pottery studio, next to a phone showing an illustrated profile grid for @pellory.studio",
-    "demo": "pellory-instagram-storytelling-plan/demo/index.html",
-    "demoLabel": "See the plan",
-    "downloads": [
-      {
-        "file": "pellory-instagram-storytelling-plan/samples/Pellory-Instagram-plan-DEMO.pdf",
-        "label": "Download the plan PDF"
-      }
-    ],
-    "gallery": [
-      {
-        "src": "pellory-instagram-storytelling-plan/screenshots/detail-calendar.webp",
-        "alt": "The 30-day publishing calendar: a Monday to Sunday grid color-coded by content pillar, with format, working title and goal on each day"
-      },
-      {
-        "src": "pellory-instagram-storytelling-plan/screenshots/detail-reels.webp",
-        "alt": "A Reel storyboard: a phone frame showing the current shot with its on-screen text, beside the hook, audio note and shot list"
-      },
-      {
-        "src": "pellory-instagram-storytelling-plan/screenshots/detail-carousels.webp",
-        "alt": "A carousel shown in a phone feed frame with arrows and dots, next to thumbnails of all its slides"
-      },
-      {
-        "src": "pellory-instagram-storytelling-plan/screenshots/detail-captions.webp",
-        "alt": "Caption cards with the line before more highlighted, length meters for the first line and full caption, hashtags and alt text"
-      },
-      {
-        "src": "pellory-instagram-storytelling-plan/screenshots/detail-stories.webp",
-        "alt": "A seven-frame Story sequence counting down to the kiln opening, with poll, quiz, question, countdown, slider and link stickers"
-      },
-      {
-        "src": "pellory-instagram-storytelling-plan/screenshots/mobile.webp",
-        "alt": "Three phone screens: the top of the page, a Reel storyboard and a carousel"
-      }
-    ],
-    "extraLinks": [
-      {
-        "label": "Source on GitHub",
-        "href": "https://github.com/alexmercer-projects/pellory-instagram-storytelling-plan"
-      }
-    ],
-    "labelNote": "The studio, its owner, the town and every post, handle and number are made up. Nothing here was posted, and no follower counts or results are claimed. Not client work."
-  },
-  {
-    "id": "quillmere-datasheet-generator",
-    "title": "Quillmere Lighting Co.: spreadsheet to datasheet generator",
-    "short": "Spreadsheet to datasheets",
-    "category": "Document automation",
-    "label": "Concept demo",
-    "year": 2026,
-    "folder": "quillmere-datasheet-generator",
-    "summary": "A made-up lighting company's 16-product spreadsheet turned into print-ready datasheets. One designed template, one command: a PDF for every product plus an 18-page catalog, with the data and the actual print layout checked before anything is written.",
-    "cover": "quillmere-datasheet-generator/cover.webp",
-    "coverAlt": "Datasheet generator page: the headline 16 products in one spreadsheet, 16 print-ready datasheets out, next to a preview of the Strata 420 bollard datasheet",
-    "demo": "quillmere-datasheet-generator/demo/index.html",
-    "demoLabel": "See the sheets",
-    "downloads": [
-      {
-        "file": "quillmere-datasheet-generator/demo/files/quillmere-catalog-DEMO.pdf",
-        "label": "Download the catalog PDF"
-      },
-      {
-        "file": "quillmere-datasheet-generator/demo/files/quillmere-products.xlsx",
-        "label": "Download the spreadsheet"
-      },
-      {
-        "file": "quillmere-datasheet-generator/demo/files/quillmere-template.zip",
-        "label": "Download the template"
-      }
-    ],
-    "gallery": [
-      {
-        "src": "quillmere-datasheet-generator/screenshots/sheet-QL-PTH-50.webp",
-        "alt": "The Alder 500 path light datasheet: drawing, key figures, grouped specs, dimension drawing, finish swatches and ordering code"
-      },
-      {
-        "src": "quillmere-datasheet-generator/screenshots/detail-workflow.webp",
-        "alt": "How it works: spreadsheet rows, the template with its placeholders highlighted, and the finished sheet"
-      },
-      {
-        "src": "quillmere-datasheet-generator/screenshots/detail-checks.webp",
-        "alt": "What gets checked: four rule cards, an example validation report from a broken spreadsheet, and a description that runs past its text box"
-      },
-      {
-        "src": "quillmere-datasheet-generator/screenshots/detail-sheets.webp",
-        "alt": "The gallery of all 16 generated sheets with filter chips by product family"
-      },
-      {
-        "src": "quillmere-datasheet-generator/screenshots/detail-downloads.webp",
-        "alt": "Downloads: catalog PDF, workbook, CSV, print template, sample sheets and the validation report"
-      },
-      {
-        "src": "quillmere-datasheet-generator/screenshots/mobile.webp",
-        "alt": "Three phone screens: the top of the page, the workflow steps and the sheet gallery"
-      }
-    ],
-    "extraLinks": [
-      {
-        "label": "Code and tests on GitHub",
-        "href": "https://github.com/alexmercer-projects/quillmere-datasheet-generator"
-      }
-    ],
-    "labelNote": "The company is made up, and so is every product, spec and rating in the spreadsheet. Certifications are placeholders on purpose. Not client work, and no results are claimed."
-  },
-  {
-    "id": "fernhollow-customer-list-cleanup",
-    "title": "Fernhollow Supply Co.: a customer list cleanup",
-    "short": "Customer list cleanup",
-    "category": "Data cleanup",
-    "label": "Concept demo",
-    "year": 2026,
-    "folder": "fernhollow-customer-list-cleanup",
-    "summary": "A Python script that cleaned a messy 250-row customer CSV for a made-up supply company: formats fixed, 34 repeats merged into the customers they belong to, every change logged, and the 15 judgment calls left for a person instead of guessed.",
-    "cover": "fernhollow-customer-list-cleanup/cover.webp",
-    "coverAlt": "Customer list cleanup page: 250 messy rows in, 211 clean customers out, with a panel showing 5 junk rows dropped, 34 repeats merged and 1,187 cells fixed",
-    "demo": "fernhollow-customer-list-cleanup/demo/index.html",
-    "demoLabel": "See the before and after",
-    "downloads": [
-      {
-        "file": "fernhollow-customer-list-cleanup/samples/fernhollow-customers-cleanup-DEMO.xlsx",
-        "label": "Download the workbook"
-      },
-      {
-        "file": "fernhollow-customer-list-cleanup/samples/fernhollow-customers-CLEAN.csv",
-        "label": "Download the clean CSV"
-      },
-      {
-        "file": "fernhollow-customer-list-cleanup/samples/fernhollow-cleanup-output-DEMO.zip",
-        "label": "Download all the reports"
-      }
-    ],
-    "gallery": [
-      {
-        "src": "fernhollow-customer-list-cleanup/screenshots/detail-before-after.webp",
-        "alt": "Sample rows after cleaning, with fixed cells marked in green, two unusable emails outlined for review, and the email typo fix explained below"
-      },
-      {
-        "src": "fernhollow-customer-list-cleanup/screenshots/detail-rules.webp",
-        "alt": "Rule cards with counts and a before and after example: spacing and capitals, street address, dates, account type, state, phone format"
-      },
-      {
-        "src": "fernhollow-customer-list-cleanup/screenshots/detail-repeats.webp",
-        "alt": "Four merged customers, each showing the kept row after the merge next to the row merged into it, and what was filled in or moved to Notes"
-      },
-      {
-        "src": "fernhollow-customer-list-cleanup/screenshots/detail-kept-apart.webp",
-        "alt": "Look-alike rows kept apart on purpose: same name in two towns, one email shared by two businesses, similar names in one ZIP"
-      },
-      {
-        "src": "fernhollow-customer-list-cleanup/screenshots/detail-review.webp",
-        "alt": "The list of 15 things left for a person, with the row, customer ID, field and reason"
-      },
-      {
-        "src": "fernhollow-customer-list-cleanup/screenshots/detail-log.webp",
-        "alt": "The searchable change log filtered to email domain typos, with before and after values"
-      },
-      {
-        "src": "fernhollow-customer-list-cleanup/screenshots/detail-files.webp",
-        "alt": "The downloads (workbook, clean CSV, reports, original file) and an example run of the script"
-      },
-      {
-        "src": "fernhollow-customer-list-cleanup/screenshots/mobile.webp",
-        "alt": "Three phone screens: the top of the page, a merged customer and the review list"
-      }
-    ],
-    "extraLinks": [
-      {
-        "label": "Code and tests on GitHub",
-        "href": "https://github.com/alexmercer-projects/fernhollow-customer-list-cleanup"
-      }
-    ],
-    "labelNote": "The business is made up, and so is every customer in the file: the towns, people, 555-01xx phone numbers and example.com emails. The messy file was generated to look like a real export. Not client work, and no results are claimed."
-  },
-  {
-    "id": "harborline-florida-probate-explainer",
-    "title": "Harborline Estate & Probate: a plain-English Florida probate explainer",
-    "short": "Florida probate explainer",
-    "category": "Legal writing",
-    "label": "Concept demo",
-    "year": 2026,
-    "folder": "harborline-florida-probate-explainer",
-    "summary": "A practice-area article for a made-up Florida probate firm on summary vs. formal administration, written for families rather than lawyers. Every rule links to the 2026 statute behind it, including the new $150,000 summary limit.",
-    "cover": "harborline-florida-probate-explainer/cover.webp",
-    "coverAlt": "A law firm article titled Do I have to go through probate in Florida, with an at-a-glance panel: $150,000 summary administration limit, 3 months for creditor claims, 2 years outside limit",
-    "demo": "harborline-florida-probate-explainer/demo/index.html",
-    "demoLabel": "Read the article",
-    "downloads": [
-      {
-        "file": "harborline-florida-probate-explainer/samples/harborline-florida-probate-guide-DEMO.pdf",
-        "label": "Download the PDF"
-      }
-    ],
-    "gallery": [
-      {
-        "src": "harborline-florida-probate-explainer/screenshots/detail-summary.webp",
-        "alt": "The summary administration section, with a New in 2026 note on the limit going from $75,000 to $150,000"
-      },
-      {
-        "src": "harborline-florida-probate-explainer/screenshots/detail-flow.webp",
-        "alt": "A five-step which path fits decision flow with yes and no answers"
-      },
-      {
-        "src": "harborline-florida-probate-explainer/screenshots/detail-table.webp",
-        "alt": "A comparison table of no administration, summary administration and formal administration"
-      },
-      {
-        "src": "harborline-florida-probate-explainer/screenshots/detail-faq.webp",
-        "alt": "The FAQ with one answer open, above the call to action"
-      },
-      {
-        "src": "harborline-florida-probate-explainer/screenshots/detail-notes.webp",
-        "alt": "Writer's notes: reading level 7.4, keyword plan, Florida Bar rules and accuracy checks"
-      },
-      {
-        "src": "harborline-florida-probate-explainer/screenshots/mobile.webp",
-        "alt": "Three phone screens: the top of the article, the decision flow and the comparison table as stacked cards"
-      }
-    ],
-    "extraLinks": [
-      {
-        "label": "Sources and checks on GitHub",
-        "href": "https://github.com/alexmercer-projects/harborline-florida-probate-explainer"
-      }
-    ],
-    "labelNote": "The firm, phone number and email are made up, and this is not client work. The law is real and sourced as of Nov. 22, 2026, but it has not been reviewed by a Florida-licensed attorney and is not legal advice."
-  },
-  {
-    "id": "alderbend-wordpress-theme",
-    "title": "Alderbend Landscape Co.: a from-scratch WordPress block theme",
-    "short": "WordPress block theme",
-    "category": "WordPress",
-    "label": "Concept demo",
-    "year": 2026,
-    "folder": "alderbend-wordpress-theme",
-    "summary": "A WordPress block theme written from scratch for a made-up landscaper: design tokens in theme.json, 16 patterns, two custom blocks including a quote form that validates and escapes everything, and tests. The demo site is a static copy of the real theme running in WordPress.",
-    "cover": "alderbend-wordpress-theme/cover.webp",
-    "coverAlt": "The Alderbend home page: a headline reading Yards that look settled in from the first spring, a garden illustration in an arch, and a dark strip of four facts",
-    "demo": "alderbend-wordpress-theme/demo/index.html",
-    "demoLabel": "Read the write-up and open the demo",
-    "downloads": [
-      {
-        "file": "alderbend-wordpress-theme/samples/alderbend-theme.zip",
-        "label": "Download the theme"
-      }
-    ],
-    "gallery": [
-      {
-        "src": "alderbend-wordpress-theme/screenshots/desktop-services.webp",
-        "alt": "The Services page: six service rows with checklists, then the process steps"
-      },
-      {
-        "src": "alderbend-wordpress-theme/screenshots/desktop-projects.webp",
-        "alt": "The Projects page: a three-column grid of illustrated sample projects"
-      },
-      {
-        "src": "alderbend-wordpress-theme/screenshots/desktop-project.webp",
-        "alt": "A single sample project page with a large illustration, date and category"
-      },
-      {
-        "src": "alderbend-wordpress-theme/screenshots/desktop-contact.webp",
-        "alt": "The Contact page: the quote request form beside a panel of contact details"
-      },
-      {
-        "src": "alderbend-wordpress-theme/screenshots/desktop-clay-variation.webp",
-        "alt": "The home page with the Clay and sage style variation applied from the Styles panel"
-      },
-      {
-        "src": "alderbend-wordpress-theme/screenshots/editor-contact.webp",
-        "alt": "The Contact page open in the WordPress block editor with the Quote request form block selected"
-      },
-      {
-        "src": "alderbend-wordpress-theme/screenshots/mobile-home.webp",
-        "alt": "The home page on a phone, 390 pixels wide"
-      },
-      {
-        "src": "alderbend-wordpress-theme/screenshots/mobile-menu.webp",
-        "alt": "The phone menu open: Services, Projects, About and Contact on a dark green panel"
-      }
-    ],
-    "extraLinks": [
-      {
-        "label": "Just the demo site",
-        "href": "alderbend-wordpress-theme/demo/site/index.html"
-      },
-      {
-        "label": "Source and tests on GitHub",
-        "href": "https://github.com/alexmercer-projects/alderbend-wordpress-theme"
-      }
-    ],
-    "labelNote": "The company, towns, projects and phone number are made up. Tested on a local WordPress 7.1.5 with PHP lint, PHPCS and headless Chrome; not used on a real site, and no results are claimed. The demo site is a static copy because GitHub Pages can't run PHP, so the quote form can't send anything there."
+    ]
   },
   {
     "id": "tollhaven-shopify-product-page",
@@ -556,158 +96,245 @@
     "labelNote": "The shop, product, prices and stock are made up, and so are the contact details. Tested offline with LiquidJS and headless Chrome; not installed on a real Shopify store, and no sales or results are claimed."
   },
   {
-    "id": "copperwick-quote-automation",
-    "title": "Copperwick Moving Co.: a quote request automation",
-    "short": "Form-to-sheet automation",
-    "category": "Automation",
+    "id": "iveray-psychology",
+    "title": "Iveray Psychology: a one-page practice site",
+    "short": "Psychology practice site",
+    "category": "Website",
     "label": "Concept demo",
     "year": 2026,
-    "folder": "copperwick-quote-automation",
-    "summary": "A form-to-sheet-to-email automation in Google Apps Script: every quote request logged, checked for spam, typos and repeats, routed to the right estimator and confirmed, with reminders. The demo runs the real code.",
-    "cover": "copperwick-quote-automation/cover.webp",
-    "coverAlt": "A quote form next to the script's run log, the email it would send and the Requests sheet below",
-    "demo": "copperwick-quote-automation/demo/index.html",
-    "demoLabel": "Try the automation",
-    "downloads": [
+    "folder": "iveray-psychology",
+    "summary": "A one-page site for a made-up psychology practice, with about, intake through an existing portal, a booking placeholder, office and telehealth details, and a 988 line. The site itself does not collect health information.",
+    "cover": "iveray-psychology/cover.webp",
+    "coverAlt": "Iveray Psychology homepage, with the headline A quiet place to start and a practice snapshot card",
+    "demo": "iveray-psychology/demo/index.html",
+    "demoLabel": "Open the live site",
+    "gallery": [
       {
-        "file": "copperwick-quote-automation/samples/copperwick-quote-automation-apps-script.zip",
-        "label": "Download the Apps Script project"
+        "src": "iveray-psychology/screenshots/desktop.webp",
+        "alt": "The full homepage on a wide screen"
       },
       {
-        "file": "copperwick-quote-automation/samples/Copperwick-quote-requests-DEMO.xlsx",
-        "label": "Download the sample sheet"
+        "src": "iveray-psychology/screenshots/intake.webp",
+        "alt": "The intake section, which sends people to an outside portal"
+      },
+      {
+        "src": "iveray-psychology/screenshots/mobile.webp",
+        "alt": "The site on a phone"
+      }
+    ],
+    "labelNote": "The practice, clinician, credentials, town and contact details are made up. The intake button and booking times are for show, and the site does not collect health information. Not client work."
+  },
+  {
+    "id": "alderbend-wordpress-theme",
+    "title": "Alderbend Landscape Co.: a from-scratch WordPress block theme",
+    "short": "WordPress block theme",
+    "category": "WordPress",
+    "label": "Concept demo",
+    "year": 2026,
+    "folder": "alderbend-wordpress-theme",
+    "summary": "A WordPress block theme written from scratch for a made-up landscaper, with design tokens in theme.json, 16 patterns, two custom blocks including a quote form that validates and escapes everything, and tests. The demo site is a static copy of the real theme running in WordPress.",
+    "cover": "alderbend-wordpress-theme/cover.webp",
+    "coverAlt": "The Alderbend home page: a headline reading Yards that look settled in from the first spring, a garden illustration in an arch, and a dark strip of four facts",
+    "demo": "alderbend-wordpress-theme/demo/index.html",
+    "demoLabel": "Read the write-up and open the demo",
+    "downloads": [
+      {
+        "file": "alderbend-wordpress-theme/samples/alderbend-theme.zip",
+        "label": "Download the theme"
       }
     ],
     "gallery": [
       {
-        "src": "copperwick-quote-automation/screenshots/detail-try.webp",
-        "alt": "The Try it box: a quote form, the step-by-step run log, the email it would send and the Requests sheet"
+        "src": "alderbend-wordpress-theme/screenshots/desktop-services.webp",
+        "alt": "The Services page: six service rows with checklists, then the process steps"
       },
       {
-        "src": "copperwick-quote-automation/screenshots/detail-sheet.webp",
-        "alt": "The Requests tab with reference numbers, statuses, estimators and reply-by times"
+        "src": "alderbend-wordpress-theme/screenshots/desktop-projects.webp",
+        "alt": "The Projects page: a three-column grid of illustrated sample projects"
       },
       {
-        "src": "copperwick-quote-automation/screenshots/detail-emails.webp",
-        "alt": "The confirmation to the customer, the alert to the estimator and the repeat heads-up"
+        "src": "alderbend-wordpress-theme/screenshots/desktop-project.webp",
+        "alt": "A single sample project page with a large illustration, date and category"
       },
       {
-        "src": "copperwick-quote-automation/screenshots/detail-follow.webp",
-        "alt": "A missed request on a timeline next to the morning digest email"
+        "src": "alderbend-wordpress-theme/screenshots/desktop-contact.webp",
+        "alt": "The Contact page: the quote request form beside a panel of contact details"
       },
       {
-        "src": "copperwick-quote-automation/screenshots/detail-edges.webp",
-        "alt": "Six edge cases: simultaneous requests, the email quota, moved columns, errors, typos and repeats"
+        "src": "alderbend-wordpress-theme/screenshots/desktop-clay-variation.webp",
+        "alt": "The home page with the Clay and sage style variation applied from the Styles panel"
       },
       {
-        "src": "copperwick-quote-automation/screenshots/detail-setup.webp",
-        "alt": "Setup steps, a code excerpt from Rules.gs and the test run"
+        "src": "alderbend-wordpress-theme/screenshots/editor-contact.webp",
+        "alt": "The Contact page open in the WordPress block editor with the Quote request form block selected"
       },
       {
-        "src": "copperwick-quote-automation/screenshots/mobile.webp",
-        "alt": "The page on a phone"
+        "src": "alderbend-wordpress-theme/screenshots/mobile-home.webp",
+        "alt": "The home page on a phone, 390 pixels wide"
+      },
+      {
+        "src": "alderbend-wordpress-theme/screenshots/mobile-menu.webp",
+        "alt": "The phone menu open: Services, Projects, About and Contact on a dark green panel"
       }
     ],
     "extraLinks": [
       {
-        "label": "Source and tests on GitHub",
-        "href": "https://github.com/alexmercer-projects/copperwick-quote-automation"
-      }
-    ],
-    "labelNote": "The business is made up, and so is every name and contact detail. Tested offline against stand-ins for Google's services; not installed for a real business, and no results are claimed."
-  },
-  {
-    "id": "thistledown-wholesale-prospects",
-    "title": "Thistledown Coffee Roasters: a wholesale prospect list",
-    "short": "Wholesale lead list",
-    "category": "Lead research",
-    "label": "Concept demo",
-    "year": 2026,
-    "folder": "thistledown-wholesale-prospects",
-    "summary": "A lead list of 40 places that could buy a small roaster's coffee wholesale, each with a contact, a fit score, the reason it fits and its source. As a page you can filter and a real Excel file.",
-    "cover": "thistledown-wholesale-prospects/cover.webp",
-    "coverAlt": "The prospect list: search and filters above rows with the business, town, contact, a fit score, why it fits, a suggested first line and the source",
-    "demo": "thistledown-wholesale-prospects/demo/index.html",
-    "demoLabel": "Open the prospect list",
-    "downloads": [
-      {
-        "file": "thistledown-wholesale-prospects/samples/Thistledown-wholesale-prospects-DEMO.xlsx",
-        "label": "Download the Excel file"
+        "label": "Just the demo site",
+        "href": "alderbend-wordpress-theme/demo/site/index.html"
       },
       {
-        "file": "thistledown-wholesale-prospects/samples/Thistledown-wholesale-prospects-DEMO.csv",
-        "label": "Download the CSV"
+        "label": "Source and tests on GitHub",
+        "href": "https://github.com/alexmercer-projects/alderbend-wordpress-theme"
       }
+    ],
+    "labelNote": "The company, towns, projects and phone number are made up. Tested on a local WordPress 7.1.5 with PHP lint, PHPCS and headless Chrome; not used on a real site, and no results are claimed. The demo site is a static copy because GitHub Pages can't run PHP, so the quote form can't send anything there."
+  },
+  {
+    "id": "juniper-rye",
+    "title": "Juniper & Rye Bakehouse",
+    "short": "Bakery website",
+    "category": "Website",
+    "label": "Concept demo",
+    "year": 2026,
+    "folder": "juniper-rye-bakehouse",
+    "summary": "A one-page site for a bakery, with today's bake, the menu, preorders and hours.",
+    "cover": "juniper-rye-bakehouse/cover.webp",
+    "coverAlt": "Juniper and Rye Bakehouse homepage, headline: Slow bread for fast mornings",
+    "demo": "juniper-rye-bakehouse/demo/index.html",
+    "demoLabel": "Open the live site",
+    "downloads": [],
+    "gallery": [
+      {
+        "src": "juniper-rye-bakehouse/screenshots/juniper-rye-today.webp",
+        "alt": "On the rack today: the bake board"
+      },
+      {
+        "src": "juniper-rye-bakehouse/screenshots/juniper-rye-menu.webp",
+        "alt": "The three-column menu"
+      },
+      {
+        "src": "juniper-rye-bakehouse/screenshots/mobile.webp",
+        "alt": "The site on a phone"
+      }
+    ],
+    "features": [
+      "Today's bake board with items and prices",
+      "Full menu",
+      "Preorder-for-pickup section",
+      "Hours and location block",
+      "Self-hosted fonts (Fraunces, DM Sans)"
+    ]
+  },
+  {
+    "id": "wrenmill-community-house",
+    "title": "Wrenmill Community House: a nonprofit homepage",
+    "short": "Nonprofit website",
+    "category": "Website",
+    "label": "Concept demo",
+    "year": 2026,
+    "folder": "wrenmill-community-house",
+    "summary": "A one-page homepage for a small-town community house, with this week's events, programs, hall rental, volunteer sign-up and a donate block.",
+    "cover": "wrenmill-community-house/cover.webp",
+    "coverAlt": "Wrenmill Community House homepage with an illustrated hall",
+    "demo": "wrenmill-community-house/demo/index.html",
+    "demoLabel": "Open the live homepage",
+    "downloads": [
+      "wrenmill-community-house/samples/Wrenmill-Community-House-homepage-DEMO.pdf"
     ],
     "gallery": [
       {
-        "src": "thistledown-wholesale-prospects/screenshots/detail-list.webp",
-        "alt": "The list with search, filters and the first rows, each with a contact, fit score, reason and source"
+        "src": "wrenmill-community-house/screenshots/detail-programs.webp",
+        "alt": "Programs that stay on the calendar"
       },
       {
-        "src": "thistledown-wholesale-prospects/screenshots/detail-scoring.webp",
-        "alt": "The five-part scoring rubric, a worked example and counts by type and town"
+        "src": "wrenmill-community-house/screenshots/detail-hall.webp",
+        "alt": "Hall rental rates and desk hours"
       },
       {
-        "src": "thistledown-wholesale-prospects/screenshots/detail-checks.webp",
-        "alt": "Quality checks: sources and dates on every row, no guessed emails, places left off and duplicates merged"
-      },
-      {
-        "src": "thistledown-wholesale-prospects/screenshots/detail-handoff.webp",
-        "alt": "What each workbook tab does and a suggested first week grouped by town"
-      },
-      {
-        "src": "thistledown-wholesale-prospects/screenshots/mobile.webp",
-        "alt": "The page on a phone"
+        "src": "wrenmill-community-house/screenshots/mobile.webp",
+        "alt": "The homepage on a phone"
       }
     ]
   },
   {
-    "id": "brightwater-resume-makeover",
-    "title": "Noa Brightwater: a resume and LinkedIn makeover",
-    "short": "Resume makeover",
-    "category": "Writing",
+    "id": "halloway-mobile-storefront",
+    "title": "Halloway & Co.: a mobile storefront you can install",
+    "short": "Mobile storefront app",
+    "category": "Mobile app",
     "label": "Concept demo",
     "year": 2026,
-    "folder": "brightwater-resume-makeover",
-    "summary": "A cluttered resume rebuilt as a clean, ATS-friendly one-pager, plus a rewritten LinkedIn headline and About section.",
-    "cover": "brightwater-resume-makeover/cover.webp",
-    "coverAlt": "Before and after: a cluttered two-column resume with numbered problem pins next to the rebuilt one-column version",
-    "demo": "brightwater-resume-makeover/demo/index.html",
-    "demoLabel": "Open the before and after",
-    "downloads": [
+    "folder": "halloway-mobile-storefront",
+    "summary": "A mobile-first shop for a made-up canvas and leather workshop that installs to a phone like an app and keeps working offline. Search and filters, product pages with color and size pickers that know what's sold out, a cart with discount codes and live totals, a wishlist and a demo checkout that takes no payment, all in plain JavaScript with 39 tests.",
+    "cover": "halloway-mobile-storefront/cover.webp",
+    "coverAlt": "Storefront home page: the headline Canvas and leather, cut and stitched to be used hard, next to an illustration of a tote, a backpack, a wallet and a mug, above category cards",
+    "demo": "halloway-mobile-storefront/demo/index.html",
+    "demoLabel": "Open the shop",
+    "gallery": [
       {
-        "file": "brightwater-resume-makeover/samples/Noa-Brightwater-resume-DEMO.pdf",
-        "label": "Download the resume PDF"
+        "src": "halloway-mobile-storefront/screenshots/mobile.webp",
+        "alt": "Four phone screens: the home page, a product page, the cart and the demo checkout, each with a bottom tab bar"
       },
       {
-        "file": "brightwater-resume-makeover/samples/Noa-Brightwater-resume-DEMO.docx",
-        "label": "Download the Word file"
+        "src": "halloway-mobile-storefront/screenshots/detail-product.webp",
+        "alt": "Product page for a waxed canvas apron: picture gallery with thumbnails, color swatches, size buttons, stock message, quantity stepper and Add to cart"
+      },
+      {
+        "src": "halloway-mobile-storefront/screenshots/detail-shop.webp",
+        "alt": "Shop page with a search box, category chips, a filters button, sorting and a four-column grid of illustrated products"
+      },
+      {
+        "src": "halloway-mobile-storefront/screenshots/detail-cart.webp",
+        "alt": "Cart with three items, quantity steppers, a free shipping bar, a discount code applied and the subtotal, discount, shipping, tax and total"
+      },
+      {
+        "src": "halloway-mobile-storefront/screenshots/detail-checkout.webp",
+        "alt": "Demo checkout showing the no-payment notice, an error summary listing the empty fields, and the order summary"
       }
+    ],
+    "extraLinks": [
+      {
+        "label": "Source on GitHub",
+        "href": "https://github.com/alexmercer-projects/halloway-mobile-storefront"
+      }
+    ],
+    "labelNote": "The shop, its maker, the town and every product, price, stock count and code are made up. The checkout takes no payment and nothing ships. Not client work."
+  },
+  {
+    "id": "ridgeline-plumbing-local-seo",
+    "title": "Ridgeline Plumbing Co.: local SEO before and after",
+    "short": "Local SEO demo",
+    "category": "SEO",
+    "label": "Concept demo",
+    "year": 2026,
+    "folder": "ridgeline-plumbing-local-seo",
+    "summary": "A before-and-after on-page SEO rewrite for a plumber's site, covering titles, meta descriptions, headings, alt text, business details and tap-to-call.",
+    "cover": "ridgeline-plumbing-local-seo/cover.webp",
+    "coverAlt": "Local SEO scorecard comparing before and after on-page checks",
+    "demo": "ridgeline-plumbing-local-seo/demo/case-study.html",
+    "demoLabel": "Open the case sheet",
+    "extraLinks": [
+      {
+        "label": "Before site",
+        "href": "ridgeline-plumbing-local-seo/demo/before/index.html"
+      },
+      {
+        "label": "After site",
+        "href": "ridgeline-plumbing-local-seo/demo/after/index.html"
+      }
+    ],
+    "downloads": [
+      "ridgeline-plumbing-local-seo/samples/local-seo-before-after-demo.pdf"
     ],
     "gallery": [
       {
-        "src": "brightwater-resume-makeover/screenshots/detail-compare.webp",
-        "alt": "The old resume and the new one side by side, with eight numbered fixes"
+        "src": "ridgeline-plumbing-local-seo/screenshots/before.webp",
+        "alt": "Before: the made-up plumber's homepage with missing titles and no tap-to-call"
       },
       {
-        "src": "brightwater-resume-makeover/screenshots/detail-bullets.webp",
-        "alt": "Bullet rewrites, from duties to results"
-      },
-      {
-        "src": "brightwater-resume-makeover/screenshots/detail-keywords.webp",
-        "alt": "Keyword check against a sample posting, before and after"
-      },
-      {
-        "src": "brightwater-resume-makeover/screenshots/detail-linkedin.webp",
-        "alt": "LinkedIn headline and About section, before and after"
-      },
-      {
-        "src": "brightwater-resume-makeover/screenshots/mobile.webp",
-        "alt": "The page on a phone"
+        "src": "ridgeline-plumbing-local-seo/screenshots/after.webp",
+        "alt": "After: the same page with a clear title, one H1 and tap-to-call"
       }
-    ],
-    "labelNote": "The job seeker, employers and school are made up. Every number is example data, and no results are claimed."
+    ]
   },
   {
     "id": "alderwick-accessibility-audit",
@@ -717,7 +344,7 @@
     "label": "Concept demo",
     "year": 2026,
     "folder": "alderwick-accessibility-audit",
-    "summary": "A sample WCAG 2.2 AA audit for a clinic website: 19 example findings with who each one affects and the fix, before-and-after code, a remediation plan and a PDF of the report.",
+    "summary": "A sample WCAG 2.2 AA audit for a clinic website. It has 19 example findings with who each one affects and the fix, before-and-after code, a remediation plan and a PDF of the report.",
     "cover": "alderwick-accessibility-audit/cover.webp",
     "coverAlt": "The audit summary: 19 barriers on the clinic site, 3 that stop patients cold, with issue counts by severity",
     "demo": "alderwick-accessibility-audit/demo/index.html",
@@ -741,6 +368,44 @@
         "src": "alderwick-accessibility-audit/screenshots/mobile.webp",
         "alt": "The report on a phone"
       }
+    ]
+  },
+  {
+    "id": "cedar-clerk-wp-formatting",
+    "title": "Cedar & Clerk: WordPress article formatting",
+    "short": "WordPress formatting",
+    "category": "WordPress",
+    "label": "Concept demo",
+    "year": 2026,
+    "folder": "cedar-clerk-wp-formatting",
+    "summary": "A fully formatted WordPress article with SEO fields, a featured image, internal links and a reusable checklist for the rest of a batch.",
+    "cover": "cedar-clerk-wp-formatting/cover.webp",
+    "coverAlt": "Cedar and Clerk formatted article beside a WordPress settings panel",
+    "demo": "cedar-clerk-wp-formatting/demo/index.html",
+    "demoLabel": "Open the formatted article",
+    "downloads": [
+      "cedar-clerk-wp-formatting/samples/Cedar-Clerk-WP-formatting-sample-DEMO.pdf"
+    ],
+    "gallery": [
+      {
+        "src": "cedar-clerk-wp-formatting/screenshots/desktop-article.webp",
+        "alt": "The formatted article with its featured image"
+      },
+      {
+        "src": "cedar-clerk-wp-formatting/screenshots/pdf-page-2.webp",
+        "alt": "Page 2 of the PDF: the formatting checklist for the rest of a batch"
+      },
+      {
+        "src": "cedar-clerk-wp-formatting/screenshots/phone-top.webp",
+        "alt": "The article on a phone"
+      }
+    ],
+    "features": [
+      "Clean H2/H3 structure and a readable long-form layout",
+      "Featured image with alt text (1400 x 788, compressed)",
+      "SEO title (54/60) and meta description (146/155)",
+      "Categories, tags, a clean slug, and three descriptive internal links",
+      "Page 2 of the PDF is a formatting checklist, including a mixed-batch order"
     ]
   },
   {
@@ -799,140 +464,690 @@
     ]
   },
   {
-    "id": "hollis-pike-repair",
-    "title": "Hollis & Pike Home Repair: a one-page trades site",
-    "short": "Trades website",
-    "category": "Website",
+    "id": "kestrelle-launch-plan",
+    "title": "Kestrelle: a UAE marketing launch plan",
+    "short": "Launch plan",
+    "category": "Marketing",
     "label": "Concept demo",
     "year": 2026,
-    "folder": "hollis-pike-home-repair",
-    "summary": "A one-page site for a handyman and appliance repair business: tap-to-call, starting prices, a service-area map, a photo quote form and an FAQ.",
-    "cover": "hollis-pike-home-repair/cover.webp",
-    "coverAlt": "Hollis and Pike Home Repair one-page site, headline: The little things, fixed properly",
-    "demo": "hollis-pike-home-repair/demo/index.html",
-    "demoLabel": "Open the live site",
+    "folder": "kestrelle-launch-plan",
+    "summary": "An 8-week go-to-market plan for a made-up skincare brand opening in Dubai. It covers positioning, a sourced market snapshot, channels, a week-by-week timeline, creator outreach, an example budget, KPIs and tests.",
+    "cover": "kestrelle-launch-plan/cover.webp",
+    "coverAlt": "The top of the Kestrelle launch plan, with the headline, a short intro and an at-a-glance card for market, lead product, plan length and example budget",
+    "demo": "kestrelle-launch-plan/demo/index.html",
+    "demoLabel": "Open the launch plan",
     "downloads": [
-      "hollis-pike-home-repair/samples/Hollis-Pike-home-repair-website-DEMO.pdf"
+      {
+        "file": "kestrelle-launch-plan/samples/Kestrelle-launch-plan-DEMO.pdf",
+        "label": "Download the plan PDF"
+      }
     ],
     "gallery": [
       {
-        "src": "hollis-pike-home-repair/screenshots/detail-services.webp",
-        "alt": "Starting prices by job type"
+        "src": "kestrelle-launch-plan/screenshots/detail-timeline.webp",
+        "alt": "The 8-week timeline as a chart, with the launch in week 5 and the expected Ramadan window shaded"
       },
       {
-        "src": "hollis-pike-home-repair/screenshots/detail-quote.webp",
-        "alt": "Photo quote form"
+        "src": "kestrelle-launch-plan/screenshots/detail-market.webp",
+        "alt": "Market snapshot with sourced figures and a box of assumptions to check"
       },
       {
-        "src": "hollis-pike-home-repair/screenshots/mobile.webp",
-        "alt": "The site on a phone, with the call button up top"
+        "src": "kestrelle-launch-plan/screenshots/detail-calendar.webp",
+        "alt": "Launch-week content calendar, one card per day"
+      },
+      {
+        "src": "kestrelle-launch-plan/screenshots/detail-creators.webp",
+        "alt": "Creator tiers, outreach steps and a sample first message"
+      },
+      {
+        "src": "kestrelle-launch-plan/screenshots/detail-budget.webp",
+        "alt": "Example budget split as a donut chart and a table"
+      },
+      {
+        "src": "kestrelle-launch-plan/screenshots/mobile.webp",
+        "alt": "The plan on a phone"
+      }
+    ],
+    "labelNote": "The brand, products, prices, creators, budget and targets are made up. The market facts are real and sourced on the page. Nothing here has run, and no results are claimed."
+  },
+  {
+    "id": "pellory-instagram-storytelling-plan",
+    "title": "Pellory Ceramics: a 30-day Instagram storytelling plan",
+    "short": "Instagram storytelling plan",
+    "category": "Social media",
+    "label": "Concept demo",
+    "year": 2026,
+    "folder": "pellory-instagram-storytelling-plan",
+    "summary": "A month of Instagram for a made-up one-person pottery studio, built around the owner's own story. A 30-day calendar, six shot-by-shot Reel storyboards, three carousels designed as real slides, length-checked captions, a Story sequence and a plan for measuring it, all shown on phone mockups.",
+    "cover": "pellory-instagram-storytelling-plan/cover.webp",
+    "coverAlt": "Instagram plan page: the headline Thirty days of Instagram for a one-woman pottery studio, next to a phone showing an illustrated profile grid for @pellory.studio",
+    "demo": "pellory-instagram-storytelling-plan/demo/index.html",
+    "demoLabel": "See the plan",
+    "downloads": [
+      {
+        "file": "pellory-instagram-storytelling-plan/samples/Pellory-Instagram-plan-DEMO.pdf",
+        "label": "Download the plan PDF"
+      }
+    ],
+    "gallery": [
+      {
+        "src": "pellory-instagram-storytelling-plan/screenshots/detail-calendar.webp",
+        "alt": "The 30-day publishing calendar: a Monday to Sunday grid color-coded by content pillar, with format, working title and goal on each day"
+      },
+      {
+        "src": "pellory-instagram-storytelling-plan/screenshots/detail-reels.webp",
+        "alt": "A Reel storyboard: a phone frame showing the current shot with its on-screen text, beside the hook, audio note and shot list"
+      },
+      {
+        "src": "pellory-instagram-storytelling-plan/screenshots/detail-carousels.webp",
+        "alt": "A carousel shown in a phone feed frame with arrows and dots, next to thumbnails of all its slides"
+      },
+      {
+        "src": "pellory-instagram-storytelling-plan/screenshots/detail-captions.webp",
+        "alt": "Caption cards with the line before more highlighted, length meters for the first line and full caption, hashtags and alt text"
+      },
+      {
+        "src": "pellory-instagram-storytelling-plan/screenshots/detail-stories.webp",
+        "alt": "A seven-frame Story sequence counting down to the kiln opening, with poll, quiz, question, countdown, slider and link stickers"
+      },
+      {
+        "src": "pellory-instagram-storytelling-plan/screenshots/mobile.webp",
+        "alt": "Three phone screens: the top of the page, a Reel storyboard and a carousel"
+      }
+    ],
+    "extraLinks": [
+      {
+        "label": "Source on GitHub",
+        "href": "https://github.com/alexmercer-projects/pellory-instagram-storytelling-plan"
+      }
+    ],
+    "labelNote": "The studio, its owner, the town and every post, handle and number are made up. Nothing here was posted, and no follower counts or results are claimed. Not client work."
+  },
+  {
+    "id": "kettle-creek-ads",
+    "title": "Kettle Creek Heating & Air: short-form ad scripts",
+    "short": "Ad script pack",
+    "category": "Ads",
+    "label": "Concept demo",
+    "year": 2026,
+    "folder": "kettle-creek-heating-air",
+    "summary": "Twelve hooks and three timed 9:16 video ad scripts for a heating and air company, plus a test plan.",
+    "cover": "kettle-creek-heating-air/cover.webp",
+    "coverAlt": "Kettle Creek ad script pack, headline: Twelve hooks. Three scripts. One cold night.",
+    "demo": "kettle-creek-heating-air/demo/index.html",
+    "demoLabel": "Open the script pack",
+    "downloads": [
+      "kettle-creek-heating-air/samples/Kettle-Creek-ad-script-pack-DEMO.pdf"
+    ],
+    "gallery": [
+      {
+        "src": "kettle-creek-heating-air/screenshots/kettle-creek-hooks.webp",
+        "alt": "The hook bank, grouped by angle"
+      },
+      {
+        "src": "kettle-creek-heating-air/screenshots/kettle-creek-scripts.webp",
+        "alt": "A timed 9:16 script"
+      },
+      {
+        "src": "kettle-creek-heating-air/screenshots/mobile.webp",
+        "alt": "The pack on a phone"
       }
     ]
   },
   {
-    "id": "wrenmill-community-house",
-    "title": "Wrenmill Community House: a nonprofit homepage",
-    "short": "Nonprofit website",
-    "category": "Website",
+    "id": "painter-facebook-posting-plan",
+    "title": "Facebook posting plan for a painting company",
+    "short": "Facebook posting plan",
+    "category": "Ads",
     "label": "Concept demo",
     "year": 2026,
-    "folder": "wrenmill-community-house",
-    "summary": "A one-page homepage for a small-town community house: this week's events, programs, hall rental, volunteer sign-up and a donate block.",
-    "cover": "wrenmill-community-house/cover.webp",
-    "coverAlt": "Wrenmill Community House homepage with an illustrated hall",
-    "demo": "wrenmill-community-house/demo/index.html",
-    "demoLabel": "Open the live homepage",
+    "folder": "painter-facebook-posting-plan",
+    "summary": "A one-page organic Facebook plan for a house painter, with five ready-to-use post drafts.",
+    "cover": "painter-facebook-posting-plan/cover.webp",
+    "coverAlt": "A finished Facebook before-and-after post for a made-up painting company, beside the four post types to rotate",
+    "demo": null,
     "downloads": [
-      "wrenmill-community-house/samples/Wrenmill-Community-House-homepage-DEMO.pdf"
+      "painter-facebook-posting-plan/samples/Facebook-posting-plan-EXAMPLE.pdf"
+    ],
+    "reading": "painter-facebook-posting-plan/samples/facebook-posting-plan-EXAMPLE.md",
+    "gallery": []
+  },
+  {
+    "id": "tamarack-budget-tracker",
+    "title": "Tamarack Build Co.: a project budget and payment tracker",
+    "short": "Budget tracker",
+    "category": "Spreadsheet",
+    "label": "Concept demo",
+    "year": 2026,
+    "folder": "tamarack-budget-tracker",
+    "summary": "A budget and payment tracker for a home builder, built as a live dashboard and a real Excel file. It shows budget versus paid by category, a filterable payments log, change orders and missing-receipt flags, all done with formulas.",
+    "cover": "tamarack-budget-tracker/cover.webp",
+    "featured": false,
+    "coverWide": "tamarack-budget-tracker/cover-wide.webp",
+    "coverAlt": "Tamarack Build Co. tracker dashboard: remaining balance, revised budget, paid to date and missing receipts",
+    "demo": "tamarack-budget-tracker/demo/index.html",
+    "demoLabel": "Open the live dashboard",
+    "downloads": [
+      "tamarack-budget-tracker/samples/Tamarack-budget-tracker-DEMO.xlsx",
+      "tamarack-budget-tracker/samples/Tamarack-budget-tracker-DEMO.pdf"
     ],
     "gallery": [
       {
-        "src": "wrenmill-community-house/screenshots/detail-programs.webp",
-        "alt": "Programs that stay on the calendar"
+        "src": "tamarack-budget-tracker/screenshots/detail-budget.webp",
+        "alt": "Budget against paid, by trade, with a progress bar per category"
       },
       {
-        "src": "wrenmill-community-house/screenshots/detail-hall.webp",
-        "alt": "Hall rental rates and desk hours"
+        "src": "tamarack-budget-tracker/screenshots/detail-payments.webp",
+        "alt": "Payments log with filters and missing-receipt flags"
       },
       {
-        "src": "wrenmill-community-house/screenshots/mobile.webp",
-        "alt": "The homepage on a phone"
+        "src": "tamarack-budget-tracker/screenshots/detail-workbook.webp",
+        "alt": "The Excel workbook's Budget vs Paid tab"
+      },
+      {
+        "src": "tamarack-budget-tracker/screenshots/mobile.webp",
+        "alt": "The dashboard on a phone"
+      }
+    ],
+    "featuredTitle": "Tamarack Build Co. budget and payment tracker",
+    "featuredLine": "A live dashboard and a real Excel file for a home builder.",
+    "coverPhone": "tamarack-budget-tracker/cover-phone.webp"
+  },
+  {
+    "id": "fernhollow-customer-list-cleanup",
+    "title": "Fernhollow Supply Co.: a customer list cleanup",
+    "short": "Customer list cleanup",
+    "category": "Data cleanup",
+    "label": "Concept demo",
+    "year": 2026,
+    "folder": "fernhollow-customer-list-cleanup",
+    "summary": "A Python script that cleaned a messy 250-row customer CSV for a made-up supply company. Formats were fixed, 34 repeats were merged into the customers they belong to, every change was logged, and the 15 judgment calls were left for a person instead of guessed.",
+    "cover": "fernhollow-customer-list-cleanup/cover.webp",
+    "coverAlt": "Customer list cleanup page: 250 messy rows in, 211 clean customers out, with a panel showing 5 junk rows dropped, 34 repeats merged and 1,187 cells fixed",
+    "demo": "fernhollow-customer-list-cleanup/demo/index.html",
+    "demoLabel": "See the before and after",
+    "downloads": [
+      {
+        "file": "fernhollow-customer-list-cleanup/samples/fernhollow-customers-cleanup-DEMO.xlsx",
+        "label": "Download the workbook"
+      },
+      {
+        "file": "fernhollow-customer-list-cleanup/samples/fernhollow-customers-CLEAN.csv",
+        "label": "Download the clean CSV"
+      },
+      {
+        "file": "fernhollow-customer-list-cleanup/samples/fernhollow-cleanup-output-DEMO.zip",
+        "label": "Download all the reports"
+      }
+    ],
+    "gallery": [
+      {
+        "src": "fernhollow-customer-list-cleanup/screenshots/detail-before-after.webp",
+        "alt": "Sample rows after cleaning, with fixed cells marked in green, two unusable emails outlined for review, and the email typo fix explained below"
+      },
+      {
+        "src": "fernhollow-customer-list-cleanup/screenshots/detail-rules.webp",
+        "alt": "Rule cards with counts and a before and after example: spacing and capitals, street address, dates, account type, state, phone format"
+      },
+      {
+        "src": "fernhollow-customer-list-cleanup/screenshots/detail-repeats.webp",
+        "alt": "Four merged customers, each showing the kept row after the merge next to the row merged into it, and what was filled in or moved to Notes"
+      },
+      {
+        "src": "fernhollow-customer-list-cleanup/screenshots/detail-kept-apart.webp",
+        "alt": "Look-alike rows kept apart on purpose: same name in two towns, one email shared by two businesses, similar names in one ZIP"
+      },
+      {
+        "src": "fernhollow-customer-list-cleanup/screenshots/detail-review.webp",
+        "alt": "The list of 15 things left for a person, with the row, customer ID, field and reason"
+      },
+      {
+        "src": "fernhollow-customer-list-cleanup/screenshots/detail-log.webp",
+        "alt": "The searchable change log filtered to email domain typos, with before and after values"
+      },
+      {
+        "src": "fernhollow-customer-list-cleanup/screenshots/detail-files.webp",
+        "alt": "The downloads (workbook, clean CSV, reports, original file) and an example run of the script"
+      },
+      {
+        "src": "fernhollow-customer-list-cleanup/screenshots/mobile.webp",
+        "alt": "Three phone screens: the top of the page, a merged customer and the review list"
+      }
+    ],
+    "extraLinks": [
+      {
+        "label": "Code and tests on GitHub",
+        "href": "https://github.com/alexmercer-projects/fernhollow-customer-list-cleanup"
+      }
+    ],
+    "labelNote": "The business is made up, and so is every customer in the file, including the towns, people, 555-01xx phone numbers and example.com emails. The messy file was generated to look like a real export. Not client work, and no results are claimed."
+  },
+  {
+    "id": "roofing-claim-job-tracker",
+    "title": "Roofing claim and job tracker",
+    "short": "Roofing job tracker",
+    "category": "Spreadsheet",
+    "label": "Concept demo",
+    "year": 2026,
+    "folder": "roofing-claim-job-tracker",
+    "summary": "An Excel tracker for insurance-claim roofing jobs, plus a plain-language homeowner leave-behind.",
+    "cover": "roofing-claim-job-tracker/cover.webp",
+    "coverAlt": "The Jobs sheet of the roofing tracker with three SAMPLE rows",
+    "demo": null,
+    "downloads": [
+      "roofing-claim-job-tracker/samples/Roofing-Claim-Job-Tracker-SAMPLE.xlsx",
+      "roofing-claim-job-tracker/samples/Hail-Claim-Homeowner-Leave-Behind-SAMPLE.pdf"
+    ],
+    "reading": "roofing-claim-job-tracker/samples/Hail-Claim-Homeowner-Leave-Behind-SAMPLE.md",
+    "readingTitle": "The homeowner leave-behind",
+    "gallery": []
+  },
+  {
+    "id": "thistledown-wholesale-prospects",
+    "title": "Thistledown Coffee Roasters: a wholesale prospect list",
+    "short": "Wholesale lead list",
+    "category": "Lead research",
+    "label": "Concept demo",
+    "year": 2026,
+    "folder": "thistledown-wholesale-prospects",
+    "summary": "A lead list of 40 places that could buy a small roaster's coffee wholesale, each with a contact, a fit score, the reason it fits and its source. As a page you can filter and a real Excel file.",
+    "cover": "thistledown-wholesale-prospects/cover.webp",
+    "coverAlt": "The prospect list: search and filters above rows with the business, town, contact, a fit score, why it fits, a suggested first line and the source",
+    "demo": "thistledown-wholesale-prospects/demo/index.html",
+    "demoLabel": "Open the prospect list",
+    "downloads": [
+      {
+        "file": "thistledown-wholesale-prospects/samples/Thistledown-wholesale-prospects-DEMO.xlsx",
+        "label": "Download the Excel file"
+      },
+      {
+        "file": "thistledown-wholesale-prospects/samples/Thistledown-wholesale-prospects-DEMO.csv",
+        "label": "Download the CSV"
+      }
+    ],
+    "gallery": [
+      {
+        "src": "thistledown-wholesale-prospects/screenshots/detail-list.webp",
+        "alt": "The list with search, filters and the first rows, each with a contact, fit score, reason and source"
+      },
+      {
+        "src": "thistledown-wholesale-prospects/screenshots/detail-scoring.webp",
+        "alt": "The five-part scoring rubric, a worked example and counts by type and town"
+      },
+      {
+        "src": "thistledown-wholesale-prospects/screenshots/detail-checks.webp",
+        "alt": "Quality checks: sources and dates on every row, no guessed emails, places left off and duplicates merged"
+      },
+      {
+        "src": "thistledown-wholesale-prospects/screenshots/detail-handoff.webp",
+        "alt": "What each workbook tab does and a suggested first week grouped by town"
+      },
+      {
+        "src": "thistledown-wholesale-prospects/screenshots/mobile.webp",
+        "alt": "The page on a phone"
       }
     ]
   },
   {
-    "id": "juniper-rye",
-    "title": "Juniper & Rye Bakehouse",
-    "short": "Bakery website",
-    "category": "Website",
+    "id": "quillmere-datasheet-generator",
+    "title": "Quillmere Lighting Co.: spreadsheet to datasheet generator",
+    "short": "Spreadsheet to datasheets",
+    "category": "Document automation",
     "label": "Concept demo",
     "year": 2026,
-    "folder": "juniper-rye-bakehouse",
-    "summary": "A one-page site for a bakery: today's bake, the menu, preorders and hours.",
-    "cover": "juniper-rye-bakehouse/cover.webp",
-    "coverAlt": "Juniper and Rye Bakehouse homepage, headline: Slow bread for fast mornings",
-    "demo": "juniper-rye-bakehouse/demo/index.html",
-    "demoLabel": "Open the live site",
+    "folder": "quillmere-datasheet-generator",
+    "summary": "A made-up lighting company's 16-product spreadsheet turned into print-ready datasheets. One designed template and one command give you a PDF for every product plus an 18-page catalog, with the data and the actual print layout checked before anything is written.",
+    "cover": "quillmere-datasheet-generator/cover.webp",
+    "coverAlt": "Datasheet generator page: the headline 16 products in one spreadsheet, 16 print-ready datasheets out, next to a preview of the Strata 420 bollard datasheet",
+    "demo": "quillmere-datasheet-generator/demo/index.html",
+    "demoLabel": "See the sheets",
+    "downloads": [
+      {
+        "file": "quillmere-datasheet-generator/demo/files/quillmere-catalog-DEMO.pdf",
+        "label": "Download the catalog PDF"
+      },
+      {
+        "file": "quillmere-datasheet-generator/demo/files/quillmere-products.xlsx",
+        "label": "Download the spreadsheet"
+      },
+      {
+        "file": "quillmere-datasheet-generator/demo/files/quillmere-template.zip",
+        "label": "Download the template"
+      }
+    ],
+    "gallery": [
+      {
+        "src": "quillmere-datasheet-generator/screenshots/sheet-QL-PTH-50.webp",
+        "alt": "The Alder 500 path light datasheet: drawing, key figures, grouped specs, dimension drawing, finish swatches and ordering code"
+      },
+      {
+        "src": "quillmere-datasheet-generator/screenshots/detail-workflow.webp",
+        "alt": "How it works: spreadsheet rows, the template with its placeholders highlighted, and the finished sheet"
+      },
+      {
+        "src": "quillmere-datasheet-generator/screenshots/detail-checks.webp",
+        "alt": "What gets checked: four rule cards, an example validation report from a broken spreadsheet, and a description that runs past its text box"
+      },
+      {
+        "src": "quillmere-datasheet-generator/screenshots/detail-sheets.webp",
+        "alt": "The gallery of all 16 generated sheets with filter chips by product family"
+      },
+      {
+        "src": "quillmere-datasheet-generator/screenshots/detail-downloads.webp",
+        "alt": "Downloads: catalog PDF, workbook, CSV, print template, sample sheets and the validation report"
+      },
+      {
+        "src": "quillmere-datasheet-generator/screenshots/mobile.webp",
+        "alt": "Three phone screens: the top of the page, the workflow steps and the sheet gallery"
+      }
+    ],
+    "extraLinks": [
+      {
+        "label": "Code and tests on GitHub",
+        "href": "https://github.com/alexmercer-projects/quillmere-datasheet-generator"
+      }
+    ],
+    "labelNote": "The company is made up, and so is every product, spec and rating in the spreadsheet. Certifications are placeholders on purpose. Not client work, and no results are claimed."
+  },
+  {
+    "id": "copperwick-quote-automation",
+    "title": "Copperwick Moving Co.: a quote request automation",
+    "short": "Form-to-sheet automation",
+    "category": "Automation",
+    "label": "Concept demo",
+    "year": 2026,
+    "folder": "copperwick-quote-automation",
+    "summary": "A form-to-sheet-to-email automation in Google Apps Script. Every quote request is logged, checked for spam, typos and repeats, routed to the right estimator and confirmed, with reminders. The demo runs the real code.",
+    "cover": "copperwick-quote-automation/cover.webp",
+    "coverAlt": "A quote form next to the script's run log, the email it would send and the Requests sheet below",
+    "demo": "copperwick-quote-automation/demo/index.html",
+    "demoLabel": "Try the automation",
+    "downloads": [
+      {
+        "file": "copperwick-quote-automation/samples/copperwick-quote-automation-apps-script.zip",
+        "label": "Download the Apps Script project"
+      },
+      {
+        "file": "copperwick-quote-automation/samples/Copperwick-quote-requests-DEMO.xlsx",
+        "label": "Download the sample sheet"
+      }
+    ],
+    "gallery": [
+      {
+        "src": "copperwick-quote-automation/screenshots/detail-try.webp",
+        "alt": "The Try it box: a quote form, the step-by-step run log, the email it would send and the Requests sheet"
+      },
+      {
+        "src": "copperwick-quote-automation/screenshots/detail-sheet.webp",
+        "alt": "The Requests tab with reference numbers, statuses, estimators and reply-by times"
+      },
+      {
+        "src": "copperwick-quote-automation/screenshots/detail-emails.webp",
+        "alt": "The confirmation to the customer, the alert to the estimator and the repeat heads-up"
+      },
+      {
+        "src": "copperwick-quote-automation/screenshots/detail-follow.webp",
+        "alt": "A missed request on a timeline next to the morning digest email"
+      },
+      {
+        "src": "copperwick-quote-automation/screenshots/detail-edges.webp",
+        "alt": "Six edge cases: simultaneous requests, the email quota, moved columns, errors, typos and repeats"
+      },
+      {
+        "src": "copperwick-quote-automation/screenshots/detail-setup.webp",
+        "alt": "Setup steps, a code excerpt from Rules.gs and the test run"
+      },
+      {
+        "src": "copperwick-quote-automation/screenshots/mobile.webp",
+        "alt": "The page on a phone"
+      }
+    ],
+    "extraLinks": [
+      {
+        "label": "Source and tests on GitHub",
+        "href": "https://github.com/alexmercer-projects/copperwick-quote-automation"
+      }
+    ],
+    "labelNote": "The business is made up, and so is every name and contact detail. Tested offline against stand-ins for Google's services; not installed for a real business, and no results are claimed."
+  },
+  {
+    "id": "prestashop-quickbooks-import",
+    "title": "PrestaShop to QuickBooks Desktop import",
+    "short": "Order import script",
+    "category": "Automation",
+    "label": "Spec sample",
+    "year": 2026,
+    "folder": "prestashop-quickbooks-import",
+    "summary": "A PHP script that turns PrestaShop orders into a QuickBooks Desktop IIF invoice file, with test orders you can run offline.",
+    "cover": "prestashop-quickbooks-import/cover.webp",
+    "coverAlt": "A sample PrestaShop order beside the QuickBooks invoice lines it becomes",
+    "demo": null,
+    "downloads": [
+      "prestashop-quickbooks-import/samples/prestashop-quickbooks-sample.zip",
+      "prestashop-quickbooks-import/samples/ps2qb.php"
+    ],
+    "gallery": [],
+    "snippets": [
+      {
+        "file": "prestashop-quickbooks-import/samples/sample-orders.iif",
+        "caption": "sample-orders.iif: what the script wrote for the two test orders"
+      }
+    ],
+    "labelNote": "A sample script with made-up test orders. Not a paid implementation, and not connected to anyone's QuickBooks file."
+  },
+  {
+    "id": "writer-civic-va-setup",
+    "title": "Week-1 VA setup for a writer and civic lead",
+    "short": "VA operating setup",
+    "category": "VA",
+    "label": "Concept demo",
+    "year": 2026,
+    "folder": "writer-civic-va-setup",
+    "summary": "A week-one system that turns voice notes into tasks, stages publishing work and keeps civic follow-ups from slipping.",
+    "cover": "writer-civic-va-setup/cover.webp",
+    "coverAlt": "Week-1 operating setup page with a tracker table",
+    "demo": "writer-civic-va-setup/demo/index.html",
+    "demoLabel": "Open the setup page",
     "downloads": [],
     "gallery": [
       {
-        "src": "juniper-rye-bakehouse/screenshots/juniper-rye-today.webp",
-        "alt": "On the rack today: the bake board"
-      },
-      {
-        "src": "juniper-rye-bakehouse/screenshots/juniper-rye-menu.webp",
-        "alt": "The three-column menu"
-      },
-      {
-        "src": "juniper-rye-bakehouse/screenshots/mobile.webp",
-        "alt": "The site on a phone"
+        "src": "writer-civic-va-setup/screenshots/mobile.webp",
+        "alt": "The setup page on a phone"
       }
-    ],
-    "features": [
-      "Today's bake board with items and prices",
-      "Full menu",
-      "Preorder-for-pickup section",
-      "Hours and location block",
-      "Self-hosted fonts (Fraunces, DM Sans)"
     ]
   },
   {
-    "id": "cedar-clerk-wp-formatting",
-    "title": "Cedar & Clerk: WordPress article formatting",
-    "short": "WordPress formatting",
-    "category": "WordPress",
+    "id": "ashlow-rivers-annual-report",
+    "title": "Ashlow Rivers Trust: an illustrated annual review",
+    "short": "Annual review",
+    "category": "Print design",
     "label": "Concept demo",
     "year": 2026,
-    "folder": "cedar-clerk-wp-formatting",
-    "summary": "A fully formatted WordPress article with SEO fields, a featured image, internal links and a reusable checklist for the rest of a batch.",
-    "cover": "cedar-clerk-wp-formatting/cover.webp",
-    "coverAlt": "Cedar and Clerk formatted article beside a WordPress settings panel",
-    "demo": "cedar-clerk-wp-formatting/demo/index.html",
-    "demoLabel": "Open the formatted article",
+    "folder": "ashlow-rivers-annual-report",
+    "summary": "A 16-page illustrated annual review for a made-up UK rivers charity, as a print-ready A4 PDF and a web page where you can browse the spreads and the layout system.",
+    "cover": "ashlow-rivers-annual-report/cover.webp",
+    "coverAlt": "The Ashlow Rivers Trust annual review on the web, with the title and a download for the 16-page A4 PDF",
+    "demo": "ashlow-rivers-annual-report/demo/index.html",
+    "demoLabel": "Open the review",
     "downloads": [
-      "cedar-clerk-wp-formatting/samples/Cedar-Clerk-WP-formatting-sample-DEMO.pdf"
+      {
+        "file": "ashlow-rivers-annual-report/samples/ashlow-rivers-trust-annual-review-2025-26-DEMO.pdf",
+        "label": "Download the review PDF"
+      }
     ],
     "gallery": [
       {
-        "src": "cedar-clerk-wp-formatting/screenshots/desktop-article.webp",
-        "alt": "The formatted article with its featured image"
+        "src": "ashlow-rivers-annual-report/screenshots/page-01-cover.webp",
+        "alt": "The printed cover, Where the water goes"
       },
       {
-        "src": "cedar-clerk-wp-formatting/screenshots/pdf-page-2.webp",
-        "alt": "Page 2 of the PDF: the formatting checklist for the rest of a batch"
+        "src": "ashlow-rivers-annual-report/screenshots/page-04-glance.webp",
+        "alt": "A year-at-a-glance page of example figures"
       },
       {
-        "src": "cedar-clerk-wp-formatting/screenshots/phone-top.webp",
-        "alt": "The article on a phone"
+        "src": "ashlow-rivers-annual-report/screenshots/page-06-health.webp",
+        "alt": "A river health page with charts and a catchment map"
+      },
+      {
+        "src": "ashlow-rivers-annual-report/screenshots/page-13-finances.webp",
+        "alt": "The finances page, with example income and spending"
       }
     ],
-    "features": [
-      "Clean H2/H3 structure and a readable long-form layout",
-      "Featured image with alt text (1400 x 788, compressed)",
-      "SEO title (54/60) and meta description (146/155)",
-      "Categories, tags, a clean slug, and three descriptive internal links",
-      "Page 2 of the PDF is a formatting checklist, including a mixed-batch order"
-    ]
+    "galleryStyle": "pages",
+    "labelNote": "The charity, places, people and every figure are made up. Numbers are example data. Not client work, and no results are claimed."
+  },
+  {
+    "id": "harborline-florida-probate-explainer",
+    "title": "Harborline Estate & Probate: a plain-English Florida probate explainer",
+    "short": "Florida probate explainer",
+    "category": "Legal writing",
+    "label": "Concept demo",
+    "year": 2026,
+    "folder": "harborline-florida-probate-explainer",
+    "summary": "A practice-area article for a made-up Florida probate firm on summary vs. formal administration, written for families rather than lawyers. Every rule links to the 2026 statute behind it, including the new $150,000 summary limit.",
+    "cover": "harborline-florida-probate-explainer/cover.webp",
+    "coverAlt": "A law firm article titled Do I have to go through probate in Florida, with an at-a-glance panel: $150,000 summary administration limit, 3 months for creditor claims, 2 years outside limit",
+    "demo": "harborline-florida-probate-explainer/demo/index.html",
+    "demoLabel": "Read the article",
+    "downloads": [
+      {
+        "file": "harborline-florida-probate-explainer/samples/harborline-florida-probate-guide-DEMO.pdf",
+        "label": "Download the PDF"
+      }
+    ],
+    "gallery": [
+      {
+        "src": "harborline-florida-probate-explainer/screenshots/detail-summary.webp",
+        "alt": "The summary administration section, with a New in 2026 note on the limit going from $75,000 to $150,000"
+      },
+      {
+        "src": "harborline-florida-probate-explainer/screenshots/detail-flow.webp",
+        "alt": "A five-step which path fits decision flow with yes and no answers"
+      },
+      {
+        "src": "harborline-florida-probate-explainer/screenshots/detail-table.webp",
+        "alt": "A comparison table of no administration, summary administration and formal administration"
+      },
+      {
+        "src": "harborline-florida-probate-explainer/screenshots/detail-faq.webp",
+        "alt": "The FAQ with one answer open, above the call to action"
+      },
+      {
+        "src": "harborline-florida-probate-explainer/screenshots/detail-notes.webp",
+        "alt": "Writer's notes: reading level 7.4, keyword plan, Florida Bar rules and accuracy checks"
+      },
+      {
+        "src": "harborline-florida-probate-explainer/screenshots/mobile.webp",
+        "alt": "Three phone screens: the top of the article, the decision flow and the comparison table as stacked cards"
+      }
+    ],
+    "extraLinks": [
+      {
+        "label": "Sources and checks on GitHub",
+        "href": "https://github.com/alexmercer-projects/harborline-florida-probate-explainer"
+      }
+    ],
+    "labelNote": "The firm, phone number and email are made up, and this is not client work. The law is real and sourced as of Nov. 22, 2026, but it has not been reviewed by a Florida-licensed attorney and is not legal advice."
+  },
+  {
+    "id": "brightwater-resume-makeover",
+    "title": "Noa Brightwater: a resume and LinkedIn makeover",
+    "short": "Resume makeover",
+    "category": "Writing",
+    "label": "Concept demo",
+    "year": 2026,
+    "folder": "brightwater-resume-makeover",
+    "summary": "A cluttered resume rebuilt as a clean, ATS-friendly one-pager, plus a rewritten LinkedIn headline and About section.",
+    "cover": "brightwater-resume-makeover/cover.webp",
+    "coverAlt": "Before and after: a cluttered two-column resume with numbered problem pins next to the rebuilt one-column version",
+    "demo": "brightwater-resume-makeover/demo/index.html",
+    "demoLabel": "Open the before and after",
+    "downloads": [
+      {
+        "file": "brightwater-resume-makeover/samples/Noa-Brightwater-resume-DEMO.pdf",
+        "label": "Download the resume PDF"
+      },
+      {
+        "file": "brightwater-resume-makeover/samples/Noa-Brightwater-resume-DEMO.docx",
+        "label": "Download the Word file"
+      }
+    ],
+    "gallery": [
+      {
+        "src": "brightwater-resume-makeover/screenshots/detail-compare.webp",
+        "alt": "The old resume and the new one side by side, with eight numbered fixes"
+      },
+      {
+        "src": "brightwater-resume-makeover/screenshots/detail-bullets.webp",
+        "alt": "Bullet rewrites, from duties to results"
+      },
+      {
+        "src": "brightwater-resume-makeover/screenshots/detail-keywords.webp",
+        "alt": "Keyword check against a sample posting, before and after"
+      },
+      {
+        "src": "brightwater-resume-makeover/screenshots/detail-linkedin.webp",
+        "alt": "LinkedIn headline and About section, before and after"
+      },
+      {
+        "src": "brightwater-resume-makeover/screenshots/mobile.webp",
+        "alt": "The page on a phone"
+      }
+    ],
+    "labelNote": "The job seeker, employers and school are made up. Every number is example data, and no results are claimed."
+  },
+  {
+    "id": "thirty-seconds-of-quiet-film-pitch-deck",
+    "title": "Thirty Seconds of Quiet: a feature film pitch deck",
+    "short": "Film pitch deck",
+    "category": "Pitch deck",
+    "label": "Concept demo",
+    "year": 2026,
+    "folder": "thirty-seconds-of-quiet-film-pitch-deck",
+    "summary": "A 16-slide pitch deck I wrote and designed for a made-up romantic comedy feature, from logline and tone to characters, the world, why now, audience and an illustrative format. It reads as a web page, runs full screen in present mode and prints to a 16:9 PDF, with every image drawn in SVG and CSS.",
+    "cover": "thirty-seconds-of-quiet-film-pitch-deck/cover.webp",
+    "coverAlt": "Pitch deck page: the headline A pitch deck for a romantic comedy that doesn't exist, above a title slide for Thirty Seconds of Quiet showing a Spanish-style house, palms and a jacaranda at sunset",
+    "demo": "thirty-seconds-of-quiet-film-pitch-deck/demo/index.html",
+    "demoLabel": "See the deck",
+    "downloads": [
+      {
+        "file": "thirty-seconds-of-quiet-film-pitch-deck/samples/Thirty-Seconds-of-Quiet-pitch-deck-DEMO.pdf",
+        "label": "Download the deck PDF"
+      }
+    ],
+    "gallery": [
+      {
+        "src": "thirty-seconds-of-quiet-film-pitch-deck/screenshots/detail-synopsis.webp",
+        "alt": "Synopsis slide: Twelve days, twenty-three rooms, one very loud man, with the story told in three acts"
+      },
+      {
+        "src": "thirty-seconds-of-quiet-film-pitch-deck/screenshots/detail-leads.webp",
+        "alt": "The leads slide: illustrated cards for Mara, a dialogue editor in headphones, and Theo, an estate-sale man, each with a quote and who they are, what they want and what they need"
+      },
+      {
+        "src": "thirty-seconds-of-quiet-film-pitch-deck/screenshots/detail-house.webp",
+        "alt": "The world slide: a numbered floor plan of the house with four set pieces marked"
+      },
+      {
+        "src": "thirty-seconds-of-quiet-film-pitch-deck/screenshots/detail-mood.webp",
+        "alt": "Look and feel slide: a mood board of golden-hour palms, jacaranda blossoms, a reel-to-reel tape deck, pool light and two people in a lit window"
+      },
+      {
+        "src": "thirty-seconds-of-quiet-film-pitch-deck/screenshots/detail-setpieces.webp",
+        "alt": "Set pieces slide: five illustrated scene cards, from a sofa auction to a packed house going quiet"
+      },
+      {
+        "src": "thirty-seconds-of-quiet-film-pitch-deck/screenshots/mobile.webp",
+        "alt": "Three phone screens: the top of the deck, the leads and the mood board, each slide reflowed into a card"
+      }
+    ],
+    "extraLinks": [
+      {
+        "label": "Source on GitHub",
+        "href": "https://github.com/alexmercer-projects/thirty-seconds-of-quiet-film-pitch-deck"
+      }
+    ],
+    "labelNote": "The film, Corbel Lane Pictures, the writer and every character, place and figure are made up. No talent, director, financier or distributor is attached, and the format and budget tier are illustrative. Not client work."
   },
   {
     "id": "ordinary-mechanics-explainer",
@@ -966,35 +1181,43 @@
     ]
   },
   {
-    "id": "kettle-creek-ads",
-    "title": "Kettle Creek Heating & Air: short-form ad scripts",
-    "short": "Ad script pack",
-    "category": "Ads",
-    "label": "Concept demo",
+    "id": "keyset-vs-offset",
+    "title": "OFFSET pagination gets slower every page. Keyset doesn't.",
+    "short": "Keyset pagination",
+    "category": "Technical writing",
+    "label": "Spec sample",
     "year": 2026,
-    "folder": "kettle-creek-heating-air",
-    "summary": "Twelve hooks and three timed 9:16 video ad scripts for a heating and air company, plus a test plan.",
-    "cover": "kettle-creek-heating-air/cover.webp",
-    "coverAlt": "Kettle Creek ad script pack, headline: Twelve hooks. Three scripts. One cold night.",
-    "demo": "kettle-creek-heating-air/demo/index.html",
-    "demoLabel": "Open the script pack",
+    "folder": "keyset-vs-offset-postgresql",
+    "summary": "A four-page write-up with a benchmark you can rerun. Skipping 1.9 million rows took 345 ms with OFFSET and 0.02 ms with keyset pagination.",
+    "cover": "keyset-vs-offset-postgresql/cover.webp",
+    "coverAlt": "Line chart: OFFSET query time climbs to 345 ms while keyset stays near zero",
+    "demo": null,
     "downloads": [
-      "kettle-creek-heating-air/samples/Kettle-Creek-ad-script-pack-DEMO.pdf"
+      "keyset-vs-offset-postgresql/samples/Keyset-vs-OFFSET-PostgreSQL-SAMPLE.pdf",
+      "keyset-vs-offset-postgresql/samples/keyset_bench.py"
     ],
     "gallery": [
       {
-        "src": "kettle-creek-heating-air/screenshots/kettle-creek-hooks.webp",
-        "alt": "The hook bank, grouped by angle"
+        "src": "keyset-vs-offset-postgresql/screenshots/keyset-pdf-p1.webp",
+        "alt": "Page 1 of the write-up"
       },
       {
-        "src": "kettle-creek-heating-air/screenshots/kettle-creek-scripts.webp",
-        "alt": "A timed 9:16 script"
-      },
-      {
-        "src": "kettle-creek-heating-air/screenshots/mobile.webp",
-        "alt": "The pack on a phone"
+        "src": "keyset-vs-offset-postgresql/screenshots/keyset-pdf-p2.webp",
+        "alt": "Page 2 of the write-up"
       }
-    ]
+    ],
+    "galleryStyle": "pages",
+    "snippets": [
+      {
+        "file": "keyset-vs-offset-postgresql/samples/keyset_bench.py",
+        "lines": [
+          1,
+          32
+        ],
+        "caption": "The first lines of keyset_bench.py"
+      }
+    ],
+    "labelNote": "An unpublished technical write-up with a benchmark you can rerun. Not client work, and not a published clip."
   },
   {
     "id": "pine-ember-etsy-listing",
@@ -1049,7 +1272,7 @@
     "label": "Spec sample",
     "year": 2026,
     "folder": "spec-writing-pack",
-    "summary": "Three writing samples: a blog post on artist statements, a newsletter and social set repurposed from it, and an SEO category page on impact-resistant shingles.",
+    "summary": "Three writing samples. One is a blog post on artist statements, one is a newsletter and social set written from it, and one is an SEO category page on impact-resistant shingles.",
     "cover": "spec-writing-pack/cover.webp",
     "coverAlt": "Three writing samples: a blog post, an email and an SEO page",
     "demo": null,
@@ -1084,164 +1307,57 @@
     "galleryStyle": "pages"
   },
   {
-    "id": "ridgeline-plumbing-local-seo",
-    "title": "Ridgeline Plumbing Co.: local SEO before and after",
-    "short": "Local SEO demo",
-    "category": "SEO",
+    "id": "holdfast-parametric-wall-cradle",
+    "title": "Holdfast Cradle: a parametric OpenSCAD wall mount",
+    "short": "Parametric 3D model (OpenSCAD)",
+    "category": "3D modeling",
     "label": "Concept demo",
     "year": 2026,
-    "folder": "ridgeline-plumbing-local-seo",
-    "summary": "A before-and-after on-page SEO rewrite for a plumber's site: titles, meta descriptions, headings, alt text, business details and tap-to-call.",
-    "cover": "ridgeline-plumbing-local-seo/cover.webp",
-    "coverAlt": "Local SEO scorecard comparing before and after on-page checks",
-    "demo": "ridgeline-plumbing-local-seo/demo/case-study.html",
-    "demoLabel": "Open the case sheet",
+    "folder": "holdfast-parametric-wall-cradle",
+    "summary": "A parametric OpenSCAD wall mount I modelled for a made-up maker shop. Enter a device's size and the cradle, screw holes, cable cutouts and vents rebuild, ready to print with no supports. It comes with 35 Customizer settings, four presets exported to STL, renders, printability notes, checks on every mesh and a 3D viewer you can turn in the browser.",
+    "cover": "holdfast-parametric-wall-cradle/cover.webp",
+    "coverAlt": "Demo page: the headline One model. Any box on your wall. next to a 3D viewer showing an orange printed cradle on a print bed, with a see-through box for the router it holds",
+    "demo": "holdfast-parametric-wall-cradle/demo/index.html",
+    "demoLabel": "Open the 3D viewer",
+    "downloads": [
+      {
+        "file": "holdfast-parametric-wall-cradle/samples/holdfast-cradle-model-and-stls-DEMO.zip",
+        "label": "Download the .scad and STLs (zip)"
+      }
+    ],
+    "gallery": [
+      {
+        "src": "holdfast-parametric-wall-cradle/screenshots/detail-presets.webp",
+        "alt": "Four preset cards with OpenSCAD renders: a long power strip tray, an upright router cradle, a shallow USB hub pocket and a deep remote caddy, each with its size, mount type and an STL button"
+      },
+      {
+        "src": "holdfast-parametric-wall-cradle/screenshots/detail-anatomy.webp",
+        "alt": "A render of the router cradle with six numbered features: teardrop keyholes, cord slot, vent slots, sloped side walls, front lip and rounded, chamfered edges"
+      },
+      {
+        "src": "holdfast-parametric-wall-cradle/screenshots/detail-viewer.webp",
+        "alt": "The 3D viewer in x-ray mode showing the remote caddy's edges, its size and triangle count, and toggles for the device, wall view, x-ray and turntable"
+      },
+      {
+        "src": "holdfast-parametric-wall-cradle/screenshots/detail-parameters.webp",
+        "alt": "Parameter table with section filters: each setting's description, default, range and its value in the four presets, with changed values marked"
+      },
+      {
+        "src": "holdfast-parametric-wall-cradle/screenshots/detail-printing.webp",
+        "alt": "Printability notes: orientation, overhangs, wall thickness, a tolerance table, starting slicer settings, a bed-size fit table and a not load-tested warning"
+      },
+      {
+        "src": "holdfast-parametric-wall-cradle/screenshots/mobile.webp",
+        "alt": "Three phone screens: the 3D viewer, a preset card and the parameter table as cards"
+      }
+    ],
     "extraLinks": [
       {
-        "label": "Before site",
-        "href": "ridgeline-plumbing-local-seo/demo/before/index.html"
-      },
-      {
-        "label": "After site",
-        "href": "ridgeline-plumbing-local-seo/demo/after/index.html"
+        "label": "Source on GitHub",
+        "href": "https://github.com/alexmercer-projects/holdfast-parametric-wall-cradle"
       }
     ],
-    "downloads": [
-      "ridgeline-plumbing-local-seo/samples/local-seo-before-after-demo.pdf"
-    ],
-    "gallery": [
-      {
-        "src": "ridgeline-plumbing-local-seo/screenshots/before.webp",
-        "alt": "Before: the made-up plumber's homepage with missing titles and no tap-to-call"
-      },
-      {
-        "src": "ridgeline-plumbing-local-seo/screenshots/after.webp",
-        "alt": "After: the same page with a clear title, one H1 and tap-to-call"
-      }
-    ]
-  },
-  {
-    "id": "painter-facebook-posting-plan",
-    "title": "Facebook posting plan for a painting company",
-    "short": "Facebook posting plan",
-    "category": "Ads",
-    "label": "Concept demo",
-    "year": 2026,
-    "folder": "painter-facebook-posting-plan",
-    "summary": "A one-page organic Facebook plan for a house painter, with five ready-to-use post drafts.",
-    "cover": "painter-facebook-posting-plan/cover.webp",
-    "coverAlt": "A finished Facebook before-and-after post for a made-up painting company, beside the four post types to rotate",
-    "demo": null,
-    "downloads": [
-      "painter-facebook-posting-plan/samples/Facebook-posting-plan-EXAMPLE.pdf"
-    ],
-    "reading": "painter-facebook-posting-plan/samples/facebook-posting-plan-EXAMPLE.md",
-    "gallery": []
-  },
-  {
-    "id": "writer-civic-va-setup",
-    "title": "Week-1 VA setup for a writer and civic lead",
-    "short": "VA operating setup",
-    "category": "VA",
-    "label": "Concept demo",
-    "year": 2026,
-    "folder": "writer-civic-va-setup",
-    "summary": "A week-one system that turns voice notes into tasks, stages publishing work and keeps civic follow-ups from slipping.",
-    "cover": "writer-civic-va-setup/cover.webp",
-    "coverAlt": "Week-1 operating setup page with a tracker table",
-    "demo": "writer-civic-va-setup/demo/index.html",
-    "demoLabel": "Open the setup page",
-    "downloads": [],
-    "gallery": [
-      {
-        "src": "writer-civic-va-setup/screenshots/mobile.webp",
-        "alt": "The setup page on a phone"
-      }
-    ]
-  },
-  {
-    "id": "prestashop-quickbooks-import",
-    "title": "PrestaShop to QuickBooks Desktop import",
-    "short": "Order import script",
-    "category": "Automation",
-    "label": "Spec sample",
-    "year": 2026,
-    "folder": "prestashop-quickbooks-import",
-    "summary": "A PHP script that turns PrestaShop orders into a QuickBooks Desktop IIF invoice file, with test orders you can run offline.",
-    "cover": "prestashop-quickbooks-import/cover.webp",
-    "coverAlt": "A sample PrestaShop order beside the QuickBooks invoice lines it becomes",
-    "demo": null,
-    "downloads": [
-      "prestashop-quickbooks-import/samples/prestashop-quickbooks-sample.zip",
-      "prestashop-quickbooks-import/samples/ps2qb.php"
-    ],
-    "gallery": [],
-    "snippets": [
-      {
-        "file": "prestashop-quickbooks-import/samples/sample-orders.iif",
-        "caption": "sample-orders.iif: what the script wrote for the two test orders"
-      }
-    ],
-    "labelNote": "A sample script with made-up test orders. Not a paid implementation, and not connected to anyone's QuickBooks file."
-  },
-  {
-    "id": "roofing-claim-job-tracker",
-    "title": "Roofing claim and job tracker",
-    "short": "Roofing job tracker",
-    "category": "Spreadsheet",
-    "label": "Concept demo",
-    "year": 2026,
-    "folder": "roofing-claim-job-tracker",
-    "summary": "An Excel tracker for insurance-claim roofing jobs, plus a plain-language homeowner leave-behind.",
-    "cover": "roofing-claim-job-tracker/cover.webp",
-    "coverAlt": "The Jobs sheet of the roofing tracker with three SAMPLE rows",
-    "demo": null,
-    "downloads": [
-      "roofing-claim-job-tracker/samples/Roofing-Claim-Job-Tracker-SAMPLE.xlsx",
-      "roofing-claim-job-tracker/samples/Hail-Claim-Homeowner-Leave-Behind-SAMPLE.pdf"
-    ],
-    "reading": "roofing-claim-job-tracker/samples/Hail-Claim-Homeowner-Leave-Behind-SAMPLE.md",
-    "readingTitle": "The homeowner leave-behind",
-    "gallery": []
-  },
-  {
-    "id": "keyset-vs-offset",
-    "title": "OFFSET pagination gets slower every page. Keyset doesn't.",
-    "short": "Keyset pagination",
-    "category": "Technical writing",
-    "label": "Spec sample",
-    "year": 2026,
-    "folder": "keyset-vs-offset-postgresql",
-    "summary": "A four-page write-up with a benchmark you can rerun. Skipping 1.9 million rows took 345 ms with OFFSET and 0.02 ms with keyset pagination.",
-    "cover": "keyset-vs-offset-postgresql/cover.webp",
-    "coverAlt": "Line chart: OFFSET query time climbs to 345 ms while keyset stays near zero",
-    "demo": null,
-    "downloads": [
-      "keyset-vs-offset-postgresql/samples/Keyset-vs-OFFSET-PostgreSQL-SAMPLE.pdf",
-      "keyset-vs-offset-postgresql/samples/keyset_bench.py"
-    ],
-    "gallery": [
-      {
-        "src": "keyset-vs-offset-postgresql/screenshots/keyset-pdf-p1.webp",
-        "alt": "Page 1 of the write-up"
-      },
-      {
-        "src": "keyset-vs-offset-postgresql/screenshots/keyset-pdf-p2.webp",
-        "alt": "Page 2 of the write-up"
-      }
-    ],
-    "galleryStyle": "pages",
-    "snippets": [
-      {
-        "file": "keyset-vs-offset-postgresql/samples/keyset_bench.py",
-        "lines": [
-          1,
-          32
-        ],
-        "caption": "The first lines of keyset_bench.py"
-      }
-    ],
-    "labelNote": "An unpublished technical write-up with a benchmark you can rerun. Not client work, and not a published clip."
+    "labelNote": "Brindle & Bolt Workshop, its town and contact details are made up. The model, STL files and checks are real, but the parts have not been printed or load-tested, so no load rating is claimed. Not client work."
   },
   {
     "id": "mcp-stateless-revision",

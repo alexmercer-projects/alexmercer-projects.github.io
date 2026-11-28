@@ -1,0 +1,4 @@
+Schibsted Grotesk: Copyright 2022 The Schibsted Grotesk Project Authors. Licensed under the SIL Open Font License, Version 1.1.
+JetBrains Mono: Copyright 2020 The JetBrains Mono Project Authors. Licensed under the SIL Open Font License, Version 1.1.
+Full license text: https://openfontlicense.org
+These are the latin subsets, self-hosted so the site makes no calls to Google Fonts.
